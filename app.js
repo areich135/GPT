@@ -112,7 +112,7 @@ function renderRow(p){
         <div class="metric" aria-label="Höhe ${format(p.height)} Zentimeter"><img src="assets/rundtopf-hoehe-pikto.svg" alt="Höhe">${format(p.height)}</div>
         <div class="metric"><img src="assets/rundtopf-vol-pikto.svg" alt="Volumen">${format(p.volume)} l</div>
       </div></div>
-      <button class="detail-toggle" data-expand="variants" data-id="${p.index}" aria-expanded="${expanded==='variants'}" aria-controls="row-detail-${p.index}" aria-label="Farbvarianten von ${p.name}"><img src="assets/${expanded==='variants'?'filter-recycling.svg':'farbvarianten-pikto.svg'}" alt=""><span>${expanded==='variants'?'Details ⌃':'Farben ⌄'}</span></button>
+      <button class="detail-toggle" data-expand="variants" data-id="${p.index}" aria-expanded="${expanded==='variants'}" aria-controls="row-detail-${p.index}" aria-label="Farbvarianten von ${p.name}"><img src="assets/filter-recycling.svg" alt=""><span>Details ${expanded==='variants'?'⌃':'⌄'}</span></button>
       <button class="detail-toggle" data-expand="trays" data-id="${p.index}" aria-expanded="${expanded==='trays'}" aria-controls="row-detail-${p.index}" aria-label="Passende Trays für ${p.name}"><img src="assets/tray-konfigurator-pikto.svg" alt=""><span>anzeigen ${expanded==='trays'?'⌃':'⌄'}</span></button>
       <button class="detail-toggle pack-toggle" data-expand="packaging" data-id="${p.index}" aria-expanded="${expanded==='packaging'}" aria-controls="row-detail-${p.index}"><span class="pack-label">Verpackungs-<br>daten</span><span>anzeigen ${expanded==='packaging'?'⌃':'⌄'}</span></button>
       <div class="split-buttons"><button data-request="sample" data-id="${p.index}">Muster</button><button data-request="offer" data-id="${p.index}">Angebot</button></div>
