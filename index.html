@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>TEKU · VCG Rundtöpfe 5°</title>
+  <meta name="description" content="Interaktiver TEKU VCG Produktdetailseiten-Entwurf mit Farbauswahl, Artikelfiltern und Musteranfrage.">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230f2e5b'/%3E%3Ctext x='16' y='24' text-anchor='middle' font-family='Arial' font-size='24' font-weight='bold' fill='%234eae94'%3ET%3C/text%3E%3C/svg%3E">
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="data.js"></script>
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <header class="site-header">
+    <button class="menu-button" aria-label="Menü öffnen" data-action="menu"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 6h15M3 12h19M3 18h11"/></svg></button>
+    <a class="brand" href="#top" aria-label="TEKU Start"><img src="assets/pp-teku-logo-r.svg" alt="Pöppelmann TEKU"></a>
+    <nav class="header-actions" aria-label="Service">
+      <button class="round-button favorites-button" aria-label="Merkzettel öffnen" data-action="favorites"><svg viewBox="0 0 24 24"><path d="M20.8 4.6c-2-2-5.1-1.7-6.8.3L12 7.2l-2-2.3C8.3 2.9 5.2 2.6 3.2 4.6c-2.1 2-1.9 5.3.1 7.4L12 21l8.7-9c2-2.1 2.2-5.4.1-7.4Z"/></svg><span id="favorites-count" class="badge" hidden>0</span></button>
+      <button class="round-button language" aria-label="Sprache wählen" data-action="language">DE</button>
+      <button class="round-button" aria-label="Suche öffnen" data-action="search"><svg viewBox="0 0 24 24"><circle cx="10" cy="10" r="6.5"/><path d="m15 15 6 6"/></svg></button>
+      <button class="round-button" aria-label="Kontakt öffnen" data-action="contact"><svg viewBox="0 0 24 24"><path d="m6 3 4 5-3 3c2 3 3 4 6 6l3-3 5 4-2 3c-1 1-4 1-8-2-4-3-7-6-9-11-1-2 0-4 1-4Z"/></svg></button>
+    </nav>
+  </header>
+  <main id="top">
+    <section class="hero" aria-labelledby="product-title">
+      <div class="eyebrow">Rundtöpfe 5°</div>
+      <h1 id="product-title">VCG</h1>
+      <div class="hero-grid">
+        <div class="info-card" id="hero-info" aria-live="polite"></div>
+        <div class="gallery-card">
+          <button class="main-image-button" aria-label="Produktbild vergrößern" data-action="zoom"><img id="main-image" src="assets/vcg-circular-ton-grau-pr.png" alt="VCG in Circular ton/grau"><span id="image-unavailable" hidden></span></button>
+          <div class="gallery-progress" aria-hidden="true"><span id="gallery-progress-bar"></span></div>
+          <div class="thumbnails" role="group" aria-label="Produktansichten">
+            <button class="thumbnail active" aria-label="Frontansicht" aria-pressed="true" data-view="0"><img id="front-thumbnail" src="assets/vcg-circular-ton-grau-pr.png" alt=""></button>
+            <button class="thumbnail" aria-label="Multilochprofilboden" aria-pressed="false" data-view="1"><img src="assets/vcg-slide2.png" alt=""></button>
+            <button class="thumbnail" aria-label="Kronenrand" aria-pressed="false" data-view="2"><img src="assets/vcg-slide3.png" alt=""></button>
+          </div>
+        </div>
+      </div>
+      <div class="tabs" role="tablist" aria-label="Produktinformationen">
+        <button id="tab-variants" role="tab" aria-controls="variants-panel" aria-selected="true" data-tab="variants">Varianten</button>
+        <button id="tab-benefits" role="tab" aria-controls="benefits-panel" aria-selected="false" tabindex="-1" data-tab="benefits">Vorteile</button>
+        <button id="tab-downloads" role="tab" aria-controls="downloads-panel" aria-selected="false" tabindex="-1" data-tab="downloads">Downloads</button>
+      </div>
+    </section>
+    <section id="variants-panel" class="catalog" role="tabpanel" aria-labelledby="tab-variants">
+      <aside class="filters" aria-label="Artikelfilter">
+        <button class="collapse-filter" id="collapse-filter" aria-expanded="true">⊟ einklappen</button>
+        <div id="filter-body">
+          <section class="filter-section"><h2><span class="filter-symbol">◉</span> FARBE</h2><div class="color-grid" id="colors"></div></section>
+          <section class="filter-section"><h2><span class="filter-symbol">♻</span> NACHHALTIGKEITSKATEGORIE</h2>
+            <label class="check-label"><input type="checkbox" name="category" value="Circular360">Circular360<sup>®</sup><button class="info-button" aria-label="Informationen zu Circular360" data-info="Circular360">i</button></label>
+            <label class="check-label"><input type="checkbox" name="category" value="Baseline">Baseline<button class="info-button" aria-label="Informationen zu Baseline" data-info="Baseline">i</button></label>
+            <label class="check-label"><input type="checkbox" name="category" value="Recyclable">Recyclable<button class="info-button" aria-label="Informationen zu Recyclable" data-info="Recyclable">i</button></label>
+          </section>
+          <section class="filter-section"><h2><span class="filter-symbol">♧</span> PRODUKTIONSVERFAHREN</h2>
+            <label class="check-label"><input type="checkbox" name="process" value="Spritzguss">Spritzguss</label>
+            <label class="check-label"><input type="checkbox" name="process" value="Tiefgezogen" checked>Tiefgezogen</label>
+          </section>
+          <section class="filter-section"><h2><span class="filter-symbol">↔</span> DURCHMESSER</h2><div class="pill-grid" id="diameters"></div></section>
+          <section class="filter-section"><h2><span class="filter-symbol">▣</span> VOLUMEN</h2><div class="pill-grid volume-grid" id="volumes"></div></section>
+          <section class="filter-section"><h2><span class="filter-symbol">▱</span> KONIZITÄT</h2><div class="pill-grid" id="angles"></div></section>
+          <button class="reset-button" id="reset-filters">Filter zurücksetzen</button>
+        </div>
+      </aside>
+      <div class="results-column"><div id="result-status" class="sr-only" aria-live="polite"></div><div id="results"></div><div id="additional-results"></div></div>
+    </section>
+    <section id="benefits-panel" class="content-panel" role="tabpanel" aria-labelledby="tab-benefits" hidden><div class="benefit-grid" id="benefits"></div></section>
+    <section id="downloads-panel" class="content-panel" role="tabpanel" aria-labelledby="tab-downloads" hidden><div class="download-card"><h2>Downloads</h2><div id="download-list"></div></div></section>
+    <section class="recommendations hero"><h2>Das könnte Sie auch interessieren:</h2><div class="recommendation-grid" id="recommendations"></div></section>
+  </main>
+  <dialog id="modal" aria-labelledby="modal-title"><button class="close-modal" aria-label="Dialog schließen">×</button><div id="modal-content"></div></dialog>
+  <div id="toast" role="status" hidden></div>
+</body>
+</html>
