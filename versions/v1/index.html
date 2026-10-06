@@ -3,15 +3,14 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script src="version-switch.js"></script>
+  <script src="../../version-switch.js"></script>
   <title>TEKU · VCG Rundtöpfe 5°</title>
   <meta name="description" content="Interaktiver TEKU VCG Produktdetailseiten-Entwurf mit Farbauswahl, Artikelfiltern und Musteranfrage.">
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%230f2e5b'/%3E%3Ctext x='16' y='24' text-anchor='middle' font-family='Arial' font-size='24' font-weight='bold' fill='%234eae94'%3ET%3C/text%3E%3C/svg%3E">
-  <link rel="stylesheet" href="styles.css?v=2">
-  <link rel="stylesheet" href="v2.css?v=2">
-  <link rel="stylesheet" href="version-switch.css">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="../../version-switch.css">
   <script defer src="data.js"></script>
-  <script defer src="app.js?v=2"></script>
+  <script defer src="app.js"></script>
 </head>
 <body>
   <header class="site-header">
@@ -32,13 +31,11 @@
         <div class="info-card" id="hero-info" aria-live="polite"></div>
         <div class="gallery-card">
           <button class="main-image-button" aria-label="Produktbild vergrößern" data-action="zoom"><img id="main-image" src="assets/vcg-circular-ton-grau-pr.png" alt="VCG in Circular ton/grau"><span id="image-unavailable" hidden></span></button>
-          <button class="gallery-arrow gallery-prev" data-gallery-step="-1" aria-label="Vorherige Produktansicht"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m15 5-7 7 7 7"/></svg></button>
-          <button class="gallery-arrow gallery-next" data-gallery-step="1" aria-label="Nächste Produktansicht"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m9 5 7 7-7 7"/></svg></button>
           <div class="gallery-progress" aria-hidden="true"><span id="gallery-progress-bar"></span></div>
           <div class="thumbnails" role="group" aria-label="Produktansichten">
             <button class="thumbnail active" aria-label="Frontansicht" aria-pressed="true" data-view="0"><img id="front-thumbnail" src="assets/vcg-circular-ton-grau-pr.png" alt=""></button>
-            <button class="thumbnail" aria-label="Bodenkonstruktion vergrößern" aria-pressed="false" data-view="1"><img src="assets/vcg-slide2.png" alt=""></button>
-            <button class="thumbnail" aria-label="Randansicht vergrößern" aria-pressed="false" data-view="2"><img src="assets/vcg-slide3.png" alt=""></button>
+            <button class="thumbnail" aria-label="Multilochprofilboden" aria-pressed="false" data-view="1"><img src="assets/vcg-slide2.png" alt=""></button>
+            <button class="thumbnail" aria-label="Kronenrand" aria-pressed="false" data-view="2"><img src="assets/vcg-slide3.png" alt=""></button>
           </div>
         </div>
       </div>
@@ -50,22 +47,21 @@
     </section>
     <section id="variants-panel" class="catalog" role="tabpanel" aria-labelledby="tab-variants">
       <aside class="filters" aria-label="Artikelfilter">
-        <button class="collapse-filter" id="collapse-filter" aria-controls="filter-body" aria-label="Filter einklappen" aria-expanded="true"><img src="assets/filter-toggle.svg" alt=""><span>einklappen</span></button>
-        <nav id="compact-filters" class="compact-filters" aria-label="Filtergruppen" hidden></nav>
+        <button class="collapse-filter" id="collapse-filter" aria-expanded="true">⊟ einklappen</button>
         <div id="filter-body">
-          <section class="filter-section" id="filter-color"><h2><img class="filter-symbol" src="assets/filter-color.svg" alt=""> FARBE</h2><div class="color-grid" id="colors"></div></section>
-          <section class="filter-section" id="filter-category"><h2><img class="filter-symbol" src="assets/filter-recycling.svg" alt=""> NACHHALTIGKEITSKATEGORIE</h2>
+          <section class="filter-section"><h2><span class="filter-symbol">◉</span> FARBE</h2><div class="color-grid" id="colors"></div></section>
+          <section class="filter-section"><h2><span class="filter-symbol">♻</span> NACHHALTIGKEITSKATEGORIE</h2>
             <label class="check-label"><input type="checkbox" name="category" value="Circular360">Circular360<sup>®</sup><button class="info-button" aria-label="Informationen zu Circular360" data-info="Circular360">i</button></label>
             <label class="check-label"><input type="checkbox" name="category" value="Baseline">Baseline<button class="info-button" aria-label="Informationen zu Baseline" data-info="Baseline">i</button></label>
             <label class="check-label"><input type="checkbox" name="category" value="Recyclable">Recyclable<button class="info-button" aria-label="Informationen zu Recyclable" data-info="Recyclable">i</button></label>
           </section>
-          <section class="filter-section" id="filter-process"><h2><img class="filter-symbol" src="assets/filter-production.svg" alt=""> PRODUKTIONSVERFAHREN</h2>
+          <section class="filter-section"><h2><span class="filter-symbol">♧</span> PRODUKTIONSVERFAHREN</h2>
             <label class="check-label"><input type="checkbox" name="process" value="Spritzguss">Spritzguss</label>
             <label class="check-label"><input type="checkbox" name="process" value="Tiefgezogen" checked>Tiefgezogen</label>
           </section>
-          <section class="filter-section" id="filter-diameter"><h2><img class="filter-symbol" src="assets/filter-diameter.svg" alt=""> DURCHMESSER</h2><div class="pill-grid" id="diameters"></div></section>
-          <section class="filter-section" id="filter-volume"><h2><img class="filter-symbol" src="assets/filter-volume.svg" alt=""> VOLUMEN</h2><div class="pill-grid volume-grid" id="volumes"></div></section>
-          <section class="filter-section" id="filter-angle"><h2><img class="filter-symbol" src="assets/filter-conicity.svg" alt=""> KONIZITÄT</h2><div class="pill-grid" id="angles"></div></section>
+          <section class="filter-section"><h2><span class="filter-symbol">↔</span> DURCHMESSER</h2><div class="pill-grid" id="diameters"></div></section>
+          <section class="filter-section"><h2><span class="filter-symbol">▣</span> VOLUMEN</h2><div class="pill-grid volume-grid" id="volumes"></div></section>
+          <section class="filter-section"><h2><span class="filter-symbol">▱</span> KONIZITÄT</h2><div class="pill-grid" id="angles"></div></section>
           <button class="reset-button" id="reset-filters">Filter zurücksetzen</button>
         </div>
       </aside>

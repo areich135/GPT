@@ -1,0 +1,5 @@
+.version-toolbar{display:flex;align-items:center;gap:10px;min-height:38px;padding:5px 2.3vw;background:#fff;color:#123361;font:400 13px/1.3 Aeonik,Arial,sans-serif;border-bottom:1px solid #dce8e4;position:relative;z-index:2}
+.version-toolbar label{font-size:13px;margin:0}
+.version-toolbar select{background:white;color:#123361;border:1px solid #4eae94;border-radius:16px;padding:3px 26px 3px 12px;font:700 13px Aeonik,Arial,sans-serif;cursor:pointer;min-width:70px}
+.version-toolbar select:focus-visible{outline:3px solid #64c9b8;outline-offset:2px}
+@media(max-width:700px){.version-toolbar{padding-left:16px}}

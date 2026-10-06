@@ -41,44 +41,8 @@ const svg = name => {
 const selectedVariant = p => p.variants.find(v => v.color === colorById(state.color || state.previewColor)?.name) || p.variants.find(v=>v.color==='Circular ton/grau') || p.variants[0];
 const productImage = p => selectedVariant(p)?.image || imagePath('vcg-circular-ton-grau-pr.png');
 function toast(message){$('#toast').textContent=message;$('#toast').hidden=false;clearTimeout(toast.timer);toast.timer=setTimeout(()=>$('#toast').hidden=true,3500)}
-function openModal(title, body){$('#modal').classList.remove('gallery-modal');$('#modal-content').innerHTML=`<h2 id="modal-title">${escapeHTML(title)}</h2>${body}`;const modal=$('#modal');if(!modal.open)modal.showModal()}
-function closeModal(){$('#modal').close();$('#modal').classList.remove('gallery-modal')}
-const filterGroups = [
-  ['color','Farbe','filter-color.svg'],
-  ['category','Nachhaltigkeitskategorie','filter-recycling.svg'],
-  ['process','Produktionsverfahren','filter-production.svg'],
-  ['diameter','Durchmesser','filter-diameter.svg'],
-  ['volume','Volumen','filter-volume.svg'],
-  ['angle','Konizität','filter-conicity.svg']
-];
-$('#compact-filters').innerHTML=filterGroups.map(([key,label,file])=>`<button data-filter-group="${key}" aria-label="${label}: Filter aufklappen" title="${label}"><img src="assets/${file}" alt=""></button>`).join('');
-function setFilterCollapsed(collapsed){
-  state.filterCollapsed=collapsed;
-  $('.filters').classList.toggle('collapsed',collapsed);
-  $('.catalog').classList.toggle('filters-collapsed',collapsed);
-  $('#filter-body').hidden=collapsed;
-  $('#compact-filters').hidden=!collapsed;
-  const toggle=$('#collapse-filter');
-  toggle.classList.toggle('is-collapsed',collapsed);
-  toggle.setAttribute('aria-expanded',String(!collapsed));
-  toggle.setAttribute('aria-label',collapsed?'Filter aufklappen':'Filter einklappen');
-  toggle.title=collapsed?'Filter aufklappen':'Filter einklappen';
-  toggle.querySelector('span').textContent=collapsed?'aufklappen':'einklappen';
-}
-function showGalleryModal(){
-  if($('#main-image').hidden){toast('Für diese Farbe ist keine Produktabbildung verfügbar.');return}
-  const titles=['Produktansicht','Bodenkonstruktion','Randansicht'];
-  const detail=state.view>0?'<p class="gallery-note">Detailabbildung in Circular ton/grau</p>':'';
-  openModal(`${productById(state.current).name} · ${titles[state.view]}`,`<div class="gallery-modal-image"><button class="gallery-modal-arrow" data-gallery-step="-1" aria-label="Vorherige Ansicht im Bilddialog">${svg('arrow')}</button><img class="modal-image" src="${$('#main-image').getAttribute('src')}" alt="${escapeHTML($('#main-image').alt)}"><button class="gallery-modal-arrow" data-gallery-step="1" aria-label="Nächste Ansicht im Bilddialog">${svg('arrow')}</button></div><div class="gallery-modal-tabs" role="group" aria-label="Vergrößerte Produktansichten">${titles.map((title,i)=>`<button data-modal-view="${i}" aria-pressed="${i===state.view}" class="${i===state.view?'active':''}">${title}</button>`).join('')}</div>${detail}`);
-  $('#modal').classList.add('gallery-modal');
-}
-function stepGallery(step){
-  const inModal=$('#modal').open&&$('#modal').classList.contains('gallery-modal');
-  state.view=(state.view+step+3)%3;
-  if(state.view===0&&state.color&&!colorById(state.color).file)state.view=step>0?1:2;
-  updateGallery();
-  if(inModal){showGalleryModal();$('#modal').querySelector(`[data-gallery-step="${step}"]`)?.focus()}
-}
+function openModal(title, body){$('#modal-content').innerHTML=`<h2 id="modal-title">${escapeHTML(title)}</h2>${body}`;const modal=$('#modal');if(!modal.open)modal.showModal()}
+function closeModal(){$('#modal').close()}
 function renderFilters(){
   $('#colors').innerHTML=colors.map(c=>`<button class="swatch-button ${state.color===c.id?'active':''}" data-color="${c.id}" data-unavailable="${!c.file}" aria-label="${escapeHTML(c.name)}${!c.file?' – keine VCG-Variante auf der aktuellen Produktseite':''}" aria-pressed="${state.color===c.id}" title="${escapeHTML(c.name)}"><span class="swatch" style="--swatch:${c.hex}"></span><span class="swatch-label">${escapeHTML(c.name).replace(' ','<br>')}</span></button>`).join('');
   const allDiameters=[5,5.5,6,7,8,8.5,9,9.5,10,10.5,11,12,13,14,15,17,19];
@@ -112,7 +76,7 @@ function renderRow(p){
         <div class="metric" aria-label="Höhe ${format(p.height)} Zentimeter"><img src="assets/rundtopf-hoehe-pikto.svg" alt="Höhe">${format(p.height)}</div>
         <div class="metric"><img src="assets/rundtopf-vol-pikto.svg" alt="Volumen">${format(p.volume)} l</div>
       </div></div>
-      <button class="detail-toggle" data-expand="variants" data-id="${p.index}" aria-expanded="${expanded==='variants'}" aria-controls="row-detail-${p.index}" aria-label="Farbvarianten von ${p.name}"><img src="assets/${expanded==='variants'?'filter-recycling.svg':'farbvarianten-pikto.svg'}" alt=""><span>${expanded==='variants'?'Details ⌃':'Farben ⌄'}</span></button>
+      <button class="detail-toggle" data-expand="variants" data-id="${p.index}" aria-expanded="${expanded==='variants'}" aria-controls="row-detail-${p.index}" aria-label="Farbvarianten von ${p.name}"><span class="recycle-icon">♻</span><span>Details ${expanded==='variants'?'⌃':'⌄'}</span></button>
       <button class="detail-toggle" data-expand="trays" data-id="${p.index}" aria-expanded="${expanded==='trays'}" aria-controls="row-detail-${p.index}" aria-label="Passende Trays für ${p.name}"><img src="assets/tray-konfigurator-pikto.svg" alt=""><span>anzeigen ${expanded==='trays'?'⌃':'⌄'}</span></button>
       <button class="detail-toggle pack-toggle" data-expand="packaging" data-id="${p.index}" aria-expanded="${expanded==='packaging'}" aria-controls="row-detail-${p.index}"><span class="pack-label">Verpackungs-<br>daten</span><span>anzeigen ${expanded==='packaging'?'⌃':'⌄'}</span></button>
       <div class="split-buttons"><button data-request="sample" data-id="${p.index}">Muster</button><button data-request="offer" data-id="${p.index}">Angebot</button></div>
@@ -239,10 +203,7 @@ document.addEventListener('click',event=>{
   if(b.dataset.diameter){const v=Number(b.dataset.diameter);state.diameter=state.diameter===v?null:v;renderFilters();renderProducts();return}
   if(b.dataset.volume){state.volume=state.volume===b.dataset.volume?null:b.dataset.volume;renderFilters();renderProducts();return}
   if(b.dataset.angle){const v=Number(b.dataset.angle);state.angle=state.angle===v?null:v;renderFilters();renderProducts();return}
-  if(b.dataset.galleryStep!==undefined){stepGallery(Number(b.dataset.galleryStep));return}
-  if(b.dataset.modalView!==undefined){state.view=Number(b.dataset.modalView);updateGallery();showGalleryModal();$('#modal').querySelector(`[data-modal-view="${state.view}"]`)?.focus();return}
-  if(b.dataset.view!==undefined){state.view=Number(b.dataset.view);updateGallery();if(state.view>0)showGalleryModal();return}
-  if(b.dataset.filterGroup){setFilterCollapsed(false);const section=$(`#filter-${b.dataset.filterGroup}`);section.scrollIntoView({behavior:'smooth',block:'center'});section.querySelector('button,input')?.focus({preventScroll:true});return}
+  if(b.dataset.view!==undefined){state.view=Number(b.dataset.view);updateGallery();return}
   if(b.dataset.product!==undefined){selectProduct(b.dataset.product);return}
   if(b.dataset.expand){const id=Number(b.dataset.id);state.expanded[id]=state.expanded[id]===b.dataset.expand?null:b.dataset.expand;renderProducts();return}
   if(b.dataset.variant!==undefined){const p=productById(b.dataset.id),v=p.variants[Number(b.dataset.variant)],c=colors.find(c=>c.name===v.color);if(c){state.current=p.index;state.color=null;state.previewColor=c.id;state.view=0;renderFilters();renderProducts();updateGallery();showHeroInfo(p);$('#top').scrollIntoView({behavior:'smooth'})}return}
@@ -258,7 +219,7 @@ document.addEventListener('click',event=>{
   if(b.dataset.searchResult!==undefined){closeModal();state.color=null;state.volume=null;state.diameter=null;state.categories.clear();state.process.clear();state.angle=null;activateTab('variants');renderFilters();renderProducts();selectProduct(b.dataset.searchResult);return}
   if(b.dataset.localTab){event.preventDefault();closeModal();activateTab(b.dataset.localTab);$('#top').scrollIntoView({behavior:'smooth'});return}
   if(b.dataset.info){event.preventDefault();const info={Circular360:'Auf der bestehenden Produktseite ist Circular360 als eigene Nachhaltigkeitskategorie aufgeführt. Die Farb- und Artikelzuordnung wird hier aus dieser Seite übernommen.',Baseline:'Baseline ist eine der auf der aktuellen VCG-Produktseite angebotenen Nachhaltigkeitskategorien.',Recyclable:'Im XD-Entwurf vorgesehen. Auf der aktuellen VCG-Produktseite ist keine Variante dieser Kategorie hinterlegt.'};openModal(b.dataset.info,`<p>${info[b.dataset.info]}</p>`);return}
-  if(b.id==='collapse-filter'){setFilterCollapsed(!state.filterCollapsed);return}
+  if(b.id==='collapse-filter'){state.filterCollapsed=!state.filterCollapsed;$('.filters').classList.toggle('collapsed',state.filterCollapsed);$('.catalog').classList.toggle('filters-collapsed',state.filterCollapsed);b.textContent=state.filterCollapsed?'⊞ Filter aufklappen':'⊟ einklappen';b.setAttribute('aria-expanded',!state.filterCollapsed);return}
   if(b.id==='reset-filters'||b.dataset.action==='reset'){resetFilters();return}
   if(b.classList.contains('close-modal')){closeModal();return}
   if(b.id==='select-all'){$$('input[name="article"]',$('#modal')).forEach(i=>i.checked=true);return}
@@ -271,7 +232,7 @@ document.addEventListener('click',event=>{
   if(action==='language'){openModal('Sprache','<p>Dieser Click-Dummy bildet den deutschen TEKU-Entwurf ab.</p><div class="language-options"><button class="pink-button" data-action="close">Deutsch · DE</button></div>');return}
   if(action==='close'){closeModal();return}
   if(action==='contact'){openModal('TEKU Beratung','<p>Sie haben Fragen zu unseren Produkten?</p><p><a href="tel:+4944429821626">+49 4442 982-1626</a></p><p><a href="mailto:teku@poeppelmann.com">teku@poeppelmann.com</a></p><p>Pöppelmann GmbH &amp; Co. KG<br>Bakumer Straße 73<br>49393 Lohne</p>');return}
-  if(action==='zoom'){showGalleryModal();return}
+  if(action==='zoom'){if($('#main-image').hidden){toast('Für diese Farbe ist keine Produktabbildung verfügbar.');return}openModal($('#main-image').alt,`<img class="modal-image" src="${$('#main-image').getAttribute('src')}" alt="${escapeHTML($('#main-image').alt)}">`);return}
 });
 document.addEventListener('change',event=>{
   const i=event.target;if(i.name==='category'||i.name==='process'){const set=i.name==='category'?state.categories:state.process;i.checked?set.add(i.value):set.delete(i.value);renderProducts()}
@@ -294,6 +255,3 @@ if(document.modelContext?.registerTool){
   register({name:'select_vcg_color',description:'Select a VCG color in the visible prototype and update its filters and product photograph. No request is sent.',inputSchema:{type:'object',properties:{colorId:{type:'string',enum:colors.map(c=>c.id)}},required:['colorId'],additionalProperties:false},annotations:{readOnlyHint:false},execute:input=>{if(!input||typeof input.colorId!=='string'||!colorById(input.colorId))throw new Error('Unbekannte Farbe');state.color=null;chooseColor(input.colorId);return{color:colorById(input.colorId).name,imageAvailable:!!colorById(input.colorId).file,matchingArticles:filteredProducts().map(p=>p.name)}}});
   window.addEventListener('pagehide',()=>lifecycle.abort(),{once:true});
 }
-
-$('#modal').addEventListener('keydown',event=>{if(!$('#modal').classList.contains('gallery-modal')||!['ArrowLeft','ArrowRight'].includes(event.key))return;event.preventDefault();stepGallery(event.key==='ArrowRight'?1:-1)});
-$('.gallery-card').addEventListener('keydown',event=>{if(!['ArrowLeft','ArrowRight'].includes(event.key))return;event.preventDefault();stepGallery(event.key==='ArrowRight'?1:-1)});
