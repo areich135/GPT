@@ -1,4 +1,17 @@
-# TEKU VCG Click-Dummy
+# TEKU Produktdetailseiten – Clickdummy
+
+Die Kopfzeile führt zu zwei Produktbereichen:
+
+- **Rundtöpfe / VCG:** V1 und V2 als frühere Entwürfe, V3 mit den aktuellen technischen Reitern, Bodenansicht und aktiven Filterpunkten.
+- **Trays / Anzuchtpaletten / BP:** V1 mit 20 Artikeln aus der TEKU-Produktseite; Plug-D/E zuerst, anschließend Zellvolumen und Pflanzenzahl. Tray- und Zellmaße sind separat benannt.
+
+Beide aktuellen Entwürfe enthalten die rechten Listen für Muster, Angebote und Merkliste. Anfragen werden nur simuliert. Der Stellflächenrechner ist eine geometrische Vorschau.
+
+- [Rundtöpfe V3 öffnen](https://areich135.github.io/GPT/?version=v3)
+- [Anzuchtpaletten BP V1 öffnen](https://areich135.github.io/GPT/bp/?version=v1)
+- [Quellen, Datenzuordnung und tatsächliche Prüfungen](docs/sources-2026-10-22.md)
+
+## Beschreibung der bisherigen VCG-Basis
 
 Eigenständiger interaktiver Nachbau des Adobe-XD-Entwurfs, Seite 20. Kein Zugriff auf das Pöppelmann-Repository oder Backend erforderlich.
 

@@ -3,3 +3,5 @@
 .version-toolbar select{background:white;color:#123361;border:1px solid #4eae94;border-radius:16px;padding:3px 26px 3px 12px;font:700 13px Aeonik,Arial,sans-serif;cursor:pointer;min-width:70px}
 .version-toolbar select:focus-visible{outline:3px solid #64c9b8;outline-offset:2px}
 @media(max-width:700px){.version-toolbar{padding-left:16px}}
+.version-toolbar{flex-wrap:wrap;gap:10px 24px;padding-top:8px;padding-bottom:8px}.category-tabs{display:flex;gap:5px;flex-wrap:wrap}.category-tabs a{padding:7px 14px;text-decoration:none;border-radius:18px;border:1px solid #dce8e4;font-weight:700}.category-tabs a[aria-current]{background:#123361;color:white;border-color:#123361}.version-choice{display:flex;gap:10px;align-items:center}.version-choice>span{font-weight:700;border-right:1px solid #dce8e4;padding-right:12px}
+@media(max-width:500px){.version-toolbar{gap:8px;padding:10px 16px}.category-tabs{width:100%}.category-tabs a{font-size:12px;padding:6px 10px}}
