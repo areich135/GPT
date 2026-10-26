@@ -62,3 +62,19 @@
     grid-column:6;grid-row:1;justify-self:center;margin:0;
   }
 }
+/* Round-pot technical image: numbered rim and base details overlap the product. */
+.catalog-xd .rounds-detail-figure{display:block;padding:5px 0 10px}
+.catalog-xd .rounds-detail-stage{position:relative;width:100%;max-width:250px;height:280px;margin:0 auto}
+.catalog-xd .rounds-detail-product{position:absolute;top:38px;left:0;width:70%;height:230px}
+.catalog-xd .rounds-detail-product img{width:100%;height:100%;object-fit:contain;transform:scale(1.4)}
+.catalog-xd .rounds-detail-stage .detail-zoom{position:absolute;right:0;width:126px;height:126px;background:white;border:3px solid #185383;border-radius:50%;z-index:1}
+.catalog-xd .rim-detail-zoom{top:0}
+.catalog-xd .floor-detail-zoom{bottom:0}
+.catalog-xd .detail-zoom-image{display:block;width:100%;height:100%;border-radius:50%;overflow:hidden}
+.catalog-xd .detail-zoom-image img{width:100%;height:100%;object-fit:cover;transform:scale(1.45)}
+.catalog-xd .rounds-detail-figure .detail-number{display:inline-grid;place-items:center;width:16px;height:16px;border-radius:50%;background:var(--navy);color:white;font-size:10px;line-height:1;font-weight:700;flex:none}
+.catalog-xd .detail-zoom .detail-number{position:absolute;top:-3px;left:-3px}
+.catalog-xd .floor-detail-zoom .detail-number{left:auto;right:-3px}
+.catalog-xd .rounds-detail-figure figcaption{max-width:250px;margin:14px auto 0;text-align:left;width:100%;font-size:13px}
+.catalog-xd .rounds-detail-figure figcaption>span{display:flex;gap:4px;align-items:center;margin-bottom:3px}
+.catalog-xd .rounds-detail-figure figcaption small{display:block;margin-top:7px}
