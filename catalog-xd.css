@@ -79,3 +79,7 @@
 .catalog-xd .rounds-detail-figure figcaption{max-width:250px;margin:14px auto 0;text-align:left;width:100%;font-size:13px}
 .catalog-xd .rounds-detail-figure figcaption>span{display:flex;gap:4px;align-items:center;margin-bottom:3px}
 .catalog-xd .rounds-detail-figure figcaption small{display:block;margin-top:7px}
+/* Font-independent disclosure arrows in both current drafts. */
+.catalog-xd .row-section-toggle>span{display:inline-flex;align-items:center;justify-content:center;gap:4px}
+.catalog-xd .row-section-toggle>span svg,.catalog-xd .more-sizes svg{width:13px;height:13px;flex-shrink:0;vertical-align:middle}
+.catalog-xd .row-section-toggle[aria-expanded=true]>span svg,.catalog-xd .more-sizes[aria-expanded=true] svg{transform:rotate(180deg)}
