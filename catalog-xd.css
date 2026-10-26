@@ -72,6 +72,7 @@
 .catalog-xd .floor-detail-zoom{bottom:0}
 .catalog-xd .detail-zoom-image{display:block;width:100%;height:100%;border-radius:50%;overflow:hidden}
 .catalog-xd .detail-zoom-image img{width:100%;height:100%;object-fit:cover;transform:scale(1.45)}
+.catalog-xd .floor-detail-zoom .detail-zoom-image img{transform:translateY(14px) scale(1.45)}
 .catalog-xd .rounds-detail-figure .detail-number{display:inline-grid;place-items:center;width:16px;height:16px;border-radius:50%;background:var(--navy);color:white;font-size:10px;line-height:1;font-weight:700;flex:none}
 .catalog-xd .detail-zoom .detail-number{position:absolute;top:-3px;left:-3px}
 .catalog-xd .floor-detail-zoom .detail-number{left:auto;right:-3px}
