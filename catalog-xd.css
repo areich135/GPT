@@ -50,3 +50,15 @@
   .catalog-xd .selection-sidebar{grid-row:3}
   .catalog-xd .selection-stack{grid-template-columns:1fr}
 }
+/* XD correction: keep both request buttons stacked on the right with open filters. */
+.catalog-xd:is(.rounds-v4,.bp-v2) .catalog:not(.filters-collapsed) .refreshed-row .row-requests{
+  flex-direction:column;align-items:stretch;flex-wrap:nowrap;gap:12px;
+}
+@container(min-width:701px){
+  .catalog-xd:is(.rounds-v4,.bp-v2) .catalog:not(.filters-collapsed) .refreshed-row .row-main{
+    grid-template-columns:54px minmax(115px,1.1fr) repeat(3,minmax(76px,1fr)) minmax(140px,1.3fr);grid-template-rows:auto;
+  }
+  .catalog-xd:is(.rounds-v4,.bp-v2) .catalog:not(.filters-collapsed) .refreshed-row .row-requests{
+    grid-column:6;grid-row:1;justify-self:center;margin:0;
+  }
+}
