@@ -1,12 +1,12 @@
 /* Modal adapter only. Component styles are isolated in its Shadow DOM. */
-#space-calculator-modal{width:min(1020px,calc(100% - 32px));max-width:calc(100% - 16px);max-height:92dvh;padding:0;border:0;border-radius:14px;color:var(--navy);overscroll-behavior:contain}
-#space-calculator-modal .sc-modal-header{padding:30px 36px 20px;border-bottom:1px solid var(--line);position:sticky;top:0;background:white;z-index:2;display:flex;align-items:center;justify-content:space-between;gap:20px}
-#space-calculator-modal .sc-modal-header small{font-size:12px;letter-spacing:.1em;color:var(--muted)}
-#space-calculator-modal h2{margin:5px 0 0;font-size:30px;line-height:1.15}
+#space-calculator-modal{width:min(1060px,calc(100% - 32px));max-width:calc(100% - 16px);max-height:calc(100dvh - 32px);padding:0;border:0;border-radius:14px;color:var(--navy);overscroll-behavior:contain}
+#space-calculator-modal .sc-modal-header{padding:16px 24px 14px;border-bottom:1px solid var(--line);position:sticky;top:0;background:white;z-index:2;display:flex;align-items:center;justify-content:space-between;gap:20px}
+#space-calculator-modal .sc-modal-header small{display:block;font-size:12px;line-height:1.2;letter-spacing:.1em;color:var(--muted)}
+#space-calculator-modal h2{margin:4px 0 0;font-size:26px;line-height:1.15}
 #space-calculator-modal .sc-modal-close{background:var(--pink);color:white;border:0;border-radius:50%;width:32px;height:32px;display:grid;place-items:center;flex-shrink:0;font-size:25px}
 .space-launcher{padding:15px 0 8px;max-width:480px}
 .space-launcher h3{margin:0 0 10px;font-size:20px}
 .space-launcher p{margin:0 0 16px;line-height:1.5;font-size:14px}
 .space-launcher .pink-button{display:inline-flex;align-items:center;gap:9px}
 .space-launcher .pink-button svg{width:18px;height:18px}
-@media(max-width:600px){#space-calculator-modal{width:calc(100% - 16px);max-height:96dvh}#space-calculator-modal .sc-modal-header{padding:22px 20px 17px}#space-calculator-modal h2{font-size:24px}}
+@media(max-width:600px){#space-calculator-modal{width:calc(100% - 16px);max-height:calc(100dvh - 16px)}#space-calculator-modal .sc-modal-header{padding:14px 16px 12px}#space-calculator-modal h2{font-size:23px}}

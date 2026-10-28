@@ -77,3 +77,14 @@ Ausgeführt:
 - Browserbedienung: 11→12 cm (64/68), 2 × 1 m (128/144 bei 12 cm), m→cm (200/100), 2,54 cm→1 Zoll, Dezimalkomma, leeres Pflichtfeld, alte Ergebnisse ausblenden, Zurücksetzen, Layoutwechsel/Diagramm, Escape/Schließen, Rückkehr des Fokus zum Auslöser, Wiederöffnen und Vorbelegung einer anderen Variante (VCG 12), Tab-Umlauf im Modal und Versionswechsel auf archivierte V6.
 
 Keine manuelle Prüfung mit Screenreader, Safari/iOS oder im eigentlichen Pöppelmann-CMS. Vor Live-Übernahme sind dort Datenübergabe, Dialogeinbindung und Browser/CSP-Vorgaben zu prüfen. Die Formelkorrekturen und die Abweichung vom Excel-Optimierer sollten fachlich mit dem Formelverantwortlichen abgeglichen werden.
+
+
+## Kompaktes Layout – Überarbeitung vom 28.10.2026
+
+Eingaben und Ergebnisse stehen auf Desktop nebeneinander. Länge und Breite verwenden bis zu 150 px breite Felder. Schriftgrößen der Eingaben bleiben 16 px; der Platzgewinn entsteht überwiegend durch die Anordnung, kürzere Felder und reduzierte Abstände. Beide Ergebnisverbände und die grafische Anordnung bleiben gleichzeitig sichtbar.
+
+„Wie wird gerechnet?“ öffnet eine eigene Ansicht innerhalb desselben Modals. „Zurück zum Rechner“ erhält die eingegebenen Werte. Auf Displays bis 760 px Breite wechseln „Eingaben“ und „Ergebnisse“ innerhalb des Modals; gültiges Berechnen öffnet dort die Ergebnisse. Fehlermeldungen bleiben bei den Eingaben sichtbar. Alle bisherigen Rechnerfunktionen und die Rechenlogik sind erhalten.
+
+Gemessen in Chromium mit CSS-Viewport-Prüfrahmen: 1280 × 600 px → Modalhöhe und Inhaltshöhe jeweils 559 px; 1280 × 720 px → jeweils 587 px. Kein vertikaler oder horizontaler Überlauf des Modals. Auch die Rechenhinweise passen in die 600-px-Ansicht. Bei 390 × 844 px passen Eingaben (692 px), Ergebnisse (699 px), die Fehlermeldungsansicht (745 px) und Rechenhinweise (471 px) jeweils ohne Scrollen. Native Betriebssystemleisten, Bildschirmtastatur und andere Browser-/Zoomkombinationen wurden damit nicht simuliert.
+
+Erneut geprüft: Durchmesserwechsel 11→12 cm, Ergebnisse 64/68, Diagrammwechsel, Einheitenwechsel, Zurücksetzen, Eingabeprüfung, Wechsel zu Rechenhinweisen und zurück mit Werterhalt sowie mobile Eingabe-/Ergebnisumschaltung.
