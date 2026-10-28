@@ -2,14 +2,23 @@
 
 Die Kopfzeile führt zu zwei Produktbereichen:
 
-- **Rundtöpfe / VCG:** V1 und V2 als frühere Entwürfe, V3 mit den aktuellen technischen Reitern, Bodenansicht und aktiven Filterpunkten.
+- **Rundtöpfe / VCG:** V7 mit funktionierendem Stellflächenrechner im Modal; V1–V6 bleiben über den Versionsumschalter erreichbar.
 - **Trays / Anzuchtpaletten / BP:** V1 mit 20 Artikeln aus der TEKU-Produktseite; Plug-D/E zuerst, anschließend Zellvolumen und Pflanzenzahl. Tray- und Zellmaße sind separat benannt.
 
-Beide aktuellen Entwürfe enthalten die rechten Listen für Muster, Angebote und Merkliste. Anfragen werden nur simuliert. Der Stellflächenrechner ist eine geometrische Vorschau.
+Beide aktuellen Entwürfe enthalten die rechten Listen für Muster, Angebote und Merkliste. Anfragen werden nur simuliert. Der VCG-Stellflächenrechner berechnet die Stückzahl für Viereck- und Dreieckverband mit frei änderbarem Durchmesser.
 
-- [Rundtöpfe V3 öffnen](https://areich135.github.io/GPT/?version=v3)
+- [Rundtöpfe V7 öffnen](https://areich135.github.io/GPT/?version=v7)
 - [Anzuchtpaletten BP V1 öffnen](https://areich135.github.io/GPT/bp/?version=v1)
 - [Quellen, Datenzuordnung und tatsächliche Prüfungen](docs/sources-2026-10-22.md)
+
+## Stellflächenrechner V7
+
+- [Rechner direkt mit VCG 11 öffnen](https://areich135.github.io/GPT/?version=v7&calculator=3)
+- [Wiederverwendbarer Code](space-calculator/)
+- [Einbindung, Formeln, Quellen und Prüfungen](docs/calculator-v7.md)
+- Rechenprüfung: `node --test tests/space-engine.test.cjs`
+
+Die neue Komponente besteht aus einer unabhängigen Rechenlogik und einem Custom Element. Der konkrete Klickdummy-Adapter bindet sie in die Produktdetailseite ein. Die Word-Formel ist die Grundlage; geometrische Randkorrekturen und Unterschiede zum umfangreicheren Excel-Makro sind dokumentiert.
 
 ## Beschreibung der bisherigen VCG-Basis
 
