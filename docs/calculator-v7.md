@@ -88,3 +88,6 @@ Eingaben und Ergebnisse stehen auf Desktop nebeneinander. Länge und Breite verw
 Gemessen in Chromium mit CSS-Viewport-Prüfrahmen: 1280 × 600 px → Modalhöhe und Inhaltshöhe jeweils 559 px; 1280 × 720 px → jeweils 587 px. Kein vertikaler oder horizontaler Überlauf des Modals. Auch die Rechenhinweise passen in die 600-px-Ansicht. Bei 390 × 844 px passen Eingaben (692 px), Ergebnisse (699 px), die Fehlermeldungsansicht (745 px) und Rechenhinweise (471 px) jeweils ohne Scrollen. Native Betriebssystemleisten, Bildschirmtastatur und andere Browser-/Zoomkombinationen wurden damit nicht simuliert.
 
 Erneut geprüft: Durchmesserwechsel 11→12 cm, Ergebnisse 64/68, Diagrammwechsel, Einheitenwechsel, Zurücksetzen, Eingabeprüfung, Wechsel zu Rechenhinweisen und zurück mit Werterhalt sowie mobile Eingabe-/Ergebnisumschaltung.
+
+
+Einstieg: Auch ein Link mit `calculator=3` öffnet das Modal nicht automatisch. Er blendet bei VCG 11 nur den technischen Reiter mit dem CTA ein und scrollt zum Auslöser. Erst ein Klick auf „Stellflächenrechner öffnen“ startet den Dialog.

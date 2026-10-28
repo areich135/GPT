@@ -13,7 +13,7 @@ Beide aktuellen Entwürfe enthalten die rechten Listen für Muster, Angebote und
 
 ## Stellflächenrechner V7
 
-- [Rechner direkt mit VCG 11 öffnen](https://areich135.github.io/GPT/?version=v7&calculator=3)
+- [Zum Rechner-CTA von VCG 11](https://areich135.github.io/GPT/?version=v7&calculator=3)
 - [Wiederverwendbarer Code](space-calculator/)
 - [Einbindung, Formeln, Quellen und Prüfungen](docs/calculator-v7.md)
 - Rechenprüfung: `node --test tests/space-engine.test.cjs`
