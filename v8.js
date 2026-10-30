@@ -12,12 +12,12 @@
       const badges = (VARIANT_CERTIFICATES[p.name]?.[v.color] || []).map(key => {
         const [file, label, url] = certificates[key];
         const logo = `<img src="assets/${file}" alt="${label}" loading="lazy">`;
-        return `<figure>${url ? `<a href="${url}" target="_blank" rel="noopener">${logo}</a>` : logo}<figcaption${key === 'angel' ? ' class="sr-only"' : ''}>${key === 'angel' ? '<a href="https://www.blauer-engel.de/uz30a" target="_blank" rel="noopener">www.blauer-engel.de/uz30a</a>' : '100 % recyclingfähig'}</figcaption></figure>`;
+        return `<figure>${url ? `<a href="${url}" target="_blank" rel="noopener">${logo}</a>` : logo}<figcaption class="sr-only">${key === 'angel' ? '<a href="https://www.blauer-engel.de/uz30a" target="_blank" rel="noopener">www.blauer-engel.de/uz30a</a>' : '100 % recyclingfähig'}</figcaption></figure>`;
       }).join('');
       return `<article class="certified-variant"><button class="variant-choice" data-variant="${i}" data-id="${p.index}" aria-label="${escapeHTML(p.name + ' · ' + v.color)} auswählen" aria-pressed="${selectedVariant(p) === v}"><img src="${v.image}" alt="${escapeHTML(v.color)}" loading="lazy"><span><strong>${escapeHTML(v.category)}</strong><small>Farbe ${escapeHTML(v.color)}</small></span></button><button class="variant-favorite" data-favorite="${p.index}" data-variant-index="${i}" aria-label="${escapeHTML(p.name + ' · ' + v.color)} merken">${svg('heart')}</button><div class="variant-certificates">${badges}</div></article>`;
     }).join('')}</div>`;
     if (type !== 'trays' || p.trays.length < 2) return baseDetail(p, type);
-    return `<section class="tray-carousel" aria-label="Passende Trays für ${escapeHTML(p.name)}"><h3>Passende Trays · ${escapeHTML(p.name)}</h3><div class="tray-carousel-track" tabindex="0" aria-label="Passende Trays – mit Pfeiltasten blättern">${p.trays.map((t, i) => `<button class="tray-tile" data-tray="${i}" data-id="${p.index}"><img src="${t.image}" alt="" loading="lazy">${escapeHTML(t.name)}</button>`).join('')}</div><nav class="tray-carousel-navigation" aria-label="Tray-Auswahl"><button data-carousel-step="-1" aria-label="Vorherige passende Trays">${arrow(-1)}</button><div class="tray-carousel-dots" role="group" aria-label="Tray-Seiten"></div><button data-carousel-step="1" aria-label="Nächste passende Trays">${arrow(1)}</button></nav></section>`;
+    return `<section class="tray-carousel" aria-label="Passende Trays für ${escapeHTML(p.name)}"><h3>Passende Trays · ${escapeHTML(p.name)}</h3><div class="tray-carousel-track" tabindex="0" aria-label="Passende Trays – mit Pfeiltasten blättern">${p.trays.map((t, i) => `<button class="tray-tile" data-tray="${i}" data-id="${p.index}"><img src="${t.image}" alt="" loading="lazy">${escapeHTML(t.name)}</button>`).join('')}</div><nav class="tray-carousel-navigation" aria-label="Tray-Auswahl"><button data-carousel-step="-1" aria-label="Vorherige passende Trays">${arrow(-1)}</button><input class="tray-carousel-progress" type="range" min="0" max="100" step="0.1" value="0" aria-label="Position der passenden Trays"><button data-carousel-step="1" aria-label="Nächste passende Trays">${arrow(1)}</button></nav></section>`;
   };
 
   const rail = document.createElement('nav');
@@ -36,14 +36,13 @@
 
   function setupCarousel(carousel) {
     const track = carousel.querySelector('.tray-carousel-track');
-    const dots = carousel.querySelector('.tray-carousel-dots');
+    const progress = carousel.querySelector('.tray-carousel-progress');
     const update = () => {
-      const step = Math.max(1, track.clientWidth);
       const end = Math.max(0, track.scrollWidth - track.clientWidth);
-      const count = Math.max(1, Math.ceil(end / step) + 1);
-      if (dots.children.length !== count) dots.innerHTML = Array.from({length:count}, (_,i)=>`<button data-carousel-page="${i}" aria-label="Tray-Seite ${i+1}" aria-current="false"></button>`).join('');
-      const page = end && track.scrollLeft >= end-2 ? count-1 : Math.round(track.scrollLeft/step);
-      [...dots.children].forEach((b,i)=>b.setAttribute('aria-current',String(i===page)));
+      progress.value = end ? track.scrollLeft / end * 100 : 0;
+      progress.disabled = end === 0;
+      progress.style.setProperty('--thumb-width', `${Math.max(24, progress.clientWidth * track.clientWidth / Math.max(1, track.scrollWidth))}px`);
+      progress.setAttribute('aria-valuetext', `${Math.round(Number(progress.value))} %`);
       carousel.querySelector('[data-carousel-step="-1"]').disabled = track.scrollLeft <= 2;
       carousel.querySelector('[data-carousel-step="1"]').disabled = track.scrollLeft >= end-2;
     };
@@ -88,11 +87,15 @@
       const badge=rail.querySelector(`[data-rail-count="${key}"]`);badge.textContent=count;badge.hidden=!count;
     });
   };
-  function move(carousel, page) {
+  function move(carousel, direction) {
     const track=carousel.querySelector('.tray-carousel-track');
-    const count=carousel.querySelector('.tray-carousel-dots').children.length;
-    track.scrollTo({left:Math.min(count-1,Math.max(0,page))*track.clientWidth,behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'});
+    track.scrollTo({left:Math.min(track.scrollWidth-track.clientWidth,Math.max(0,track.scrollLeft+direction*track.clientWidth)),behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'});
   }
+  document.addEventListener('input',event=>{
+    if(!event.target.matches('.tray-carousel-progress'))return;
+    const track=event.target.closest('.tray-carousel').querySelector('.tray-carousel-track');
+    track.scrollTo({left:(track.scrollWidth-track.clientWidth)*Number(event.target.value)/100,behavior:'instant'});
+  });
   document.addEventListener('click',event=>{
     const button=event.target.closest('button');if(!button)return;
     if(button.dataset.openSelection){
@@ -101,17 +104,14 @@
       const card=key==='contact'?sidebar.querySelector('.selection-contact'):$(`#selection-title-${key}`).closest('.selection-card');
       card.tabIndex=-1;card.scrollIntoView({behavior:'smooth',block:'nearest'});card.focus({preventScroll:true});return;
     }
-    if(button.dataset.carouselStep||button.dataset.carouselPage!==undefined){
-      const carousel=button.closest('.tray-carousel');
-      const active=carousel.querySelector('[data-carousel-page][aria-current="true"]');
-      move(carousel,button.dataset.carouselPage!==undefined?Number(button.dataset.carouselPage):Number(active.dataset.carouselPage)+Number(button.dataset.carouselStep));
+    if(button.dataset.carouselStep){
+      move(button.closest('.tray-carousel'),Number(button.dataset.carouselStep));
     }
   });
   document.addEventListener('keydown',event=>{
     if(!event.target.matches('.tray-carousel-track')||!['ArrowLeft','ArrowRight'].includes(event.key))return;
     event.preventDefault();const carousel=event.target.closest('.tray-carousel');
-    const page=Number(carousel.querySelector('[data-carousel-page][aria-current="true"]').dataset.carouselPage);
-    move(carousel,page+(event.key==='ArrowRight'?1:-1));
+    move(carousel,event.key==='ArrowRight'?1:-1);
   });
   renderProducts();
 })();

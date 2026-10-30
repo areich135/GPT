@@ -13,7 +13,7 @@ V7 ist als eigener Stand unter `versions/v7` gesichert. V8 verwendet den Stammor
 
 „Muster anfordern“ verwendet Magenta mit weißer Schrift; Hover übernimmt den bestehenden hellen Hintergrund. Das Angebot bleibt als Konturbutton. Auf-/Zuklappen erfolgt über beschriftete Buttons mit SVG-Pfeil ohne den zusätzlichen sichtbaren Text „einblenden“. `aria-expanded` und zugängliche Namen bleiben erhalten. Der weiße Zeiger folgt der Mitte des geöffneten Buttons, auch nach einer Größenänderung.
 
-Passende Trays haben eine horizontale Produktansicht, darunter klickbare Seitenpunkte mit Pfeilen links und rechts. Die Punkteanzahl passt sich der verfügbaren Breite an; Pfeiltasten und Wischen funktionieren. Der Scrollbalken ist ausgeblendet.
+Passende Trays haben eine horizontale Produktansicht, darunter einen mitwandernden Balken mit Pfeilen ganz links und rechts. Der Balken bildet die sichtbare Teilbreite und die Scrollposition ab; Ziehen, Pfeiltasten und Wischen funktionieren. Der Scrollbalken ist ausgeblendet.
 
 Beim Öffnen des Filters werden die vier Listen durch eine schmale Leiste für Angebote, Muster, Merkliste und Kontakt mit Artikelzählern angedeutet. Ein Klick klappt den Filter ein und fokussiert die betreffende Kachel. Auf kleinen Bildschirmen steht die Leiste unten rechts.
 
@@ -21,8 +21,16 @@ Beim Öffnen des Filters werden die vier Listen durch eine schmale Leiste für A
 
 - Browser bei 390, 768 und 1440 Pixeln innerhalb entsprechender Vorschau-Frames, mit offenem und geschlossenem Filter: keine horizontale Seitenüberbreite; Variantenkacheln passen in die Spalte.
 - Variantenherz übernimmt die konkrete Farbe in die Merkliste. Listenleiste versteckt/zeigt die bisherigen Kacheln; Listeninhalt bleibt erhalten. Automatisches Filtereinklappen beim Öffnen eines Bereichs geprüft.
-- Tray-Pfeile und direkte Seitenauswahl; weißer Zeiger numerisch mit der Mitte des geöffneten Tray-Buttons abgeglichen.
+- Tray-Pfeile und Positionsbalken; weißer Zeiger numerisch mit der Mitte des geöffneten Tray-Buttons abgeglichen.
 - Stellflächenrechner bleibt zunächst geschlossen, öffnet durch CTA und lässt sich schließen. Sieben vorhandene Rechenprüfungen bestanden.
 - JavaScript-Syntax und Git-Diff geprüft. Keine Pixelgleichheit oder Performance-Messung behauptet.
 
 Anfragen bleiben Clickdummy-Funktionen ohne Versand. Produktlinks und der Link zum Blauen Engel führen auf externe Seiten; Bilder, Schriften und Code werden lokal geladen.
+
+## Aktualisierung nach Nutzerkorrektur am 30.10.2026
+
+Die Punkte sind entfernt. Die Variantenkacheln sind auf etwa 150 Pixel Höhe verdichtet; die doppelte sichtbare Textzeile „100 % recyclingfähig“ entfällt, die Originalgrafik und ihr zugänglicher Alternativtext bleiben erhalten. Vorlage: image(20261030-090105).png.
+
+BP V4 erhält ausgeschriebene Anzuchtpaletten-Maße, Plug-Breite und Plug-Höhe ohne D/E, unveränderte Zellmaße A/B sowie Info-Schaltflächen an beiden CC-Werten in Tabelle und Filter. Die Erklärung beschreibt CC-Wagen und CC-Lage ohne neue Leistungs- oder Kapazitätsangaben. Die ausblendbaren Listen haben dieselbe schmale Leiste wie bei den Rundtöpfen. Aushebeplatte bleibt als Bereich erhalten; bei mehreren zugeordneten Produkten verwendet er dieselbe Balkennavigation. Die aktuell hinterlegten BP-Artikel haben maximal eine zugeordnete Aushebeplatte, daher erscheint dort keine unnötige Navigation. Vorlage: image(20261030-090340).png.
+
+Geprüft: Maßtexte, Info-Dialog, Ein-/Ausklappen der BP-Listenleiste; schmale Ansichten bei 390 und 768 Pixeln ohne Seitenüberbreite. Rundtöpfe: kompakte Kacheln, keine Punkte, äußere Pfeile und mitwandernder Balken.
