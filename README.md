@@ -2,12 +2,12 @@
 
 Die Kopfzeile führt zu zwei Produktbereichen:
 
-- **Rundtöpfe / VCG:** V7 mit funktionierendem Stellflächenrechner im Modal; V1–V6 bleiben über den Versionsumschalter erreichbar.
+- **Rundtöpfe / VCG:** V8 mit funktionierendem Stellflächenrechner im Modal; V1–V7 bleiben über den Versionsumschalter erreichbar.
 - **Trays / Anzuchtpaletten / BP:** V1 mit 20 Artikeln aus der TEKU-Produktseite; Plug-D/E zuerst, anschließend Zellvolumen und Pflanzenzahl. Tray- und Zellmaße sind separat benannt.
 
 Beide aktuellen Entwürfe enthalten die rechten Listen für Muster, Angebote und Merkliste. Anfragen werden nur simuliert. Der VCG-Stellflächenrechner berechnet die Stückzahl für Viereck- und Dreieckverband mit frei änderbarem Durchmesser.
 
-- [Rundtöpfe V7 öffnen](https://areich135.github.io/GPT/?version=v7)
+- [Rundtöpfe V8 öffnen](https://areich135.github.io/GPT/?version=v8)
 - [Anzuchtpaletten BP V1 öffnen](https://areich135.github.io/GPT/bp/?version=v1)
 - [Quellen, Datenzuordnung und tatsächliche Prüfungen](docs/sources-2026-10-22.md)
 

@@ -8,8 +8,8 @@
     sample:'<path d="m12 2 9 5v10l-9 5-9-5V7zM3 7l9 5 9-5M12 12v10M7.5 4.5l9 5"/>'
   };
   const listIcon = type => type==='favorites' ? svg('heart') : `<svg viewBox="0 0 24 24" aria-hidden="true">${icons[type]}</svg>`;
-  const snapshot = id => {
-    const p = productById(id), variant = p && selectedVariant(p);
+  const snapshot = (id, variantIndex) => {
+    const p = productById(id), variant = p && (variantIndex === undefined ? selectedVariant(p) : p.variants[Number(variantIndex)]);
     return variant ? {key:`${p.index}:${p.variants.indexOf(variant)}`,id:p.index,name:p.name,color:variant.color,image:variant.image} : null;
   };
   const added = (type,item) => !!item && lists[type].has(item.key);
@@ -75,7 +75,7 @@
     if(b.dataset.listClear){handled();lists[b.dataset.listClear].clear();refresh();return}
     if(b.dataset.listCheckout){handled();checkout(b.dataset.listCheckout);return}
     if(b.hasAttribute('data-save-list')){handled();const content=JSON.stringify([...lists.favorites.values()],null,2);const url=URL.createObjectURL(new Blob([content],{type:'application/json'}));const link=document.createElement('a');link.href=url;link.download='TEKU-Merkliste.json';document.body.append(link);link.click();link.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);return}
-    if(b.dataset.favorite!==undefined){handled();const item=snapshot(b.dataset.favorite);if(added('favorites',item)){lists.favorites.delete(item.key);refresh();toast('Artikel aus der Merkliste entfernt.')}else add('favorites',item);return}
+    if(b.dataset.favorite!==undefined){handled();const item=snapshot(b.dataset.favorite,b.dataset.variantIndex);if(added('favorites',item)){lists.favorites.delete(item.key);refresh();toast('Artikel aus der Merkliste entfernt.')}else add('favorites',item);return}
     if(b.dataset.request){handled();add(b.dataset.request,snapshot(b.dataset.id));if($('#modal').open)closeModal();return}
     if(b.dataset.action==='favorites'){handled();showSelection('favorites');return}
   },true);
