@@ -23,3 +23,5 @@
 .bp-review .bp-tray-measure-values strong small{font-size:8px}
 @media(max-width:700px){.bp-review .selection-rail{top:auto;bottom:12px;right:12px;flex-direction:row;border-radius:10px;padding:3px 5px;gap:5px}.bp-review .selection-rail button{min-width:46px;min-height:43px}}
 @container(max-width:480px){.bp-review .tray-carousel-track .tray-tile{flex-basis:calc((100% - 12px)/2)}}
+
+.bp-review .bp-dimension-caption{display:block;font-size:9px;margin:0 0 5px;color:var(--muted);white-space:nowrap}
