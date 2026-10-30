@@ -28,13 +28,13 @@
       this.form.addEventListener('change',event=>{if(event.target.name!=='areaUnit')return;const next=event.target.value;for(const key of ['length','width']){const value=E.parseDecimal(this.field(key).value);if(Number.isFinite(value))this.field(key).value=String(Number(E.convert(value,this.areaUnit,next).toPrecision(15))).replace('.',',');}this.areaUnit=next;this.update();});
       this.form.addEventListener('submit',event=>{event.preventDefault();if(this.update(true)&&matchMedia('(max-width:760px)').matches)this.showPanel('results');});
       this.form.addEventListener('reset',event=>{event.preventDefault();for(const [key,value] of Object.entries({...this.initial,gap:0,length:1,width:1,areaUnit:'m'})){if(value!==null&&this.field(key))this.field(key).value=typeof value==='number'?String(value).replace('.',','):value;}this.areaUnit='m';this.manualArrangement=false;this.update();});
-      this.shadowRoot.addEventListener('click',event=>{const button=event.target.closest('button');if(!button)return;if(button.dataset.panel){this.showPanel(button.dataset.panel);return;}if(button.dataset.arrangement){this.manualArrangement=true;this.arrangement=button.dataset.arrangement;this.update();return;}if(button.dataset.method){const open=button.dataset.method==='open';this.shadowRoot.querySelector('.calculator-view').hidden=open;this.shadowRoot.querySelector('.method-view').hidden=!open;this.shadowRoot.querySelector(`[data-method="${open?'back':'open'}"]`).focus();}});
+      this.shadowRoot.addEventListener('click',event=>{const button=event.target.closest('button');if(!button)return;if(button.dataset.panel){this.showPanel(button.dataset.panel);return;}if(button.dataset.arrangement){this.manualArrangement=true;const changed=this.arrangement!==button.dataset.arrangement;this.arrangement=button.dataset.arrangement;this.update(false,changed);return;}if(button.dataset.method){const open=button.dataset.method==='open';this.shadowRoot.querySelector('.calculator-view').hidden=open;this.shadowRoot.querySelector('.method-view').hidden=!open;this.shadowRoot.querySelector(`[data-method="${open?'back':'open'}"]`).focus();}});
       this.update();
     }
     field(name){return this.form.elements.namedItem(name);}
     focusInput(){this.field('itemLength').focus();}
     showPanel(panel){if(panel==='results'&&!this.update(true))return;this.setAttribute('panel',panel);this.shadowRoot.querySelectorAll('[data-panel]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.panel===panel)));this.shadowRoot.querySelector(`[data-panel="${panel}"]`).focus();}
-    update(focusError=false){
+    update(focusError=false,animate=false){
       const root=this.shadowRoot,values={};for(const key of ['itemLength','itemWidth','gap','length','width'])values[key]=E.parseDecimal(this.field(key).value);values.length*=E.units[this.areaUnit];values.width*=E.units[this.areaUnit];values.plants=this.initial.plants===null?null:E.parseDecimal(this.field('plants').value);
       root.querySelectorAll('[data-area-unit]').forEach(e=>e.textContent=this.areaUnit);
       root.querySelectorAll('input').forEach(i=>i.removeAttribute('aria-invalid'));
@@ -43,15 +43,16 @@
       const best=meter[meter.best];root.querySelector('#per-meter').innerHTML=`<strong>${n(best.count,0)}</strong> ${esc(this.label)}${best.plants===null?'':` · ${n(best.plants,0)} Pflanzen`}`;
       root.querySelector('#area-label').textContent=`${n(values.length/100,6)} × ${n(values.width/100,6)} m = ${n(result.area,6)} m² · Abstand ${n(values.gap)} cm`;
       for(const key of ['normal','rotated']){const plan=result[key],button=root.querySelector(`[data-arrangement="${key}"]`);root.querySelector(`[data-count="${key}"]`).textContent=n(plan.count,0);root.querySelector(`[data-plants="${key}"]`).textContent=plan.plants===null?'':`${n(plan.plants,0)} Pflanzen`;button.setAttribute('aria-pressed',String(this.arrangement===key));button.querySelector('.show').textContent=this.arrangement===key?'Anordnung wird angezeigt':'Anordnung anzeigen';}
-      this.draw(result[this.arrangement],values);root.querySelector('#announcement').textContent=`${n(result[result.best].count,0)} ${this.label} passen auf die gewählte Fläche.`;return true;
+      this.draw(result[this.arrangement],values,animate);root.querySelector('#announcement').textContent=`${n(result[result.best].count,0)} ${this.label} passen auf die gewählte Fläche.`;return true;
     }
-    draw(plan,values){
+    draw(plan,values,animate=false){
       const root=this.shadowRoot,stage=root.querySelector('#diagram'),caption=root.querySelector('#diagram-caption');
       if(!plan.count){stage.innerHTML='<p class="empty">Die Stellfläche ist für diese Ausrichtung zu klein.</p>';caption.textContent=`0 ${this.label}`;return;}
       const rows=Math.min(plan.rows,16),columns=Math.min(plan.columns,20),excerpt=rows*columns<plan.count;
-      const L=excerpt?columns*(plan.itemLength+values.gap)-values.gap:values.length,W=excerpt?rows*(plan.itemWidth+values.gap)-values.gap:values.width,pad=Math.max(L,W)*.025;
-      let cells='';for(let y=0;y<rows;y++)for(let x=0;x<columns;x++)cells+=`<rect x="${x*(plan.itemLength+values.gap)}" y="${y*(plan.itemWidth+values.gap)}" width="${plan.itemLength}" height="${plan.itemWidth}" fill="white" stroke="var(--sc-green)" stroke-width="1" vector-effect="non-scaling-stroke"/>`;
-      stage.innerHTML=`<svg viewBox="${-pad} ${-pad} ${L+pad*2} ${W+pad*2}" role="img" aria-label="${n(plan.count,0)} ${esc(this.label)}${excerpt?' · Ausschnitt':''}"><rect width="${L}" height="${W}" fill="white" stroke="var(--sc-muted)" vector-effect="non-scaling-stroke" ${excerpt?'stroke-dasharray="4 3"':''}/>${cells}</svg>`;
+      const L=excerpt?columns*(plan.itemLength+values.gap)-values.gap:values.length,W=excerpt?rows*(plan.itemWidth+values.gap)-values.gap:values.width;
+      const items=[];
+      for(let y=0;y<rows;y++)for(let x=0;x<columns;x++)items.push({key:`${y}:${x}`,x:x*(plan.itemLength+values.gap)+plan.itemLength/2,y:y*(plan.itemWidth+values.gap)+plan.itemWidth/2,w:values.itemLength,h:values.itemWidth,angle:plan.rotated?90:0});
+      window.TEKUDiagramMotion.draw(stage,{length:L,width:W,items,excerpt,label:`${n(plan.count,0)} ${this.label}${excerpt?' · Ausschnitt':''}`},animate);
       caption.innerHTML=`<strong>${plan.rotated?'Um 90° gedreht':'Längs ausgerichtet'}</strong>${n(plan.rows,0)} Reihen · ${n(plan.columns,0)} je Reihe<small>${n(plan.itemLength)} × ${n(plan.itemWidth)} cm je Palette<br>${excerpt?`Ausschnitt: ${rows*columns} von ${n(plan.count,0)} Paletten.`:'Draufsicht der gesamten Stellfläche.'}</small>`;
     }
   }

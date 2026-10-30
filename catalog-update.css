@@ -1,0 +1,15 @@
+/* The same catalog gap separates filter, variants and compact list actions. */
+@media(min-width:701px){
+  .catalog-xd .catalog:not(.filters-collapsed){grid-template-columns:var(--xd-filter) minmax(0,1fr) 44px}
+  .catalog-xd .selection-rail-host{grid-column:3;grid-row:1;align-self:stretch;min-width:0}
+  .catalog-xd .selection-rail-host .selection-rail{position:sticky;top:20px;right:auto;bottom:auto;border-radius:10px;margin:0;box-shadow:none}
+}
+.selection-rail-host[hidden]{display:none}
+@media(max-width:700px){.selection-rail-host.outside-variants .selection-rail{visibility:hidden}}
+.rounds-v8 .tray-carousel-dots{display:flex;align-items:center;justify-content:center;gap:4px}
+.rounds-v8 .tray-carousel-dots button{display:grid;place-items:center;width:24px;height:32px;padding:0}
+.rounds-v8 .tray-carousel-dots button::before{content:"";width:7px;height:7px;border:1px solid var(--navy);border-radius:50%;background:white}
+.rounds-v8 .tray-carousel-dots button[aria-current="true"]::before{background:var(--navy)}
+.rounds-v8 .tray-carousel-dots button:focus-visible{outline:2px solid var(--pink);outline-offset:1px;border-radius:4px}
+/* Dot positions can lie between tiles when several trays are visible. */
+.rounds-v8 .tray-carousel-track{scroll-snap-type:none}

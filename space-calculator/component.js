@@ -80,8 +80,9 @@
         }
         const button = event.target.closest('[data-arrangement]');
         if (!button) return;
+        const changed=this.arrangement!==button.dataset.arrangement;
         this.arrangement = button.dataset.arrangement;
-        this.update();
+        this.update(false,changed);
       });
       this.update();
     }
@@ -111,7 +112,7 @@
       this[name] = next;
       this.update();
     }
-    update(focusError = false) {
+    update(focusError = false, animate = false) {
       const root = this.shadowRoot;
       // Read tracked units: select's input event precedes change/conversion.
       const input = {diameter: E.parseDecimal(this.field('diameter').value),gap: E.parseDecimal(this.field('gap').value) * E.units[this.gapUnit],length: E.parseDecimal(this.field('length').value) * E.units[this.areaUnit],width: E.parseDecimal(this.field('width').value) * E.units[this.areaUnit]};
@@ -140,22 +141,28 @@
         button.setAttribute('aria-pressed',String(selected));button.querySelector('.show').textContent=selected?'Anordnung wird angezeigt':'Anordnung anzeigen';
       }
       root.querySelector('#area-label').textContent=`${number(input.length/100,6)} × ${number(input.width/100,6)} m = ${number(result.area,6)} m² · Ø ${number(input.diameter)} cm · Abstand ${number(input.gap,6)} cm`;
-      this.draw(result[this.arrangement],input);
+      this.draw(result[this.arrangement],input,animate);
       clearTimeout(this.announceTimer);
       this.announceTimer=setTimeout(() => {root.querySelector('#announcement').textContent=`Ihre Fläche: ${number(result.square.count,0)} Töpfe im Viereckverband, ${number(result.triangle.count,0)} Töpfe im Dreieckverband.`;},400);
       this.dispatchEvent(new CustomEvent('teku-calculation',{detail:{input,result},bubbles:true,composed:true}));
       return true;
     }
     disconnectedCallback() {clearTimeout(this.announceTimer);}
-    draw(plan,input) {
+    draw(plan,input,animate=false) {
       const stage=this.shadowRoot.querySelector('#diagram'),caption=this.shadowRoot.querySelector('#diagram-caption');
       const title=this.arrangement==='triangle'?'Dreieckverband':'Viereckverband';
       if(!plan.count){stage.innerHTML='<p class="empty">Für diese Anordnung ist die Stellfläche zu klein.</p>';caption.innerHTML=`<strong>${title}</strong>0 Töpfe passen auf die angegebene Fläche.`;return;}
       const points=E.positions(plan,input.diameter),excerpt=points.length<plan.count;
       const length=excerpt?Math.max(...points.map(p=>p.x+plan.pitch/2)):input.length;
       const width=excerpt?Math.max(...points.map(p=>p.y+plan.pitch/2)):input.width;
-      const pad=Math.max(length,width)*.025;
-      stage.innerHTML=`<svg viewBox="${-pad} ${-pad} ${length+pad*2} ${width+pad*2}" role="img" aria-label="${title}: ${excerpt?'Ausschnitt mit '+points.length+' von ':''}${plan.count} Töpfen"><rect width="${length}" height="${width}" fill="white" stroke="var(--sc-muted)" stroke-width="1" vector-effect="non-scaling-stroke" ${excerpt?'stroke-dasharray="4 3"':''}/>${points.map(p=>`<circle cx="${p.x}" cy="${p.y}" r="${p.radius}" fill="white" stroke="var(--sc-green)" stroke-width="1.2" vector-effect="non-scaling-stroke"/>`).join('')}</svg>`;
+      let row=0,col=0;
+      const items=points.map(p=>{
+        const key=`${row}:${col}`;
+        col++;
+        if(col>=Math.min(row%2?plan.oddColumns:plan.columns,24)){row++;col=0;}
+        return {...p,key};
+      });
+      window.TEKUDiagramMotion.draw(stage,{length,width,items,excerpt,label:`${title}: ${excerpt?'Ausschnitt mit '+points.length+' von ':''}${plan.count} Töpfen`},animate);
       const rowInfo=plan.columns===plan.oddColumns?`${number(plan.columns,0)} Töpfe je Reihe`:`${number(plan.columns,0)} / ${number(plan.oddColumns,0)} Töpfe im Wechsel`;
       caption.innerHTML=`<strong>${title}</strong>${number(plan.rows,0)} Reihen · ${rowInfo}<br>${plan.rotated?'Reihen entlang der Breite':'Reihen entlang der Länge'}<small>${excerpt?`Ausschnitt: ${points.length} von ${number(plan.count,0)} Töpfen. Gestrichelter Rahmen = Ausschnittsgrenze.`:'Draufsicht der gesamten Stellfläche.'} Kreise zeigen die Topfaußenmaße.</small>`;
     }

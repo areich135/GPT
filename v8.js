@@ -16,8 +16,8 @@
       }).join('');
       return `<article class="certified-variant"><button class="variant-choice" data-variant="${i}" data-id="${p.index}" aria-label="${escapeHTML(p.name + ' · ' + v.color)} auswählen" aria-pressed="${selectedVariant(p) === v}"><img src="${v.image}" alt="${escapeHTML(v.color)}" loading="lazy"><span><strong>${escapeHTML(v.category)}</strong><small>Farbe ${escapeHTML(v.color)}</small></span></button><button class="variant-favorite" data-favorite="${p.index}" data-variant-index="${i}" aria-label="${escapeHTML(p.name + ' · ' + v.color)} merken">${svg('heart')}</button><div class="variant-certificates">${badges}</div></article>`;
     }).join('')}</div>`;
-    if (type !== 'trays' || p.trays.length < 2) return baseDetail(p, type);
-    return `<section class="tray-carousel" aria-label="Passende Trays für ${escapeHTML(p.name)}"><h3>Passende Trays · ${escapeHTML(p.name)}</h3><div class="tray-carousel-track" tabindex="0" aria-label="Passende Trays – mit Pfeiltasten blättern">${p.trays.map((t, i) => `<button class="tray-tile" data-tray="${i}" data-id="${p.index}"><img src="${t.image}" alt="" loading="lazy">${escapeHTML(t.name)}</button>`).join('')}</div><nav class="tray-carousel-navigation" aria-label="Tray-Auswahl"><button data-carousel-step="-1" aria-label="Vorherige passende Trays">${arrow(-1)}</button><input class="tray-carousel-progress" type="range" min="0" max="100" step="0.1" value="0" aria-label="Position der passenden Trays"><button data-carousel-step="1" aria-label="Nächste passende Trays">${arrow(1)}</button></nav></section>`;
+    if (type !== 'trays' || !p.trays.length) return baseDetail(p, type);
+    return `<section class="tray-carousel" aria-label="Passende Trays für ${escapeHTML(p.name)}"><h3>Passende Trays · ${escapeHTML(p.name)}</h3><div class="tray-carousel-track" tabindex="0" aria-label="Passende Trays – mit Pfeiltasten blättern">${p.trays.map((t, i) => `<button class="tray-tile" data-tray="${i}" data-id="${p.index}"><img src="${t.image}" alt="" loading="lazy">${escapeHTML(t.name)}</button>`).join('')}</div><nav class="tray-carousel-navigation" aria-label="Tray-Auswahl"><button data-carousel-step="-1" aria-label="Vorherige passende Trays">${arrow(-1)}</button><div class="tray-carousel-dots">${Array.from({length:Math.min(5,p.trays.length)},(_,i)=>`<button data-carousel-dot="${i}" aria-label="Tray-Gruppe ${i+1} anzeigen" aria-current="${i===0}"></button>`).join('')}</div><button data-carousel-step="1" aria-label="Nächste passende Trays">${arrow(1)}</button></nav></section>`;
   };
 
   const rail = document.createElement('nav');
@@ -36,13 +36,18 @@
 
   function setupCarousel(carousel) {
     const track = carousel.querySelector('.tray-carousel-track');
-    const progress = carousel.querySelector('.tray-carousel-progress');
+    const dots = [...carousel.querySelectorAll('[data-carousel-dot]')];
     const update = () => {
       const end = Math.max(0, track.scrollWidth - track.clientWidth);
-      progress.value = end ? track.scrollLeft / end * 100 : 0;
-      progress.disabled = end === 0;
-      progress.style.setProperty('--thumb-width', `${Math.max(24, progress.clientWidth * track.clientWidth / Math.max(1, track.scrollWidth))}px`);
-      progress.setAttribute('aria-valuetext', `${Math.round(Number(progress.value))} %`);
+      const total=track.children.length;
+      const active = end ? Math.round(track.scrollLeft / end * (total-1)) : 0;
+      const start=Math.max(0,Math.min(total-dots.length,active-2));
+      dots.forEach((dot,i)=>{
+        const target=start+i;
+        dot.dataset.carouselDot=target;
+        dot.setAttribute('aria-label',`Tray-Position ${target+1} von ${total} anzeigen`);
+        dot.setAttribute('aria-current',String(target===active));
+      });
       carousel.querySelector('[data-carousel-step="-1"]').disabled = track.scrollLeft <= 2;
       carousel.querySelector('[data-carousel-step="1"]').disabled = track.scrollLeft >= end-2;
     };
@@ -89,13 +94,8 @@
   };
   function move(carousel, direction) {
     const track=carousel.querySelector('.tray-carousel-track');
-    track.scrollTo({left:Math.min(track.scrollWidth-track.clientWidth,Math.max(0,track.scrollLeft+direction*track.clientWidth)),behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'});
+    track.scrollTo({left:Math.min(track.scrollWidth-track.clientWidth,Math.max(0,track.scrollLeft+direction*(track.scrollWidth-track.clientWidth)/Math.max(1,track.children.length-1))),behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'});
   }
-  document.addEventListener('input',event=>{
-    if(!event.target.matches('.tray-carousel-progress'))return;
-    const track=event.target.closest('.tray-carousel').querySelector('.tray-carousel-track');
-    track.scrollTo({left:(track.scrollWidth-track.clientWidth)*Number(event.target.value)/100,behavior:'instant'});
-  });
   document.addEventListener('click',event=>{
     const button=event.target.closest('button');if(!button)return;
     if(button.dataset.openSelection){
@@ -103,6 +103,12 @@
       setFilterCollapsed(true);
       const card=key==='contact'?sidebar.querySelector('.selection-contact'):$(`#selection-title-${key}`).closest('.selection-card');
       card.tabIndex=-1;card.scrollIntoView({behavior:'smooth',block:'nearest'});card.focus({preventScroll:true});return;
+    }
+    if(button.dataset.carouselDot!==undefined){
+      const carousel=button.closest('.tray-carousel'),track=carousel.querySelector('.tray-carousel-track');
+      const count=track.children.length;
+      // A moving window of five dots covers every position, even for long lists.
+      track.scrollTo({left:(track.scrollWidth-track.clientWidth)*Number(button.dataset.carouselDot)/Math.max(1,count-1),behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'});
     }
     if(button.dataset.carouselStep){
       move(button.closest('.tray-carousel'),Number(button.dataset.carouselStep));

@@ -2,14 +2,24 @@
 
 Die Kopfzeile führt zu zwei Produktbereichen:
 
-- **Rundtöpfe / VCG:** V8 mit funktionierendem Stellflächenrechner im Modal; V1–V7 bleiben über den Versionsumschalter erreichbar.
-- **Trays / Anzuchtpaletten / BP:** V1 mit 20 Artikeln aus der TEKU-Produktseite; Plug-D/E zuerst, anschließend Zellvolumen und Pflanzenzahl. Tray- und Zellmaße sind separat benannt.
+- **Rundtöpfe / VCG:** V9 mit animiertem Stellflächenrechner im Modal; V1–V8 bleiben über den Versionsumschalter erreichbar.
+- **Trays / Anzuchtpaletten / BP:** V5 mit 20 Artikeln, eigenem Rechteckrechner und animiertem Ausrichtungswechsel; V1–V4 bleiben erreichbar. Plug-, Tray- und Zellmaße sind separat benannt.
 
 Beide aktuellen Entwürfe enthalten die rechten Listen für Muster, Angebote und Merkliste. Anfragen werden nur simuliert. Der VCG-Stellflächenrechner berechnet die Stückzahl für Viereck- und Dreieckverband mit frei änderbarem Durchmesser.
 
-- [Rundtöpfe V8 öffnen](https://areich135.github.io/GPT/?version=v8)
-- [Anzuchtpaletten BP V1 öffnen](https://areich135.github.io/GPT/bp/?version=v1)
+- [Rundtöpfe V9 öffnen](https://areich135.github.io/GPT/?version=v9)
+- [Anzuchtpaletten BP V5 öffnen](https://areich135.github.io/GPT/bp/?version=v5)
 - [Quellen, Datenzuordnung und tatsächliche Prüfungen](docs/sources-2026-10-22.md)
+
+## Changelog
+
+### 30.10.2026 · Rundtöpfe V9 / BP V5
+
+- „Weitere technische Daten“ heißt in beiden Bereichen „Technische Daten“.
+- Stellflächenrechner: Wechsel der runden Verbände bzw. der BP-Ausrichtungen in einer Sekunde animiert; reduzierte Bewegung wird berücksichtigt. Rechenlogik und CTA zum Öffnen bleiben erhalten.
+- Kompakte Listenleiste bei offenem Filter: neben den Varianten, mit demselben Rasterabstand und Sticky-Begrenzung auf den Variantenbereich.
+- Rundtöpfe „Passende Trays“: mittige Pfeile und ein bis fünf mitwandernde Punkte; auch längere Listen sind vollständig erreichbar.
+- VCG V8 und BP V4 samt Laufzeitdateien und Assets vor der Änderung als eigene Archivstände gesichert.
 
 ## Stellflächenrechner V7
 

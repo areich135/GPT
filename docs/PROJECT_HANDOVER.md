@@ -1,7 +1,7 @@
 # TEKU Website – verbindliche Übergabe für die Clickdummys
 
-**Dokumentrevision:** 2 · **Stand:** 30.10.2026  
-**Fachlich geprüfte Codebasis:** a503521ee3f13292b05c91ee3667e0d587c467f5  
+**Dokumentrevision:** 3 · **Stand:** 30.10.2026
+**Ausgangsbasis dieser Änderung:** e6c30d5; aktuelle Änderungen siehe README-Changelog
 **Repository:** https://github.com/areich135/GPT · **Arbeitsbranch:** main
 
 Diese Übergabe soll einen neuen Chat arbeitsfähig machen, ohne den gesamten alten Verlauf zu laden. Sie beschreibt den freigegebenen Stand, die bewussten Unterschiede zwischen den Produktbereichen und die Grenzen des Dummys. Vor jeder Aufgabe den aktuellen Remote-Stand prüfen: Eine im ChatGPT-Projekt hochgeladene Kopie kann älter sein als die Datei im Repository.
@@ -35,17 +35,17 @@ Keine erfundenen Produktdaten, Patenttexte, Siegel, Bilder, Verkaufsargumente od
 
 | Bereich | Aktueller Stand | Aktuelle Dateien | Öffentlicher Einstieg |
 |---|---|---|---|
-| Rundtöpfe, Serie VCG | V8 | Repository-Stamm | https://areich135.github.io/GPT/?version=v8 |
-| Anzuchtpaletten, Serie BP | V4 | bp/ | https://areich135.github.io/GPT/bp/?version=v4 |
+| Rundtöpfe, Serie VCG | V9 | Repository-Stamm | https://areich135.github.io/GPT/?version=v9 |
+| Anzuchtpaletten, Serie BP | V5 | bp/ | https://areich135.github.io/GPT/bp/?version=v5 |
 | Eigenständige ST-/GP-Tray-Seite | Noch nicht umgesetzt | Keine eigene aktuelle Produktseite | Nicht als fertig behaupten |
 
 Die Kategorie im Umschalter heißt „Trays / Anzuchtpaletten“. Ihr aktuell umgesetztes Produktbeispiel ist BP. Die Nutzerbegriffe Tray und Anzuchtpalette wurden im Gespräch teilweise vermischt: Für die aktuelle BP-Seite ausdrücklich „Anzuchtpalette“ verwenden. ST-/GP-Trays sind ein späterer eigener Auftrag.
 
-Frühere Rundtopf-Stände V1–V7 liegen unter versions/v1/ bis versions/v7/. Frühere BP-Stände V1–V3 liegen unter bp/versions/. Die aktuellen Stände liegen gerade nicht unter versions/v8/ oder bp/versions/v4/. Die Zuordnung steuert version-switch.js.
+Frühere Rundtopf-Stände V1–V8 liegen unter versions/v1/ bis versions/v8/. Frühere BP-Stände V1–V4 liegen unter bp/versions/. Die aktuellen Stände liegen gerade nicht unter versions/v9/ oder bp/versions/v5/. Die Zuordnung steuert version-switch.js.
 
 **Versionsregeln:**
 
-- „V8 aktualisieren“, „nur das anpassen“: die genannte aktuelle Version ändern; keine zusätzliche Version erfinden.
+- „V9 aktualisieren“, „nur das anpassen“: die genannte aktuelle Version ändern; keine zusätzliche Version erfinden.
 - „Neue Version erstellen“: den bisherigen aktuellen Stand zuerst funktionsfähig sichern, danach neue Zuordnung und Auswahl ergänzen.
 - Der nächste freie Versionsname muss aus dem tatsächlichen Umschalter abgeleitet werden, nicht aus dieser Übergabe geraten werden.
 - Frühere Stände einschließlich ihrer eigenen Assets und Skripte nicht nachträglich mit neuen Produktfunktionen überschreiben.
@@ -54,10 +54,10 @@ Frühere Rundtopf-Stände V1–V7 liegen unter versions/v1/ bis versions/v7/. Fr
 
 ## 3. Unbedingt erhalten: Entscheidungen und bewusste Unterschiede
 
-| Thema | Rundtöpfe V8 | Anzuchtpaletten BP V4 |
+| Thema | Rundtöpfe V9 | Anzuchtpaletten BP V5 |
 |---|---|---|
 | Erste Werte in der Artikelzeile | Durchmesser, Höhe, Volumen | Länge, Breite, Höhe der Anzuchtpalette mit Maßskizze |
-| Erster Aufklappbereich | „Weitere technische Daten“ | „Weitere technische Daten“ |
+| Erster Aufklappbereich | „Technische Daten“ | „Technische Daten“ |
 | Farbausführungen | „Varianten“ | Aktuell weiterhin „Details“ |
 | Dritter Bereich | „Passende Trays“ | „Aushebeplatte“; ohne Zuordnung deaktiviert |
 | Öffnen/Schließen | SVG-Pfeil ohne sichtbares „einblenden“ | Bisherige Ein-/Ausblendtexte erhalten |
@@ -65,7 +65,7 @@ Frühere Rundtopf-Stände V1–V7 liegen unter versions/v1/ bis versions/v7/. Fr
 | Anfrage-CTA | Muster primär magenta/weiß, Angebot Kontur | Bisher beide Konturbuttons; kein ausdrücklicher Auftrag zur Angleichung erfolgt |
 | Kompakte rechte Listenleiste bei offenem Filter | Umgesetzt | Umgesetzt |
 | Rechner | Kreisgeometrie | Rechteckgeometrie, inkl. Pflanzenzahl |
-| Passende Produkte | Äußere Pfeile + Positionsbalken | Gleiche Navigation für mehrere Aushebeplatten vorbereitet; derzeit höchstens eine je Artikel |
+| Passende Produkte | Mittige Pfeile + 1–5 mitwandernde Punkte | Äußere Pfeile + Positionsbalken für mehrere Aushebeplatten vorbereitet; derzeit höchstens eine je Artikel |
 
 Diese Unterschiede sind Bestandsbeschreibung, keine automatisch auszuführende To-do-Liste. Wenn der Nutzer künftig ausdrücklich Einheitlichkeit verlangt, den dann beauftragten Umfang anpassen und die Tabelle aktualisieren.
 
@@ -146,11 +146,11 @@ Die drei Listen werden zentral über v3.js verwaltet. Ein Eintrag bezieht sich a
 
 Zu erhalten sind: Hinzufügen, Entfernen, Übernahme aus der Merkliste in Muster/Angebote, jeweilige Zähler und die bisherige Anfragezusammenfassung. VCG-Variantenherzen müssen genau die angeklickte Farbvariante speichern. Ein anderes Variantenherz darf nicht die aktuell im Hero ausgewählte Farbe übernehmen.
 
-Die schmale Leiste zeigt Angebote, Muster, Merkliste, Kontakt und vorhandene Artikelzähler. Sie ist ein Zugang zu denselben Kacheln. Desktop rechts am Rand, mobil unten rechts; Bedienelemente darunter nicht verdecken.
+Die schmale Leiste zeigt Angebote, Muster, Merkliste, Kontakt und vorhandene Artikelzähler. Sie ist ein Zugang zu denselben Kacheln. Desktop: eigene 44-px-Spalte rechts neben den Varianten, gleicher --xd-gap wie links; oberer Rand bündig mit erster Variante, innerhalb des Katalogs sticky bei 20 px. Nie über den Kataloganfang in den Hero wandern. Mobil unten rechts und nur bei sichtbarem Variantenbereich.
 
 Die Listen gelten für die laufende Seite/Sitzung. Dauerhafte Speicherung nach Reload, Synchronisierung zwischen Produktbereichen und ein echter Kundenwarenkorb sind nicht zugesagt. „Merkliste speichern“ bietet den bestehenden Export; daraus kein Backend ableiten.
 
-## 6. Rundtöpfe V8: genaue fachliche Vorgaben
+## 6. Rundtöpfe V9: genaue fachliche Vorgaben
 
 ### 6.1 Daten und Artikelzeile
 
@@ -176,7 +176,7 @@ Die Kacheln sollen kompakt bleiben. Aktuelle Desktop-CSS-Basis: min-height 152 p
 
 Farbfilter oder Variantenwahl verwenden vorhandene Farbfotos. Boden-/Randdetails nicht künstlich umfarben. Fehlende Farbfotos nicht durch erfundene Assets ersetzen.
 
-### 6.3 Weitere technische Daten
+### 6.3 Technische Daten
 
 Unterbereiche: Maße, Verpackungsdaten, Stellflächenrechner.
 
@@ -190,9 +190,9 @@ Vorhandene Fußnoten wie D/K stehen im geschlossenen Artikelbereich unter der Ze
 
 Nur p.trays des ausgewählten Artikels verwenden. Die Kacheln öffnen die bisherige zugehörige Produktansicht. Keine neue Kompatibilität behaupten.
 
-Die zuletzt freigegebene Navigation hat ausdrücklich keine Punkte: Pfeil ganz links, Pfeil ganz rechts, dazwischen ein dünner Positionsbalken wie in der Hauptgalerie. Sein Griff wandert mit und bildet die sichtbare Teilbreite ab. Pfeile, Schieber, horizontales Wischen und Pfeiltasten müssen zusammenpassen. An Anfang/Ende die entsprechenden Pfeile deaktivieren. Ein passendes Produkt benötigt keine künstliche Navigation.
+Die aktuelle Navigation hat mittige Pfeile und `min(5, Anzahl zugeordneter Trays)` Punkte; bei einem Tray genau einen Punkt und deaktivierte Pfeile. Mehr als fünf Positionen: Das sichtbare Punktfenster wandert mit der Auswahl, bis zur letzten Position. Die Punkte und Pfeile decken den gesamten Scrollbereich ab; horizontales Wischen und Pfeiltasten aktualisieren den aktiven Punkt. BP-Aushebeplatten behalten ihre bisherige Navigation.
 
-## 7. Anzuchtpaletten BP V4: Fachbegriffe und Datenzuordnung
+## 7. Anzuchtpaletten BP V5: Fachbegriffe und Datenzuordnung
 
 bp/data.js enthält 20 Originalartikel. Außenmaße, Zellen und Plugs sind unterschiedliche Datenbereiche. Ein Plug ist der Jungpflanzen-/Substratballen, nicht das Loch der Palette. Größere Plug-Höhe gegenüber Zellenmaßen nicht als vermeintlichen Datenfehler „korrigieren“.
 
@@ -297,7 +297,11 @@ Kontrollwerte für BP 2850-2,5 D/104 T:
 
 Die wiederverwendbare Komponente unterstützt product-kind „Trays“ und kann ohne Pflanzenzahl betrieben werden. Das bedeutet nicht, dass eine eigenständige ST-/GP-Seite bereits existiert. Bei deren späterem Aufbau Maße und Zuordnungen erst artikelbezogen beschaffen.
 
-### 8.4 Komponentenabhängigkeiten
+### 8.4 Animation beim Wechsel
+
+Nur neue aktuelle Seiten laden `space-calculator/diagram-motion.js` vor den Komponenten. Expliziter Wechsel: 1000 ms SVG-Transformationen mit Web Animations, zusätzliche/entfallende Produkte blenden ein/aus. Laufende Animationen werden bei schneller Gegenwahl an ihrer aktuellen Position übernommen. `prefers-reduced-motion: reduce` schaltet direkt um. Kein dauernder JavaScript-Frame-Loop; Darstellung bleibt auf bestehende Ausschnittsgrenzen begrenzt. Geometrie/Ergebnisse unverändert. BP behält rechteckige Paletten und animiert die beiden Ausrichtungen.
+
+### 8.5 Komponentenabhängigkeiten
 
 Rechteckkomponente benötigt die gemeinsamen Hilfen aus engine.js und die Styles aus component.js. Danach rectangular-engine.js und rectangular-component.js laden; integration.js zuletzt. component.js exportiert die Styles über TEKUSpaceCalculatorStyles.
 
@@ -336,7 +340,7 @@ Vorlagen aus früheren Chats sind nicht automatisch im neuen Chat verfügbar. Da
 | Bereiche/Versionsauswahl | version-switch.js; beide index.html | Aktuell + Archive |
 | VCG-Daten/Filter/Grundfunktionen | data.js, app.js | Aktuelle Ergänzungen können Renderer ersetzen |
 | Aktuelle VCG-Zeile/Technik | latest.js, technical.js, technical.css, v4.css | v8.js und späte CSS-Regeln |
-| VCG-Kacheln/Zeiger/Positionsbalken | v8.js, v8.css, certificates.js | Auswahl und Listen in v3.js |
+| VCG-Kacheln/Zeiger/Punktnavigation | v8.js, v8.css, certificates.js | Auswahl und Listen in v3.js |
 | BP-Maße/Filter/Zeilen/Daten | bp/app.js, bp/data.js, bp/styles.css, bp/v2.css | bp/review-update.* |
 | BP-CC-Hilfe/Listenleiste/Produktnavigation | bp/review-update.js, bp/review-update.css | Shared Listen und setCollapsed |
 | Gemeinsame Listen | v3.js, v3.css | VCG und BP samt Cachebuster |
@@ -345,6 +349,8 @@ Vorlagen aus früheren Chats sind nicht automatisch im neuen Chat verfügbar. Da
 | Technische Reiter | technical.js | Beide Bereiche; Rechner wird später dekoriert |
 | Kreisrechnung | space-calculator/engine.js, component.js | Geteilte Styles für Rechtecke beachten |
 | Rechteckrechnung | space-calculator/rectangular-engine.js, rectangular-component.js | BP und spätere Tray-Seite |
+| Aktuelle Beschriftung/Listenleiste | latest.js, bp/app.js, catalog-update.js, catalog-update.css | Beide aktuellen Bereiche; Archive unabhängig |
+| SVG-Anordnungsanimation | space-calculator/diagram-motion.js | Beide aktuellen Rechnerkomponenten |
 | Modal/CTA/Seitenadapter | space-calculator/integration.js, modal.css | Beide Geometrien und beide index.html |
 | Archivierung | versions/ bzw. bp/versions/ | Relative Pfade und Umschalter |
 | Prüfnachweise | tests/ und die Fachdokumente | Historische Prüfungen nicht als neue ausgeben |
@@ -375,7 +381,7 @@ Nicht für jede Textkorrektur die gesamte Anwendung erneut prüfen. Betroffene F
 | Filter | Auswahl setzen/entfernen/resetten; korrekte Trefferzahl und grüner Punkt; beide Filterzustände |
 | Listen | Konkrete Farbe hinzufügen/entfernen; Duplikate; Wechsel der Listen; Inhalt nach Filtereinklappen |
 | Aufklappbereich | Öffnen/Schließen/Wechsel; automatisches Einklappen; bestehende Inhalte; VCG-Zeiger |
-| Carousel | Äußere Pfeile; keine Punkte; Balken bei Pfeil/Wischen/Schieber synchron; Anfang/Ende |
+| Carousel | VCG: mittige Pfeile, 1–5 Punkte; Auswahl/Wischen/Pfeiltasten synchron, Anfang/Ende; BP bisherige Navigation erhalten |
 | Technische Bilder | Richtiger Artikel; Ausschnitt/Überlappung; Caption; Zoom; keine unbelegte Umfärbung |
 | Rechner | CTA-Pflicht; richtige Vorbelegung; Kontrollwerte; Ausrichtungswechsel; Einheiten; Reset; Fehler; Schließen/Escape/Fokus |
 | Versionierung | Altes und neues Routing; beide Kategorien; relative Bilder, Fonts und Skripte |
@@ -390,6 +396,8 @@ Passende lokale Checks:
     node --test tests/space-engine.test.cjs tests/rectangular-engine.test.cjs
 
 Bei neuen Rechenänderungen unabhängig begründete Testfälle ergänzen, keine Tests schreiben, die bloß dieselbe Implementierung kopieren. Reine Dokumentationsänderungen benötigen keine erneuten Rechen- oder Browserprüfungen.
+
+**Prüfung V9/BP V5 am 30.10.2026:** zwölf Rechentests und Syntax-/Diffprüfung bestanden. Beide Bereiche im Chromium-Browser bei 390/768/1440 px geprüft; Rechner bei 1280 × 720 ohne inneres Scrollen, beide Wechselrichtungen mit 1000 ms, Gegenwechsel während der Animation und reduzierte Bewegung. Punktnavigation mit temporär wiederholten Originalkacheln für 1/5/6/20 Einträge bis zum Ende geprüft; diese Testdaten werden nicht gespeichert. V8/BP V4 sind eigenständig archiviert.
 
 **Historischer Prüfstand:** Vor der Dokumentrevision bestanden zwölf Rechentests. Der BP-Dialog wurde bei 1280 × 720 mit 598 px Inhaltshöhe ohne inneres Scrollen geprüft; Mobilansicht und genannte Kontrollwerte wurden im Browser kontrolliert. Das ist kein Nachweis, dass eine spätere Änderung diese Prüfungen automatisch wieder besteht.
 
@@ -426,7 +434,7 @@ Empfohlener Startauftrag:
     Lies zuerst AGENTS.md und docs/PROJECT_HANDOVER.md.
     Prüfe den aktuellen Stand.
     Verwende die aktuelle Repo-Fassung, falls die hochgeladene Übergabe älter ist.
-    
+
     Meine nächste Aufgabe: …
 
 Zum konkreten Auftrag bei Bedarf Produktbereich, Version, gewünschte Änderung, neue Grafik und „aktuelle Version aktualisieren“ oder „neue Version“ ergänzen. Bereits dokumentierte Designregeln nicht jedes Mal neu abschreiben.
