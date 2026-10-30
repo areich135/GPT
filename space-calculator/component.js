@@ -35,6 +35,7 @@
     }
     @media(max-width:420px){.wrap{padding:14px 16px}.inputs:not(.area-fields) .field>span{min-height:36px}.field{font-size:13px}.area-header h3{max-width:160px}.unit-select{flex-direction:column;align-items:flex-start}.result{padding:11px}.result .label{font-size:12px}.result .value{font-size:27px}.diagram{grid-template-columns:1fr;gap:8px}.diagram-stage{height:150px}.diagram figcaption small{margin-top:4px}.footer{flex-direction:column;gap:8px}}
   `;
+  window.TEKUSpaceCalculatorStyles = styles;
   class TekuSpaceCalculator extends HTMLElement {
     connectedCallback() {
       if (this.shadowRoot) return;
