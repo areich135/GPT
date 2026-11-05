@@ -1,7 +1,7 @@
 # TEKU Website – verbindliche Übergabe für die Clickdummys
 
-**Dokumentrevision:** 4 · **Stand:** 05.11.2026
-**Ausgangsbasis dieser Änderung:** 9546133; aktuelle Änderungen siehe README-Changelog
+**Dokumentrevision:** 5 · **Stand:** 05.11.2026
+**Ausgangsbasis dieser Änderung:** f176c2d; aktuelle Änderungen siehe README-Changelog
 **Repository:** https://github.com/areich135/GPT · **Arbeitsbranch:** main
 
 Diese Übergabe soll einen neuen Chat arbeitsfähig machen, ohne den gesamten alten Verlauf zu laden. Sie beschreibt den freigegebenen Stand, die bewussten Unterschiede zwischen den Produktbereichen und die Grenzen des Dummys. Vor jeder Aufgabe den aktuellen Remote-Stand prüfen: Eine im ChatGPT-Projekt hochgeladene Kopie kann älter sein als die Datei im Repository.
@@ -96,7 +96,13 @@ Desktop bei eingeklapptem Filter:
 - Angebote, Muster, Merkliste und Kontakt stehen zusätzlich rechts daneben.
 - Die erste Artikelzeile beginnt oben auf derselben Ebene wie Filter und rechte Kacheln.
 
+Filter und rechte Spalten sind im aktuellen Adapter durch eigene Hosts auf die tatsächlich sichtbare SKU-Liste begrenzt: `filter-sticky-host`, `selection-sidebar-host`, `selection-rail-host`. Oberkante bündig mit der ersten Variante, beim Scrollen sticky mit 20 px Abstand; Unterkante höchstens am unteren Rand der letzten `.product-row`, einschließlich geöffneter Details. Nachfolgende Katalogabstände, Sammelbuttons, Listen unterhalb der Produkte und Empfehlungen gehören nicht zur Sticky-Grenze. Ein `ResizeObserver` aktualisiert `--sku-list-height` bei Filter-, Detail- oder Breitenänderungen. Auf Desktop kein Scroll-Handler für die Positionierung.
+
+Lange geöffnete Filter und volle Listen bleiben durch eine begrenzte Höhe intern scrollbar. Wenn die SKU-Liste kürzer als die Seitenleiste ist, wird auch diese Höhe auf die verfügbare SKU-Fläche begrenzt. Ohne Treffer bleiben die Filter bedienbar; kein künstlich verlängerter SKU-Bereich.
+
 Bei geöffnetem Filter nimmt der breite Filter links mehr Platz ein. Die volle rechte Kachelspalte verschwindet; die Varianten dürfen den freigegebenen Platz nutzen. Das starre Übertragen einzelner Desktop-Pixelwerte auf alle Breiten vermeiden.
+
+Bei 700 px und schmaler läuft der kompakte Filter mit 12 px Abstand mit; der aufgeklappte Filter bleibt oberhalb der SKUs im Dokumentfluss. Die horizontale mobile Schnellzugriffsleiste wird zwischen erstem und letztem SKU begrenzt und außerhalb dieses Bereichs ausgeblendet. Volle Listen dürfen weiterhin unter die Produktansicht rücken.
 
 catalog-xd.css regelt unter anderem Breakpoints bei 1350, 1100 und 700 px. Bei schmaleren Breiten können die vollständigen Listen unter die Produktansicht rücken. Das ist bestehendes responsives Verhalten und kein Grund, eine volle Desktop-Seitenleiste auf Mobilgeräten zu erzwingen.
 
@@ -146,7 +152,7 @@ Die drei Listen werden zentral über v3.js verwaltet. Ein Eintrag bezieht sich a
 
 Zu erhalten sind: Hinzufügen, Entfernen, Übernahme aus der Merkliste in Muster/Angebote, jeweilige Zähler und die bisherige Anfragezusammenfassung. VCG-Variantenherzen müssen genau die angeklickte Farbvariante speichern. Ein anderes Variantenherz darf nicht die aktuell im Hero ausgewählte Farbe übernehmen.
 
-Die schmale Leiste zeigt Angebote, Muster, Merkliste, Kontakt und vorhandene Artikelzähler. Sie ist ein Zugang zu denselben Kacheln. Desktop: eigene 44-px-Spalte rechts neben den Varianten, gleicher --xd-gap wie links; oberer Rand bündig mit erster Variante, innerhalb des Katalogs sticky bei 20 px. Nie über den Kataloganfang in den Hero wandern. Mobil unten rechts und nur bei sichtbarem Variantenbereich.
+Die schmale Leiste zeigt Angebote, Muster, Merkliste, Kontakt und vorhandene Artikelzähler. Sie ist ein Zugang zu denselben Kacheln. Desktop: eigene 44-px-Spalte rechts neben den Varianten, gleicher --xd-gap wie links; oberer Rand bündig mit erster Variante, zwischen erstem und letztem SKU sticky bei 20 px. Nie in den Hero oder unter den letzten SKU wandern. Mobil unten rechts, am letzten SKU nach oben begrenzt und außerhalb des SKU-Bereichs verborgen.
 
 ### 5.4 Anfrageformular: Muster, Angebot oder beides
 
@@ -358,7 +364,7 @@ Vorlagen aus früheren Chats sind nicht automatisch im neuen Chat verfügbar. Da
 | Technische Reiter | technical.js | Beide Bereiche; Rechner wird später dekoriert |
 | Kreisrechnung | space-calculator/engine.js, component.js | Geteilte Styles für Rechtecke beachten |
 | Rechteckrechnung | space-calculator/rectangular-engine.js, rectangular-component.js | BP und spätere Tray-Seite |
-| Aktuelle Beschriftung/Listenleiste | latest.js, bp/app.js, catalog-update.js, catalog-update.css | Beide aktuellen Bereiche; Archive unabhängig |
+| Aktuelle Beschriftung / SKU-begrenzte Scrollspalten | latest.js, bp/app.js, catalog-update.js, catalog-update.css | Beide aktuellen Bereiche; Filter und Listen in Hosts; Archive unabhängig |
 | SVG-Anordnungsanimation | space-calculator/diagram-motion.js | Beide aktuellen Rechnerkomponenten |
 | Modal/CTA/Seitenadapter | space-calculator/integration.js, modal.css | Beide Geometrien und beide index.html |
 | Archivierung | versions/ bzw. bp/versions/ | Relative Pfade und Umschalter |
@@ -396,6 +402,7 @@ Nicht für jede Textkorrektur die gesamte Anwendung erneut prüfen. Betroffene F
 | Rechner | CTA-Pflicht; richtige Vorbelegung; Kontrollwerte; Ausrichtungswechsel; Einheiten; Reset; Fehler; Schließen/Escape/Fokus |
 | Versionierung | Altes und neues Routing; beide Kategorien; relative Bilder, Fonts und Skripte |
 | Geteiltes CSS/JS | VCG und BP; Desktop und mindestens eine schmale Ansicht |
+| Sticky-Filter/Listen | Beide Filterzustände, Anfang/Mitte/Ende der SKU-Liste, veränderte Treffer-/Detailhöhe, lange Filter scrollbar, mobile Schnellzugriffe am SKU-Ende begrenzt |
 
 Geeignete Breiten für Layoutänderungen: 390, 768, 1440 px, jeweils relevante Filter-/Panelzustände. Rechner zusätzlich 1280 × 720. Nicht nur die Seitenbreite messen: überlappende Labels, abgeschnittene CTAs, unsichtbare Siegel und verdeckte Elemente können auch ohne horizontales Seitenscrollen auftreten.
 
@@ -406,6 +413,8 @@ Passende lokale Checks:
     node --test tests/space-engine.test.cjs tests/rectangular-engine.test.cjs
 
 Bei neuen Rechenänderungen unabhängig begründete Testfälle ergänzen, keine Tests schreiben, die bloß dieselbe Implementierung kopieren. Reine Dokumentationsänderungen benötigen keine erneuten Rechen- oder Browserprüfungen.
+
+**Prüfung der Scrollanpassung vom 05.11.2026:** Beide Bereiche im Chromium-Browser bei 1774/1280/768/390 px geprüft. Desktop-/Tabletfilter und rechte Seitenspalten am Anfang, beim Scrollen und exakt am letzten SKU kontrolliert; lange Filter intern scrollbar. Mobile kompakte Filterleiste und begrenzte Schnellzugriffe geprüft. Filterauswahl aktualisiert die Grenze; Musterliste und Anfrageformular bleiben bedienbar. Keine JavaScript- oder Assetfehler; Syntax-/Diffprüfung bestanden.
 
 **Prüfung der Anpassung vom 05.11.2026:** Formular in beiden Bereichen über Muster- und Angebotsliste geöffnet; gemeinsame Auswahl, getrennte Mengen, Pflichtbestätigung und Umsatzsteuer-ID einschließlich Leerzeicheneingabe geprüft. Leere Anfrageart blockiert den Abschluss. BP-Primärfarbe und „Varianten“-Beschriftungen kontrolliert; Formularbreiten 390/768/1440 px ohne horizontalen Überlauf. JavaScript-Syntax und Diffprüfung bestanden; keine Browserfehler oder fehlenden Assets.
 

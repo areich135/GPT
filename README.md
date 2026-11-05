@@ -13,6 +13,12 @@ Beide aktuellen Entwürfe enthalten die rechten Listen für Muster, Angebote und
 
 ## Changelog
 
+### 05.11.2026 · Scrollverhalten V9 / BP V5
+
+- Linker Filter läuft auf Desktop eingeklappt und aufgeklappt mit; lange Filter bleiben innerhalb der verfügbaren Höhe scrollbar.
+- Filter sowie volle und kompakte rechte Anfrageleiste stoppen exakt am Ende der angezeigten SKUs. Die Grenze aktualisiert sich nach Filter- und Detailänderungen.
+- Auf schmalen Ansichten läuft die kompakte Filterleiste mit; die mobilen Schnellzugriffe bleiben auf den sichtbaren SKU-Bereich begrenzt.
+
 ### 05.11.2026 · Rundtöpfe V9 / BP V5 aktualisiert
 
 - „Details“ heißt in beiden Produktbereichen „Varianten“, auch im geöffneten BP-Bereich.
