@@ -1,0 +1,42 @@
+/* V4 request-button layout, based on the supplied Adobe XD draft. */
+.rounds-v4 .refreshed-row{container-type:inline-size;position:relative}
+.rounds-v4 .refreshed-row .row-main{position:static;grid-template-columns:54px minmax(115px,1.1fr) repeat(3,minmax(68px,1fr));grid-template-rows:auto auto;gap:12px;align-items:center;padding-right:30px}
+.rounds-v4 .catalog.filters-collapsed .refreshed-row .row-main{grid-template-columns:54px minmax(115px,1.1fr) repeat(3,minmax(76px,1fr)) minmax(140px,1.3fr);grid-template-rows:auto;gap:14px;padding-right:42px}
+.rounds-v4 .refreshed-row .product-photo{grid-column:1;grid-row:1}
+.rounds-v4 .refreshed-row .row-product-summary{grid-column:2;grid-row:1;padding:0}
+.rounds-v4 .refreshed-row .row-section-toggle{grid-row:1;min-width:0;min-height:66px}
+.rounds-v4 .refreshed-row .row-section-toggle:nth-of-type(2){grid-column:3}
+.rounds-v4 .refreshed-row .row-section-toggle:nth-of-type(3){grid-column:4}
+.rounds-v4 .refreshed-row .row-section-toggle:nth-of-type(4){grid-column:5}
+.rounds-v4 .refreshed-row .row-requests{grid-column:3/6;grid-row:2;justify-self:end;justify-content:flex-end;flex-direction:row;align-items:center;gap:10px;padding:0;margin:0 0 0 auto;flex-wrap:wrap}
+.rounds-v4 .catalog.filters-collapsed .refreshed-row .row-requests{grid-column:6;grid-row:1;flex-direction:column;justify-self:center;align-items:center;gap:12px;margin:0;padding:0;flex-wrap:nowrap}
+.rounds-v4 .refreshed-row .row-requests button{font-weight:700;font-size:12px;line-height:1.2;padding:7px 12px;min-width:136px}
+.rounds-v4 .refreshed-row .row-favorite{position:absolute;right:13px;top:12px;z-index:2;grid-column:auto;grid-row:auto;align-self:auto;justify-self:auto;width:21px;height:21px}
+.rounds-v4 .refreshed-row .row-favorite svg{width:19px;height:19px}
+.rounds-v4 .filter-topbar{display:flex;justify-content:space-between;align-items:flex-start;gap:8px;margin-bottom:12px}
+.rounds-v4 .filter-topbar .collapse-filter{margin:0}
+.rounds-v4 .filter-topbar .reset-button{margin:0;color:var(--pink);font-size:11px;line-height:20px;font-weight:400;text-decoration:none;white-space:nowrap}
+.rounds-v4 .filters.collapsed .filter-topbar{justify-content:center;margin:0}
+.rounds-v4 .filters.collapsed .filter-topbar .reset-button{display:none}
+@container(max-width:700px){
+  .rounds-v4 .catalog.filters-collapsed .refreshed-row .row-main{grid-template-columns:44px minmax(105px,1fr) repeat(3,minmax(58px,1fr));grid-template-rows:auto auto;gap:10px;padding-right:26px}
+  .rounds-v4 .catalog.filters-collapsed .refreshed-row .row-requests{grid-column:3/6;grid-row:2;flex-direction:row;justify-self:end;justify-content:flex-end;gap:8px;flex-wrap:wrap}
+  .rounds-v4 .refreshed-row .row-requests button{font-size:11px;min-width:0;padding:7px 10px}
+  .rounds-v4 .refreshed-row .row-section-toggle strong{font-size:12px}
+}
+@container(max-width:480px){
+  .rounds-v4 .refreshed-row .row-main,.rounds-v4 .catalog.filters-collapsed .refreshed-row .row-main{grid-template-columns:repeat(3,minmax(0,1fr));grid-template-rows:auto auto auto;gap:10px;padding-right:0}
+  .rounds-v4 .refreshed-row .row-product-summary{grid-column:2/4;grid-row:1;padding-right:17px}
+  .rounds-v4 .refreshed-row .row-section-toggle{grid-row:2;min-height:60px}
+  .rounds-v4 .refreshed-row .row-section-toggle:nth-of-type(2){grid-column:1}
+  .rounds-v4 .refreshed-row .row-section-toggle:nth-of-type(3){grid-column:2}
+  .rounds-v4 .refreshed-row .row-section-toggle:nth-of-type(4){grid-column:3}
+  .rounds-v4 .refreshed-row .row-requests,.rounds-v4 .catalog.filters-collapsed .refreshed-row .row-requests{grid-column:1/-1;grid-row:3;justify-self:end;flex-direction:row;justify-content:flex-end;gap:7px;flex-wrap:wrap}
+  .rounds-v4 .refreshed-row .row-requests button{font-size:11px;padding:7px 8px;min-width:0}
+  .rounds-v4 .refreshed-row .row-section-toggle strong{font-size:11px}
+  .rounds-v4 .refreshed-row .row-section-toggle>span{font-size:10px}
+}
+/* Equal inner bounds for closed rows and rows with an open detail panel. */
+.rounds-v4 .catalog .product-row.refreshed-row,.rounds-v4 .catalog.filters-collapsed .product-row.refreshed-row{padding:0}
+.rounds-v4 .catalog .refreshed-row .row-main,.rounds-v4 .catalog.filters-collapsed .refreshed-row .row-main{padding:18px 46px 18px 18px!important}
+@container(max-width:480px){.rounds-v4 .catalog .refreshed-row .row-main,.rounds-v4 .catalog.filters-collapsed .refreshed-row .row-main{padding:18px 14px!important}}

@@ -20,7 +20,12 @@
   let frame;
   function measure(){
     frame=null;
-    if(!catalog.getClientRects().length)return;
+    const recommendation=document.querySelector('.recommendations');
+    if(!catalog.getClientRects().length){
+      recommendation?.style.removeProperty('--sku-column-left');
+      recommendation?.style.removeProperty('--sku-column-width');
+      return;
+    }
     const rows=results.querySelectorAll('.product-row');
     const first=rows[0]?.getBoundingClientRect();
     const last=rows[rows.length-1]?.getBoundingClientRect();
@@ -30,6 +35,11 @@
       const height=Math.max(0,last.bottom-results.getBoundingClientRect().top);
       catalog.style.setProperty('--sku-list-height',`${height}px`);
     }else catalog.style.removeProperty('--sku-list-height');
+    if(recommendation){
+      const column=results.getBoundingClientRect();
+      recommendation.style.setProperty('--sku-column-left',`${column.left+scrollX}px`);
+      recommendation.style.setProperty('--sku-column-width',`${column.width}px`);
+    }
     host.classList.toggle('outside-variants',!last||last.bottom<=12||first.top>=innerHeight-12);
     if(mobile.matches&&!rail.hidden&&last){
       const top=Math.max(first.top,Math.min(innerHeight-rail.offsetHeight-12,last.bottom-rail.offsetHeight));

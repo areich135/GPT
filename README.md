@@ -2,16 +2,24 @@
 
 Die Kopfzeile führt zu zwei Produktbereichen:
 
-- **Rundtöpfe / VCG:** V9 mit animiertem Stellflächenrechner im Modal; V1–V8 bleiben über den Versionsumschalter erreichbar.
-- **Trays / Anzuchtpaletten / BP:** V5 mit 20 Artikeln, eigenem Rechteckrechner und animiertem Ausrichtungswechsel; V1–V4 bleiben erreichbar. Plug-, Tray- und Zellmaße sind separat benannt.
+- **Rundtöpfe / VCG:** V10 mit animiertem Stellflächenrechner im Modal; V1–V9 bleiben über den Versionsumschalter erreichbar.
+- **Trays / Anzuchtpaletten / BP:** V6 mit 20 Artikeln, eigenem Rechteckrechner und animiertem Ausrichtungswechsel; V1–V5 bleiben erreichbar. Plug-, Tray- und Zellmaße sind separat benannt.
 
 Beide aktuellen Entwürfe enthalten die rechten Listen für Muster, Angebote und Merkliste. Anfragen werden nur simuliert. Der VCG-Stellflächenrechner berechnet die Stückzahl für Viereck- und Dreieckverband mit frei änderbarem Durchmesser.
 
-- [Rundtöpfe V9 öffnen](https://areich135.github.io/GPT/?version=v9)
-- [Anzuchtpaletten BP V5 öffnen](https://areich135.github.io/GPT/bp/?version=v5)
+- [Rundtöpfe V10 öffnen](https://areich135.github.io/GPT/?version=v10)
+- [Anzuchtpaletten BP V6 öffnen](https://areich135.github.io/GPT/bp/?version=v6)
 - [Quellen, Datenzuordnung und tatsächliche Prüfungen](docs/sources-2026-10-22.md)
 
 ## Changelog
+
+### 05.11.2026 · Neue Entwürfe VCG V10 / BP V6
+
+- Linker Filter bleibt in beiden Zuständen am Anfang der SKU-Liste und scrollt mit der Seite weg. Rechte volle und kompakte Listen behalten ihr bisheriges Mitlaufen bis zum letzten SKU.
+- Rundtöpfe „Passende Trays“: maximal fünf sichtbare Produkte, blaue Pfeile links/rechts neben den Produkten, exakt ein Produktschritt pro Klick. Pfeile an den Enden deaktiviert.
+- Fortschrittsbalken füllt sich von links gemäß dem bereits sichtbaren Produktanteil. Ein einzelnes bzw. vollständig sichtbares Sortiment ergibt einen vollen Balken und deaktivierte Pfeile.
+- Der untere Empfehlungsblock einschließlich Überschrift fluchtet mit der SKU-Spalte, auch bei Filter- und Breitenwechsel.
+- VCG V9 und BP V5 sind mit ihren eigenen Laufzeitdateien und Assets archiviert.
 
 ### 05.11.2026 · Scrollverhalten V9 / BP V5
 

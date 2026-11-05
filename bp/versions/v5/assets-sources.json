@@ -1,0 +1,306 @@
+{
+  "retrieved": "2026-10-22",
+  "page": "https://www.poeppelmann.com/de/teku/produkte/bp-jungpflanzen-und-baumschulpaletten",
+  "assets": [
+    {
+      "url": "https://static.poeppelmann.com/assets/700234/m2-pikto.svg",
+      "local": "assets/density.svg",
+      "bytes": 994,
+      "type": "image/svg+xml"
+    },
+    {
+      "url": "https://static.poeppelmann.com/assets/700244/cc-wagen-pikto.svg",
+      "local": "assets/cc.svg",
+      "bytes": 3184,
+      "type": "image/svg+xml"
+    },
+    {
+      "url": "https://static.poeppelmann.com/assets/700247/anzuchtpalette-pikto.svg",
+      "local": "assets/tray.svg",
+      "bytes": 9365,
+      "type": "image/svg+xml"
+    },
+    {
+      "url": "https://static.poeppelmann.com/assets/700249/anzuchtpalette-abmessung-abc-pikto.svg",
+      "local": "assets/tray-dim.svg",
+      "bytes": 11947,
+      "type": "image/svg+xml"
+    },
+    {
+      "url": "https://static.poeppelmann.com/assets/700295/tray-vol-pikto.svg",
+      "local": "assets/volume.svg",
+      "bytes": 1603,
+      "type": "image/svg+xml"
+    },
+    {
+      "url": "https://static.poeppelmann.com/assets/700301/tray-abmessung-ab-cm-pikto.svg",
+      "local": "assets/cell.svg",
+      "bytes": 4045,
+      "type": "image/svg+xml"
+    },
+    {
+      "url": "https://static.poeppelmann.com/assets/700310/plug-abmessung-de-cm-pikto.svg",
+      "local": "assets/plug.svg",
+      "bytes": 5633,
+      "type": "image/svg+xml"
+    },
+    {
+      "url": "https://static.poeppelmann.com/assets/700386/pflanzen-2x-pikto.svg",
+      "local": "assets/plants.svg",
+      "bytes": 4757,
+      "type": "image/svg+xml"
+    },
+    {
+      "url": "https://static.teku.com/assets/455353/ap-3040-54-pr.psd",
+      "local": "assets/ap-3040-54-pr.webp",
+      "bytes": 34078,
+      "type": "image/webp"
+    },
+    {
+      "url": "https://static.teku.com/assets/547669/bp-3153-4-6-28-transparent-pr.psd",
+      "local": "assets/bp-3153-4-6-28-transparent-pr.webp",
+      "bytes": 21672,
+      "type": "image/webp"
+    },
+    {
+      "url": "https://static.teku.com/assets/571264/bp-3153-84-t-pr-circular-grau.psd",
+      "local": "assets/bp-3153-84-t-pr-circular-grau.webp",
+      "bytes": 32262,
+      "type": "image/webp"
+    },
+    {
+      "url": "https://static.teku.com/assets/571265/bp-3153-60-t-pr-circular-grau.psd",
+      "local": "assets/bp-3153-60-t-pr-circular-grau.webp",
+      "bytes": 27298,
+      "type": "image/webp"
+    },
+    {
+      "url": "https://static.teku.com/assets/571266/bp-3153-40-t-pr-circular-grau.psd",
+      "local": "assets/bp-3153-40-t-pr-circular-grau.webp",
+      "bytes": 33856,
+      "type": "image/webp"
+    },
+    {
+      "url": "https://static.teku.com/assets/571267/bp-3153-35-t-pr-circular-grau.psd",
+      "local": "assets/bp-3153-35-t-pr-circular-grau.webp",
+      "bytes": 27034,
+      "type": "image/webp"
+    },
+    {
+      "url": "https://static.teku.com/assets/571269/bp-3153-2-2-d-144-t-pr-circular-grau.psd",
+      "local": "assets/bp-3153-2-2-d-144-t-pr-circular-grau.webp",
+      "bytes": 34908,
+      "type": "image/webp"
+    },
+    {
+      "url": "https://static.teku.com/assets/571270/bp-3153-2-2-144-t-pr-circular-grau.psd",
+      "local": "assets/bp-3153-2-2-144-t-pr-circular-grau.webp",
+      "bytes": 37698,
+      "type": "image/webp"
+    },
+    {
+      "url": "https://static.teku.com/assets/571271/bp-2850-35-50-t-pr-circular-grau.psd",
+      "local": "assets/bp-2850-35-50-t-pr-circular-grau.webp",
+      "bytes": 29790,
+      "type": "image/webp"
+    },
+    {
+      "url": "https://static.teku.com/assets/571272/bp-2850-30-72-t-pr-circular-grau.psd",
+      "local": "assets/bp-2850-30-72-t-pr-circular-grau.webp",
+      "bytes": 29972,
+      "type": "image/webp"
+    },
+    {
+      "url": "https://static.teku.com/assets/571273/bp-2850-25-d-104-t-pr-circular-grau.psd",
+      "local": "assets/bp-2850-25-d-104-t-pr-circular-grau.webp",
+      "bytes": 33244,
+      "type": "image/webp"
+    },
+    {
+      "url": "https://static.teku.com/assets/571473/bp-2850-35-50-t-pr-bodenansicht-circular-grau.psd",
+      "local": "assets/bp-2850-35-50-t-pr-bodenansicht-circular-grau.webp",
+      "bytes": 18352,
+      "type": "image/webp"
+    },
+    {
+      "url": "https://static.teku.com/assets/571476/bp-3153-60-t-pr-bodenansicht-circular-grau.psd",
+      "local": "assets/bp-3153-60-t-pr-bodenansicht-circular-grau.webp",
+      "bytes": 14554,
+      "type": "image/webp"
+    },
+    {
+      "url": "https://static.teku.com/assets/571477/bp-3153-40-t-pr-bodenansicht-circular-grau.psd",
+      "local": "assets/bp-3153-40-t-pr-bodenansicht-circular-grau.webp",
+      "bytes": 13604,
+      "type": "image/webp"
+    },
+    {
+      "url": "https://static.teku.com/assets/571478/bp-3153-35-t-pr-bodenansicht-circular-grau.psd",
+      "local": "assets/bp-3153-35-t-pr-bodenansicht-circular-grau.webp",
+      "bytes": 14896,
+      "type": "image/webp"
+    },
+    {
+      "url": "https://static.teku.com/assets/571512/bp-2850-25-d-104-t-bodenansicht-circular-grau.psd",
+      "local": "assets/bp-2850-25-d-104-t-bodenansicht-circular-grau.webp",
+      "bytes": 22418,
+      "type": "image/webp"
+    },
+    {
+      "url": "https://static.teku.com/assets/571513/bp-3153-18-pr-bodenansicht-circular-grau.psd",
+      "local": "assets/bp-3153-18-pr-bodenansicht-circular-grau.webp",
+      "bytes": 11974,
+      "type": "image/webp"
+    },
+    {
+      "url": "https://static.teku.com/assets/571514/bp-3153-2-2-144-t-bodenansicht-circular-grau.psd",
+      "local": "assets/bp-3153-2-2-144-t-bodenansicht-circular-grau.webp",
+      "bytes": 19610,
+      "type": "image/webp"
+    },
+    {
+      "url": "https://static.teku.com/assets/571515/bp-3153-104-t-bodenansicht-circular-grau.psd",
+      "local": "assets/bp-3153-104-t-bodenansicht-circular-grau.webp",
+      "bytes": 15240,
+      "type": "image/webp"
+    },
+    {
+      "url": "https://static.teku.com/assets/571516/bp-2850-30-72-t-bodenansicht-circular-grau.psd",
+      "local": "assets/bp-2850-30-72-t-bodenansicht-circular-grau.webp",
+      "bytes": 16650,
+      "type": "image/webp"
+    },
+    {
+      "url": "https://static.teku.com/assets/571517/bp-3153-2-6-84-t-bodenansicht-circular-grau.psd",
+      "local": "assets/bp-3153-2-6-84-t-bodenansicht-circular-grau.webp",
+      "bytes": 17194,
+      "type": "image/webp"
+    },
+    {
+      "url": "https://static.teku.com/assets/571518/bp-3153-3-5-60-t-bodenansicht-circular-grau.psd",
+      "local": "assets/bp-3153-3-5-60-t-bodenansicht-circular-grau.webp",
+      "bytes": 15294,
+      "type": "image/webp"
+    },
+    {
+      "url": "https://static.teku.com/assets/571520/bp-3153-26-104-t-bodenansicht-circular-grau.psd",
+      "local": "assets/bp-3153-26-104-t-bodenansicht-circular-grau.webp",
+      "bytes": 20126,
+      "type": "image/webp"
+    },
+    {
+      "url": "https://static.teku.com/assets/571521/bp-3153-26-12-t-bodenansicht-circular-grau.psd",
+      "local": "assets/bp-3153-26-12-t-bodenansicht-circular-grau.webp",
+      "bytes": 14588,
+      "type": "image/webp"
+    },
+    {
+      "url": "https://static.teku.com/assets/571720/bp-3153-2-6-84-t-circular-grau.psd",
+      "local": "assets/bp-3153-2-6-84-t-circular-grau.webp",
+      "bytes": 29230,
+      "type": "image/webp"
+    },
+    {
+      "url": "https://static.teku.com/assets/571721/bp-3153-3-5-60-t-circular-grau.psd",
+      "local": "assets/bp-3153-3-5-60-t-circular-grau.webp",
+      "bytes": 29342,
+      "type": "image/webp"
+    },
+    {
+      "url": "https://static.teku.com/assets/571722/bp-3153-104-t-circular-grau.psd",
+      "local": "assets/bp-3153-104-t-circular-grau.webp",
+      "bytes": 31718,
+      "type": "image/webp"
+    },
+    {
+      "url": "https://static.teku.com/assets/571723/bp-3153-2-6-104-t-circular-grau.psd",
+      "local": "assets/bp-3153-2-6-104-t-circular-grau.webp",
+      "bytes": 31718,
+      "type": "image/webp"
+    },
+    {
+      "url": "https://static.teku.com/assets/571724/bp-3153-2-6-126-t-circular-grau.psd",
+      "local": "assets/bp-3153-2-6-126-t-circular-grau.webp",
+      "bytes": 31468,
+      "type": "image/webp"
+    },
+    {
+      "url": "https://static.teku.com/assets/571726/bp-3153-18-circular-grau.psd",
+      "local": "assets/bp-3153-18-circular-grau.webp",
+      "bytes": 20606,
+      "type": "image/webp"
+    },
+    {
+      "url": "https://static.teku.com/assets/575596/bp-2854-72-circular-grau-pr.psd",
+      "local": "assets/bp-2854-72-circular-grau-pr.webp",
+      "bytes": 21088,
+      "type": "image/webp"
+    },
+    {
+      "url": "https://static.teku.com/assets/575597/bp-2854-72-bodenansicht-circular-grau-pr.psd",
+      "local": "assets/bp-2854-72-bodenansicht-circular-grau-pr.webp",
+      "bytes": 12528,
+      "type": "image/webp"
+    },
+    {
+      "url": "https://static.teku.com/assets/575598/bp-3153-144-t-circular-grau-pr.psd",
+      "local": "assets/bp-3153-144-t-circular-grau-pr.webp",
+      "bytes": 28622,
+      "type": "image/webp"
+    },
+    {
+      "url": "https://static.teku.com/assets/575599/bp-3153-144-t-bodenansicht-circular-grau-pr.psd",
+      "local": "assets/bp-3153-144-t-bodenansicht-circular-grau-pr.webp",
+      "bytes": 13558,
+      "type": "image/webp"
+    },
+    {
+      "url": "https://static.teku.com/assets/575601/bp-3153-4-6-28-circular-grau-pr.psd",
+      "local": "assets/bp-3153-4-6-28-circular-grau-pr.webp",
+      "bytes": 24584,
+      "type": "image/webp"
+    },
+    {
+      "url": "https://static.teku.com/assets/575602/bp-3153-4-6-28-bodenansicht-circular-grau-pr.psd",
+      "local": "assets/bp-3153-4-6-28-bodenansicht-circular-grau-pr.webp",
+      "bytes": 10976,
+      "type": "image/webp"
+    },
+    {
+      "url": "https://static.teku.com/assets/575605/bp-3153-19-180-t-circular-grau-pr.psd",
+      "local": "assets/bp-3153-19-180-t-circular-grau-pr.webp",
+      "bytes": 29426,
+      "type": "image/webp"
+    },
+    {
+      "url": "https://static.teku.com/assets/575606/bp-3153-19-180-t-bodenansicht-circular-grau-pr.psd",
+      "local": "assets/bp-3153-19-180-t-bodenansicht-circular-grau-pr.webp",
+      "bytes": 12448,
+      "type": "image/webp"
+    },
+    {
+      "url": "https://static.teku.com/assets/575607/bp-3153-22-104-t-circular-grau-pr.psd",
+      "local": "assets/bp-3153-22-104-t-circular-grau-pr.webp",
+      "bytes": 27040,
+      "type": "image/webp"
+    },
+    {
+      "url": "https://static.teku.com/assets/575608/bp-3153-22-104-t-bodenansicht-circular-grau-pr.psd",
+      "local": "assets/bp-3153-22-104-t-bodenansicht-circular-grau-pr.webp",
+      "bytes": 14614,
+      "type": "image/webp"
+    },
+    {
+      "url": "https://static.teku.com/assets/575808/bp-3153-3-5-84-t-pr-circular-grau.psd",
+      "local": "assets/bp-3153-3-5-84-t-pr-circular-grau.webp",
+      "bytes": 26544,
+      "type": "image/webp"
+    },
+    {
+      "url": "https://static.teku.com/assets/575809/bp-3153-3-5-84-t-bodenansicht-circular-grau.psd",
+      "local": "assets/bp-3153-3-5-84-t-bodenansicht-circular-grau.webp",
+      "bytes": 15556,
+      "type": "image/webp"
+    }
+  ]
+}

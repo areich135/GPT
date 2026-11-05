@@ -17,7 +17,7 @@
       return `<article class="certified-variant"><button class="variant-choice" data-variant="${i}" data-id="${p.index}" aria-label="${escapeHTML(p.name + ' · ' + v.color)} auswählen" aria-pressed="${selectedVariant(p) === v}"><img src="${v.image}" alt="${escapeHTML(v.color)}" loading="lazy"><span><strong>${escapeHTML(v.category)}</strong><small>Farbe ${escapeHTML(v.color)}</small></span></button><button class="variant-favorite" data-favorite="${p.index}" data-variant-index="${i}" aria-label="${escapeHTML(p.name + ' · ' + v.color)} merken">${svg('heart')}</button><div class="variant-certificates">${badges}</div></article>`;
     }).join('')}</div>`;
     if (type !== 'trays' || !p.trays.length) return baseDetail(p, type);
-    return `<section class="tray-carousel" aria-label="Passende Trays für ${escapeHTML(p.name)}"><h3>Passende Trays · ${escapeHTML(p.name)}</h3><div class="tray-carousel-track" tabindex="0" aria-label="Passende Trays – mit Pfeiltasten blättern">${p.trays.map((t, i) => `<button class="tray-tile" data-tray="${i}" data-id="${p.index}"><img src="${t.image}" alt="" loading="lazy">${escapeHTML(t.name)}</button>`).join('')}</div><nav class="tray-carousel-navigation" aria-label="Tray-Auswahl"><button data-carousel-step="-1" aria-label="Vorherige passende Trays">${arrow(-1)}</button><div class="tray-carousel-dots">${Array.from({length:Math.min(5,p.trays.length)},(_,i)=>`<button data-carousel-dot="${i}" aria-label="Tray-Gruppe ${i+1} anzeigen" aria-current="${i===0}"></button>`).join('')}</div><button data-carousel-step="1" aria-label="Nächste passende Trays">${arrow(1)}</button></nav></section>`;
+    return `<section class="tray-carousel" aria-label="Passende Trays für ${escapeHTML(p.name)}"><h3>Passende Trays · ${escapeHTML(p.name)}</h3><div class="tray-carousel-stage"><button class="tray-carousel-arrow" data-carousel-step="-1" aria-label="Vorheriges passendes Tray">${arrow(-1)}</button><div class="tray-carousel-track" tabindex="0" aria-label="Passende Trays – mit Pfeiltasten ein Produkt weiterblättern">${p.trays.map((t, i) => `<button class="tray-tile" data-tray="${i}" data-id="${p.index}"><img src="${t.image}" alt="" loading="lazy">${escapeHTML(t.name)}</button>`).join('')}</div><button class="tray-carousel-arrow" data-carousel-step="1" aria-label="Nächstes passendes Tray">${arrow(1)}</button></div><div class="tray-carousel-progress" role="progressbar" aria-label="Fortschritt der passenden Trays" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span></span></div></section>`;
   };
 
   const rail = document.createElement('nav');
@@ -35,26 +35,48 @@
   setFilterCollapsed(state.filterCollapsed);
 
   function setupCarousel(carousel) {
-    const track = carousel.querySelector('.tray-carousel-track');
-    const dots = [...carousel.querySelectorAll('[data-carousel-dot]')];
-    const update = () => {
-      const end = Math.max(0, track.scrollWidth - track.clientWidth);
-      const total=track.children.length;
-      const active = end ? Math.round(track.scrollLeft / end * (total-1)) : 0;
-      const start=Math.max(0,Math.min(total-dots.length,active-2));
-      dots.forEach((dot,i)=>{
-        const target=start+i;
-        dot.dataset.carouselDot=target;
-        dot.setAttribute('aria-label',`Tray-Position ${target+1} von ${total} anzeigen`);
-        dot.setAttribute('aria-current',String(target===active));
-      });
-      carousel.querySelector('[data-carousel-step="-1"]').disabled = track.scrollLeft <= 2;
-      carousel.querySelector('[data-carousel-step="1"]').disabled = track.scrollLeft >= end-2;
+    const track=carousel.querySelector('.tray-carousel-track');
+    const progress=carousel.querySelector('.tray-carousel-progress');
+    const previous=carousel.querySelector('[data-carousel-step="-1"]');
+    const next=carousel.querySelector('[data-carousel-step="1"]');
+    const total=track.children.length;
+    let step=1,visible=1,index=0,target=null;
+    const update=()=>{
+      const end=Math.max(0,track.scrollWidth-track.clientWidth);
+      const position=Math.max(0,Math.min(total-visible,track.scrollLeft/step));
+      index=Math.round(position);
+      if(target!==null&&Math.abs(track.scrollLeft-Math.min(end,target*step))<1)target=null;
+      const active=target??index;
+      previous.disabled=active===0||end<1;
+      next.disabled=active>=total-visible||end<1;
+      const fraction=end<1?1:Math.min(1,(position+visible)/total);
+      progress.querySelector('span').style.width=`${fraction*100}%`;
+      progress.setAttribute('aria-valuenow',String(Math.round(fraction*100)));
+      progress.setAttribute('aria-valuetext',`Produkte ${index+1} bis ${Math.min(total,index+visible)} von ${total}`);
     };
-    track.addEventListener('scroll', update, {passive:true});
-    const observer = new ResizeObserver(update); observer.observe(track);
-    carousel._cleanup = () => observer.disconnect();
-    update();
+    const resize=()=>{
+      const keep=target??index;
+      const slots=parseInt(getComputedStyle(track).getPropertyValue('--tray-slots'),10)||5;
+      visible=Math.min(total,slots);
+      track.style.setProperty('--visible-products',visible);
+      step=track.firstElementChild.getBoundingClientRect().width+(parseFloat(getComputedStyle(track).columnGap)||0);
+      target=null;index=Math.min(keep,total-visible);
+      track.scrollTo({left:Math.min(track.scrollWidth-track.clientWidth,index*step),behavior:'instant'});
+      update();
+    };
+    carousel._move=direction=>{
+      const end=Math.max(0,track.scrollWidth-track.clientWidth);
+      target=Math.max(0,Math.min(total-visible,(target??index)+direction));
+      track.scrollTo({left:Math.min(end,target*step),behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'});
+      update();
+    };
+    track.addEventListener('scroll',update,{passive:true});
+    const manual=()=>{target=null;};
+    track.addEventListener('pointerdown',manual,{passive:true});
+    track.addEventListener('wheel',manual,{passive:true});
+    const observer=new ResizeObserver(resize);observer.observe(track);
+    carousel._cleanup=()=>observer.disconnect();
+    resize();
   }
   const previousRender = renderProducts;
   let observers = [];
@@ -92,10 +114,7 @@
       const badge=rail.querySelector(`[data-rail-count="${key}"]`);badge.textContent=count;badge.hidden=!count;
     });
   };
-  function move(carousel, direction) {
-    const track=carousel.querySelector('.tray-carousel-track');
-    track.scrollTo({left:Math.min(track.scrollWidth-track.clientWidth,Math.max(0,track.scrollLeft+direction*(track.scrollWidth-track.clientWidth)/Math.max(1,track.children.length-1))),behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'});
-  }
+  function move(carousel, direction) {carousel._move?.(direction);}
   document.addEventListener('click',event=>{
     const button=event.target.closest('button');if(!button)return;
     if(button.dataset.openSelection){
@@ -103,12 +122,6 @@
       setFilterCollapsed(true);
       const card=key==='contact'?sidebar.querySelector('.selection-contact'):$(`#selection-title-${key}`).closest('.selection-card');
       card.tabIndex=-1;card.scrollIntoView({behavior:'smooth',block:'nearest'});card.focus({preventScroll:true});return;
-    }
-    if(button.dataset.carouselDot!==undefined){
-      const carousel=button.closest('.tray-carousel'),track=carousel.querySelector('.tray-carousel-track');
-      const count=track.children.length;
-      // A moving window of five dots covers every position, even for long lists.
-      track.scrollTo({left:(track.scrollWidth-track.clientWidth)*Number(button.dataset.carouselDot)/Math.max(1,count-1),behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'instant':'smooth'});
     }
     if(button.dataset.carouselStep){
       move(button.closest('.tray-carousel'),Number(button.dataset.carouselStep));

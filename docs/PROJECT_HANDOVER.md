@@ -1,7 +1,7 @@
 # TEKU Website – verbindliche Übergabe für die Clickdummys
 
-**Dokumentrevision:** 5 · **Stand:** 05.11.2026
-**Ausgangsbasis dieser Änderung:** f176c2d; aktuelle Änderungen siehe README-Changelog
+**Dokumentrevision:** 6 · **Stand:** 05.11.2026
+**Ausgangsbasis dieser Änderung:** 9bd2aca; aktuelle Änderungen siehe README-Changelog
 **Repository:** https://github.com/areich135/GPT · **Arbeitsbranch:** main
 
 Diese Übergabe soll einen neuen Chat arbeitsfähig machen, ohne den gesamten alten Verlauf zu laden. Sie beschreibt den freigegebenen Stand, die bewussten Unterschiede zwischen den Produktbereichen und die Grenzen des Dummys. Vor jeder Aufgabe den aktuellen Remote-Stand prüfen: Eine im ChatGPT-Projekt hochgeladene Kopie kann älter sein als die Datei im Repository.
@@ -35,17 +35,17 @@ Keine erfundenen Produktdaten, Patenttexte, Siegel, Bilder, Verkaufsargumente od
 
 | Bereich | Aktueller Stand | Aktuelle Dateien | Öffentlicher Einstieg |
 |---|---|---|---|
-| Rundtöpfe, Serie VCG | V9 | Repository-Stamm | https://areich135.github.io/GPT/?version=v9 |
-| Anzuchtpaletten, Serie BP | V5 | bp/ | https://areich135.github.io/GPT/bp/?version=v5 |
+| Rundtöpfe, Serie VCG | V10 | Repository-Stamm | https://areich135.github.io/GPT/?version=v10 |
+| Anzuchtpaletten, Serie BP | V6 | bp/ | https://areich135.github.io/GPT/bp/?version=v6 |
 | Eigenständige ST-/GP-Tray-Seite | Noch nicht umgesetzt | Keine eigene aktuelle Produktseite | Nicht als fertig behaupten |
 
 Die Kategorie im Umschalter heißt „Trays / Anzuchtpaletten“. Ihr aktuell umgesetztes Produktbeispiel ist BP. Die Nutzerbegriffe Tray und Anzuchtpalette wurden im Gespräch teilweise vermischt: Für die aktuelle BP-Seite ausdrücklich „Anzuchtpalette“ verwenden. ST-/GP-Trays sind ein späterer eigener Auftrag.
 
-Frühere Rundtopf-Stände V1–V8 liegen unter versions/v1/ bis versions/v8/. Frühere BP-Stände V1–V4 liegen unter bp/versions/. Die aktuellen Stände liegen gerade nicht unter versions/v9/ oder bp/versions/v5/. Die Zuordnung steuert version-switch.js.
+Frühere Rundtopf-Stände V1–V9 liegen unter versions/v1/ bis versions/v9/. Frühere BP-Stände V1–V5 liegen unter bp/versions/. Die aktuellen Stände liegen gerade nicht unter versions/v10/ oder bp/versions/v6/. Die Zuordnung steuert version-switch.js.
 
 **Versionsregeln:**
 
-- „V9 aktualisieren“, „nur das anpassen“: die genannte aktuelle Version ändern; keine zusätzliche Version erfinden.
+- „V10 aktualisieren“, „nur das anpassen“: die genannte aktuelle Version ändern; keine zusätzliche Version erfinden.
 - „Neue Version erstellen“: den bisherigen aktuellen Stand zuerst funktionsfähig sichern, danach neue Zuordnung und Auswahl ergänzen.
 - Der nächste freie Versionsname muss aus dem tatsächlichen Umschalter abgeleitet werden, nicht aus dieser Übergabe geraten werden.
 - Frühere Stände einschließlich ihrer eigenen Assets und Skripte nicht nachträglich mit neuen Produktfunktionen überschreiben.
@@ -54,7 +54,7 @@ Frühere Rundtopf-Stände V1–V8 liegen unter versions/v1/ bis versions/v8/. Fr
 
 ## 3. Unbedingt erhalten: Entscheidungen und bewusste Unterschiede
 
-| Thema | Rundtöpfe V9 | Anzuchtpaletten BP V5 |
+| Thema | Rundtöpfe V10 | Anzuchtpaletten BP V6 |
 |---|---|---|
 | Erste Werte in der Artikelzeile | Durchmesser, Höhe, Volumen | Länge, Breite, Höhe der Anzuchtpalette mit Maßskizze |
 | Erster Aufklappbereich | „Technische Daten“ | „Technische Daten“ |
@@ -65,7 +65,7 @@ Frühere Rundtopf-Stände V1–V8 liegen unter versions/v1/ bis versions/v8/. Fr
 | Anfrage-CTA | Muster primär magenta/weiß, Angebot Kontur | Muster primär magenta/weiß, Angebot Kontur |
 | Kompakte rechte Listenleiste bei offenem Filter | Umgesetzt | Umgesetzt |
 | Rechner | Kreisgeometrie | Rechteckgeometrie, inkl. Pflanzenzahl |
-| Passende Produkte | Mittige Pfeile + 1–5 mitwandernde Punkte | Äußere Pfeile + Positionsbalken für mehrere Aushebeplatten vorbereitet; derzeit höchstens eine je Artikel |
+| Passende Produkte | Seitliche blaue Pfeile + von links füllender Balken | Äußere Pfeile + Positionsbalken für mehrere Aushebeplatten vorbereitet; derzeit höchstens eine je Artikel |
 
 Diese Unterschiede sind Bestandsbeschreibung, keine automatisch auszuführende To-do-Liste. Wenn der Nutzer künftig ausdrücklich Einheitlichkeit verlangt, den dann beauftragten Umfang anpassen und die Tabelle aktualisieren.
 
@@ -96,13 +96,15 @@ Desktop bei eingeklapptem Filter:
 - Angebote, Muster, Merkliste und Kontakt stehen zusätzlich rechts daneben.
 - Die erste Artikelzeile beginnt oben auf derselben Ebene wie Filter und rechte Kacheln.
 
-Filter und rechte Spalten sind im aktuellen Adapter durch eigene Hosts auf die tatsächlich sichtbare SKU-Liste begrenzt: `filter-sticky-host`, `selection-sidebar-host`, `selection-rail-host`. Oberkante bündig mit der ersten Variante, beim Scrollen sticky mit 20 px Abstand; Unterkante höchstens am unteren Rand der letzten `.product-row`, einschließlich geöffneter Details. Nachfolgende Katalogabstände, Sammelbuttons, Listen unterhalb der Produkte und Empfehlungen gehören nicht zur Sticky-Grenze. Ein `ResizeObserver` aktualisiert `--sku-list-height` bei Filter-, Detail- oder Breitenänderungen. Auf Desktop kein Scroll-Handler für die Positionierung.
+Der linke Filter bleibt in beiden Zuständen oben am Anfang der SKU-Liste im normalen Dokumentfluss. Er läuft beim Scrollen mit dem Dokument aus dem Sichtfeld; kein Sticky, keine Begrenzung auf die SKU-Höhe und kein eigener Scrollbereich. `filter-sticky-host` bleibt als Raster-Wrapper bestehen; sein Name ist historisch.
 
-Lange geöffnete Filter und volle Listen bleiben durch eine begrenzte Höhe intern scrollbar. Wenn die SKU-Liste kürzer als die Seitenleiste ist, wird auch diese Höhe auf die verfügbare SKU-Fläche begrenzt. Ohne Treffer bleiben die Filter bedienbar; kein künstlich verlängerter SKU-Bereich.
+Die rechten Spalten sind unverändert durch `selection-sidebar-host` und `selection-rail-host` auf die tatsächlich sichtbare SKU-Liste begrenzt. Oberkante bündig mit der ersten Variante, beim Scrollen sticky mit 20 px Abstand; Unterkante höchstens am unteren Rand der letzten `.product-row`, einschließlich geöffneter Details. Nachfolgende Katalogabstände, Sammelbuttons, Listen unterhalb der Produkte und Empfehlungen gehören nicht zur Sticky-Grenze. Ein `ResizeObserver` aktualisiert `--sku-list-height` bei Filter-, Detail- oder Breitenänderungen. Auf Desktop kein Scroll-Handler für die Positionierung. Volle Listen bleiben bei Bedarf intern scrollbar.
+
+Der untere Empfehlungsblock der Rundtöpfe und seine Überschrift fluchten mit der linken/rechten Außenkante der SKU-Spalte. `catalog-update.js` misst hierfür die `.results-column` und setzt `--sku-column-left` und `--sku-column-width`. Bei Breiten- oder Filterwechsel neu ausrichten; bei ausgeblendetem Variantenpanel responsive Fallbackwerte verwenden. BP hat derzeit keinen eigenen Empfehlungsblock.
 
 Bei geöffnetem Filter nimmt der breite Filter links mehr Platz ein. Die volle rechte Kachelspalte verschwindet; die Varianten dürfen den freigegebenen Platz nutzen. Das starre Übertragen einzelner Desktop-Pixelwerte auf alle Breiten vermeiden.
 
-Bei 700 px und schmaler läuft der kompakte Filter mit 12 px Abstand mit; der aufgeklappte Filter bleibt oberhalb der SKUs im Dokumentfluss. Die horizontale mobile Schnellzugriffsleiste wird zwischen erstem und letztem SKU begrenzt und außerhalb dieses Bereichs ausgeblendet. Volle Listen dürfen weiterhin unter die Produktansicht rücken.
+Auch bei 700 px und schmaler bleiben beide Filterzustände im Dokumentfluss. Die horizontale mobile Schnellzugriffsleiste wird zwischen erstem und letztem SKU begrenzt und außerhalb dieses Bereichs ausgeblendet. Volle Listen dürfen weiterhin unter die Produktansicht rücken.
 
 catalog-xd.css regelt unter anderem Breakpoints bei 1350, 1100 und 700 px. Bei schmaleren Breiten können die vollständigen Listen unter die Produktansicht rücken. Das ist bestehendes responsives Verhalten und kein Grund, eine volle Desktop-Seitenleiste auf Mobilgeräten zu erzwingen.
 
@@ -164,7 +166,7 @@ Pflichtfelder: Geschäftskundenbestätigung (nicht vorausgewählt), Firma, Umsat
 
 Die Listen gelten für die laufende Seite/Sitzung. Dauerhafte Speicherung nach Reload, Synchronisierung zwischen Produktbereichen und ein echter Kundenwarenkorb sind nicht zugesagt. „Merkliste speichern“ bietet den bestehenden Export; daraus kein Backend ableiten.
 
-## 6. Rundtöpfe V9: genaue fachliche Vorgaben
+## 6. Rundtöpfe V10: genaue fachliche Vorgaben
 
 ### 6.1 Daten und Artikelzeile
 
@@ -204,9 +206,14 @@ Vorhandene Fußnoten wie D/K stehen im geschlossenen Artikelbereich unter der Ze
 
 Nur p.trays des ausgewählten Artikels verwenden. Die Kacheln öffnen die bisherige zugehörige Produktansicht. Keine neue Kompatibilität behaupten.
 
-Die aktuelle Navigation hat mittige Pfeile und `min(5, Anzahl zugeordneter Trays)` Punkte; bei einem Tray genau einen Punkt und deaktivierte Pfeile. Mehr als fünf Positionen: Das sichtbare Punktfenster wandert mit der Auswahl, bis zur letzten Position. Die Punkte und Pfeile decken den gesamten Scrollbereich ab; horizontales Wischen und Pfeiltasten aktualisieren den aktiven Punkt. BP-Aushebeplatten behalten ihre bisherige Navigation.
+Die aktuelle Navigation hat blaue Pfeile links und rechts neben den Produkten und einen dünnen Balken darunter. Desktop maximal fünf vollständige Produkte nebeneinander; responsive vier/drei/zwei/eines, bei weniger Zuordnungen entsprechend weniger. Ausschließlich vorhandene `p.trays` anzeigen.
 
-## 7. Anzuchtpaletten BP V5: Fachbegriffe und Datenzuordnung
+Jeder Pfeilklick verschiebt genau um eine Kachelbreite einschließlich Abstand. Schnelle Klicks zählen ihre Zielpositionen weiter, ohne Schritte durch eine laufende Animation zu verlieren. Anfang: links deaktiviert; Ende: rechts deaktiviert; bei vollständig sichtbaren Produkten beide deaktiviert. Pfeiltasten und horizontales Wischen aktualisieren denselben Zustand. `ResizeObserver` erhalten und beim Re-Render aufräumen.
+
+Der dunkelblaue Balken beginnt immer links und füllt sich, statt als Griff weiterzuwandern. Füllstand = (Index des ersten sichtbaren Produkts + Anzahl sichtbarer Produkte) / Anzahl aller zugeordneten Produkte. Beispiel zehn Produkte, fünf sichtbar: 50 %, nach einem Schritt 60 %, am Ende 100 %. Bei einem Produkt 100 % und beide Pfeile deaktiviert; keine Produkte ergeben keine künstliche Navigation. BP-Aushebeplatten behalten ihre bisherige Navigation.
+
+
+## 7. Anzuchtpaletten BP V6: Fachbegriffe und Datenzuordnung
 
 bp/data.js enthält 20 Originalartikel. Außenmaße, Zellen und Plugs sind unterschiedliche Datenbereiche. Ein Plug ist der Jungpflanzen-/Substratballen, nicht das Loch der Palette. Größere Plug-Höhe gegenüber Zellenmaßen nicht als vermeintlichen Datenfehler „korrigieren“.
 
@@ -354,7 +361,7 @@ Vorlagen aus früheren Chats sind nicht automatisch im neuen Chat verfügbar. Da
 | Bereiche/Versionsauswahl | version-switch.js; beide index.html | Aktuell + Archive |
 | VCG-Daten/Filter/Grundfunktionen | data.js, app.js | Aktuelle Ergänzungen können Renderer ersetzen |
 | Aktuelle VCG-Zeile/Technik | latest.js, technical.js, technical.css, v4.css | v8.js und späte CSS-Regeln |
-| VCG-Kacheln/Zeiger/Punktnavigation | v8.js, v8.css, certificates.js | Auswahl und Listen in v3.js |
+| VCG-Kacheln/Zeiger/Tray-Fortschritt | v8.js, v8.css, certificates.js | Auswahl und Listen in v3.js |
 | BP-Maße/Filter/Zeilen/Daten | bp/app.js, bp/data.js, bp/styles.css, bp/v2.css | bp/review-update.* |
 | BP-CC-Hilfe/Listenleiste/Produktnavigation | bp/review-update.js, bp/review-update.css | Shared Listen und setCollapsed |
 | Gemeinsame Listen | v3.js, v3.css | VCG und BP samt Cachebuster |
@@ -397,12 +404,13 @@ Nicht für jede Textkorrektur die gesamte Anwendung erneut prüfen. Betroffene F
 | Listen | Konkrete Farbe hinzufügen/entfernen; Duplikate; Wechsel der Listen; Inhalt nach Filtereinklappen |
 | Anfrageformular | Einstieg Muster/Angebot, beide gleichzeitig, getrennte Mengen, keine leere Anfrageart, Geschäftskundenpflicht, Umsatzsteuer-ID, gespeicherte Farbvarianten und Dummy-Abschluss |
 | Aufklappbereich | Öffnen/Schließen/Wechsel; automatisches Einklappen; bestehende Inhalte; VCG-Zeiger |
-| Carousel | VCG: mittige Pfeile, 1–5 Punkte; Auswahl/Wischen/Pfeiltasten synchron, Anfang/Ende; BP bisherige Navigation erhalten |
+| Carousel | VCG: seitliche blaue Pfeile, maximal fünf Produkte, ein Produktschritt je Klick, von links füllender Balken, Anfang/Ende; BP bisherige Navigation erhalten |
 | Technische Bilder | Richtiger Artikel; Ausschnitt/Überlappung; Caption; Zoom; keine unbelegte Umfärbung |
 | Rechner | CTA-Pflicht; richtige Vorbelegung; Kontrollwerte; Ausrichtungswechsel; Einheiten; Reset; Fehler; Schließen/Escape/Fokus |
 | Versionierung | Altes und neues Routing; beide Kategorien; relative Bilder, Fonts und Skripte |
 | Geteiltes CSS/JS | VCG und BP; Desktop und mindestens eine schmale Ansicht |
-| Sticky-Filter/Listen | Beide Filterzustände, Anfang/Mitte/Ende der SKU-Liste, veränderte Treffer-/Detailhöhe, lange Filter scrollbar, mobile Schnellzugriffe am SKU-Ende begrenzt |
+| Filter/Sticky-Listen | Linker Filter in beiden Zuständen statisch; rechte Listen unverändert am Anfang/Mitte/Ende der SKU-Liste und nach Höhenänderung begrenzt; mobile Schnellzugriffe erhalten |
+| Empfehlungsblock | Linke/rechte Außenkante und Überschrift bündig mit SKU-Spalte, bei beiden Filterzuständen und schmalen Breiten |
 
 Geeignete Breiten für Layoutänderungen: 390, 768, 1440 px, jeweils relevante Filter-/Panelzustände. Rechner zusätzlich 1280 × 720. Nicht nur die Seitenbreite messen: überlappende Labels, abgeschnittene CTAs, unsichtbare Siegel und verdeckte Elemente können auch ohne horizontales Seitenscrollen auftreten.
 
@@ -413,6 +421,8 @@ Passende lokale Checks:
     node --test tests/space-engine.test.cjs tests/rectangular-engine.test.cjs
 
 Bei neuen Rechenänderungen unabhängig begründete Testfälle ergänzen, keine Tests schreiben, die bloß dieselbe Implementierung kopieren. Reine Dokumentationsänderungen benötigen keine erneuten Rechen- oder Browserprüfungen.
+
+**Prüfung V10/BP V6 am 05.11.2026:** Statischer Filter in beiden Zuständen, unverändertes Mitlaufen und SKU-Ende der rechten Spalten sowie Empfehlungsfluchten bei 1774/1280/768/390 px im Chromium-Browser geprüft. Tray-Navigation mit 0/1/3/5/6/10/20 temporär wiederholten Originalzuordnungen: maximal fünf Produkte, ein Schritt je Klick, schnelle Dreifachklicks, Fortschritt und deaktivierte Endpfeile geprüft. Archivrouting V9/BP V5 samt bisherigen Sticky-Filtern und lokalen Assets geprüft; keine JavaScript-/Assetfehler. Syntax-/Diffprüfung bestanden.
 
 **Prüfung der Scrollanpassung vom 05.11.2026:** Beide Bereiche im Chromium-Browser bei 1774/1280/768/390 px geprüft. Desktop-/Tabletfilter und rechte Seitenspalten am Anfang, beim Scrollen und exakt am letzten SKU kontrolliert; lange Filter intern scrollbar. Mobile kompakte Filterleiste und begrenzte Schnellzugriffe geprüft. Filterauswahl aktualisiert die Grenze; Musterliste und Anfrageformular bleiben bedienbar. Keine JavaScript- oder Assetfehler; Syntax-/Diffprüfung bestanden.
 

@@ -1,0 +1,34 @@
+/* The same catalog gap separates filter, variants and compact list actions. */
+@media(min-width:701px){
+  .catalog-xd .catalog:not(.filters-collapsed){grid-template-columns:var(--xd-filter) minmax(0,1fr) 44px}
+  .catalog-xd .filter-sticky-host{grid-column:1;grid-row:1;align-self:start;min-width:0}
+  .catalog-xd .has-sku-rows .filter-sticky-host{height:var(--sku-list-height)}
+  .catalog-xd .catalog .filters{position:sticky;top:20px;align-self:start;max-height:calc(100dvh - 40px);overflow-y:auto}
+  .catalog-xd .catalog.has-sku-rows .filters{max-height:min(calc(100dvh - 40px),var(--sku-list-height))}
+  .catalog-xd .selection-rail-host{grid-column:3;grid-row:1;align-self:stretch;min-width:0}
+  .catalog-xd .has-sku-rows .selection-rail-host{height:var(--sku-list-height);align-self:start}
+  .catalog-xd .selection-rail-host .selection-rail{position:sticky;top:20px;right:auto;bottom:auto;border-radius:10px;margin:0;box-shadow:none;max-height:calc(100dvh - 40px);overflow-y:auto}
+  .catalog-xd .has-sku-rows .selection-rail-host .selection-rail{max-height:min(calc(100dvh - 40px),var(--sku-list-height))}
+}
+.selection-rail-host[hidden],.selection-sidebar-host[hidden]{display:none}
+@media(min-width:1101px){
+  .catalog-xd .selection-sidebar-host{grid-column:3;grid-row:1;align-self:start;min-width:0}
+  .catalog-xd .has-sku-rows .selection-sidebar-host{height:var(--sku-list-height)}
+  .catalog-xd .catalog.has-sku-rows .selection-sidebar{max-height:min(calc(100dvh - 40px),var(--sku-list-height))}
+}
+@media(max-width:1100px){.catalog-xd .selection-sidebar-host{grid-column:1/-1;grid-row:2;min-width:0}}
+@media(max-width:700px){.selection-rail-host.outside-variants .selection-rail{visibility:hidden}}
+@media(max-width:700px){
+  .catalog-xd .filter-sticky-host{grid-column:1;grid-row:1;min-width:0}
+  .catalog-xd .catalog.filters-collapsed.has-sku-rows .filter-sticky-host{height:var(--sku-list-height)}
+  .catalog-xd .selection-sidebar-host{grid-row:3}
+  .catalog-xd .catalog.filters-collapsed .filters{position:sticky;top:12px;align-self:start;max-height:calc(100dvh - 24px);overflow-y:auto}
+  .catalog-xd .catalog.filters-collapsed.has-sku-rows .filters{max-height:min(calc(100dvh - 24px),var(--sku-list-height))}
+}
+.rounds-v8 .tray-carousel-dots{display:flex;align-items:center;justify-content:center;gap:4px}
+.rounds-v8 .tray-carousel-dots button{display:grid;place-items:center;width:24px;height:32px;padding:0}
+.rounds-v8 .tray-carousel-dots button::before{content:"";width:7px;height:7px;border:1px solid var(--navy);border-radius:50%;background:white}
+.rounds-v8 .tray-carousel-dots button[aria-current="true"]::before{background:var(--navy)}
+.rounds-v8 .tray-carousel-dots button:focus-visible{outline:2px solid var(--pink);outline-offset:1px;border-radius:4px}
+/* Dot positions can lie between tiles when several trays are visible. */
+.rounds-v8 .tray-carousel-track{scroll-snap-type:none}

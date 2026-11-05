@@ -1,0 +1,85 @@
+/* October 26 XD: one alignment frame for hero, filter and results.
+   The selection column sits beyond the hero while the filter is collapsed. */
+.catalog-xd{
+  --xd-left:19.7vw;
+  --xd-right:3vw;
+  --xd-gap:16px;
+  --xd-sidebar:clamp(210px,13.2vw,250px);
+  --xd-filter:clamp(260px,19vw,368px);
+  --xd-compact:64px;
+  --xd-main:min(60.5vw,1160px,calc(100vw - var(--xd-left) - var(--xd-right) - var(--xd-sidebar) - var(--xd-gap)));
+  --xd-full:calc(var(--xd-main) + var(--xd-sidebar) + var(--xd-gap));
+}
+.catalog-xd .hero{margin-left:var(--xd-left);width:var(--xd-main);max-width:none}
+.catalog-xd .catalog,.catalog-xd .catalog.filters-collapsed{
+  margin-left:var(--xd-left);width:var(--xd-full);max-width:none;gap:var(--xd-gap);
+  grid-template-columns:var(--xd-filter) minmax(0,1fr);
+}
+.catalog-xd .catalog.filters-collapsed{grid-template-columns:var(--xd-compact) minmax(0,1fr) var(--xd-sidebar)}
+.catalog-xd .filters{grid-column:1;grid-row:1;min-width:0}
+.catalog-xd .results-column{grid-column:2;grid-row:1;min-width:0}
+.catalog-xd .selection-sidebar{grid-column:3;grid-row:1;position:sticky;top:20px;max-height:calc(100vh - 40px);overflow:auto}
+.catalog-xd .selection-stack{display:flex;flex-direction:column;gap:14px}
+.catalog-xd .selection-contact{margin-top:14px}
+.catalog-xd .refreshed-row{scroll-margin-top:24px}
+/* Put the first card on the same horizontal line as the filter and sidebar. */
+.catalog-xd .bp-results-header{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap}
+.catalog-xd .bp-active-filters{margin:0}
+.catalog-xd .bp-active-filters:not(:empty){padding:10px 0}
+.catalog-xd.bp-v2 .bp-tray-measures{position:relative;max-width:120px;margin-top:5px;text-align:center}
+.catalog-xd.bp-v2 .bp-tray-measures>img{width:58px;height:36px;object-fit:contain;margin:0 auto 4px}
+.catalog-xd.bp-v2 .bp-tray-measure-values{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-top:1px solid #627797;padding-top:5px;gap:4px}
+.catalog-xd.bp-v2 .bp-tray-measure-values>div{display:flex;flex-direction:column;gap:5px;font-size:11px}
+.catalog-xd.bp-v2 .bp-tray-measure-values strong{font-size:10px}
+.catalog-xd.bp-v2 .bp-tray-unit{position:absolute;right:-17px;bottom:0;color:var(--muted);font-size:9px}
+@media(max-width:1350px){
+  .catalog-xd{--xd-left:8vw;--xd-right:4vw;--xd-main:calc(100vw - var(--xd-left) - var(--xd-right) - var(--xd-sidebar) - var(--xd-gap));--xd-filter:250px;--xd-compact:54px;--xd-gap:14px}
+}
+@media(max-width:1100px){
+  .catalog-xd{--xd-left:4vw;--xd-right:4vw;--xd-main:92vw;--xd-full:92vw;--xd-filter:225px}
+  .catalog-xd .catalog.filters-collapsed{grid-template-columns:var(--xd-compact) minmax(0,1fr)}
+  .catalog-xd .selection-sidebar{grid-column:1/-1;grid-row:2;position:static;max-height:none;overflow:visible}
+  .catalog-xd .selection-stack{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+}
+@media(max-width:700px){
+  .catalog-xd{--xd-left:5vw;--xd-right:5vw;--xd-main:90vw;--xd-full:90vw;--xd-compact:44px;--xd-gap:12px}
+  .catalog-xd .catalog{grid-template-columns:minmax(0,1fr)}
+  .catalog-xd .filters{grid-column:1;grid-row:1}
+  .catalog-xd .results-column{grid-column:1;grid-row:2}
+  .catalog-xd .catalog.filters-collapsed .results-column{grid-column:2;grid-row:1}
+  .catalog-xd .selection-sidebar{grid-row:3}
+  .catalog-xd .selection-stack{grid-template-columns:1fr}
+}
+/* XD correction: keep both request buttons stacked on the right with open filters. */
+.catalog-xd:is(.rounds-v4,.bp-v2) .catalog:not(.filters-collapsed) .refreshed-row .row-requests{
+  flex-direction:column;align-items:stretch;flex-wrap:nowrap;gap:12px;
+}
+@container(min-width:701px){
+  .catalog-xd:is(.rounds-v4,.bp-v2) .catalog:not(.filters-collapsed) .refreshed-row .row-main{
+    grid-template-columns:54px minmax(115px,1.1fr) repeat(3,minmax(76px,1fr)) minmax(140px,1.3fr);grid-template-rows:auto;
+  }
+  .catalog-xd:is(.rounds-v4,.bp-v2) .catalog:not(.filters-collapsed) .refreshed-row .row-requests{
+    grid-column:6;grid-row:1;justify-self:center;margin:0;
+  }
+}
+/* Round-pot technical image: numbered rim and base details overlap the product. */
+.catalog-xd .rounds-detail-figure{display:block;padding:5px 0 10px}
+.catalog-xd .rounds-detail-stage{position:relative;width:100%;max-width:250px;height:280px;margin:0 auto}
+.catalog-xd .rounds-detail-product{position:absolute;top:38px;left:0;width:70%;height:230px}
+.catalog-xd .rounds-detail-product img{width:100%;height:100%;object-fit:contain;transform:scale(1.4)}
+.catalog-xd .rounds-detail-stage .detail-zoom{position:absolute;right:0;width:126px;height:126px;background:white;border:3px solid #185383;border-radius:50%;z-index:1}
+.catalog-xd .rim-detail-zoom{top:0}
+.catalog-xd .floor-detail-zoom{bottom:0}
+.catalog-xd .detail-zoom-image{display:block;width:100%;height:100%;border-radius:50%;overflow:hidden}
+.catalog-xd .detail-zoom-image img{width:100%;height:100%;object-fit:cover;transform:scale(1.45)}
+.catalog-xd .floor-detail-zoom .detail-zoom-image img{transform:translateY(14px) scale(1.45)}
+.catalog-xd .rounds-detail-figure .detail-number{display:inline-grid;place-items:center;width:16px;height:16px;border-radius:50%;background:var(--navy);color:white;font-size:10px;line-height:1;font-weight:700;flex:none}
+.catalog-xd .detail-zoom .detail-number{position:absolute;top:-3px;left:-3px}
+.catalog-xd .floor-detail-zoom .detail-number{left:auto;right:-3px}
+.catalog-xd .rounds-detail-figure figcaption{max-width:250px;margin:14px auto 0;text-align:left;width:100%;font-size:13px}
+.catalog-xd .rounds-detail-figure figcaption>span{display:flex;gap:4px;align-items:center;margin-bottom:3px}
+.catalog-xd .rounds-detail-figure figcaption small{display:block;margin-top:7px}
+/* Font-independent disclosure arrows in both current drafts. */
+.catalog-xd .row-section-toggle>span{display:inline-flex;align-items:center;justify-content:center;gap:4px}
+.catalog-xd .row-section-toggle>span svg,.catalog-xd .more-sizes svg{width:13px;height:13px;flex-shrink:0;vertical-align:middle}
+.catalog-xd .row-section-toggle[aria-expanded=true]>span svg,.catalog-xd .more-sizes[aria-expanded=true] svg{transform:rotate(180deg)}
