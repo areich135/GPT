@@ -1,7 +1,7 @@
 # TEKU Website – verbindliche Übergabe für die Clickdummys
 
-**Dokumentrevision:** 6 · **Stand:** 05.11.2026
-**Ausgangsbasis dieser Änderung:** 9bd2aca; aktuelle Änderungen siehe README-Changelog
+**Dokumentrevision:** 7 · **Stand:** 05.11.2026
+**Ausgangsbasis dieser Änderung:** 549f29d; aktuelle Änderungen siehe README-Changelog
 **Repository:** https://github.com/areich135/GPT · **Arbeitsbranch:** main
 
 Diese Übergabe soll einen neuen Chat arbeitsfähig machen, ohne den gesamten alten Verlauf zu laden. Sie beschreibt den freigegebenen Stand, die bewussten Unterschiede zwischen den Produktbereichen und die Grenzen des Dummys. Vor jeder Aufgabe den aktuellen Remote-Stand prüfen: Eine im ChatGPT-Projekt hochgeladene Kopie kann älter sein als die Datei im Repository.
@@ -156,13 +156,20 @@ Zu erhalten sind: Hinzufügen, Entfernen, Übernahme aus der Merkliste in Muster
 
 Die schmale Leiste zeigt Angebote, Muster, Merkliste, Kontakt und vorhandene Artikelzähler. Sie ist ein Zugang zu denselben Kacheln. Desktop: eigene 44-px-Spalte rechts neben den Varianten, gleicher --xd-gap wie links; oberer Rand bündig mit erster Variante, zwischen erstem und letztem SKU sticky bei 20 px. Nie in den Hero oder unter den letzten SKU wandern. Mobil unten rechts, am letzten SKU nach oben begrenzt und außerhalb des SKU-Bereichs verborgen.
 
-### 5.4 Anfrageformular: Muster, Angebot oder beides
+### 5.4 Anfrageformular: zwei Schritte für Muster und Angebot
 
-Nur die aktuellen Seiten laden `request-form.js` und `request-form.css`. Der gemeinsame Adapter ersetzt `showRequest` nach den bisherigen Seitenskripten. Einstieg über Muster- oder Angebotsliste wählt die entsprechende Anfrageart vor; zwei unabhängige Checkboxen erlauben beides gleichzeitig. Mindestens eine muss gewählt sein.
+Nur die aktuellen Seiten laden `request-form.js` und `request-form.css`. Der gemeinsame Adapter ersetzt `showRequest` nach den bisherigen Seitenskripten. Die zwei Screenshots vom 05.11.2026 sind die visuelle Vorlage: breites weißes Modal, pillenförmige Eingaben, zwei Spalten auf Desktop, magentafarbener Fortschritt und Weiter-CTA. Der Ablauf ist eine Anfrage, ohne Shop-Registrierung, Zahlung oder Kontoanlage.
 
-Getrennte Mengenfelder für Muster und Angebot; nur ausgewählte Anfragearten sind sichtbar, aktiv und Pflichtfelder. Beim Umschalten bleiben Eingaben erhalten. Bestehende VCG-Mengengrenzen bleiben bestehen; BP erhält dadurch keine zusätzliche Mengenbegrenzung. Listen-Checkout aus `v3.js` überträgt weiterhin die gespeicherten Artikel mit ihrer konkreten Farbe in die Zusammenfassung und ersetzt die Farbauswahl durch „Ausgewählte Varianten“.
+1. **Kontaktdaten:** Anrede, Vorname, Nachname, Funktion im Unternehmen, Telefon, E-Mail sind Pflichtfelder. Anrede erlaubt „Keine Angabe“. Funktion ist frei eingebbar.
+2. **Firmen-/Lieferadresse und Anfrage:** Firma, Straße, Hausnummer, PLZ, Ort, Land und Umsatzsteuer-ID sind Pflichtfelder. Firmenzusatz und Bundesland/Region sind optional. Land ist frei änderbar, mit Deutschland vorbelegt; PLZ und Hausnummer sind Textfelder für internationale Formate.
 
-Pflichtfelder: Geschäftskundenbestätigung (nicht vorausgewählt), Firma, Umsatzsteuer-ID, Ansprechpartner und E-Mail. Eine leere oder nur aus Leerzeichen bestehende Umsatzsteuer-ID verhindert den Abschluss. Es gibt keine externe Prüfung der ID. Der Abschluss zeigt die gewählten Anfragearten und Mengen; der Dummy versendet und speichert keine Anfrage oder Kontaktdaten.
+Die Geschäftskunden-Abfrage und -Bestätigung entfallen ausdrücklich. Keine gleichbedeutende Geschäfts-/Verbrauchererklärung aus der Shop-Vorlage ergänzen. Die Umsatzsteuer-ID bleibt erforderlich; keine externe Prüfung der ID. Eingaben aus nur Leerzeichen werden bei erforderlichen Textfeldern abgewiesen.
+
+Einstieg über Muster- oder Angebotsliste wählt die Anfrageart vor. In Schritt 2 erlauben zwei unabhängige Checkboxen Muster, Angebot oder beides gleichzeitig. Mindestens eine muss gewählt sein. Getrennte Mengenfelder; nur ausgewählte Anfragearten sind sichtbar, aktiv und erforderlich. Bisherige VCG-Mengengrenzen bleiben; BP erhält keine neue Mengenbegrenzung.
+
+„Weiter“ bzw. Enter in Schritt 1 validiert nur die Kontaktdaten. Schritt 2 validiert Adresse und Anfrage. Inaktive äußere Fieldsets sind ausgeblendet und deaktiviert, damit unsichtbare Pflichtfelder weder blockieren noch fokussiert werden. „Zurück“ erhält alle Werte; „Abbrechen“ in Schritt 1 schließt den Dialog. Fortschritt ist schrittbasiert: 0 % / 50 % / 100 % beim simulierten Abschluss. Die Aktionsleiste bleibt erreichbar; lange Inhalte scrollen innerhalb des Modal-Inhalts. Keine Speichervorgänge oder echten Anfragen.
+
+`v3.js` überträgt weiterhin die gespeicherten Artikel mit exakter Farbe. Daher `.request-summary` und `select[name="color"]` mit umschließendem Label erhalten; der Checkout ersetzt dieses Label auch im zunächst ausgeblendeten zweiten Schritt durch „Ausgewählte Varianten“. Die Artikelliste ist im Modal als aufklappbarer Kontext enthalten. Der simulierte Abschluss zeigt Anfragearten, Mengen, Kontakt und Adresse. Das vorherige Fieldset wird hierfür kurz wieder aktiviert, um alle Kontaktfelder in `FormData` zu erfassen.
 
 Die Listen gelten für die laufende Seite/Sitzung. Dauerhafte Speicherung nach Reload, Synchronisierung zwischen Produktbereichen und ein echter Kundenwarenkorb sind nicht zugesagt. „Merkliste speichern“ bietet den bestehenden Export; daraus kein Backend ableiten.
 
@@ -402,7 +409,7 @@ Nicht für jede Textkorrektur die gesamte Anwendung erneut prüfen. Betroffene F
 | Text/Label | Richtige Stelle und Einheit; keine unbeabsichtigten Treffer in Artikelname/Rohdaten; keine Überlagerung |
 | Filter | Auswahl setzen/entfernen/resetten; korrekte Trefferzahl und grüner Punkt; beide Filterzustände |
 | Listen | Konkrete Farbe hinzufügen/entfernen; Duplikate; Wechsel der Listen; Inhalt nach Filtereinklappen |
-| Anfrageformular | Einstieg Muster/Angebot, beide gleichzeitig, getrennte Mengen, keine leere Anfrageart, Geschäftskundenpflicht, Umsatzsteuer-ID, gespeicherte Farbvarianten und Dummy-Abschluss |
+| Anfrageformular | Beide Schritte und Einstiege, Weiter/Zurück/Enter, pro Schritt validieren, keine Geschäftskundenfrage, vollständige Adresse, Umsatzsteuer-ID, kombinierte Anfrage/Mengen, gespeicherte Farbvarianten und Dummy-Abschluss |
 | Aufklappbereich | Öffnen/Schließen/Wechsel; automatisches Einklappen; bestehende Inhalte; VCG-Zeiger |
 | Carousel | VCG: seitliche blaue Pfeile, maximal fünf Produkte, ein Produktschritt je Klick, von links füllender Balken, Anfang/Ende; BP bisherige Navigation erhalten |
 | Technische Bilder | Richtiger Artikel; Ausschnitt/Überlappung; Caption; Zoom; keine unbelegte Umfärbung |
@@ -421,6 +428,8 @@ Passende lokale Checks:
     node --test tests/space-engine.test.cjs tests/rectangular-engine.test.cjs
 
 Bei neuen Rechenänderungen unabhängig begründete Testfälle ergänzen, keine Tests schreiben, die bloß dieselbe Implementierung kopieren. Reine Dokumentationsänderungen benötigen keine erneuten Rechen- oder Browserprüfungen.
+
+**Prüfung der zweistufigen Anfrage am 05.11.2026:** Beide Bereiche im Chromium-Browser jeweils über Muster- und Angebotsliste geprüft: Schrittvalidierung inklusive leerer Felder, ungültiger E-Mail und Leerzeichen in der Umsatzsteuer-ID; kombinierte und einzelne Anfragearten, getrennte Mengen, Enter-Bedienung, Zurückgehen mit Datenerhalt und vollständiger Dummy-Abschluss. Internationale Adresse mit alphanumerischer PLZ sowie optionaler Region geprüft. Bei 1280/768/390 px kein horizontaler Überlauf; Aktionsleiste erreichbar. Beide Schritte visuell kontrolliert; keine JavaScript-/Assetfehler. Syntax-/Diffprüfung bestanden.
 
 **Prüfung V10/BP V6 am 05.11.2026:** Statischer Filter in beiden Zuständen, unverändertes Mitlaufen und SKU-Ende der rechten Spalten sowie Empfehlungsfluchten bei 1774/1280/768/390 px im Chromium-Browser geprüft. Tray-Navigation mit 0/1/3/5/6/10/20 temporär wiederholten Originalzuordnungen: maximal fünf Produkte, ein Schritt je Klick, schnelle Dreifachklicks, Fortschritt und deaktivierte Endpfeile geprüft. Archivrouting V9/BP V5 samt bisherigen Sticky-Filtern und lokalen Assets geprüft; keine JavaScript-/Assetfehler. Syntax-/Diffprüfung bestanden.
 

@@ -13,6 +13,13 @@ Beide aktuellen Entwürfe enthalten die rechten Listen für Muster, Angebote und
 
 ## Changelog
 
+### 05.11.2026 · Zweistufige Anfrage VCG V10 / BP V6
+
+- Anfrage-Modale nach Vorlage in zwei Schritte aufgeteilt: Kontaktdaten sowie Firmen-/Lieferadresse mit Anfrageart und Mengen.
+- Anrede, Vor-/Nachname, Funktion, Telefon sowie vollständige Adressfelder ergänzt; Umsatzsteuer-ID bleibt ein Pflichtfeld. Firmenzusatz und Bundesland/Region sind optional.
+- Geschäftskunden-Abfrage entfernt. Muster und Angebot bleiben gemeinsam auswählbar; Eingaben bleiben beim Zurückgehen erhalten und werden pro Schritt geprüft.
+- Breites responsives Modal mit runden Eingabefeldern, Fortschritt 0/50/100 % und erreichbarer Aktionsleiste. Der Anfrageabschluss bleibt simuliert.
+
 ### 05.11.2026 · Pfeilgestaltung VCG V10
 
 - Pfeile bei „Passende Trays“ als schlichte blaue Winkel ohne Kreisrahmen gemäß Screenshot angepasst; Klickfläche und Navigation bleiben erhalten.
