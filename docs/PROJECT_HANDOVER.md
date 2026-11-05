@@ -206,7 +206,7 @@ Vorhandene Fußnoten wie D/K stehen im geschlossenen Artikelbereich unter der Ze
 
 Nur p.trays des ausgewählten Artikels verwenden. Die Kacheln öffnen die bisherige zugehörige Produktansicht. Keine neue Kompatibilität behaupten.
 
-Die aktuelle Navigation hat blaue Pfeile links und rechts neben den Produkten und einen dünnen Balken darunter. Desktop maximal fünf vollständige Produkte nebeneinander; responsive vier/drei/zwei/eines, bei weniger Zuordnungen entsprechend weniger. Ausschließlich vorhandene `p.trays` anzeigen.
+Die aktuelle Navigation hat schlichte blaue SVG-Winkel ohne Kreisrahmen links und rechts neben den Produkten und einen dünnen Balken darunter. Desktop maximal fünf vollständige Produkte nebeneinander; responsive vier/drei/zwei/eines, bei weniger Zuordnungen entsprechend weniger. Ausschließlich vorhandene `p.trays` anzeigen.
 
 Jeder Pfeilklick verschiebt genau um eine Kachelbreite einschließlich Abstand. Schnelle Klicks zählen ihre Zielpositionen weiter, ohne Schritte durch eine laufende Animation zu verlieren. Anfang: links deaktiviert; Ende: rechts deaktiviert; bei vollständig sichtbaren Produkten beide deaktiviert. Pfeiltasten und horizontales Wischen aktualisieren denselben Zustand. `ResizeObserver` erhalten und beim Re-Render aufräumen.
 

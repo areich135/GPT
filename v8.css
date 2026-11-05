@@ -28,7 +28,7 @@
 .rounds-v8 .tray-carousel-track{--tray-slots:5;display:flex;gap:12px;overflow-x:auto;overscroll-behavior-x:contain;scrollbar-width:none;scroll-snap-type:x mandatory}
 .rounds-v8 .tray-carousel-track::-webkit-scrollbar{display:none}
 .rounds-v8 .tray-carousel-track .tray-tile{flex:0 0 calc((100% - 12px * (var(--visible-products,5) - 1)) / var(--visible-products,5));min-width:0;scroll-snap-align:start;border:0;padding:6px;font-weight:700}
-.rounds-v8 .tray-carousel-arrow{width:32px;height:32px;border:1px solid currentColor;color:var(--navy);border-radius:50%;display:grid;place-items:center}
+.rounds-v8 .tray-carousel-arrow{width:32px;height:32px;border:0;background:transparent;color:var(--navy);border-radius:0;display:grid;place-items:center}
 .rounds-v8 .tray-carousel-arrow:disabled{color:var(--muted);opacity:.35;cursor:default}
 .rounds-v8 .tray-carousel-arrow svg{width:18px;height:18px}
 .rounds-v8 .tray-carousel-progress{height:2px;background:#d4d8dc;margin:16px 44px 0}

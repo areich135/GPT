@@ -13,6 +13,10 @@ Beide aktuellen Entwürfe enthalten die rechten Listen für Muster, Angebote und
 
 ## Changelog
 
+### 05.11.2026 · Pfeilgestaltung VCG V10
+
+- Pfeile bei „Passende Trays“ als schlichte blaue Winkel ohne Kreisrahmen gemäß Screenshot angepasst; Klickfläche und Navigation bleiben erhalten.
+
 ### 05.11.2026 · Neue Entwürfe VCG V10 / BP V6
 
 - Linker Filter bleibt in beiden Zuständen am Anfang der SKU-Liste und scrollt mit der Seite weg. Rechte volle und kompakte Listen behalten ihr bisheriges Mitlaufen bis zum letzten SKU.
