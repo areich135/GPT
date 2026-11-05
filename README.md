@@ -13,6 +13,13 @@ Beide aktuellen Entwürfe enthalten die rechten Listen für Muster, Angebote und
 
 ## Changelog
 
+### 05.11.2026 · Rundtöpfe V9 / BP V5 aktualisiert
+
+- „Details“ heißt in beiden Produktbereichen „Varianten“, auch im geöffneten BP-Bereich.
+- Gemeinsames Anfrageformular: Muster und Angebot gleichzeitig auswählbar, mit getrennten Mengen; die gewählten Farbvarianten aus der rechten Liste bleiben erhalten.
+- Pflichtbestätigung „Ich bin Geschäftskunde“ und Pflichtfeld „Umsatzsteuer-ID“ ergänzt. Mindestens eine Anfrageart muss gewählt sein.
+- BP: „Muster anfordern“ jetzt als magentafarbener Primärbutton analog zu Rundtöpfen.
+
 ### 30.10.2026 · Rundtöpfe V9 / BP V5
 
 - „Weitere technische Daten“ heißt in beiden Bereichen „Technische Daten“.

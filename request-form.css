@@ -1,0 +1,14 @@
+.combined-request-form .request-types{min-width:0;border:0;padding:0;margin:0 0 20px}
+.combined-request-form .request-types legend{font-weight:700;margin-bottom:12px}
+.combined-request-form .request-type-options{display:flex;flex-wrap:wrap;gap:12px 24px}
+.combined-request-form .request-check{display:flex;align-items:flex-start;gap:9px;font-size:14px;line-height:1.5;cursor:pointer}
+.combined-request-form .request-check input{flex:none;width:18px;height:18px;margin:1px 0 0;accent-color:var(--green)}
+.combined-request-form .request-business{margin-bottom:8px}
+.combined-request-form .wide{grid-column:1/-1}
+.combined-request-form .request-type-error{font-size:14px;color:var(--pink)}
+.combined-request-form .small-note{margin:10px 0 16px}
+.combined-request-form [hidden]{display:none}
+/* Keep the BP primary request action aligned with the round-pot draft. */
+.bp-review .catalog .row-requests [data-request=sample]{background:var(--pink);border-color:var(--pink);color:white}
+.bp-review .catalog .row-requests [data-request=sample]:hover{background:#fff4fb;color:var(--pink)}
+.bp-review .catalog .row-requests [data-request=sample].is-selected{background:var(--pink);color:white}

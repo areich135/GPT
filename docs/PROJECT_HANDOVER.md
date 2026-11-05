@@ -1,7 +1,7 @@
 # TEKU Website – verbindliche Übergabe für die Clickdummys
 
-**Dokumentrevision:** 3 · **Stand:** 30.10.2026
-**Ausgangsbasis dieser Änderung:** e6c30d5; aktuelle Änderungen siehe README-Changelog
+**Dokumentrevision:** 4 · **Stand:** 05.11.2026
+**Ausgangsbasis dieser Änderung:** 9546133; aktuelle Änderungen siehe README-Changelog
 **Repository:** https://github.com/areich135/GPT · **Arbeitsbranch:** main
 
 Diese Übergabe soll einen neuen Chat arbeitsfähig machen, ohne den gesamten alten Verlauf zu laden. Sie beschreibt den freigegebenen Stand, die bewussten Unterschiede zwischen den Produktbereichen und die Grenzen des Dummys. Vor jeder Aufgabe den aktuellen Remote-Stand prüfen: Eine im ChatGPT-Projekt hochgeladene Kopie kann älter sein als die Datei im Repository.
@@ -58,11 +58,11 @@ Frühere Rundtopf-Stände V1–V8 liegen unter versions/v1/ bis versions/v8/. Fr
 |---|---|---|
 | Erste Werte in der Artikelzeile | Durchmesser, Höhe, Volumen | Länge, Breite, Höhe der Anzuchtpalette mit Maßskizze |
 | Erster Aufklappbereich | „Technische Daten“ | „Technische Daten“ |
-| Farbausführungen | „Varianten“ | Aktuell weiterhin „Details“ |
+| Farbausführungen | „Varianten“ | „Varianten“ |
 | Dritter Bereich | „Passende Trays“ | „Aushebeplatte“; ohne Zuordnung deaktiviert |
 | Öffnen/Schließen | SVG-Pfeil ohne sichtbares „einblenden“ | Bisherige Ein-/Ausblendtexte erhalten |
 | Weißer Zeiger unter aktivem Bereich | Umgesetzt; folgt dessen Buttonmitte | Nicht allein wegen VCG automatisch nachrüsten |
-| Anfrage-CTA | Muster primär magenta/weiß, Angebot Kontur | Bisher beide Konturbuttons; kein ausdrücklicher Auftrag zur Angleichung erfolgt |
+| Anfrage-CTA | Muster primär magenta/weiß, Angebot Kontur | Muster primär magenta/weiß, Angebot Kontur |
 | Kompakte rechte Listenleiste bei offenem Filter | Umgesetzt | Umgesetzt |
 | Rechner | Kreisgeometrie | Rechteckgeometrie, inkl. Pflanzenzahl |
 | Passende Produkte | Mittige Pfeile + 1–5 mitwandernde Punkte | Äußere Pfeile + Positionsbalken für mehrere Aushebeplatten vorbereitet; derzeit höchstens eine je Artikel |
@@ -106,7 +106,7 @@ catalog-xd.css regelt unter anderem Breakpoints bei 1350, 1100 und 700 px. Bei s
 
 Bei sehr schmalen Karten erlauben bestehende Containerregeln andere Zeilenumbrüche. Priorität: alle Buttons lesbar, bedienbar und vollständig sichtbar; keine starre Desktop-Anordnung auf Kosten von Überlagerungen erzwingen.
 
-Nur VCG: Musterbutton Magenta mit weißer Schrift. Hover derzeit Hintergrund #fff4fb und magentafarbener Text. Angebot bleibt Konturbutton. Bereits zur Liste hinzugefügte Artikel behalten ihren sichtbaren Status.
+Beide aktuellen Bereiche: Musterbutton Magenta mit weißer Schrift. Hover derzeit Hintergrund #fff4fb und magentafarbener Text. Angebot bleibt Konturbutton. Bereits zur Liste hinzugefügte Artikel behalten ihren sichtbaren Status.
 
 ## 5. Zustandsmodell: Filter, Listen und Aufklappbereiche
 
@@ -147,6 +147,14 @@ Die drei Listen werden zentral über v3.js verwaltet. Ein Eintrag bezieht sich a
 Zu erhalten sind: Hinzufügen, Entfernen, Übernahme aus der Merkliste in Muster/Angebote, jeweilige Zähler und die bisherige Anfragezusammenfassung. VCG-Variantenherzen müssen genau die angeklickte Farbvariante speichern. Ein anderes Variantenherz darf nicht die aktuell im Hero ausgewählte Farbe übernehmen.
 
 Die schmale Leiste zeigt Angebote, Muster, Merkliste, Kontakt und vorhandene Artikelzähler. Sie ist ein Zugang zu denselben Kacheln. Desktop: eigene 44-px-Spalte rechts neben den Varianten, gleicher --xd-gap wie links; oberer Rand bündig mit erster Variante, innerhalb des Katalogs sticky bei 20 px. Nie über den Kataloganfang in den Hero wandern. Mobil unten rechts und nur bei sichtbarem Variantenbereich.
+
+### 5.4 Anfrageformular: Muster, Angebot oder beides
+
+Nur die aktuellen Seiten laden `request-form.js` und `request-form.css`. Der gemeinsame Adapter ersetzt `showRequest` nach den bisherigen Seitenskripten. Einstieg über Muster- oder Angebotsliste wählt die entsprechende Anfrageart vor; zwei unabhängige Checkboxen erlauben beides gleichzeitig. Mindestens eine muss gewählt sein.
+
+Getrennte Mengenfelder für Muster und Angebot; nur ausgewählte Anfragearten sind sichtbar, aktiv und Pflichtfelder. Beim Umschalten bleiben Eingaben erhalten. Bestehende VCG-Mengengrenzen bleiben bestehen; BP erhält dadurch keine zusätzliche Mengenbegrenzung. Listen-Checkout aus `v3.js` überträgt weiterhin die gespeicherten Artikel mit ihrer konkreten Farbe in die Zusammenfassung und ersetzt die Farbauswahl durch „Ausgewählte Varianten“.
+
+Pflichtfelder: Geschäftskundenbestätigung (nicht vorausgewählt), Firma, Umsatzsteuer-ID, Ansprechpartner und E-Mail. Eine leere oder nur aus Leerzeichen bestehende Umsatzsteuer-ID verhindert den Abschluss. Es gibt keine externe Prüfung der ID. Der Abschluss zeigt die gewählten Anfragearten und Mengen; der Dummy versendet und speichert keine Anfrage oder Kontaktdaten.
 
 Die Listen gelten für die laufende Seite/Sitzung. Dauerhafte Speicherung nach Reload, Synchronisierung zwischen Produktbereichen und ein echter Kundenwarenkorb sind nicht zugesagt. „Merkliste speichern“ bietet den bestehenden Export; daraus kein Backend ableiten.
 
@@ -254,7 +262,7 @@ Diese bleiben fehlend. Nicht null als 0 ml/cm oder als „passt für alle“ aus
 
 ### 8.1 Gemeinsame Bedienung
 
-Weitere technische Daten → Reiter „Stellflächenrechner“ → CTA „Stellflächenrechner öffnen“ → Modal.
+Technische Daten → Reiter „Stellflächenrechner“ → CTA „Stellflächenrechner öffnen“ → Modal.
 
 Weder beim Seitenladen noch beim bloßen Anwählen des Reiters automatisch öffnen. Ein optionaler Review-Link darf höchstens den CTA sichtbar machen. Dialog per Schließen, Escape und bestehendem Hintergrundklick schließen; Fokus sinnvoll zum Auslöser zurückgeben und Hintergrundscrollen wieder freigeben.
 
@@ -327,7 +335,7 @@ Vorlagen aus früheren Chats sind nicht automatisch im neuen Chat verfügbar. Da
 
 - Eigenständige ST-/GP-Tray-Seite: zukünftiger Auftrag, aktuelle BP-Seite nicht bloß umbenennen.
 - Zusätzliche Produkt-Rand-/Bodendetailfotos, Patenttexte oder andere Farbabbildungen: nur mit Vorlage/Originalquelle ergänzen.
-- Ob BP künftig dieselben Primärbuttons, Begriffe und reinen SVG-Aufklapppfeile wie VCG erhalten soll, ist ohne neuen Auftrag offen.
+- BP verwendet nun ebenfalls „Varianten“ und den magentafarbenen Musterbutton. Die bisherigen Ein-/Ausblendtexte und übrigen Aufklappdetails bleiben bewusst erhalten.
 - Ein echtes Anfrage-Backend, Anmeldung, Preise, Verfügbarkeit, CRM-Anbindung oder dauerhaft gespeicherter Warenkorb gehören nicht zum derzeitigen Dummy.
 - Eine allgemeine CC-Wagenplanung über mehrere Ebenen wird nicht berechnet.
 - Produktnavigation mit mehreren BP-Aushebeplatten ist in der Komponente vorhanden, aber im aktuellen Datenbestand nicht real belegbar.
@@ -344,6 +352,7 @@ Vorlagen aus früheren Chats sind nicht automatisch im neuen Chat verfügbar. Da
 | BP-Maße/Filter/Zeilen/Daten | bp/app.js, bp/data.js, bp/styles.css, bp/v2.css | bp/review-update.* |
 | BP-CC-Hilfe/Listenleiste/Produktnavigation | bp/review-update.js, bp/review-update.css | Shared Listen und setCollapsed |
 | Gemeinsame Listen | v3.js, v3.css | VCG und BP samt Cachebuster |
+| Gemeinsames aktuelles Anfrageformular / BP-Primärbutton | request-form.js, request-form.css | Beide aktuellen index.html; nach bisherigen Seitenskripten laden |
 | Fluchten/automatisches Einklappen | catalog-xd.js, catalog-xd.css | Beide aktuellen Bereiche |
 | Ältere Produktnavigation | review.js, review.css | Kann für nicht ersetzte Bereiche weiterhin wirksam sein |
 | Technische Reiter | technical.js | Beide Bereiche; Rechner wird später dekoriert |
@@ -357,7 +366,7 @@ Vorlagen aus früheren Chats sind nicht automatisch im neuen Chat verfügbar. Da
 
 **Ladereihenfolge ist Teil der Funktion.** Das Projekt verwendet globale Funktionen, die spätere Skripte dekorieren/überschreiben. renderProducts, renderRow, renderDetail und die Collapse-Setter nicht isoliert neu definieren, ohne vorhandene Wrapper zu berücksichtigen.
 
-VCG grob: app.js → v3.js → technical.js → latest.js → v4.js → catalog-xd.js → review.js → Rechneradapter → certificates.js/v8.js. BP grob: technical.js → bp/app.js → gemeinsames v3.js → catalog-xd.js → review.js → bp/review-update.js → Rechnerkomponenten/Adapter. Bei Änderungen die tatsächlichen script-Tags prüfen; diese Kurzfolge ist kein Ersatz für index.html.
+VCG grob: app.js → v3.js → technical.js → latest.js → v4.js → catalog-xd.js → review.js → Rechneradapter → certificates.js/v8.js. BP grob: technical.js → bp/app.js → gemeinsames v3.js → catalog-xd.js → review.js → bp/review-update.js → Rechnerkomponenten/Adapter. Beide aktuellen Seiten laden zuletzt `request-form.js`; Archivseiten behalten ihre bisherigen Formulare. Bei Änderungen die tatsächlichen script-Tags prüfen; diese Kurzfolge ist kein Ersatz für index.html.
 
 CSS ebenfalls in tatsächlicher Reihenfolge prüfen. Ein früher Treffer in styles.css ist oft nicht die am Ende wirksame Regel. Vorhandene Media-/Containerqueries sowie Scope-Klassen beachten: rounds-v8 und bp-review sind bereichsspezifisch, catalog-xd und v3-Dateien geteilt.
 
@@ -380,6 +389,7 @@ Nicht für jede Textkorrektur die gesamte Anwendung erneut prüfen. Betroffene F
 | Text/Label | Richtige Stelle und Einheit; keine unbeabsichtigten Treffer in Artikelname/Rohdaten; keine Überlagerung |
 | Filter | Auswahl setzen/entfernen/resetten; korrekte Trefferzahl und grüner Punkt; beide Filterzustände |
 | Listen | Konkrete Farbe hinzufügen/entfernen; Duplikate; Wechsel der Listen; Inhalt nach Filtereinklappen |
+| Anfrageformular | Einstieg Muster/Angebot, beide gleichzeitig, getrennte Mengen, keine leere Anfrageart, Geschäftskundenpflicht, Umsatzsteuer-ID, gespeicherte Farbvarianten und Dummy-Abschluss |
 | Aufklappbereich | Öffnen/Schließen/Wechsel; automatisches Einklappen; bestehende Inhalte; VCG-Zeiger |
 | Carousel | VCG: mittige Pfeile, 1–5 Punkte; Auswahl/Wischen/Pfeiltasten synchron, Anfang/Ende; BP bisherige Navigation erhalten |
 | Technische Bilder | Richtiger Artikel; Ausschnitt/Überlappung; Caption; Zoom; keine unbelegte Umfärbung |
@@ -396,6 +406,8 @@ Passende lokale Checks:
     node --test tests/space-engine.test.cjs tests/rectangular-engine.test.cjs
 
 Bei neuen Rechenänderungen unabhängig begründete Testfälle ergänzen, keine Tests schreiben, die bloß dieselbe Implementierung kopieren. Reine Dokumentationsänderungen benötigen keine erneuten Rechen- oder Browserprüfungen.
+
+**Prüfung der Anpassung vom 05.11.2026:** Formular in beiden Bereichen über Muster- und Angebotsliste geöffnet; gemeinsame Auswahl, getrennte Mengen, Pflichtbestätigung und Umsatzsteuer-ID einschließlich Leerzeicheneingabe geprüft. Leere Anfrageart blockiert den Abschluss. BP-Primärfarbe und „Varianten“-Beschriftungen kontrolliert; Formularbreiten 390/768/1440 px ohne horizontalen Überlauf. JavaScript-Syntax und Diffprüfung bestanden; keine Browserfehler oder fehlenden Assets.
 
 **Prüfung V9/BP V5 am 30.10.2026:** zwölf Rechentests und Syntax-/Diffprüfung bestanden. Beide Bereiche im Chromium-Browser bei 390/768/1440 px geprüft; Rechner bei 1280 × 720 ohne inneres Scrollen, beide Wechselrichtungen mit 1000 ms, Gegenwechsel während der Animation und reduzierte Bewegung. Punktnavigation mit temporär wiederholten Originalkacheln für 1/5/6/20 Einträge bis zum Ende geprüft; diese Testdaten werden nicht gespeichert. V8/BP V4 sind eigenständig archiviert.
 
