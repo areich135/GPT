@@ -1,7 +1,7 @@
 # TEKU Website – verbindliche Übergabe für die Clickdummys
 
-**Dokumentrevision:** 7 · **Stand:** 05.11.2026
-**Ausgangsbasis dieser Änderung:** 549f29d; aktuelle Änderungen siehe README-Changelog
+**Dokumentrevision:** 8 · **Stand:** 10.11.2026
+**Ausgangsbasis dieser Änderung:** adfc2e3; aktuelle Änderungen siehe README-Changelog
 **Repository:** https://github.com/areich135/GPT · **Arbeitsbranch:** main
 
 Diese Übergabe soll einen neuen Chat arbeitsfähig machen, ohne den gesamten alten Verlauf zu laden. Sie beschreibt den freigegebenen Stand, die bewussten Unterschiede zwischen den Produktbereichen und die Grenzen des Dummys. Vor jeder Aufgabe den aktuellen Remote-Stand prüfen: Eine im ChatGPT-Projekt hochgeladene Kopie kann älter sein als die Datei im Repository.
@@ -35,13 +35,13 @@ Keine erfundenen Produktdaten, Patenttexte, Siegel, Bilder, Verkaufsargumente od
 
 | Bereich | Aktueller Stand | Aktuelle Dateien | Öffentlicher Einstieg |
 |---|---|---|---|
-| Rundtöpfe, Serie VCG | V10 | Repository-Stamm | https://areich135.github.io/GPT/?version=v10 |
+| Rundtöpfe, Serie VCG | V11 | Repository-Stamm | https://areich135.github.io/GPT/?version=v11 |
 | Anzuchtpaletten, Serie BP | V6 | bp/ | https://areich135.github.io/GPT/bp/?version=v6 |
 | Eigenständige ST-/GP-Tray-Seite | Noch nicht umgesetzt | Keine eigene aktuelle Produktseite | Nicht als fertig behaupten |
 
 Die Kategorie im Umschalter heißt „Trays / Anzuchtpaletten“. Ihr aktuell umgesetztes Produktbeispiel ist BP. Die Nutzerbegriffe Tray und Anzuchtpalette wurden im Gespräch teilweise vermischt: Für die aktuelle BP-Seite ausdrücklich „Anzuchtpalette“ verwenden. ST-/GP-Trays sind ein späterer eigener Auftrag.
 
-Frühere Rundtopf-Stände V1–V9 liegen unter versions/v1/ bis versions/v9/. Frühere BP-Stände V1–V5 liegen unter bp/versions/. Die aktuellen Stände liegen gerade nicht unter versions/v10/ oder bp/versions/v6/. Die Zuordnung steuert version-switch.js.
+Frühere Rundtopf-Stände V1–V10 liegen unter versions/v1/ bis versions/v10/. Frühere BP-Stände V1–V5 liegen unter bp/versions/. Die aktuellen Stände liegen gerade nicht unter versions/v11/ oder bp/versions/v6/. Die Zuordnung steuert version-switch.js.
 
 **Versionsregeln:**
 
@@ -54,7 +54,7 @@ Frühere Rundtopf-Stände V1–V9 liegen unter versions/v1/ bis versions/v9/. Fr
 
 ## 3. Unbedingt erhalten: Entscheidungen und bewusste Unterschiede
 
-| Thema | Rundtöpfe V10 | Anzuchtpaletten BP V6 |
+| Thema | Rundtöpfe V11 | Anzuchtpaletten BP V6 |
 |---|---|---|
 | Erste Werte in der Artikelzeile | Durchmesser, Höhe, Volumen | Länge, Breite, Höhe der Anzuchtpalette mit Maßskizze |
 | Erster Aufklappbereich | „Technische Daten“ | „Technische Daten“ |
@@ -173,13 +173,25 @@ Einstieg über Muster- oder Angebotsliste wählt die Anfrageart vor. In Schritt 
 
 Die Listen gelten für die laufende Seite/Sitzung. Dauerhafte Speicherung nach Reload, Synchronisierung zwischen Produktbereichen und ein echter Kundenwarenkorb sind nicht zugesagt. „Merkliste speichern“ bietet den bestehenden Export; daraus kein Backend ableiten.
 
-## 6. Rundtöpfe V10: genaue fachliche Vorgaben
+## 6. Rundtöpfe V11: genaue fachliche Vorgaben
 
 ### 6.1 Daten und Artikelzeile
 
 data.js enthält 14 VCG-Artikel. Hauptwerte diameter und height sind cm, volume ist Liter. Die Rohdaten nicht auf die gerundeten Beispielzahlen einer XD-Grafik reduzieren.
 
 latest.js erzeugt die aktuelle Grundstruktur der Zeile und technische Inhalte. v8.js ergänzt Variantenkacheln, Zeiger, neue Navigation und Listenleiste. Eine Änderung nur im ursprünglichen renderRow in app.js kann durch spätere Überschreibungen unsichtbar bleiben.
+
+### 6.1a Maßeinheit ab V11
+
+`measurements.js`/`.css` laden nur auf der aktuellen Rundtopfseite, zuletzt nach den bestehenden Adaptern. Erste Filtergruppe „Maßeinheit“, mm-/inch-Pillenschalter nach Nutzerscreenshot `image(20261110-101321).png` vom 10.11.2026 (visuell abgeleitet), magenta aktiv aus bestehender TEKU-CSS-Variable. Kompakte Filterleiste erhält einen Zugang mit aktueller Einheit. Start ist mm; diese Anzeigepräferenz bleibt beim Filterreset bestehen und wird nicht dauerhaft gespeichert.
+
+Längen aus cm: × 10 → mm, ÷ 2,54 → inch. Volumen aus Litern: metrisch l, bei inch ÷ 0,016387064 → in³. Beispiel VCG 11: 110 mm / 86 mm / 0,53 l bzw. 4,33 inch / 3,39 inch / 32,34 in³. Höchstens zwei Nachkommastellen, ohne die Rohdaten zu verändern oder gerundete Anzeigen erneut umzurechnen. Kein Wechsel zu US-/UK-Gallonen oder Fluid Ounces.
+
+Kurzmaße mit Icons, aktiver technischer Reiter „Maße“, vorhandene Hero-Produktinfo sowie Durchmesser-/Volumenfilter werden umgestellt. Filter verwenden weiterhin originale cm-Werte und Range-IDs; Ergebniszuordnung bleibt gleich. Verpackungszahlen, Konizität und der eigenständige Stellflächenrechner bleiben fachlich unverändert. Dieser rechnet weiterhin mit seinen eigenen ausdrücklich beschrifteten Einheiten.
+
+Die Umschaltung aktualisiert gebundene Werte im bestehenden DOM statt Artikel neu zu rendern; offene Reiter, gespeicherte Farbvarianten und Tray-Scrollposition bleiben erhalten. Dekorierte `renderProducts`, `renderFilters` und `showHeroInfo` binden später erzeugte Inhalte wieder ein. Keine Dokument-Subtree-Beobachtung; ein kleiner Observer reagiert nur auf `html[lang]`.
+
+Einheitenwahl ist in jeder Dokumentsprache zugänglich und wird nicht an DE/EN gebunden. Zahlenformat via `Intl.NumberFormat` mit `html.lang`. Das ist keine vollständige Übersetzung des bestehenden deutschen Dummys; dessen Sprachauswahl bleibt unverändert.
 
 ### 6.2 Variantenkacheln und Umweltzeichen
 
@@ -366,6 +378,7 @@ Vorlagen aus früheren Chats sind nicht automatisch im neuen Chat verfügbar. Da
 | Änderung | Zuerst ansehen | Mitbetroffene Bereiche |
 |---|---|---|
 | Bereiche/Versionsauswahl | version-switch.js; beide index.html | Aktuell + Archive |
+| VCG-Einheiten mm/inch ab V11 | measurements.js, measurements.css | Nur aktuelle Rundtopfseite; Quelldaten in cm/Liter und archivierte Versionen erhalten |
 | VCG-Daten/Filter/Grundfunktionen | data.js, app.js | Aktuelle Ergänzungen können Renderer ersetzen |
 | Aktuelle VCG-Zeile/Technik | latest.js, technical.js, technical.css, v4.css | v8.js und späte CSS-Regeln |
 | VCG-Kacheln/Zeiger/Tray-Fortschritt | v8.js, v8.css, certificates.js | Auswahl und Listen in v3.js |
@@ -386,7 +399,7 @@ Vorlagen aus früheren Chats sind nicht automatisch im neuen Chat verfügbar. Da
 
 **Ladereihenfolge ist Teil der Funktion.** Das Projekt verwendet globale Funktionen, die spätere Skripte dekorieren/überschreiben. renderProducts, renderRow, renderDetail und die Collapse-Setter nicht isoliert neu definieren, ohne vorhandene Wrapper zu berücksichtigen.
 
-VCG grob: app.js → v3.js → technical.js → latest.js → v4.js → catalog-xd.js → review.js → Rechneradapter → certificates.js/v8.js. BP grob: technical.js → bp/app.js → gemeinsames v3.js → catalog-xd.js → review.js → bp/review-update.js → Rechnerkomponenten/Adapter. Beide aktuellen Seiten laden zuletzt `request-form.js`; Archivseiten behalten ihre bisherigen Formulare. Bei Änderungen die tatsächlichen script-Tags prüfen; diese Kurzfolge ist kein Ersatz für index.html.
+VCG grob: app.js → v3.js → technical.js → latest.js → v4.js → catalog-xd.js → review.js → Rechneradapter → certificates.js/v8.js. BP grob: technical.js → bp/app.js → gemeinsames v3.js → catalog-xd.js → review.js → bp/review-update.js → Rechnerkomponenten/Adapter. Beide aktuellen Seiten laden `request-form.js`; VCG lädt danach `measurements.js`. Archivseiten behalten ihre bisherigen Formulare und Maßanzeigen. Bei Änderungen die tatsächlichen script-Tags prüfen; diese Kurzfolge ist kein Ersatz für index.html.
 
 CSS ebenfalls in tatsächlicher Reihenfolge prüfen. Ein früher Treffer in styles.css ist oft nicht die am Ende wirksame Regel. Vorhandene Media-/Containerqueries sowie Scope-Klassen beachten: rounds-v8 und bp-review sind bereichsspezifisch, catalog-xd und v3-Dateien geteilt.
 
@@ -407,6 +420,7 @@ Nicht für jede Textkorrektur die gesamte Anwendung erneut prüfen. Betroffene F
 | Auftrag | Mindestprüfung |
 |---|---|
 | Text/Label | Richtige Stelle und Einheit; keine unbeabsichtigten Treffer in Artikelname/Rohdaten; keine Überlagerung |
+| Maßeinheit | mm/inch in Kurzmaßen und Maßtabellen, Filterwerte und Treffer erhalten, spätere Renders, Sprachwechsel, Tastatur und responsive Breiten; V10/BP unverändert |
 | Filter | Auswahl setzen/entfernen/resetten; korrekte Trefferzahl und grüner Punkt; beide Filterzustände |
 | Listen | Konkrete Farbe hinzufügen/entfernen; Duplikate; Wechsel der Listen; Inhalt nach Filtereinklappen |
 | Anfrageformular | Beide Schritte und Einstiege, Weiter/Zurück/Enter, pro Schritt validieren, keine Geschäftskundenfrage, vollständige Adresse, Umsatzsteuer-ID, kombinierte Anfrage/Mengen, gespeicherte Farbvarianten und Dummy-Abschluss |
@@ -428,6 +442,8 @@ Passende lokale Checks:
     node --test tests/space-engine.test.cjs tests/rectangular-engine.test.cjs
 
 Bei neuen Rechenänderungen unabhängig begründete Testfälle ergänzen, keine Tests schreiben, die bloß dieselbe Implementierung kopieren. Reine Dokumentationsänderungen benötigen keine erneuten Rechen- oder Browserprüfungen.
+
+**Prüfung V11 am 10.11.2026:** Chromium bei 1440/768/390 px mit offenem und kompaktem Filter: keine horizontalen Überläufe oder überlaufenden Kurzmaße. Umrechnung aller 14 Artikel unabhängig mit cm³-Volumenformel gegengeprüft; zehn Hin-/Rückwechsel ohne Rundungsdrift oder veränderte Quelldaten. Maßtabelle, Hero, Durchmesser-/Volumenfilter, Filterreset, leere Treffer, Verpackungszahlen, spätere Re-Renders, erhaltene Tray-Knoten/-Position und Musteranfrage geprüft. Tastaturwahl per Space/Enter sowie Zahlenformat de/en-US geprüft; Umschaltung in beiden Sprachen zugänglich. Desktop, Tablet, Mobil und Maßtabelle visuell kontrolliert. V10-Archiv und Rückroute auf V11, BP-V6-Kategoriepfad sowie alle Archiv-Runtime-/Assetbytes gegenüber vorherigem HEAD geprüft. Keine JavaScript-/Assetfehler; Syntax-/Diffprüfung bestanden.
 
 **Prüfung der zweistufigen Anfrage am 05.11.2026:** Beide Bereiche im Chromium-Browser jeweils über Muster- und Angebotsliste geprüft: Schrittvalidierung inklusive leerer Felder, ungültiger E-Mail und Leerzeichen in der Umsatzsteuer-ID; kombinierte und einzelne Anfragearten, getrennte Mengen, Enter-Bedienung, Zurückgehen mit Datenerhalt und vollständiger Dummy-Abschluss. Internationale Adresse mit alphanumerischer PLZ sowie optionaler Region geprüft. Bei 1280/768/390 px kein horizontaler Überlauf; Aktionsleiste erreichbar. Beide Schritte visuell kontrolliert; keine JavaScript-/Assetfehler. Syntax-/Diffprüfung bestanden.
 

@@ -2,16 +2,24 @@
 
 Die Kopfzeile führt zu zwei Produktbereichen:
 
-- **Rundtöpfe / VCG:** V10 mit animiertem Stellflächenrechner im Modal; V1–V9 bleiben über den Versionsumschalter erreichbar.
+- **Rundtöpfe / VCG:** V11 mit animiertem Stellflächenrechner im Modal; V1–V10 bleiben über den Versionsumschalter erreichbar.
 - **Trays / Anzuchtpaletten / BP:** V6 mit 20 Artikeln, eigenem Rechteckrechner und animiertem Ausrichtungswechsel; V1–V5 bleiben erreichbar. Plug-, Tray- und Zellmaße sind separat benannt.
 
 Beide aktuellen Entwürfe enthalten die rechten Listen für Muster, Angebote und Merkliste. Anfragen werden nur simuliert. Der VCG-Stellflächenrechner berechnet die Stückzahl für Viereck- und Dreieckverband mit frei änderbarem Durchmesser.
 
-- [Rundtöpfe V10 öffnen](https://areich135.github.io/GPT/?version=v10)
+- [Rundtöpfe V11 öffnen](https://areich135.github.io/GPT/?version=v11)
 - [Anzuchtpaletten BP V6 öffnen](https://areich135.github.io/GPT/bp/?version=v6)
 - [Quellen, Datenzuordnung und tatsächliche Prüfungen](docs/sources-2026-10-22.md)
 
 ## Changelog
+
+### 10.11.2026 · Rundtöpfe V11: Maßeinheit
+
+- Neue Filtergruppe „Maßeinheit“ vor Farbe, mit magentafarbenem mm-/inch-Schalter nach bereitgestellter KAPSTO-Vorlage und Zugang über die kompakte Filterleiste.
+- Durchmesser und Höhe in Kurzmaßen, Maßtabelle und Produktinfo wechseln zwischen mm und inch. Volumen bleibt metrisch in Litern und wechselt bei inch zu Kubikzoll (in³); Durchmesser- und Volumenfilter zeigen dieselben Einheiten.
+- Umrechnung immer aus den unveränderten Originalwerten (cm/Liter), auf höchstens zwei Nachkommastellen. Filterauswahl, offene Bereiche, Listen und Tray-Position bleiben beim Umschalten erhalten.
+- Sprachunabhängig verfügbar; Zahlenformat folgt der Dokumentsprache. Der vorhandene Click-Dummy enthält weiterhin die deutsche Sprachfassung.
+- V10 einschließlich eigenständiger Laufzeitdateien und Assets archiviert. BP bleibt V6.
 
 ### 05.11.2026 · Zweistufige Anfrage VCG V10 / BP V6
 
