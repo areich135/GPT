@@ -1,20 +1,73 @@
 'use strict';
-// V12 round pots only. Keep an in-page draft outside the product re-render targets.
+// V12 round pots only. Keep the same draft nodes when the product list re-renders.
 (() => {
   const host=document.createElement('section');
   host.id='inline-request';host.className='inline-request';
   host.dataset.inlineRequest='true';host.hidden=true;
   host.setAttribute('aria-labelledby','inline-request-title');
-  document.querySelector('.results-column').prepend(host);
-  let form, panels, choices, step=1, selected=[], opener, lastKey='', lastType='sample';
+  const results=document.querySelector('.results-column');
+  const fallback=document.createElement('div');fallback.className='request-context-fallback';fallback.hidden=true;
+  results.prepend(host,fallback);
+  let form, panels, choices, step=1, selected=[], opener, lastKey='', lastType='sample', requestItems=[], anchorRow, pointerObserver;
   const presetFields=new Set(['country','sampleQuantity','offerQuantity']);
+  function productSummary(){
+    return `<section class="request-products" aria-label="Ausgewählte Artikel"><h3>Ihre ausgewählten Artikel (${requestItems.length})</h3><ul class="request-summary request-product-list">${requestItems.map(item=>`<li><img src="${escapeHTML(item.image)}" alt="${escapeHTML(item.name+' · '+item.color)}" loading="lazy"><div><strong>${escapeHTML(item.name)}</strong><span>${escapeHTML(item.color)}</span></div></li>`).join('')}</ul></section>`;
+  }
+  function clearPointer(){
+    pointerObserver?.disconnect();pointerObserver=null;
+    const main=anchorRow?.querySelector('.row-main');
+    main?.classList.remove('has-request-panel');
+    main?.style.removeProperty('--request-pointer');
+    main?.style.removeProperty('--request-pointer-bottom');
+    main?.querySelectorAll('[data-request]').forEach(button=>{button.removeAttribute('aria-controls');button.removeAttribute('aria-expanded');});
+  }
+  function mount(){
+    clearPointer();
+    if(host.hidden){results.prepend(host);fallback.hidden=true;fallback.replaceChildren();anchorRow=null;return;}
+    const item=requestItems[0],p=productById(item.id);
+    anchorRow=document.getElementById(`article-${item.id}`);
+    if(!anchorRow){
+      // A saved product may be outside the active filters. Keep its context
+      // visible without resetting the user's filter selection.
+      const template=document.createElement('template');template.innerHTML=renderRow(p);
+      anchorRow=template.content.firstElementChild;anchorRow.classList.add('request-context-row');
+      anchorRow.querySelectorAll('.row-section-toggle,.row-favorite,.row-note,.row-detail').forEach(node=>node.remove());
+      fallback.replaceChildren(anchorRow);fallback.hidden=false;
+    }else fallback.hidden=!fallback.contains(anchorRow);
+    anchorRow.after(host);
+    const main=anchorRow.querySelector('.row-main'),buttons=main.querySelector('.row-requests');
+    main.classList.add('has-request-panel');
+    buttons.querySelectorAll('[data-request]').forEach(button=>{
+      button.setAttribute('aria-controls','inline-request');button.setAttribute('aria-expanded','true');
+    });
+    const position=()=>{
+      const a=main.getBoundingClientRect(),b=buttons.getBoundingClientRect(),row=anchorRow.getBoundingClientRect();
+      main.style.setProperty('--request-pointer',`${b.left+b.width/2-a.left}px`);
+      main.style.setProperty('--request-pointer-bottom',`${a.bottom-row.bottom-10}px`);
+    };
+    position();pointerObserver=new ResizeObserver(position);pointerObserver.observe(main);pointerObserver.observe(buttons);pointerObserver.observe(anchorRow);
+  }
+  const previousRender=renderProducts;
+  renderProducts=function(...args){
+    const focused=host.contains(document.activeElement)?document.activeElement:null;
+    clearPointer();
+    // The draft object and its event listeners survive removal from the DOM.
+    // Remove temporary context before the normal render and reattach afterwards.
+    if(fallback.contains(host))results.prepend(host);
+    fallback.replaceChildren();fallback.hidden=true;
+    const result=previousRender.apply(this,args);
+    if(!host.hidden&&state.expanded[requestItems[0]?.id])host.hidden=true;
+    mount();
+    if(focused?.isConnected&&!host.hidden)focused.focus({preventScroll:true});
+    return result;
+  };
   function reveal(){
-    host.hidden=false;
-    host.scrollIntoView({block:'start',behavior:'instant'});
+    host.hidden=false;mount();
+    (anchorRow||host).scrollIntoView({block:'start',behavior:'instant'});
     (form?.querySelector(`[data-request-step="${step}"] h3`)||host.querySelector('h2')).focus({preventScroll:true});
   }
   function close(){
-    host.hidden=true;
+    host.hidden=true;renderProducts();
     const target=opener?.isConnected?opener:document.querySelector(`[data-list-checkout="${lastType}"]`);
     target?.focus({preventScroll:true});
   }
@@ -78,7 +131,7 @@
           <div class="request-progress" role="progressbar" aria-label="Fortschritt der Anfrage" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span></span></div>
         </header>
         <div class="request-wizard-body">
-          <details class="request-products"><summary>${selected.length} Artikel ausgewählt</summary><div class="request-summary">${selected.map(p=>`<strong>${escapeHTML(p.name)}</strong> · ${escapeHTML(selectedVariant(p)?.color||'')}`).join('<br>')}</div></details>
+          ${productSummary()}
           <fieldset class="request-step-panel" data-request-step="1" aria-labelledby="request-contact-title">
             <h3 id="request-contact-title" tabindex="-1">Kontaktdaten</h3>
             <p class="request-step-intro">Geben Sie Ihre persönlichen Kontaktdaten ein.</p>
@@ -143,7 +196,7 @@
       const value=name=>escapeHTML(String(data.get(name)||'').trim());
       const quantities=types.map(key=>key==='sample'?`Muster: ${value('sampleQuantity')} Stück`:`Angebot: ${value('offerQuantity')} Stück`).join('<br>');
       const address=[value('company'),value('companyAddition'),`${value('street')} ${value('houseNumber')}`,`${value('postalCode')} ${value('city')}`,value('region'),value('country')].filter(Boolean).join('<br>');
-      host.innerHTML=`<button type="button" class="inline-request-close" data-request-close aria-label="Anfrageformular schließen">×</button><h2 id="inline-request-title" tabindex="-1">Anfrage im Dummy abgeschlossen</h2><p class="small-note">100 % · Beide Schritte abgeschlossen</p><p>Ausgewählt: <strong>${types.length===2?'Muster und Angebot':types[0]==='sample'?'Muster':'Angebot'}</strong></p><p>${quantities}</p><p><strong>Kontakt</strong><br>${value('firstName')} ${value('lastName')}<br>${value('phone')}<br>${value('email')}</p><p><strong>${types.includes('sample')?'Firmen- und Lieferadresse':'Firmenadresse'}</strong><br>${address}</p><p>Es wurde keine Muster- oder Angebotsanfrage versendet.</p><button type="button" class="pink-button" data-request-close>Zurück zu den Artikeln</button>`;
+      host.innerHTML=`<button type="button" class="inline-request-close" data-request-close aria-label="Anfrageformular schließen">×</button><h2 id="inline-request-title" tabindex="-1">Anfrage im Dummy abgeschlossen</h2>${productSummary()}<p class="small-note">100 % · Beide Schritte abgeschlossen</p><p>Ausgewählt: <strong>${types.length===2?'Muster und Angebot':types[0]==='sample'?'Muster':'Angebot'}</strong></p><p>${quantities}</p><p><strong>Kontakt</strong><br>${value('firstName')} ${value('lastName')}<br>${value('phone')}<br>${value('email')}</p><p><strong>${types.includes('sample')?'Firmen- und Lieferadresse':'Firmenadresse'}</strong><br>${address}</p><p>Es wurde keine Muster- oder Angebotsanfrage versendet.</p><button type="button" class="pink-button" data-request-close>Zurück zu den Artikeln</button>`;
       form=null;reveal();
     });
     showStep(1,false);
@@ -153,7 +206,8 @@
     selected=ids.map(productById).filter(Boolean);
     if(!selected.length){toast('Bitte wählen Sie mindestens einen Artikel.');return;}
     opener=document.activeElement;lastType=type;
-    const items=entries||selected.map(p=>({id:p.index,key:`${p.index}:${p.variants.indexOf(selectedVariant(p))}`,name:p.name,color:selectedVariant(p)?.color||''}));
+    const items=entries||selected.map(p=>({id:p.index,key:`${p.index}:${p.variants.indexOf(selectedVariant(p))}`,name:p.name,color:selectedVariant(p)?.color||'',image:productImage(p)}));
+    requestItems=items.map(item=>({...item}));
     const key=type+':'+items.map(item=>item.key).join('|');
     if(!form)build(type);
     else if(lastKey!==key){
@@ -161,14 +215,14 @@
       updateSelection();updateProgress();
     }
     lastKey=key;
-    form.querySelector('.request-products summary').textContent=`${items.length} Artikel ausgewählt`;
-    form.querySelector('.request-summary').innerHTML=items.map(item=>`<strong>${escapeHTML(item.name)}</strong> · ${escapeHTML(item.color)}`).join('<br>');
+    form.querySelector('.request-products').outerHTML=productSummary();
     const colorField=form.querySelector('[name="color"]')?.closest('label')||form.querySelector('.selection-form-colors')?.closest('label');
     colorField.innerHTML=`Ausgewählte Varianten<span class="selection-form-colors">${escapeHTML([...new Set(items.map(item=>item.color))].join(', '))}</span>`;
     if(document.querySelector('#modal').open)closeModal();
     // A previous list notification must not cover the in-page form controls.
     clearTimeout(toast.timer);document.querySelector('#toast').hidden=true;
-    activateTab('variants');reveal();
+    activateTab('variants');
+    host.hidden=false;state.expanded[requestItems[0].id]=null;renderProducts();reveal();
     return host;
   };
 })();

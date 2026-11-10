@@ -1,7 +1,7 @@
 'use strict';
 // V11 display units only. Product data and filter keys stay in cm / litres.
 (() => {
-  let unit = 'mm';
+  let unit = 'cm';
   const formatters = new Map();
   function number(value) {
     const locale = document.documentElement.lang || 'de';
@@ -13,14 +13,14 @@
   }
   function measure(value, kind) {
     if (kind === 'volume') return [number(unit === 'inch' ? value / 0.016387064 : value), unit === 'inch' ? 'in³' : 'l'];
-    return [number(unit === 'inch' ? value / 2.54 : value * 10), unit];
+    return [number(unit === 'inch' ? value / 2.54 : value), unit];
   }
   function text(value, kind) { return measure(value, kind).join(' '); }
 
   const section = document.createElement('section');
   section.className = 'filter-section';
   section.id = 'filter-unit';
-  section.innerHTML = '<h2 id="unit-heading"><img class="filter-symbol" src="assets/filter-diameter.svg" alt=""> MAẞEINHEIT</h2><div class="measurement-toggle" role="group" aria-labelledby="unit-heading"><button type="button" data-measurement-unit="mm" aria-pressed="true" aria-label="Millimeter">mm</button><button type="button" data-measurement-unit="inch" aria-pressed="false" aria-label="Inch">inch</button></div><p class="sr-only" id="measurement-status" role="status"></p>';
+  section.innerHTML = '<h2 id="unit-heading"><img class="filter-symbol" src="assets/filter-diameter.svg" alt=""> MAẞEINHEIT</h2><div class="measurement-toggle" role="group" aria-labelledby="unit-heading"><button type="button" data-measurement-unit="cm" aria-pressed="true" aria-label="Zentimeter">cm</button><button type="button" data-measurement-unit="inch" aria-pressed="false" aria-label="Inch">inch</button></div><p class="sr-only" id="measurement-status" role="status"></p>';
   document.querySelector('#filter-body').prepend(section);
   // Reuse the existing compact-filter navigation and its focus handling.
   filterGroups.unshift(['unit', 'Maßeinheit', 'filter-diameter.svg']);
@@ -62,7 +62,7 @@
     document.querySelectorAll('#volumes [data-volume]').forEach(button => {
       const index = volumes.findIndex(range => range.id === button.dataset.volume);
       const range = volumes[index];
-      button.textContent = unit === 'mm' ? range.label : Number.isFinite(range.max)
+      button.textContent = unit === 'cm' ? range.label : Number.isFinite(range.max)
         ? `${text(range.min, 'volume')} – ${text(range.max, 'volume')}`
         : `> ${text(volumes[index - 1].max, 'volume')}`;
     });
@@ -101,7 +101,7 @@
     unit = button.dataset.measurementUnit;
     // Update values in place: retain open panels, carousel position and lists.
     refresh();
-    section.querySelector('#measurement-status').textContent = unit === 'inch' ? 'inch · in³' : 'mm · l';
+    section.querySelector('#measurement-status').textContent = unit === 'inch' ? 'inch · in³' : 'cm · l';
   });
   // The selector is available for every page language; only number formatting
   // follows the document language. This dummy itself currently contains German.

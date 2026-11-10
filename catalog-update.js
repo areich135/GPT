@@ -28,7 +28,10 @@
     }
     const rows=results.querySelectorAll('.product-row');
     const first=rows[0]?.getBoundingClientRect();
-    const last=rows[rows.length-1]?.getBoundingClientRect();
+    const lastRow=rows[rows.length-1]?.getBoundingClientRect();
+    const request=results.querySelector('#inline-request:not([hidden])')?.getBoundingClientRect();
+    // A request below the last SKU is part of that SKU's expanded content.
+    const last=lastRow&&{bottom:Math.max(lastRow.bottom,request?.bottom??lastRow.bottom)};
     catalog.classList.toggle('has-sku-rows',!!last);
     if(last){
       // Exclude trailing list margins and the cards below the SKU list.

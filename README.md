@@ -13,6 +13,14 @@ Beide aktuellen Entwürfe enthalten die rechten Listen für Muster, Angebote und
 
 ## Changelog
 
+### 10.11.2026 · V12: cm-Anzeige und sichtbarer Produktbezug
+
+- Maßeinheiten-Schalter auf cm ↔ inch umgestellt. Metrische Längen in Kurzmaßen, Maßtabellen, Produktinfo und Durchmesserfilter stehen wieder in cm; Größe des Schalters bleibt unverändert. Volumen bleibt l bzw. in³.
+- Anfrageformular öffnet direkt unter der ersten angefragten SKU. Produktzeile bleibt darüber sichtbar; weißer Pfeil mittig unter der Gruppe aus Muster-/Angebotsbutton, auch beim Einstieg aus der rechten Liste.
+- Ausgewählte Artikel mit Originalbild, Produktname und gespeicherter Farbe stehen dauerhaft sichtbar im Formular statt in einer kleinen Aufklappzeile. Mehrere Artikel/Farben bleiben vollständig erkennbar.
+- Eingaben, Schritt und Fortschritt bleiben beim Neuaufbau der Produktliste erhalten. Andere Details desselben Artikels blenden die Anfrage mit Datenerhalt aus. Für herausgefilterte Anfragen bleibt ein Produktkopf sichtbar; die Filterwahl wird nicht zurückgesetzt.
+- V12 aktualisiert; BP V6 und archivierte Entwürfe behalten ihr bisheriges Verhalten.
+
 ### 10.11.2026 · Rundtöpfe V12: Anfrage direkt in der Seite
 
 - mm-/inch-Schalter in Breite und Höhe um 15 % verkleinert. Volumeneinheit in³ (Kubikzoll) und Faktor 0,016387064 l je in³ anhand NIST Handbook 44, Appendix C geprüft; Umrechnung unverändert.

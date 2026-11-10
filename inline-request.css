@@ -1,4 +1,14 @@
-/* V12 request card occupies only the SKU column; adjacent controls keep their places. */
+/* V12 request card follows its product header, with the existing white disclosure arrow. */
+.rounds-v8 .row-main.has-request-panel::after{content:"";position:absolute;left:var(--request-pointer);bottom:var(--request-pointer-bottom,-10px);transform:translateX(-50%);border-left:10px solid transparent;border-right:10px solid transparent;border-top:10px solid white;z-index:2}
+.request-context-fallback[hidden]{display:none}
+.rounds-v4 .catalog .request-context-row .row-main{grid-template-columns:54px minmax(0,1fr) minmax(140px,auto)!important;grid-template-rows:auto!important;padding:18px!important}
+.rounds-v4 .catalog .request-context-row .row-requests{grid-column:3!important;grid-row:1!important;flex-direction:column}
+.inline-request .request-products h3{font-size:16px;line-height:1.3;margin:0 0 10px}
+.inline-request .request-product-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,190px),1fr));list-style:none;gap:12px;margin:0 0 22px;padding:12px}
+.inline-request .request-product-list li{display:grid;grid-template-columns:42px minmax(0,1fr);align-items:center;gap:10px;min-width:0}
+.inline-request .request-product-list img{width:42px;height:54px;object-fit:contain}
+.inline-request .request-product-list strong{display:block;font-size:15px}
+.inline-request .request-product-list span{display:block;font-size:12px;color:var(--muted);overflow-wrap:anywhere}
 .inline-request{position:relative;background:white;color:var(--navy);border-radius:20px;padding:34px;margin-bottom:18px;scroll-margin-top:20px;container-type:inline-size}
 .inline-request[hidden]{display:none}
 .inline-request-close{position:absolute;right:16px;top:14px;border-radius:50%;background:var(--pink);color:white;width:29px;height:29px;font-size:25px;line-height:25px}
@@ -13,6 +23,9 @@
 .inline-request h2.sr-only{margin:-1px}
 .inline-request p{line-height:1.5}
 .inline-request button:focus-visible{outline:2px solid var(--navy);outline-offset:3px}
+@container(min-width:481px){
+ .rounds-v4 .catalog .row-main.has-request-panel>.row-product-summary{grid-column:2;grid-row:1;padding-right:0}
+}
 @container(max-width:600px){
  .inline-request .form-grid{grid-template-columns:minmax(0,1fr)}
  .inline-request .request-step-panel h3{font-size:25px}
@@ -20,6 +33,11 @@
  .inline-request .request-address-grid .form-field{grid-column:1/-1}
  .inline-request .request-address-grid .address-house,.inline-request .request-address-grid .address-postal{grid-column:auto}
  .inline-request .request-wizard-actions button{padding:10px 16px;font-size:12px}
+}
+@container(max-width:480px){
+ .rounds-v4 .catalog .request-context-row .row-main{grid-template-columns:44px minmax(0,1fr)!important;grid-template-rows:auto auto!important}
+ .rounds-v4 .catalog .request-context-row .row-product-summary{grid-column:2!important;grid-row:1}
+ .rounds-v4 .catalog .request-context-row .row-requests{grid-column:1/-1!important;grid-row:2!important;justify-self:end}
 }
 @media(max-width:700px){
  .inline-request{padding:24px 20px;border-radius:16px}
