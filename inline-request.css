@@ -1,0 +1,27 @@
+/* V12 request card occupies only the SKU column; adjacent controls keep their places. */
+.inline-request{position:relative;background:white;color:var(--navy);border-radius:20px;padding:34px;margin-bottom:18px;scroll-margin-top:20px;container-type:inline-size}
+.inline-request[hidden]{display:none}
+.inline-request-close{position:absolute;right:16px;top:14px;border-radius:50%;background:var(--pink);color:white;width:29px;height:29px;font-size:25px;line-height:25px}
+.inline-request .request-wizard{max-height:none}
+.inline-request .request-wizard-body{overflow:visible;padding-right:0;scrollbar-gutter:auto}
+.inline-request .request-stepper{padding-top:12px}
+.inline-request .request-step-panel h3{margin-top:0}
+.inline-request .request-types{margin-top:0;margin-bottom:22px}
+.inline-request .request-selection-grid{margin-top:22px}
+.inline-request .selection-form-colors{display:block;margin-top:6px}
+.inline-request h2{font-size:28px;line-height:1.2;margin:0 28px 16px 0}
+.inline-request h2.sr-only{margin:-1px}
+.inline-request p{line-height:1.5}
+.inline-request button:focus-visible{outline:2px solid var(--navy);outline-offset:3px}
+@container(max-width:600px){
+ .inline-request .form-grid{grid-template-columns:minmax(0,1fr)}
+ .inline-request .request-step-panel h3{font-size:25px}
+ .inline-request .request-address-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .inline-request .request-address-grid .form-field{grid-column:1/-1}
+ .inline-request .request-address-grid .address-house,.inline-request .request-address-grid .address-postal{grid-column:auto}
+ .inline-request .request-wizard-actions button{padding:10px 16px;font-size:12px}
+}
+@media(max-width:700px){
+ .inline-request{padding:24px 20px;border-radius:16px}
+ .inline-request .request-stepper{padding-top:22px}
+}

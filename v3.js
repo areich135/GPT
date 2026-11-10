@@ -62,7 +62,8 @@
   function checkout(type){
     const entries=[...lists[type].values()];if(!entries.length)return;
     // Keep the existing request form and its validation; summarize the saved variants.
-    showRequest(type,entries.map(item=>item.id));
+    const request=showRequest(type,entries.map(item=>item.id),entries);
+    if(request?.dataset?.inlineRequest==='true')return;
     $('#modal .request-summary').innerHTML=entries.map(item=>`<strong>${item.name}</strong> · ${escapeHTML(item.color)}`).join('<br>');
     const colorField=$('#request-form select[name="color"]').closest('label');
     colorField.innerHTML=`Ausgewählte Varianten<span class="selection-form-colors">${escapeHTML([...new Set(entries.map(item=>item.color))].join(', '))}</span>`;

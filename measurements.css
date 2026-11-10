@@ -1,6 +1,6 @@
-/* V11: the supplied KAPSTO pill switch, in the existing TEKU palette. */
-.rounds-units .measurement-toggle{display:flex;width:130px;max-width:100%;border:2px solid var(--pink);border-radius:20px;padding:3px;gap:0}
-.rounds-units .measurement-toggle button{flex:1;min-width:0;border-radius:16px;color:var(--pink);font-size:14px;line-height:20px;padding:0 8px}
+/* V12 (85% of V11 switch size): the supplied KAPSTO pill switch, in the existing TEKU palette. */
+.rounds-units .measurement-toggle{display:flex;width:110.5px;height:25.5px;align-items:center;max-width:100%;border:1.7px solid var(--pink);border-radius:17px;padding:2.55px;gap:0}
+.rounds-units .measurement-toggle button{flex:1;min-width:0;border-radius:13.6px;color:var(--pink);font-size:11.9px;line-height:17px;padding:0 6.8px}
 .rounds-units .measurement-toggle button[aria-pressed=true]{color:white;background:var(--pink);font-weight:700}
 .rounds-units .measurement-toggle button:focus-visible{outline:2px solid var(--navy);outline-offset:3px}
 .rounds-units .compact-unit{color:var(--navy);font-size:11px;font-weight:700}

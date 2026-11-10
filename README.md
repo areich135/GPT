@@ -2,16 +2,24 @@
 
 Die Kopfzeile führt zu zwei Produktbereichen:
 
-- **Rundtöpfe / VCG:** V11 mit animiertem Stellflächenrechner im Modal; V1–V10 bleiben über den Versionsumschalter erreichbar.
+- **Rundtöpfe / VCG:** V12 mit animiertem Stellflächenrechner im Modal; V1–V11 bleiben über den Versionsumschalter erreichbar.
 - **Trays / Anzuchtpaletten / BP:** V6 mit 20 Artikeln, eigenem Rechteckrechner und animiertem Ausrichtungswechsel; V1–V5 bleiben erreichbar. Plug-, Tray- und Zellmaße sind separat benannt.
 
 Beide aktuellen Entwürfe enthalten die rechten Listen für Muster, Angebote und Merkliste. Anfragen werden nur simuliert. Der VCG-Stellflächenrechner berechnet die Stückzahl für Viereck- und Dreieckverband mit frei änderbarem Durchmesser.
 
-- [Rundtöpfe V11 öffnen](https://areich135.github.io/GPT/?version=v11)
+- [Rundtöpfe V12 öffnen](https://areich135.github.io/GPT/?version=v12)
 - [Anzuchtpaletten BP V6 öffnen](https://areich135.github.io/GPT/bp/?version=v6)
 - [Quellen, Datenzuordnung und tatsächliche Prüfungen](docs/sources-2026-10-22.md)
 
 ## Changelog
+
+### 10.11.2026 · Rundtöpfe V12: Anfrage direkt in der Seite
+
+- mm-/inch-Schalter in Breite und Höhe um 15 % verkleinert. Volumeneinheit in³ (Kubikzoll) und Faktor 0,016387064 l je in³ anhand NIST Handbook 44, Appendix C geprüft; Umrechnung unverändert.
+- Zweistufiges Anfrageformular als weißer Bereich vor den SKU-Zeilen, in derselben Spalte. Filter und rechte Listen behalten ihre Platzierung. Klicks außerhalb und Escape schließen das Formular nicht.
+- Muster-/Angebotsauswahl in Schritt 1 verschoben. Gültige Pflichtfelder erhöhen den Fortschritt laufend von 0 auf 50 % bzw. von 50 auf 100 %; vorbelegte Werte erzeugen keinen anfänglichen Fortschritt.
+- X und Abbrechen blenden die Anfrage aus; erneutes Öffnen erhält Schritt und Eingaben bis zum Neuladen. Filter-/Listenaktionen entfernen den Entwurf nicht. Abschluss bleibt eine Simulation direkt in der Seite.
+- V11 mit eigenständigen Laufzeitdateien und Assets archiviert. BP V6 behält das bisherige Modal und Formularverhalten.
 
 ### 10.11.2026 · Rundtöpfe V11: Maßeinheit
 

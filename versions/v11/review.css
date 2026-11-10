@@ -1,0 +1,23 @@
+/* Keep the existing TEKU palette, fonts and cards for Alina's review. */
+.alina-review .row-section-toggle strong{line-height:1.2}
+.alina-review.bp-v2 .bp-tray-measures{max-width:148px}
+.alina-review.bp-v2 .bp-tray-measure-values{gap:5px}
+.alina-review.bp-v2 .bp-tray-measure-values strong{font-size:10px;line-height:1.2}
+.alina-review.bp-v2 .bp-tray-measure-values strong small{display:block;font-size:8px;font-weight:400;margin-top:2px;color:var(--muted)}
+.alina-review.bp-v2 .bp-tray-unit{display:none}
+.alina-review .catalog .refreshed-row .row-note{margin:0;padding:0 18px 12px;background:white;font-size:11px;color:var(--muted)}
+.alina-review .related-toolbar{display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap;margin-bottom:12px;font-size:12px;color:var(--muted)}
+.alina-review .related-controls{display:flex;gap:8px;align-items:center;margin-left:auto}
+.alina-review .related-controls button{display:inline-flex;align-items:center;justify-content:center;gap:7px;min-height:32px;border:1px solid var(--pink);border-radius:20px;color:var(--pink);font-size:12px;font-weight:700;padding:6px 12px}
+.alina-review .related-controls button:first-child{width:34px;padding:6px}
+.alina-review .related-controls svg{width:17px;height:17px;flex:none}
+.alina-review .related-track{display:flex;gap:12px;overflow-x:auto;overscroll-behavior-x:contain;scroll-snap-type:x proximity;padding:3px 3px 12px;scrollbar-width:thin;scrollbar-color:var(--green) transparent}
+.alina-review .related-track .tray-tile{flex:0 0 calc((100% - 36px)/4);min-width:140px;scroll-snap-align:start}
+@media(max-width:800px){
+  .alina-review .related-track .tray-tile{flex-basis:calc((100% - 12px)/2);min-width:125px}
+}
+@media(max-width:500px){
+  .alina-review .row-section-toggle strong{font-size:10px}
+  .alina-review .related-controls button{font-size:11px;padding:5px 9px}
+  .alina-review .related-track .tray-tile{flex-basis:80%;min-width:0}
+}

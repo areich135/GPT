@@ -1,7 +1,7 @@
 # TEKU Website – verbindliche Übergabe für die Clickdummys
 
-**Dokumentrevision:** 8 · **Stand:** 10.11.2026
-**Ausgangsbasis dieser Änderung:** adfc2e3; aktuelle Änderungen siehe README-Changelog
+**Dokumentrevision:** 9 · **Stand:** 10.11.2026
+**Ausgangsbasis dieser Änderung:** 78b0cc3; aktuelle Änderungen siehe README-Changelog
 **Repository:** https://github.com/areich135/GPT · **Arbeitsbranch:** main
 
 Diese Übergabe soll einen neuen Chat arbeitsfähig machen, ohne den gesamten alten Verlauf zu laden. Sie beschreibt den freigegebenen Stand, die bewussten Unterschiede zwischen den Produktbereichen und die Grenzen des Dummys. Vor jeder Aufgabe den aktuellen Remote-Stand prüfen: Eine im ChatGPT-Projekt hochgeladene Kopie kann älter sein als die Datei im Repository.
@@ -35,13 +35,13 @@ Keine erfundenen Produktdaten, Patenttexte, Siegel, Bilder, Verkaufsargumente od
 
 | Bereich | Aktueller Stand | Aktuelle Dateien | Öffentlicher Einstieg |
 |---|---|---|---|
-| Rundtöpfe, Serie VCG | V11 | Repository-Stamm | https://areich135.github.io/GPT/?version=v11 |
+| Rundtöpfe, Serie VCG | V12 | Repository-Stamm | https://areich135.github.io/GPT/?version=v12 |
 | Anzuchtpaletten, Serie BP | V6 | bp/ | https://areich135.github.io/GPT/bp/?version=v6 |
 | Eigenständige ST-/GP-Tray-Seite | Noch nicht umgesetzt | Keine eigene aktuelle Produktseite | Nicht als fertig behaupten |
 
 Die Kategorie im Umschalter heißt „Trays / Anzuchtpaletten“. Ihr aktuell umgesetztes Produktbeispiel ist BP. Die Nutzerbegriffe Tray und Anzuchtpalette wurden im Gespräch teilweise vermischt: Für die aktuelle BP-Seite ausdrücklich „Anzuchtpalette“ verwenden. ST-/GP-Trays sind ein späterer eigener Auftrag.
 
-Frühere Rundtopf-Stände V1–V10 liegen unter versions/v1/ bis versions/v10/. Frühere BP-Stände V1–V5 liegen unter bp/versions/. Die aktuellen Stände liegen gerade nicht unter versions/v11/ oder bp/versions/v6/. Die Zuordnung steuert version-switch.js.
+Frühere Rundtopf-Stände V1–V11 liegen unter versions/v1/ bis versions/v11/. Frühere BP-Stände V1–V5 liegen unter bp/versions/. Die aktuellen Stände liegen gerade nicht unter versions/v12/ oder bp/versions/v6/. Die Zuordnung steuert version-switch.js.
 
 **Versionsregeln:**
 
@@ -54,7 +54,7 @@ Frühere Rundtopf-Stände V1–V10 liegen unter versions/v1/ bis versions/v10/. 
 
 ## 3. Unbedingt erhalten: Entscheidungen und bewusste Unterschiede
 
-| Thema | Rundtöpfe V11 | Anzuchtpaletten BP V6 |
+| Thema | Rundtöpfe V12 | Anzuchtpaletten BP V6 |
 |---|---|---|
 | Erste Werte in der Artikelzeile | Durchmesser, Höhe, Volumen | Länge, Breite, Höhe der Anzuchtpalette mit Maßskizze |
 | Erster Aufklappbereich | „Technische Daten“ | „Technische Daten“ |
@@ -64,6 +64,7 @@ Frühere Rundtopf-Stände V1–V10 liegen unter versions/v1/ bis versions/v10/. 
 | Weißer Zeiger unter aktivem Bereich | Umgesetzt; folgt dessen Buttonmitte | Nicht allein wegen VCG automatisch nachrüsten |
 | Anfrage-CTA | Muster primär magenta/weiß, Angebot Kontur | Muster primär magenta/weiß, Angebot Kontur |
 | Kompakte rechte Listenleiste bei offenem Filter | Umgesetzt | Umgesetzt |
+| Anfrageformular | In der SKU-Spalte vor den Artikeln, laufender Fortschritt, Anfrageart in Schritt 1 | Modal, feste Fortschrittsschritte, Anfrageart in Schritt 2 |
 | Rechner | Kreisgeometrie | Rechteckgeometrie, inkl. Pflanzenzahl |
 | Passende Produkte | Seitliche blaue Pfeile + von links füllender Balken | Äußere Pfeile + Positionsbalken für mehrere Aushebeplatten vorbereitet; derzeit höchstens eine je Artikel |
 
@@ -94,11 +95,11 @@ Desktop bei eingeklapptem Filter:
 - Filter und Varianten zusammen orientieren sich an der Hero-Breite.
 - Die Varianten reichen rechts bis zur Flucht des Produktbildkastens.
 - Angebote, Muster, Merkliste und Kontakt stehen zusätzlich rechts daneben.
-- Die erste Artikelzeile beginnt oben auf derselben Ebene wie Filter und rechte Kacheln.
+- Bei geschlossener Anfrage beginnt die erste Artikelzeile oben auf derselben Ebene wie Filter und rechte Kacheln. In V12 nimmt die geöffnete Anfrage diese obere Position der SKU-Spalte ein; Artikel beginnen darunter.
 
 Der linke Filter bleibt in beiden Zuständen oben am Anfang der SKU-Liste im normalen Dokumentfluss. Er läuft beim Scrollen mit dem Dokument aus dem Sichtfeld; kein Sticky, keine Begrenzung auf die SKU-Höhe und kein eigener Scrollbereich. `filter-sticky-host` bleibt als Raster-Wrapper bestehen; sein Name ist historisch.
 
-Die rechten Spalten sind unverändert durch `selection-sidebar-host` und `selection-rail-host` auf die tatsächlich sichtbare SKU-Liste begrenzt. Oberkante bündig mit der ersten Variante, beim Scrollen sticky mit 20 px Abstand; Unterkante höchstens am unteren Rand der letzten `.product-row`, einschließlich geöffneter Details. Nachfolgende Katalogabstände, Sammelbuttons, Listen unterhalb der Produkte und Empfehlungen gehören nicht zur Sticky-Grenze. Ein `ResizeObserver` aktualisiert `--sku-list-height` bei Filter-, Detail- oder Breitenänderungen. Auf Desktop kein Scroll-Handler für die Positionierung. Volle Listen bleiben bei Bedarf intern scrollbar.
+Die rechten Spalten sind unverändert durch `selection-sidebar-host` und `selection-rail-host` auf die tatsächlich sichtbare SKU-Liste begrenzt. Oberkante bündig mit dem Anfang der SKU-Spalte (bei offener V12-Anfrage mit deren Karte), beim Scrollen sticky mit 20 px Abstand; Unterkante höchstens am unteren Rand der letzten `.product-row`, einschließlich geöffneter Details. Nachfolgende Katalogabstände, Sammelbuttons, Listen unterhalb der Produkte und Empfehlungen gehören nicht zur Sticky-Grenze. Ein `ResizeObserver` aktualisiert `--sku-list-height` bei Filter-, Detail- oder Breitenänderungen. Auf Desktop kein Scroll-Handler für die Positionierung. Volle Listen bleiben bei Bedarf intern scrollbar.
 
 Der untere Empfehlungsblock der Rundtöpfe und seine Überschrift fluchten mit der linken/rechten Außenkante der SKU-Spalte. `catalog-update.js` misst hierfür die `.results-column` und setzt `--sku-column-left` und `--sku-column-width`. Bei Breiten- oder Filterwechsel neu ausrichten; bei ausgeblendetem Variantenpanel responsive Fallbackwerte verwenden. BP hat derzeit keinen eigenen Empfehlungsblock.
 
@@ -154,26 +155,32 @@ Die drei Listen werden zentral über v3.js verwaltet. Ein Eintrag bezieht sich a
 
 Zu erhalten sind: Hinzufügen, Entfernen, Übernahme aus der Merkliste in Muster/Angebote, jeweilige Zähler und die bisherige Anfragezusammenfassung. VCG-Variantenherzen müssen genau die angeklickte Farbvariante speichern. Ein anderes Variantenherz darf nicht die aktuell im Hero ausgewählte Farbe übernehmen.
 
-Die schmale Leiste zeigt Angebote, Muster, Merkliste, Kontakt und vorhandene Artikelzähler. Sie ist ein Zugang zu denselben Kacheln. Desktop: eigene 44-px-Spalte rechts neben den Varianten, gleicher --xd-gap wie links; oberer Rand bündig mit erster Variante, zwischen erstem und letztem SKU sticky bei 20 px. Nie in den Hero oder unter den letzten SKU wandern. Mobil unten rechts, am letzten SKU nach oben begrenzt und außerhalb des SKU-Bereichs verborgen.
+Die schmale Leiste zeigt Angebote, Muster, Merkliste, Kontakt und vorhandene Artikelzähler. Sie ist ein Zugang zu denselben Kacheln. Desktop: eigene 44-px-Spalte rechts neben den Varianten, gleicher --xd-gap wie links; oberer Rand bündig mit dem Anfang der SKU-Spalte, bei offener V12-Anfrage also mit der Formularkarte; bis zum letzten SKU sticky bei 20 px. Nie in den Hero oder unter den letzten SKU wandern. Mobil unten rechts, am letzten SKU nach oben begrenzt und außerhalb des SKU-Bereichs verborgen.
 
-### 5.4 Anfrageformular: zwei Schritte für Muster und Angebot
+### 5.4 Anfrageformular: Rundtöpfe V12 und BP V6 bewusst getrennt
 
-Nur die aktuellen Seiten laden `request-form.js` und `request-form.css`. Der gemeinsame Adapter ersetzt `showRequest` nach den bisherigen Seitenskripten. Die zwei Screenshots vom 05.11.2026 sind die visuelle Vorlage: breites weißes Modal, pillenförmige Eingaben, zwei Spalten auf Desktop, magentafarbener Fortschritt und Weiter-CTA. Der Ablauf ist eine Anfrage, ohne Shop-Registrierung, Zahlung oder Kontoanlage.
+Gemeinsame Gestaltung aus den freigegebenen KAPSTO-Screenshots: weißer Bereich, runde Eingabefelder, marine Texte und magentafarbener Fortschritt/CTA. Anfrage statt Shop-Registrierung, Zahlung oder Kontoanlage. `request-form.css` bleibt die Stilbasis beider Bereiche.
 
 1. **Kontaktdaten:** Anrede, Vorname, Nachname, Funktion im Unternehmen, Telefon, E-Mail sind Pflichtfelder. Anrede erlaubt „Keine Angabe“. Funktion ist frei eingebbar.
-2. **Firmen-/Lieferadresse und Anfrage:** Firma, Straße, Hausnummer, PLZ, Ort, Land und Umsatzsteuer-ID sind Pflichtfelder. Firmenzusatz und Bundesland/Region sind optional. Land ist frei änderbar, mit Deutschland vorbelegt; PLZ und Hausnummer sind Textfelder für internationale Formate.
+2. **Firmen-/Lieferadresse:** Firma, Straße, Hausnummer, PLZ, Ort, Land und Umsatzsteuer-ID sind Pflichtfelder. Firmenzusatz und Bundesland/Region sind optional. Deutschland ist vorbelegt und frei änderbar; PLZ/Hausnummer sind Textfelder für internationale Formate. Mengen, ausgewählte Farben und Nachricht stehen weiterhin in Schritt 2.
 
-Die Geschäftskunden-Abfrage und -Bestätigung entfallen ausdrücklich. Keine gleichbedeutende Geschäfts-/Verbrauchererklärung aus der Shop-Vorlage ergänzen. Die Umsatzsteuer-ID bleibt erforderlich; keine externe Prüfung der ID. Eingaben aus nur Leerzeichen werden bei erforderlichen Textfeldern abgewiesen.
+Keine Geschäftskunden-Abfrage oder gleichbedeutende Geschäfts-/Verbrauchererklärung. Umsatzsteuer-ID nur auf nicht leeren Text prüfen; keine externe Prüfung. Erforderliche Texte aus bloßen Leerzeichen abweisen. Muster und Angebot bleiben kombinierbar, mindestens eine Anfrageart muss gewählt sein. Nur gewählte Mengen aktiv/erforderlich; VCG maximal zehn Muster und 10000000 Angebotsstücke, keine neue Grenze für BP.
 
-Einstieg über Muster- oder Angebotsliste wählt die Anfrageart vor. In Schritt 2 erlauben zwei unabhängige Checkboxen Muster, Angebot oder beides gleichzeitig. Mindestens eine muss gewählt sein. Getrennte Mengenfelder; nur ausgewählte Anfragearten sind sichtbar, aktiv und erforderlich. Bisherige VCG-Mengengrenzen bleiben; BP erhält keine neue Mengenbegrenzung.
+**Rundtöpfe V12:** `inline-request.js` ersetzt `showRequest` nur hier. Ein dauerhaftes, zunächst verborgenes `#inline-request` steht als erstes Kind der `.results-column`, vor `#results` und `#additional-results`. Bei Anfrage erscheinen Formular und später Bestätigung direkt in dieser Karte. Ausschließlich die SKU-Zeilen darunter werden nach unten verschoben. Filter und rechte Listen behalten ihr bisheriges Raster/Sticky-Verhalten. Responsive Einspaltenanordnung über Containerqueries; kein viewportbegrenzter Formular- oder Innen-Scrollbereich. Kein Dialog/Backdrop für diese Anfrage. Andere Modale bleiben unverändert.
 
-„Weiter“ bzw. Enter in Schritt 1 validiert nur die Kontaktdaten. Schritt 2 validiert Adresse und Anfrage. Inaktive äußere Fieldsets sind ausgeblendet und deaktiviert, damit unsichtbare Pflichtfelder weder blockieren noch fokussiert werden. „Zurück“ erhält alle Werte; „Abbrechen“ in Schritt 1 schließt den Dialog. Fortschritt ist schrittbasiert: 0 % / 50 % / 100 % beim simulierten Abschluss. Die Aktionsleiste bleibt erreichbar; lange Inhalte scrollen innerhalb des Modal-Inhalts. Keine Speichervorgänge oder echten Anfragen.
+Muster-/Angebotscheckboxen stehen bei V12 bereits in Schritt 1. Beide können kombiniert werden. Der Einstieg wählt die entsprechende Anfrageart vor. Vorbelegte Mengen bleiben in Schritt 2. „Weiter“ und Enter prüfen den aktiven Schritt, „Zurück“ erhält Werte. Inaktive Schritt-Fieldsets sind verborgen und deaktiviert. „Anfrage testen“ schließt ausschließlich die Simulation ab und zeigt Kontakt, Adresse, Anfragearten und Mengen in derselben Karte.
 
-`v3.js` überträgt weiterhin die gespeicherten Artikel mit exakter Farbe. Daher `.request-summary` und `select[name="color"]` mit umschließendem Label erhalten; der Checkout ersetzt dieses Label auch im zunächst ausgeblendeten zweiten Schritt durch „Ausgewählte Varianten“. Die Artikelliste ist im Modal als aufklappbarer Kontext enthalten. Der simulierte Abschluss zeigt Anfragearten, Mengen, Kontakt und Adresse. Das vorherige Fieldset wird hierfür kurz wieder aktiviert, um alle Kontaktfelder in `FormData` zu erfassen.
+Der Fortschritt reagiert auf `input`/`change` und gültige Pflichtangaben. Schritt 1 reicht von 0 bis 50 %, Schritt 2 von 50 bis 100 %. Vorbelegte Anfrageart, Land und Mengen werden als Ausgangsbasis abgezogen, damit die Anzeige leerer Daten bei 0 bzw. 50 % beginnt. Fehlende/ungültige Pflichtwerte zählen nicht, auch wenn sie vorher schon ausgefüllt waren. Optionale Felder beeinflussen den Fortschritt nicht. Keine echten Anfragen oder Speicherung in Browser-Storage/Backend.
 
-Die Listen gelten für die laufende Seite/Sitzung. Dauerhafte Speicherung nach Reload, Synchronisierung zwischen Produktbereichen und ein echter Kundenwarenkorb sind nicht zugesagt. „Merkliste speichern“ bietet den bestehenden Export; daraus kein Backend ableiten.
+X oder „Abbrechen“ verbergen den V12-Entwurf, ohne ihn zu zerstören. Erneuter Checkout erhält Schritt und Eingaben bis zum Reload bzw. zum erfolgreichen Dummy-Abschluss. Ein anderer Checkout aktualisiert Artikel-/Farbzusammenfassung und aktiviert zusätzlich die neu angefragte Anfrageart. Klicks außerhalb oder Escape entfernen die Karte nicht. Re-Render von Produkten/Listen/Filtern ersetzt nur deren bestehende Ziele, nicht den Formularbereich.
 
-## 6. Rundtöpfe V11: genaue fachliche Vorgaben
+`v3.js` übergibt dem Anfrageadapter zusätzlich die gespeicherten Variantensnapshots als dritten Parameter. Gibt der Adapter ein Element mit `data-inline-request="true"` zurück, ist die Zusammenfassung bereits vollständig übernommen. Sonst läuft die bisherige Modal-Integration weiter. So bleiben mehrere Farben desselben Artikels erhalten. Kein Auslesen privater Listen-Maps und kein Abfangen durch einen zweiten unabhängigen Checkout-Handler.
+
+**BP V6 und archivierte VCG bis V11:** Weiterhin `request-form.js`, zweistufiges Modal. Anfrageart in Schritt 2, Fortschritt fest 0 / 50 / 100 %. `v3.js` ersetzt nach `showRequest` die Modal-Zusammenfassung und das Farbauswahl-Label durch gespeicherte Varianten. `.request-summary` und `select[name="color"]` mit umschließendem Label sind hier weiter der Integrationsvertrag. BP-Daten, Formfelder und Interaktionen wurden für V12 nicht geändert.
+
+Listen gelten für die laufende Seite/Sitzung. Dauerhafte Speicherung nach Reload, Synchronisierung zwischen Bereichen oder ein echter Kundenwarenkorb sind nicht zugesagt. „Merkliste speichern“ bietet den bisherigen Export; daraus kein Backend ableiten.
+
+## 6. Rundtöpfe V12: genaue fachliche Vorgaben
 
 ### 6.1 Daten und Artikelzeile
 
@@ -183,9 +190,9 @@ latest.js erzeugt die aktuelle Grundstruktur der Zeile und technische Inhalte. v
 
 ### 6.1a Maßeinheit ab V11
 
-`measurements.js`/`.css` laden nur auf der aktuellen Rundtopfseite, zuletzt nach den bestehenden Adaptern. Erste Filtergruppe „Maßeinheit“, mm-/inch-Pillenschalter nach Nutzerscreenshot `image(20261110-101321).png` vom 10.11.2026 (visuell abgeleitet), magenta aktiv aus bestehender TEKU-CSS-Variable. Kompakte Filterleiste erhält einen Zugang mit aktueller Einheit. Start ist mm; diese Anzeigepräferenz bleibt beim Filterreset bestehen und wird nicht dauerhaft gespeichert.
+`measurements.js`/`.css` laden nur auf der aktuellen Rundtopfseite, zuletzt nach den bestehenden Adaptern. Erste Filtergruppe „Maßeinheit“, mm-/inch-Pillenschalter nach Nutzerscreenshot `image(20261110-101321).png` vom 10.11.2026 (visuell abgeleitet), magenta aktiv aus bestehender TEKU-CSS-Variable. Kompakte Filterleiste erhält einen Zugang mit aktueller Einheit. V12 verkleinert ausschließlich den eigentlichen Schalter um 15 %: Außenmaß 110,5 × 25,5 px statt 130 × 30 px, proportional kleinere Beschriftung/Polsterung. Start ist mm; diese Anzeigepräferenz bleibt beim Filterreset bestehen und wird nicht dauerhaft gespeichert.
 
-Längen aus cm: × 10 → mm, ÷ 2,54 → inch. Volumen aus Litern: metrisch l, bei inch ÷ 0,016387064 → in³. Beispiel VCG 11: 110 mm / 86 mm / 0,53 l bzw. 4,33 inch / 3,39 inch / 32,34 in³. Höchstens zwei Nachkommastellen, ohne die Rohdaten zu verändern oder gerundete Anzeigen erneut umzurechnen. Kein Wechsel zu US-/UK-Gallonen oder Fluid Ounces.
+Längen aus cm: × 10 → mm, ÷ 2,54 → inch. Volumen aus Litern: metrisch l, bei inch ÷ 0,016387064 → in³. Beispiel VCG 11: 110 mm / 86 mm / 0,53 l bzw. 4,33 inch / 3,39 inch / 32,34 in³. Höchstens zwei Nachkommastellen, ohne die Rohdaten zu verändern oder gerundete Anzeigen erneut umzurechnen. Kein Wechsel zu US-/UK-Gallonen oder Fluid Ounces. Am 10.11.2026 anhand NIST Handbook 44 (2025), Appendix C bestätigt: https://www.nist.gov/document/2025-nist-handbook-44-appx-c. in³ heißt Kubikzoll / cubic inch und ist eine Volumeneinheit; die bestehende Umrechnung bleibt korrekt.
 
 Kurzmaße mit Icons, aktiver technischer Reiter „Maße“, vorhandene Hero-Produktinfo sowie Durchmesser-/Volumenfilter werden umgestellt. Filter verwenden weiterhin originale cm-Werte und Range-IDs; Ergebniszuordnung bleibt gleich. Verpackungszahlen, Konizität und der eigenständige Stellflächenrechner bleiben fachlich unverändert. Dieser rechnet weiterhin mit seinen eigenen ausdrücklich beschrifteten Einheiten.
 
@@ -385,7 +392,8 @@ Vorlagen aus früheren Chats sind nicht automatisch im neuen Chat verfügbar. Da
 | BP-Maße/Filter/Zeilen/Daten | bp/app.js, bp/data.js, bp/styles.css, bp/v2.css | bp/review-update.* |
 | BP-CC-Hilfe/Listenleiste/Produktnavigation | bp/review-update.js, bp/review-update.css | Shared Listen und setCollapsed |
 | Gemeinsame Listen | v3.js, v3.css | VCG und BP samt Cachebuster |
-| Gemeinsames aktuelles Anfrageformular / BP-Primärbutton | request-form.js, request-form.css | Beide aktuellen index.html; nach bisherigen Seitenskripten laden |
+| V12-Anfrage in der Seite | inline-request.js, inline-request.css, request-form.css | Nur aktuelle Rundtöpfe; Checkout-Vertrag in v3.js |
+| BP-Anfrageformular / Primärbutton | request-form.js, request-form.css | BP V6 behält das Modal und die ursprünglichen zwei Schritte |
 | Fluchten/automatisches Einklappen | catalog-xd.js, catalog-xd.css | Beide aktuellen Bereiche |
 | Ältere Produktnavigation | review.js, review.css | Kann für nicht ersetzte Bereiche weiterhin wirksam sein |
 | Technische Reiter | technical.js | Beide Bereiche; Rechner wird später dekoriert |
@@ -399,7 +407,7 @@ Vorlagen aus früheren Chats sind nicht automatisch im neuen Chat verfügbar. Da
 
 **Ladereihenfolge ist Teil der Funktion.** Das Projekt verwendet globale Funktionen, die spätere Skripte dekorieren/überschreiben. renderProducts, renderRow, renderDetail und die Collapse-Setter nicht isoliert neu definieren, ohne vorhandene Wrapper zu berücksichtigen.
 
-VCG grob: app.js → v3.js → technical.js → latest.js → v4.js → catalog-xd.js → review.js → Rechneradapter → certificates.js/v8.js. BP grob: technical.js → bp/app.js → gemeinsames v3.js → catalog-xd.js → review.js → bp/review-update.js → Rechnerkomponenten/Adapter. Beide aktuellen Seiten laden `request-form.js`; VCG lädt danach `measurements.js`. Archivseiten behalten ihre bisherigen Formulare und Maßanzeigen. Bei Änderungen die tatsächlichen script-Tags prüfen; diese Kurzfolge ist kein Ersatz für index.html.
+VCG grob: app.js → v3.js → technical.js → latest.js → v4.js → catalog-xd.js → review.js → Rechneradapter → certificates.js/v8.js. BP grob: technical.js → bp/app.js → gemeinsames v3.js → catalog-xd.js → review.js → bp/review-update.js → Rechnerkomponenten/Adapter. BP lädt `request-form.js`. VCG lädt `request-form.css`, anschließend `measurements.js` und zuletzt `inline-request.js`; das bisherige Formularskript lädt dort nicht mehr. Archivseiten behalten ihre bisherigen Formulare und Maßanzeigen. Bei Änderungen die tatsächlichen script-Tags prüfen; diese Kurzfolge ist kein Ersatz für index.html.
 
 CSS ebenfalls in tatsächlicher Reihenfolge prüfen. Ein früher Treffer in styles.css ist oft nicht die am Ende wirksame Regel. Vorhandene Media-/Containerqueries sowie Scope-Klassen beachten: rounds-v8 und bp-review sind bereichsspezifisch, catalog-xd und v3-Dateien geteilt.
 
@@ -423,7 +431,7 @@ Nicht für jede Textkorrektur die gesamte Anwendung erneut prüfen. Betroffene F
 | Maßeinheit | mm/inch in Kurzmaßen und Maßtabellen, Filterwerte und Treffer erhalten, spätere Renders, Sprachwechsel, Tastatur und responsive Breiten; V10/BP unverändert |
 | Filter | Auswahl setzen/entfernen/resetten; korrekte Trefferzahl und grüner Punkt; beide Filterzustände |
 | Listen | Konkrete Farbe hinzufügen/entfernen; Duplikate; Wechsel der Listen; Inhalt nach Filtereinklappen |
-| Anfrageformular | Beide Schritte und Einstiege, Weiter/Zurück/Enter, pro Schritt validieren, keine Geschäftskundenfrage, vollständige Adresse, Umsatzsteuer-ID, kombinierte Anfrage/Mengen, gespeicherte Farbvarianten und Dummy-Abschluss |
+| Anfrageformular | V12 inline vor SKUs, Seitenleisten unverändert, laufender Fortschritt, Anfrageart in Schritt 1, Außerklick/X und Datenerhalt; BP weiterhin Modal. Beide Schritte/Einstiege, Pflichtwerte, Mengen, exakte Farben und simulierter Abschluss |
 | Aufklappbereich | Öffnen/Schließen/Wechsel; automatisches Einklappen; bestehende Inhalte; VCG-Zeiger |
 | Carousel | VCG: seitliche blaue Pfeile, maximal fünf Produkte, ein Produktschritt je Klick, von links füllender Balken, Anfang/Ende; BP bisherige Navigation erhalten |
 | Technische Bilder | Richtiger Artikel; Ausschnitt/Überlappung; Caption; Zoom; keine unbelegte Umfärbung |
@@ -442,6 +450,8 @@ Passende lokale Checks:
     node --test tests/space-engine.test.cjs tests/rectangular-engine.test.cjs
 
 Bei neuen Rechenänderungen unabhängig begründete Testfälle ergänzen, keine Tests schreiben, die bloß dieselbe Implementierung kopieren. Reine Dokumentationsänderungen benötigen keine erneuten Rechen- oder Browserprüfungen.
+
+**Prüfung V12 am 10.11.2026:** Chromium bei 1440/768/390 px, jeweils offene/kompakte Filter. Formular vor den SKU-Zeilen, bündig mit der Ergebnis-Spalte; unveränderte Koordinaten/Breiten der Filter- und Listen-Hosts; kein horizontaler Überlauf oder innerer Formular-Scroller. Gültige Kontaktfelder erhöhen 0 → 50 %, Adresse 50 → 100 %; ungültige E-Mail, fehlende Anfrageart, Leerzeichen-VAT und Musterzahl über zehn senken den Fortschritt/blockieren den nächsten Schritt. Beide Anfragearten, getrennte Mengen, Enter/Zurück und Inline-Abschluss geprüft. Außerhalbklick, Escape, X/erneutes Öffnen, Produkt-/Filter-Re-Render und Einheitenwechsel erhalten Formular/Schritt/Eingaben. Zwei gespeicherte Farben desselben Artikels werden exakt übernommen. Toggle im Browser mit V11 verglichen: 110,5 × 25,5 px gegenüber 130 × 30 px, exakt Faktor 0,85. Desktop-/Tablet-/Mobilansichten und Schritt 2 visuell geprüft; X überdeckt die Prozentanzeige nicht. V11-Routing samt ursprünglichem Modal, unverändertes BP-V6-Modal und fehlerfreie Assets/JavaScript geprüft. Archiv-Runtime/-Assets bytegleich zur Ausgangsbasis. Syntax-/Diffprüfung der geänderten Dateien bestanden; unveränderte Original-SVGs behalten ihr Zeilenformat.
 
 **Prüfung V11 am 10.11.2026:** Chromium bei 1440/768/390 px mit offenem und kompaktem Filter: keine horizontalen Überläufe oder überlaufenden Kurzmaße. Umrechnung aller 14 Artikel unabhängig mit cm³-Volumenformel gegengeprüft; zehn Hin-/Rückwechsel ohne Rundungsdrift oder veränderte Quelldaten. Maßtabelle, Hero, Durchmesser-/Volumenfilter, Filterreset, leere Treffer, Verpackungszahlen, spätere Re-Renders, erhaltene Tray-Knoten/-Position und Musteranfrage geprüft. Tastaturwahl per Space/Enter sowie Zahlenformat de/en-US geprüft; Umschaltung in beiden Sprachen zugänglich. Desktop, Tablet, Mobil und Maßtabelle visuell kontrolliert. V10-Archiv und Rückroute auf V11, BP-V6-Kategoriepfad sowie alle Archiv-Runtime-/Assetbytes gegenüber vorherigem HEAD geprüft. Keine JavaScript-/Assetfehler; Syntax-/Diffprüfung bestanden.
 
