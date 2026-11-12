@@ -13,6 +13,12 @@ Beide aktuellen Entwürfe enthalten die rechten Listen für Muster, Angebote und
 
 ## Changelog
 
+### 12.11.2026 · V12: Anfrage an erster Position und Mengen in Schritt 1
+
+- Rundtopf-Anfrage steht wieder als erster Bereich der SKU-Spalte, vor sämtlichen Produktzeilen – unabhängig davon, welche Artikel und Farben angefragt werden. Filter und rechte Listen bleiben an ihrer bisherigen Position. Die ausgewählten Produkte bleiben im Formular sichtbar.
+- Musteranzahl und gewünschte Angebotsstückzahl zu den Anfragearten in Schritt 1 verschoben. Nur ausgewählte Mengen sind aktiv und erforderlich; Prüfung und Fortschritt berücksichtigen die Mengen bereits dort.
+- Formular bleibt bei Produkt-/Filteränderungen, Detailwechseln und erneutem Öffnen mit seinen Eingaben erhalten. BP V6 bleibt unverändert.
+
 ### 10.11.2026 · V12: cm-Anzeige und sichtbarer Produktbezug
 
 - Maßeinheiten-Schalter auf cm ↔ inch umgestellt. Metrische Längen in Kurzmaßen, Maßtabellen, Produktinfo und Durchmesserfilter stehen wieder in cm; Größe des Schalters bleibt unverändert. Volumen bleibt l bzw. in³.

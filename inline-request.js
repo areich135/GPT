@@ -6,68 +6,19 @@
   host.dataset.inlineRequest='true';host.hidden=true;
   host.setAttribute('aria-labelledby','inline-request-title');
   const results=document.querySelector('.results-column');
-  const fallback=document.createElement('div');fallback.className='request-context-fallback';fallback.hidden=true;
-  results.prepend(host,fallback);
-  let form, panels, choices, step=1, selected=[], opener, lastKey='', lastType='sample', requestItems=[], anchorRow, pointerObserver;
+  results.prepend(host);
+  let form, panels, choices, step=1, selected=[], opener, lastKey='', lastType='sample', requestItems=[];
   const presetFields=new Set(['country','sampleQuantity','offerQuantity']);
   function productSummary(){
     return `<section class="request-products" aria-label="Ausgewählte Artikel"><h3>Ihre ausgewählten Artikel (${requestItems.length})</h3><ul class="request-summary request-product-list">${requestItems.map(item=>`<li><img src="${escapeHTML(item.image)}" alt="${escapeHTML(item.name+' · '+item.color)}" loading="lazy"><div><strong>${escapeHTML(item.name)}</strong><span>${escapeHTML(item.color)}</span></div></li>`).join('')}</ul></section>`;
   }
-  function clearPointer(){
-    pointerObserver?.disconnect();pointerObserver=null;
-    const main=anchorRow?.querySelector('.row-main');
-    main?.classList.remove('has-request-panel');
-    main?.style.removeProperty('--request-pointer');
-    main?.style.removeProperty('--request-pointer-bottom');
-    main?.querySelectorAll('[data-request]').forEach(button=>{button.removeAttribute('aria-controls');button.removeAttribute('aria-expanded');});
-  }
-  function mount(){
-    clearPointer();
-    if(host.hidden){results.prepend(host);fallback.hidden=true;fallback.replaceChildren();anchorRow=null;return;}
-    const item=requestItems[0],p=productById(item.id);
-    anchorRow=document.getElementById(`article-${item.id}`);
-    if(!anchorRow){
-      // A saved product may be outside the active filters. Keep its context
-      // visible without resetting the user's filter selection.
-      const template=document.createElement('template');template.innerHTML=renderRow(p);
-      anchorRow=template.content.firstElementChild;anchorRow.classList.add('request-context-row');
-      anchorRow.querySelectorAll('.row-section-toggle,.row-favorite,.row-note,.row-detail').forEach(node=>node.remove());
-      fallback.replaceChildren(anchorRow);fallback.hidden=false;
-    }else fallback.hidden=!fallback.contains(anchorRow);
-    anchorRow.after(host);
-    const main=anchorRow.querySelector('.row-main'),buttons=main.querySelector('.row-requests');
-    main.classList.add('has-request-panel');
-    buttons.querySelectorAll('[data-request]').forEach(button=>{
-      button.setAttribute('aria-controls','inline-request');button.setAttribute('aria-expanded','true');
-    });
-    const position=()=>{
-      const a=main.getBoundingClientRect(),b=buttons.getBoundingClientRect(),row=anchorRow.getBoundingClientRect();
-      main.style.setProperty('--request-pointer',`${b.left+b.width/2-a.left}px`);
-      main.style.setProperty('--request-pointer-bottom',`${a.bottom-row.bottom-10}px`);
-    };
-    position();pointerObserver=new ResizeObserver(position);pointerObserver.observe(main);pointerObserver.observe(buttons);pointerObserver.observe(anchorRow);
-  }
-  const previousRender=renderProducts;
-  renderProducts=function(...args){
-    const focused=host.contains(document.activeElement)?document.activeElement:null;
-    clearPointer();
-    // The draft object and its event listeners survive removal from the DOM.
-    // Remove temporary context before the normal render and reattach afterwards.
-    if(fallback.contains(host))results.prepend(host);
-    fallback.replaceChildren();fallback.hidden=true;
-    const result=previousRender.apply(this,args);
-    if(!host.hidden&&state.expanded[requestItems[0]?.id])host.hidden=true;
-    mount();
-    if(focused?.isConnected&&!host.hidden)focused.focus({preventScroll:true});
-    return result;
-  };
   function reveal(){
-    host.hidden=false;mount();
-    (anchorRow||host).scrollIntoView({block:'start',behavior:'instant'});
+    host.hidden=false;
+    host.scrollIntoView({block:'start',behavior:'instant'});
     (form?.querySelector(`[data-request-step="${step}"] h3`)||host.querySelector('h2')).focus({preventScroll:true});
   }
   function close(){
-    host.hidden=true;renderProducts();
+    host.hidden=true;
     const target=opener?.isConnected?opener:document.querySelector(`[data-list-checkout="${lastType}"]`);
     target?.focus({preventScroll:true});
   }
@@ -144,6 +95,10 @@
               <p class="small-note">Sie können beide Optionen gleichzeitig auswählen.</p>
               <p id="request-type-error" class="request-type-error" role="alert" hidden>Bitte wählen Sie Muster, Angebot oder beides aus.</p>
             </fieldset>
+            <div class="form-grid request-quantity-grid">
+              <label class="form-field" data-request-quantity="sample">Musteranzahl *<input name="sampleQuantity" type="number" min="1" max="10" value="1" required></label>
+              <label class="form-field" data-request-quantity="offer">Gewünschte Stückzahl für das Angebot *<input name="offerQuantity" type="number" min="1" max="10000000" value="1000" required></label>
+            </div>
             <div class="form-grid request-contact-grid">
               <label class="form-field request-salutation">Anrede *<select name="salutation" required autocomplete="honorific-prefix"><option value="">Bitte wählen Sie …</option><option>Frau</option><option>Herr</option><option value="none">Keine Angabe</option></select></label>
               <label class="form-field request-first-name">Vorname *<input name="firstName" required autocomplete="given-name" placeholder="Vornamen eingeben …"></label>
@@ -168,8 +123,6 @@
               <label class="form-field address-vat">Umsatzsteuer-ID *<input name="vatId" required spellcheck="false" placeholder="Umsatzsteuer-ID eingeben …"></label>
             </div>
             <div class="form-grid request-selection-grid">
-              <label class="form-field" data-request-quantity="sample">Musteranzahl *<input name="sampleQuantity" type="number" min="1" max="10" value="1" required></label>
-              <label class="form-field" data-request-quantity="offer">Gewünschte Stückzahl für das Angebot *<input name="offerQuantity" type="number" min="1" max="10000000" value="1000" required></label>
               <label class="form-field wide">Farbe<select name="color">${colors.map(color=>`<option ${color===selectedVariant(selected[0])?.color?'selected':''}>${escapeHTML(color)}</option>`).join('')}</select></label>
               <label class="form-field wide">Nachricht<textarea name="message" placeholder="Ihre Wünsche oder Fragen"></textarea></label>
             </div>
@@ -192,6 +145,12 @@
       if(!validateStep())return;
       if(step===1){showStep(2);return;}
       panels[0].disabled=false;
+      // A resumed draft may have gained another enquiry type. Validate its
+      // first-step quantity before including it in the final summary.
+      const contactFields=[...panels[0].querySelectorAll('input,select,textarea')];
+      contactFields.forEach(validateValue);
+      const invalid=contactFields.find(input=>!input.matches(':disabled')&&!input.checkValidity());
+      if(invalid){showStep(1);invalid.reportValidity();return;}
       const data=new FormData(form),types=data.getAll('requestType');
       const value=name=>escapeHTML(String(data.get(name)||'').trim());
       const quantities=types.map(key=>key==='sample'?`Muster: ${value('sampleQuantity')} Stück`:`Angebot: ${value('offerQuantity')} Stück`).join('<br>');
@@ -222,7 +181,7 @@
     // A previous list notification must not cover the in-page form controls.
     clearTimeout(toast.timer);document.querySelector('#toast').hidden=true;
     activateTab('variants');
-    host.hidden=false;state.expanded[requestItems[0].id]=null;renderProducts();reveal();
+    reveal();
     return host;
   };
 })();
