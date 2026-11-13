@@ -5,7 +5,9 @@
 .inline-request .request-item-title{display:flex;flex-wrap:wrap;align-items:baseline;gap:5px 14px;margin-bottom:10px}
 .inline-request .request-item-title strong{font-size:15px}
 .inline-request .request-item-title span{font-size:12px;color:var(--muted)}
-.inline-request .request-item-quantities{gap:10px 16px}
+.inline-request .request-item-quantities{grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:10px 12px;align-items:stretch}
+.inline-request .request-item-quantities .form-field{display:grid;grid-template-rows:1fr auto;align-content:end}
+.inline-request .request-item-quantities .form-field[hidden]{display:none}
 .inline-request .request-item-quantities .form-field{font-size:13px}
 .inline-request .request-item-quantities input{background:white;padding:9px 14px;min-height:40px}
 .inline-request .request-item-totals{margin:0;font-size:13px}
@@ -35,4 +37,17 @@
 @media(max-width:700px){
  .inline-request{padding:24px 20px;border-radius:16px}
  .inline-request .request-stepper{padding-top:22px}
+}
+
+/* Compact desktop article row; retain paired amount inputs on narrow cards. */
+@container(min-width:650px){
+ .inline-request .request-item:has(.request-item-quantities){display:grid;grid-template-columns:minmax(110px,.8fr) minmax(0,2.4fr);align-items:center;gap:16px}
+ .inline-request .request-item:has(.request-item-quantities) .request-item-title{display:block;margin:0}
+ .inline-request .request-item:has(.request-item-quantities) .request-item-title span{display:block;margin-top:4px}
+}
+@container(max-width:600px){
+ .inline-request .form-grid.request-item-quantities{grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:10px}
+ .inline-request .request-item{padding:12px}
+ .inline-request .request-item-quantities .form-field{font-size:12px;line-height:1.3;overflow-wrap:anywhere}
+ .inline-request .request-item-quantities input{padding:8px 10px;min-width:0}
 }

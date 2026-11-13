@@ -16,6 +16,12 @@ Alle aktuellen Entwürfe enthalten die rechten Listen für Muster, Angebote und 
 
 ## Changelog
 
+### 13.11.2026 · cm/inch bei BP und ST, kompakte Mengenzeilen
+
+- Anzuchtpaletten BP V6 und Trays ST V1 erhalten denselben 110,5 × 25,5 px großen cm/inch-Schalter wie Rundtöpfe. Kurzmaße, Maßtabellen, Maßfilter und ausgewählte Hero-Infos stellen um; BP-Zellvolumen wechselt von ml zu in³. Filter bleiben auf den Originalwerten, Rechner und Stückzahlen unverändert.
+- Rundtöpfe V12, BP V6 und ST V1: kompakte Anfragezeilen mit Artikel links und Mengen rechts auf Desktop. Muster- und Angebotsmenge bleiben auch auf Mobilgeräten nebeneinander mit umbrechenden Beschriftungen und bündigen Eingaben.
+- Aktuelle Versionsnummern und Archive unverändert; übrige Produktdaten und Funktionen erhalten.
+
 ### 13.11.2026 · Artikelbezogene Anfragen und Trays ST V1
 
 - Rundtöpfe V12 und Anzuchtpaletten BP V6: Anfrageformular beginnt mit Muster-/Angebotsauswahl und kompakten Artikelzeilen ohne Fotos. Jede gespeicherte Artikel-/Farbvariante hat eigene Muster- und Angebotsmengen; nur gewählte Anfragearten aktivieren die jeweiligen Felder. Kontaktdaten folgen darunter.
