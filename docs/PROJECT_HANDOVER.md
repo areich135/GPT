@@ -1,7 +1,7 @@
 # TEKU Website – verbindliche Übergabe für die Clickdummys
 
-**Dokumentrevision:** 11 · **Stand:** 12.11.2026
-**Ausgangsbasis dieser Änderung:** 9612620; aktuelle Änderungen siehe README-Changelog
+**Dokumentrevision:** 12 · **Stand:** 13.11.2026
+**Ausgangsbasis dieser Änderung:** 2611259; aktuelle Änderungen siehe README-Changelog
 **Repository:** https://github.com/areich135/GPT · **Arbeitsbranch:** main
 
 Diese Übergabe soll einen neuen Chat arbeitsfähig machen, ohne den gesamten alten Verlauf zu laden. Sie beschreibt den freigegebenen Stand, die bewussten Unterschiede zwischen den Produktbereichen und die Grenzen des Dummys. Vor jeder Aufgabe den aktuellen Remote-Stand prüfen: Eine im ChatGPT-Projekt hochgeladene Kopie kann älter sein als die Datei im Repository.
@@ -37,9 +37,9 @@ Keine erfundenen Produktdaten, Patenttexte, Siegel, Bilder, Verkaufsargumente od
 |---|---|---|---|
 | Rundtöpfe, Serie VCG | V12 | Repository-Stamm | https://areich135.github.io/GPT/?version=v12 |
 | Anzuchtpaletten, Serie BP | V6 | bp/ | https://areich135.github.io/GPT/bp/?version=v6 |
-| Eigenständige ST-/GP-Tray-Seite | Noch nicht umgesetzt | Keine eigene aktuelle Produktseite | Nicht als fertig behaupten |
+| Transport- und Kulturtrays, Serie ST | V1 | st/ | https://areich135.github.io/GPT/st/?version=v1 |
 
-Die Kategorie im Umschalter heißt „Trays / Anzuchtpaletten“. Ihr aktuell umgesetztes Produktbeispiel ist BP. Die Nutzerbegriffe Tray und Anzuchtpalette wurden im Gespräch teilweise vermischt: Für die aktuelle BP-Seite ausdrücklich „Anzuchtpalette“ verwenden. ST-/GP-Trays sind ein späterer eigener Auftrag.
+Der Umschalter hat drei getrennte Kategorien: „Rundtöpfe“ (VCG), „Anzuchtpaletten“ (BP) und „Trays“ (ST). ST V1 ist ein eigener Datenbestand und eine eigene Seite. GP ist nicht umgesetzt. BP nicht als Tray-Sortiment umdeuten.
 
 Frühere Rundtopf-Stände V1–V11 liegen unter versions/v1/ bis versions/v11/. Frühere BP-Stände V1–V5 liegen unter bp/versions/. Die aktuellen Stände liegen gerade nicht unter versions/v12/ oder bp/versions/v6/. Die Zuordnung steuert version-switch.js.
 
@@ -64,7 +64,7 @@ Frühere Rundtopf-Stände V1–V11 liegen unter versions/v1/ bis versions/v11/. 
 | Weißer Zeiger unter aktivem Bereich | Umgesetzt; folgt dessen Buttonmitte | Nicht allein wegen VCG automatisch nachrüsten |
 | Anfrage-CTA | Muster primär magenta/weiß, Angebot Kontur | Muster primär magenta/weiß, Angebot Kontur |
 | Kompakte rechte Listenleiste bei offenem Filter | Umgesetzt | Umgesetzt |
-| Anfrageformular | Ganz oben in der SKU-Spalte vor allen Produktzeilen; Artikelliste sichtbar; Anfragearten, Mengen und laufender Fortschritt in Schritt 1 | Modal, feste Fortschrittsschritte, Anfrageart in Schritt 2 |
+| Anfrageformular | Ganz oben in der SKU-Spalte; Anfrageart, Mengen je Artikel/Farbe, dann Kontaktdaten in Schritt 1 | Gleiches Inline-Formular mit laufendem Fortschritt; Adresse in Schritt 2 |
 | Rechner | Kreisgeometrie | Rechteckgeometrie, inkl. Pflanzenzahl |
 | Passende Produkte | Seitliche blaue Pfeile + von links füllender Balken | Äußere Pfeile + Positionsbalken für mehrere Aushebeplatten vorbereitet; derzeit höchstens eine je Artikel |
 
@@ -115,7 +115,7 @@ catalog-xd.css regelt unter anderem Breakpoints bei 1350, 1100 und 700 px. Bei s
 
 Bei sehr schmalen Karten erlauben bestehende Containerregeln andere Zeilenumbrüche. Priorität: alle Buttons lesbar, bedienbar und vollständig sichtbar; keine starre Desktop-Anordnung auf Kosten von Überlagerungen erzwingen.
 
-Beide aktuellen Bereiche: Musterbutton Magenta mit weißer Schrift. Hover derzeit Hintergrund #fff4fb und magentafarbener Text. Angebot bleibt Konturbutton. Bereits zur Liste hinzugefügte Artikel behalten ihren sichtbaren Status.
+Alle drei aktuellen Bereiche: Musterbutton Magenta mit weißer Schrift. Hover derzeit Hintergrund #fff4fb und magentafarbener Text. Angebot bleibt Konturbutton. Bereits zur Liste hinzugefügte Artikel behalten ihren sichtbaren Status.
 
 ## 5. Zustandsmodell: Filter, Listen und Aufklappbereiche
 
@@ -157,30 +157,23 @@ Zu erhalten sind: Hinzufügen, Entfernen, Übernahme aus der Merkliste in Muster
 
 Die schmale Leiste zeigt Angebote, Muster, Merkliste, Kontakt und vorhandene Artikelzähler. Sie ist ein Zugang zu denselben Kacheln. Desktop: eigene 44-px-Spalte rechts neben den Varianten, gleicher --xd-gap wie links; oberer Rand bündig mit dem Anfang der SKU-Spalte; bis zum letzten SKU sticky bei 20 px. Nie in den Hero oder unter den letzten SKU wandern. Mobil unten rechts, am letzten SKU nach oben begrenzt und außerhalb des SKU-Bereichs verborgen.
 
-### 5.4 Anfrageformular: Rundtöpfe V12 und BP V6 bewusst getrennt
+### 5.4 Gemeinsames Inline-Anfrageformular: VCG V12, BP V6 und ST V1
 
-Gemeinsame Gestaltung aus den freigegebenen KAPSTO-Screenshots: weißer Bereich, runde Eingabefelder, marine Texte und magentafarbener Fortschritt/CTA. Anfrage statt Shop-Registrierung, Zahlung oder Kontoanlage. `request-form.css` bleibt die Stilbasis beider Bereiche.
+`request-form.css` bleibt die KAPSTO-orientierte Stilbasis: weiße Karte, runde Felder, marine Texte, magentafarbener Fortschritt und CTA. Die drei aktuellen Seiten laden `inline-request.js/css`; BP lädt das bisherige `request-form.js` nicht mehr. Historische Seiten behalten ihre eigenen Modalformulare.
 
-1. **Kontaktdaten:** Anrede, Vorname, Nachname, Funktion im Unternehmen, Telefon, E-Mail sind Pflichtfelder. Anrede erlaubt „Keine Angabe“. Funktion ist frei eingebbar.
-2. **Firmen-/Lieferadresse:** Firma, Straße, Hausnummer, PLZ, Ort, Land und Umsatzsteuer-ID sind Pflichtfelder. Firmenzusatz und Bundesland/Region sind optional. Deutschland ist vorbelegt und frei änderbar; PLZ/Hausnummer sind Textfelder für internationale Formate. Bei V12 stehen Mengen in Schritt 1; ausgewählte Farben und Nachricht bleiben in Schritt 2. BP behält Mengen und Anfrageart in Schritt 2.
+`#inline-request` ist dauerhaft das erste Kind von `.results-column`, vor allen SKU-Zeilen und außerhalb der austauschbaren Ergebnisliste. Filter und rechte Listen behalten ihr Raster und Scrollverhalten. Kein Dialog, Backdrop oder innerer Formular-Scroller. Kein einzelner SKU-Kopf oberhalb der Anfrage und kein Anfrage-Pfeil; bestehende Detail-Pfeile bleiben bei den Produktzeilen.
 
-Keine Geschäftskunden-Abfrage oder gleichbedeutende Geschäfts-/Verbrauchererklärung. Umsatzsteuer-ID nur auf nicht leeren Text prüfen; keine externe Prüfung. Erforderliche Texte aus bloßen Leerzeichen abweisen. Muster und Angebot bleiben kombinierbar, mindestens eine Anfrageart muss gewählt sein. Nur gewählte Mengen aktiv/erforderlich; VCG maximal zehn Muster und 10000000 Angebotsstücke, keine neue Grenze für BP.
+**Schritt 1, feste Reihenfolge:** Fortschritt; „Ihre Anfrage“ mit Muster-/Angebotscheckboxen (beide möglich, mindestens eine erforderlich); vertikale kompakte Artikel-/Farbliste ohne Bilder; eigene Musteranzahl und Angebotsstückzahl je Artikel-/Farbvariante; anschließend Kontaktdaten. Nur Mengen gewählter Anfragearten sind sichtbar, aktiviert und erforderlich. Die anderen Mengen bleiben im Entwurf erhalten. Ganzzahl mindestens eins; bisherige VCG-Grenzen zehn Muster / 10000000 Angebotsstücke bleiben erhalten, keine neue Obergrenze für BP/ST.
 
-**Rundtöpfe V12, Stand 12.11.:** `inline-request.js` ersetzt `showRequest` nur hier. Das zunächst verborgene `#inline-request` ist dauerhaft das erste Kind der `.results-column`, vor `#results` und `#additional-results`. Das Formular steht immer vor sämtlichen SKU-Zeilen, unabhängig von der Anfrageauswahl. Die Entscheidung vom 10.11., es unter einem angefragten Produktkopf zu verankern, ist ausdrücklich überholt. Keine Anfrage-Pfeile, temporären Produktköpfe oder zusätzlichen Re-Render-Wrapper mehr. Bestehende Technik-/Varianten-/Tray-Pfeile bleiben unverändert bei den jeweiligen Produktzeilen unterhalb des Formulars.
+Die Artikelzeilen stammen ausschließlich aus den beim Checkout übergebenen Variantensnapshots. `v3.js` übergibt `{key,id,name,color,image}` als dritten Parameter von `showRequest`; der Schlüssel ist Artikelindex plus Variantenindex. `quantityDrafts` bewahrt getrennte Mengen pro Schlüssel, auch wenn sich Auswahl oder Reihenfolge beim erneuten Checkout ändern. Keine Bildkarten und keine globale Mengenangabe mehr. Schritt 2 und Abschluss zeigen eine kompakte Übersicht mit Artikel, gespeicherter Farbe und den gewählten Mengen.
 
-Alle angefragten Produkte stehen als ständig sichtbare Bild-/Name-/Farb-Liste im Formular, auch mehrere Farben desselben Produkts. Fotos/Farben stammen ausschließlich aus den beim Checkout übergebenen Variantensnapshots. Der Entwurf liegt außerhalb der austauschbaren Produktlisten; Produkt-/Filter-/Listen-Re-Render und Detailwechsel entfernen oder verbergen ihn nicht. Werte, Schritt und Fokus bleiben deshalb ohne Umhängen derselben DOM-Knoten erhalten. Auch herausgefilterte Produkte bleiben in der Anfragezusammenfassung erkennbar, ohne Filter zurückzusetzen oder künstliche SKU-Zeilen einzufügen. Filter/rechte Listen behalten ihr Raster und Sticky-Verhalten. Kein Dialog/Backdrop, kein innerer Formular-Scroller; andere Modale bleiben unverändert.
+**Kontaktdaten:** Anrede (inklusive „Keine Angabe“), Vorname, Nachname, frei eingegebene Funktion im Unternehmen, Telefon und E-Mail sind Pflichtfelder. **Schritt 2:** Firma, Straße, Hausnummer, PLZ, Ort, Land und Umsatzsteuer-ID erforderlich; Firmenzusatz, Region und Nachricht optional. Deutschland vorbelegt und frei änderbar, PLZ/Hausnummer sind internationale Textfelder. Keine Geschäftskunden-Abfrage; VAT nur auf nicht leeren Text prüfen, keine externe Gültigkeitsprüfung. Erforderliche Texte aus bloßen Leerzeichen abweisen.
 
-Muster-/Angebotscheckboxen stehen bei V12 bereits in Schritt 1. Beide können kombiniert werden. Der Einstieg wählt die entsprechende Anfrageart vor. Direkt unter der Anfrageart stehen Musteranzahl und gewünschte Angebotsstückzahl in Schritt 1. Nur gewählte Mengen sind sichtbar, aktiv und Pflichtfelder; Umschalten erhält eingegebene Mengen. Mengenfehler verhindern schon „Weiter“. „Weiter“ und Enter prüfen den aktiven Schritt, „Zurück“ erhält Werte. Inaktive Schritt-Fieldsets sind verborgen und deaktiviert. „Anfrage testen“ schließt ausschließlich die Simulation ab und zeigt Kontakt, Adresse, Anfragearten und Mengen in derselben Karte.
+Fortschritt reagiert auf gültige Pflichtangaben und Mengen: 0–50 % in Schritt 1, 50–100 % in Schritt 2. Vorbelegte Anfrageart, Land und Mengen bekommen keinen Startbonus. Ungültige aktive Mengen verhindern bereits „Weiter“. Enter prüft den aktiven Schritt, „Zurück“ erhält Werte; verborgene Schritt-Fieldsets sind deaktiviert. Vor dem Abschluss wird auch Schritt 1 erneut geprüft, falls ein späterer Checkout eine weitere Anfrageart aktiviert hat. „Anfrage testen“ simuliert den Abschluss in derselben Karte, ohne Versand.
 
-Der Fortschritt reagiert auf `input`/`change` und gültige Pflichtangaben. Schritt 1 reicht von 0 bis 50 %, Schritt 2 von 50 bis 100 %. Vorbelegte Anfrageart, Land und Mengen werden als Ausgangsbasis abgezogen, damit die Anzeige leerer Daten bei 0 bzw. 50 % beginnt. Fehlende/ungültige Pflichtwerte zählen nicht, auch wenn sie vorher schon ausgefüllt waren. Optionale Felder beeinflussen den Fortschritt nicht. Keine echten Anfragen oder Speicherung in Browser-Storage/Backend.
+X/Abbrechen verbergen die Karte mit erhaltenem Schritt und Eingaben. Außenklick und Escape schließen sie nicht. Re-Render von Filtern, Artikeln und Listen berührt den Formularbereich nicht. Ein neuer Checkout aktualisiert die Artikel und aktiviert zusätzlich die entsprechende Anfrageart; bestehende Mengen desselben Schlüssels sowie Kontakt-/Adressdaten bleiben erhalten. Die Anfrage umfasst die ausgewählte auslösende Liste, keine stillschweigende Vereinigung beider Listen.
 
-X oder „Abbrechen“ verbergen den V12-Entwurf, ohne ihn zu zerstören. Erneuter Checkout erhält Schritt und Eingaben bis zum Reload bzw. zum erfolgreichen Dummy-Abschluss. Ein anderer Checkout aktualisiert Artikel-/Farbzusammenfassung und aktiviert zusätzlich die neu angefragte Anfrageart. Klicks außerhalb oder Escape entfernen die Karte nicht. Re-Render von Produkten/Listen/Filtern berührt den außerhalb der Listen liegenden Formularbereich nicht.
-
-`v3.js` übergibt dem Anfrageadapter zusätzlich die gespeicherten Variantensnapshots als dritten Parameter. Gibt der Adapter ein Element mit `data-inline-request="true"` zurück, ist die Zusammenfassung bereits vollständig übernommen. Sonst läuft die bisherige Modal-Integration weiter. So bleiben mehrere Farben desselben Artikels erhalten. Kein Auslesen privater Listen-Maps und kein Abfangen durch einen zweiten unabhängigen Checkout-Handler.
-
-**BP V6 und archivierte VCG bis V11:** Weiterhin `request-form.js`, zweistufiges Modal. Anfrageart in Schritt 2, Fortschritt fest 0 / 50 / 100 %. `v3.js` ersetzt nach `showRequest` die Modal-Zusammenfassung und das Farbauswahl-Label durch gespeicherte Varianten. `.request-summary` und `select[name="color"]` mit umschließendem Label sind hier weiter der Integrationsvertrag. BP-Daten, Formfelder und Interaktionen wurden für V12 nicht geändert.
-
-Listen gelten für die laufende Seite/Sitzung. Dauerhafte Speicherung nach Reload, Synchronisierung zwischen Bereichen oder ein echter Kundenwarenkorb sind nicht zugesagt. „Merkliste speichern“ bietet den bisherigen Export; daraus kein Backend ableiten.
+Gibt `showRequest` ein Element mit `data-inline-request="true"` zurück, überspringt `v3.js` seine alte Modal-Nachbearbeitung. Archivformulare behalten den bisherigen Vertrag `.request-summary` und `select[name="color"]`. Listen und Entwurf gelten bis Reload; kein Browser-Storage, bereichsübergreifender Warenkorb oder Backend zugesagt. „Merkliste speichern“ bleibt der bisherige Export.
 
 ## 6. Rundtöpfe V12: genaue fachliche Vorgaben
 
@@ -325,7 +318,7 @@ Kontrollwerte bei 1 × 1 m und 0 Abstand:
 
 Die Darstellung ist ein Vergleich regelmäßiger Anordnungen, kein Nachweis maximaler Kreispackung. Details und ursprüngliche Formelgrenzen stehen in docs/calculator-v7.md.
 
-### 8.3 Anzuchtpaletten und spätere rechteckige Trays
+### 8.3 Anzuchtpaletten und rechteckige ST-Trays
 
 rectangular-engine.js und rectangular-component.js verwenden die rechteckige Außen-Grundfläche. Je einheitlicher Ausrichtung:
 
@@ -344,7 +337,7 @@ Kontrollwerte für BP 2850-2,5 D/104 T:
 - Fläche 50 × 28 cm, Abstand 0: längs genau 1.
 - Zwei Produkte à 50 cm mit 1 cm Zwischenraum passen längs auf 101 cm, nicht auf 100 cm.
 
-Die wiederverwendbare Komponente unterstützt product-kind „Trays“ und kann ohne Pflanzenzahl betrieben werden. Das bedeutet nicht, dass eine eigenständige ST-/GP-Seite bereits existiert. Bei deren späterem Aufbau Maße und Zuordnungen erst artikelbezogen beschaffen.
+Die Komponente unterstützt `product-kind="Trays"` und optional `content-label="Töpfe"`. ST übergibt Außenmaße und `pots`; Ergebnis, Eingabe und Methodentext nennen Töpfe. BP behält standardmäßig Pflanzen. Beide verwenden denselben unveränderten Rechteck-Rechenkern; es gibt keine automatische CC-Wagenplanung.
 
 ### 8.4 Animation beim Wechsel
 
@@ -363,18 +356,28 @@ Berechnungslogik bleibt getrennt vom DOM/Seitenadapter. Ein Fix am Rundtopfrechn
 | https://www.poeppelmann.com/de/teku/produkte/vcg-rundtoepfe-und-container-5- | Ursprüngliche VCG-Daten und Varianten-/Zertifikatsbezug |
 | https://www.poeppelmann.com/de/teku/produkte/bp-jungpflanzen-und-baumschulpaletten | BP-Artikel, technische Werte, Bodenbilder und Aushebeplatten |
 | https://container-centralen.com/cc-container/ | Einordnung des CC-Containers; konkrete BP-Kapazitäten stammen aus Produktdaten |
+| https://www.poeppelmann.com/de/teku/produkte/st-transport-und-kulturtrays | ST-Originaldaten, 13.11.2026; Feldzuordnung und Assets in st/SOURCE.md |
 | docs/sources-2026-10-22.md | Frühere Quellenprüfung, BP-Quellfelder und Abhängigkeiten |
 | docs/round-pots-v8.md | Entscheidungen und Korrekturen zu V8/BP |
 | docs/calculator-v7.md | Rundtopfformeln, Herkunft und Integrationshinweise |
 | docs/calculator-rectangular.md | Rechteckformel, Schnittstelle und ausgeführte Prüfungen |
 
-Diese Links sind Quellenanker, keine Behauptung eines erneuten Abrufs bei jedem Auftrag. Für neue oder zeitabhängige Produktfakten aktuelle Quellen prüfen und Datum nennen. Die Zahl 14/20 beschreibt den Dummy-Datenbestand, nicht die garantierte aktuelle Größe des Produktivsortiments.
+Diese Links sind Quellenanker, keine Behauptung eines erneuten Abrufs bei jedem Auftrag. Für neue oder zeitabhängige Produktfakten aktuelle Quellen prüfen und Datum nennen. Die Zahl 14/20/30 beschreibt den Dummy-Datenbestand, nicht die garantierte aktuelle Größe des Produktivsortiments.
 
 Vorlagen aus früheren Chats sind nicht automatisch im neuen Chat verfügbar. Dateinamen in älteren Dokumenten ersetzen keine tatsächliche Bilddatei. Für pixelgenaue neue Änderungen die relevante Grafik verfügbar machen; ansonsten eine Abweichung kenntlich machen. Keine nicht vorhandene XD-Datei oder ein Pöppelmann-Backend behaupten.
 
+### 9.1 ST V1: eigener Tray-Datenbestand
+
+`st/source-data.json` enthält den bereinigten öffentlichen Produktextrakt vom 13.11.2026, ohne Seitenkonfiguration oder Zugangsschlüssel. 30 ST-Artikel, je eine Variante Circular grau / Circular360 mit originaler Bestellnummer und artikelbezogenen Zertifikaten; 372 passende Topfzuordnungen. Alle 69 genutzten Originalassets liegen lokal, mit Herkunft und SHA-256 in `st/asset-manifest.json`. `st/SOURCE.md` dokumentiert die Feldnummern, Datenlücken und Bildverwendung.
+
+ST hat ausschließlich A/B/C-Außenmaße, Töpfe pro Tray, Trays und Töpfe pro CC-Lage sowie „Trays unterverpackt auf Palette“. Keine Zell-, Plug- oder Volumendaten aus BP übertragen. Filter umfassen Farbe, Nachhaltigkeitskategorie, A/B/C, Töpfe pro Tray und beide CC-Werte; längere Wertelisten bieten „weitere Größen laden“. Einzige Quellfarbe/-kategorie nicht künstlich erweitern.
+
+„Passende Töpfe“ verwendet ausschließlich `p.fitting` des gewählten ST-Artikels; maximal fünf nebeneinander, seitliche blaue Winkel, exakt ein Produkt pro Klick, Füllbalken ab links, Anfang/Ende deaktiviert. Ein Produkt: voller Balken, beide Pfeile aus. Original-Produktlinks öffnen sich in neuem Tab. Hero/Zoom nutzen das jeweilige Quellfoto; keine künstliche Bodenansicht. Vorteilsbilder und Texte berücksichtigen die Quellunterschiede Standard/B/D und die Etikettenaufnahmen bestimmter Modelle.
+
 ## 10. Fehlende Funktionen und noch offene Arbeit
 
-- Eigenständige ST-/GP-Tray-Seite: zukünftiger Auftrag, aktuelle BP-Seite nicht bloß umbenennen.
+- ST V1 ist umgesetzt; GP und weitere Tray-Serien sind nicht Teil des aktuellen Auftrags.
+- ST 2840/8-13 und ST 2840/8-13 D: Quellfeld „Töpfe pro CC-Lage“ fehlt, deshalb „Keine Angabe“. Keine selbst berechnete Zahl als Originalwert ausgeben. Es gibt keine zusätzlichen ST-Bodenfotos oder weiteren Farben im extrahierten Variantenbestand.
 - Zusätzliche Produkt-Rand-/Bodendetailfotos, Patenttexte oder andere Farbabbildungen: nur mit Vorlage/Originalquelle ergänzen.
 - BP verwendet nun ebenfalls „Varianten“ und den magentafarbenen Musterbutton. Die bisherigen Ein-/Ausblendtexte und übrigen Aufklappdetails bleiben bewusst erhalten.
 - Ein echtes Anfrage-Backend, Anmeldung, Preise, Verfügbarkeit, CRM-Anbindung oder dauerhaft gespeicherter Warenkorb gehören nicht zum derzeitigen Dummy.
@@ -386,30 +389,30 @@ Vorlagen aus früheren Chats sind nicht automatisch im neuen Chat verfügbar. Da
 
 | Änderung | Zuerst ansehen | Mitbetroffene Bereiche |
 |---|---|---|
-| Bereiche/Versionsauswahl | version-switch.js; beide index.html | Aktuell + Archive |
+| Bereiche/Versionsauswahl | version-switch.js; index.html, bp/index.html, st/index.html | Aktuell + Archive |
 | VCG-Einheiten cm/inch in V12 | measurements.js, measurements.css | Nur aktuelle Rundtopfseite; Quelldaten in cm/Liter und archivierte Versionen erhalten |
 | VCG-Daten/Filter/Grundfunktionen | data.js, app.js | Aktuelle Ergänzungen können Renderer ersetzen |
 | Aktuelle VCG-Zeile/Technik | latest.js, technical.js, technical.css, v4.css | v8.js und späte CSS-Regeln |
 | VCG-Kacheln/Zeiger/Tray-Fortschritt | v8.js, v8.css, certificates.js | Auswahl und Listen in v3.js |
 | BP-Maße/Filter/Zeilen/Daten | bp/app.js, bp/data.js, bp/styles.css, bp/v2.css | bp/review-update.* |
 | BP-CC-Hilfe/Listenleiste/Produktnavigation | bp/review-update.js, bp/review-update.css | Shared Listen und setCollapsed |
-| Gemeinsame Listen | v3.js, v3.css | VCG und BP samt Cachebuster |
-| V12-Anfrage in der Seite | inline-request.js, inline-request.css, request-form.css | Nur aktuelle Rundtöpfe; Checkout-Vertrag in v3.js |
-| BP-Anfrageformular / Primärbutton | request-form.js, request-form.css | BP V6 behält das Modal und die ursprünglichen zwei Schritte |
-| Fluchten/automatisches Einklappen | catalog-xd.js, catalog-xd.css | Beide aktuellen Bereiche |
+| Gemeinsame Listen | v3.js, v3.css | VCG, BP und ST samt Cachebuster |
+| Gemeinsame aktuelle Anfrage | inline-request.js, inline-request.css, request-form.css | VCG V12, BP V6, ST V1; Mengen je Artikel-/Farb-Schlüssel, Checkout-Vertrag in v3.js |
+| ST-Seite / Originaldaten | st/index.html, app.js, data.js, styles.css, interaction.js | source-data.json, asset-manifest.json, SOURCE.md; keine BP-Zellmaße |
+| Fluchten/automatisches Einklappen | catalog-xd.js, catalog-xd.css | Alle drei aktuellen Bereiche |
 | Ältere Produktnavigation | review.js, review.css | Kann für nicht ersetzte Bereiche weiterhin wirksam sein |
 | Technische Reiter | technical.js | Beide Bereiche; Rechner wird später dekoriert |
 | Kreisrechnung | space-calculator/engine.js, component.js | Geteilte Styles für Rechtecke beachten |
-| Rechteckrechnung | space-calculator/rectangular-engine.js, rectangular-component.js | BP und spätere Tray-Seite |
-| Aktuelle Beschriftung / SKU-begrenzte Scrollspalten | latest.js, bp/app.js, catalog-update.js, catalog-update.css | Beide aktuellen Bereiche; Filter und Listen in Hosts; Archive unabhängig |
+| Rechteckrechnung | space-calculator/rectangular-engine.js, rectangular-component.js | BP und ST |
+| Aktuelle Beschriftung / SKU-begrenzte Scrollspalten | latest.js, bp/app.js, st/app.js, catalog-update.js, catalog-update.css | Alle drei aktuellen Bereiche; Filter und Listen in Hosts; Archive unabhängig |
 | SVG-Anordnungsanimation | space-calculator/diagram-motion.js | Beide aktuellen Rechnerkomponenten |
-| Modal/CTA/Seitenadapter | space-calculator/integration.js, modal.css | Beide Geometrien und beide index.html |
+| Modal/CTA/Seitenadapter | space-calculator/integration.js, modal.css | Beide Geometrien und drei aktuelle index.html |
 | Archivierung | versions/ bzw. bp/versions/ | Relative Pfade und Umschalter |
 | Prüfnachweise | tests/ und die Fachdokumente | Historische Prüfungen nicht als neue ausgeben |
 
 **Ladereihenfolge ist Teil der Funktion.** Das Projekt verwendet globale Funktionen, die spätere Skripte dekorieren/überschreiben. renderProducts, renderRow, renderDetail und die Collapse-Setter nicht isoliert neu definieren, ohne vorhandene Wrapper zu berücksichtigen.
 
-VCG grob: app.js → v3.js → technical.js → latest.js → v4.js → catalog-xd.js → review.js → Rechneradapter → certificates.js/v8.js. BP grob: technical.js → bp/app.js → gemeinsames v3.js → catalog-xd.js → review.js → bp/review-update.js → Rechnerkomponenten/Adapter. BP lädt `request-form.js`. VCG lädt `request-form.css`, dann `inline-request.js` und zuletzt `measurements.js`; das bisherige Formularskript lädt dort nicht mehr. Archivseiten behalten ihre bisherigen Formulare und Maßanzeigen. Bei Änderungen die tatsächlichen script-Tags prüfen; diese Kurzfolge ist kein Ersatz für index.html.
+VCG grob: app.js → v3.js → technical.js → latest.js → v4.js → catalog-xd.js → review.js → Rechneradapter → certificates.js/v8.js. BP grob: technical.js → bp/app.js → gemeinsames v3.js → catalog-xd.js → review.js → bp/review-update.js → Rechnerkomponenten/Adapter. Alle drei aktuellen Seiten laden `request-form.css` und danach `inline-request.js/css`. VCG lädt zusätzlich `measurements.js`. ST nutzt seinen eigenen app-/interaction-Adapter und geteilte Styles/Listen/Rechner, ohne VCG-Zertifikatszuordnungen oder BP-Produktdaten zu übernehmen. Archivseiten behalten ihre bisherigen Formulare und Maßanzeigen. Bei Änderungen die tatsächlichen script-Tags prüfen; diese Kurzfolge ist kein Ersatz für index.html.
 
 CSS ebenfalls in tatsächlicher Reihenfolge prüfen. Ein früher Treffer in styles.css ist oft nicht die am Ende wirksame Regel. Vorhandene Media-/Containerqueries sowie Scope-Klassen beachten: rounds-v8 und bp-review sind bereichsspezifisch, catalog-xd und v3-Dateien geteilt.
 
@@ -425,7 +428,7 @@ Besonders beachten:
 
 ## 12. Prüfkatalog: je nach Auftrag auswählen
 
-Nicht für jede Textkorrektur die gesamte Anwendung erneut prüfen. Betroffene Funktion plus unmittelbar verbundene Abläufe verifizieren. Änderungen an gemeinsamen Dateien oder Rechenlogik erfordern eine gezielte Prüfung beider Produktbereiche.
+Nicht für jede Textkorrektur die gesamte Anwendung erneut prüfen. Betroffene Funktion plus unmittelbar verbundene Abläufe verifizieren. Änderungen an gemeinsamen Dateien oder Rechenlogik erfordern eine gezielte Prüfung aller betroffenen aktuellen Produktbereiche.
 
 | Auftrag | Mindestprüfung |
 |---|---|
@@ -433,13 +436,13 @@ Nicht für jede Textkorrektur die gesamte Anwendung erneut prüfen. Betroffene F
 | Maßeinheit | cm/inch in Kurzmaßen und Maßtabellen, Filterwerte und Treffer erhalten, spätere Renders, Sprachwechsel, Tastatur und responsive Breiten; V10/BP unverändert |
 | Filter | Auswahl setzen/entfernen/resetten; korrekte Trefferzahl und grüner Punkt; beide Filterzustände |
 | Listen | Konkrete Farbe hinzufügen/entfernen; Duplikate; Wechsel der Listen; Inhalt nach Filtereinklappen |
-| Anfrageformular | V12 immer an erster Stelle der SKU-Spalte vor allen Produkten, ausgewählte Produkte sichtbar, Anfragearten/Mengen in Schritt 1, Filter/Rerenders und Fokus erhalten, laufender Fortschritt, Außerklick/X und Datenerhalt; BP weiterhin Modal. Beide Schritte/Einstiege, Pflichtwerte, Mengen, exakte Farben und simulierter Abschluss |
+| Anfrageformular | VCG/BP/ST immer an erster Stelle der SKU-Spalte, kompakte Artikel-/Farbliste mit eigenen Mengen, Anfrageart und Mengen vor Kontaktdaten in Schritt 1; Filter/Rerenders und Fokus erhalten, laufender Fortschritt, Außenklick/X und Datenerhalt. Beide Schritte/Einstiege, Pflichtwerte, Mengen, exakte Farben und simulierter Abschluss |
 | Aufklappbereich | Öffnen/Schließen/Wechsel; automatisches Einklappen; bestehende Inhalte; VCG-Zeiger |
-| Carousel | VCG: seitliche blaue Pfeile, maximal fünf Produkte, ein Produktschritt je Klick, von links füllender Balken, Anfang/Ende; BP bisherige Navigation erhalten |
+| Carousel | VCG/ST: seitliche blaue Pfeile, maximal fünf Produkte, ein Produktschritt je Klick, von links füllender Balken, Anfang/Ende; BP bisherige Navigation erhalten |
 | Technische Bilder | Richtiger Artikel; Ausschnitt/Überlappung; Caption; Zoom; keine unbelegte Umfärbung |
 | Rechner | CTA-Pflicht; richtige Vorbelegung; Kontrollwerte; Ausrichtungswechsel; Einheiten; Reset; Fehler; Schließen/Escape/Fokus |
-| Versionierung | Altes und neues Routing; beide Kategorien; relative Bilder, Fonts und Skripte |
-| Geteiltes CSS/JS | VCG und BP; Desktop und mindestens eine schmale Ansicht |
+| Versionierung | Altes und neues Routing; drei Kategorien; relative Bilder, Fonts und Skripte |
+| Geteiltes CSS/JS | VCG, BP und ST; Desktop und mindestens eine schmale Ansicht |
 | Filter/Sticky-Listen | Linker Filter in beiden Zuständen statisch; rechte Listen unverändert am Anfang/Mitte/Ende der SKU-Liste und nach Höhenänderung begrenzt; mobile Schnellzugriffe erhalten |
 | Empfehlungsblock | Linke/rechte Außenkante und Überschrift bündig mit SKU-Spalte, bei beiden Filterzuständen und schmalen Breiten |
 
@@ -452,6 +455,8 @@ Passende lokale Checks:
     node --test tests/space-engine.test.cjs tests/rectangular-engine.test.cjs
 
 Bei neuen Rechenänderungen unabhängig begründete Testfälle ergänzen, keine Tests schreiben, die bloß dieselbe Implementierung kopieren. Reine Dokumentationsänderungen benötigen keine erneuten Rechen- oder Browserprüfungen.
+
+**Prüfung am 13.11.2026:** VCG V12, BP V6 und ST V1 im Chromium-Browser: Inline-Anfrage vor allen SKU-Zeilen; mehrere Artikel mit unabhängigen Muster-/Angebotsmengen, nur aktive Mengen sichtbar/erforderlich, ungültige Menge blockiert Weiter, Kontakte danach. 0/50/100 %, Enter/Zurück, X/erneuter Checkout, Außenklick/Escape, Re-Render und Hinzufügen eines weiteren Artikels mit erhaltenem Entwurf sowie vollständiger Dummy-Abschluss geprüft. Responsive 1440/768/390 px in beiden Filterzuständen ohne horizontalen Überlauf; Desktop/Mobil visuell kontrolliert. Alle 30 ST-Datensätze und 372 Topfzuordnungen mit dem bereinigten Originalextrakt abgeglichen; alle 69 lokalen Assets anhand Größe/SHA-256 geprüft. ST-Filter/Reset/weitere Größen, Verpackungsdaten und Carousel mit 15/43 Produkten sowie Einzelprodukt geprüft: maximal fünf Kacheln, ein Schritt, voller Endbalken, deaktivierte Endpfeile und Tastatur. ST-Rechner 39,5 × 29,4 cm / acht Töpfe → sechs Trays / 48 Töpfe auf 1 m²; BP behält Pflanzen. Kategoriepfade und VCG-V8/BP-V3-Archivumschalter geprüft. Zwölf Kreis-/Rechteck-Rechentests bestanden. Nach Bereinigung vier URL-kodierter Dateinamen keine JavaScript- oder Assetfehler. Syntax-/Diffprüfung bestanden; archivierte Laufzeitdateien unverändert.
 
 **Prüfung der V12-Anfrageposition und Mengen am 12.11.2026:** Chromium bei 1440/768/390 px, jeweils beide Filterzustände und beide Schritte. Drei Artikel (VCG 13, VCG 11, VCG 12) ausgewählt: Formular immer erstes Kind der SKU-Spalte vor allen Produktzeilen; Filter-/Listen-Hosts bleiben an ihrer Position. Mengen ausschließlich in Schritt 1, passende Sichtbarkeit/Aktivierung bei Muster/Angebot, ungültige Angebotszahl und Musterzahl über zehn blockieren „Weiter“. Mengen und Kontaktdaten bleiben bei Zurück/Enter, X/erneutem Öffnen, Filter-/Detail-/Einheitenwechsel und Re-Render erhalten; Fokus bleibt bestehen. Fortschritt 0/50/100 und vollständiger Dummy-Abschluss mit beiden Mengen und drei Artikeln geprüft. Eine durch einen späteren Checkout aktivierte ungültige Menge wird vor Abschluss auf Schritt 1 zurückgeführt. Kein horizontaler Überlauf oder innerer Formular-Scroller; kein Anfrage-Pfeil/temporärer Kopf mehr. Desktop/Mobil visuell kontrolliert; BP-Modal unverändert und keine JavaScript-/Assetfehler. Syntax-/Diffprüfung bestanden.
 

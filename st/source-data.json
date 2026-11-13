@@ -1,0 +1,4110 @@
+{
+  "retrieved": "2026-11-13",
+  "source": "https://www.poeppelmann.com/de/teku/produkte/st-transport-und-kulturtrays",
+  "headlines": [
+    {
+      "id": "8527",
+      "headlineCount-0": 3,
+      "image-0": "https://static.poeppelmann.com/assets/700284/tray-abmessung-abc-pikto.svg",
+      "title-0": ""
+    },
+    {
+      "id": "8251",
+      "headlineCount-0": 1,
+      "image-0": "https://static.poeppelmann.com/assets/700286/tray-pikto.svg",
+      "title-0": ""
+    },
+    {
+      "id": "7337",
+      "headlineCount-0": 2,
+      "image-0": "https://static.poeppelmann.com/assets/700244/cc-wagen-pikto.svg",
+      "title-0": ""
+    },
+    {
+      "id": "variants",
+      "headlineCount-0": 1,
+      "image-0": "",
+      "title-0": ""
+    },
+    {
+      "id": "fittingproducts",
+      "headlineCount-0": 1,
+      "image-0": "",
+      "title-0": ""
+    },
+    {
+      "id": "8527",
+      "headlineCount-1": 1,
+      "image-1": "",
+      "title-1": "A"
+    },
+    {
+      "id": "8532",
+      "headlineCount-1": 1,
+      "image-1": "",
+      "title-1": "B"
+    },
+    {
+      "id": "8533",
+      "headlineCount-1": 1,
+      "image-1": "",
+      "title-1": "C"
+    },
+    {
+      "id": "8251",
+      "headlineCount-1": 1,
+      "image-1": "https://static.poeppelmann.com/assets/700260/rundtopf-2x-pikto.svg",
+      "title-1": "Töpfe pro Tray"
+    },
+    {
+      "id": "7337",
+      "headlineCount-1": 1,
+      "image-1": "https://static.poeppelmann.com/assets/700283/tray-2x-pikto.svg",
+      "title-1": "Trays pro CC-Lage"
+    },
+    {
+      "id": "8250",
+      "headlineCount-1": 1,
+      "image-1": "https://static.poeppelmann.com/assets/700260/rundtopf-2x-pikto.svg",
+      "title-1": "Töpfe pro CC-Lage"
+    },
+    {
+      "id": "variants",
+      "headlineCount-1": 1,
+      "image-1": "https://static.poeppelmann.com/assets/700239/farbvarianten-pikto.svg",
+      "title-1": "Varianten"
+    },
+    {
+      "id": "fittingproducts",
+      "headlineCount-1": 1,
+      "image-1": "https://static.poeppelmann.com/assets/700282/tray-konfigurator-pikto.svg",
+      "title-1": ""
+    },
+    {
+      "id": "8440",
+      "headlineCount-0": 1,
+      "image-0": "https://static.poeppelmann.com/assets/700384/euro-palette-pikto.svg",
+      "title-0": ""
+    },
+    {
+      "id": "8440",
+      "headlineCount-1": 1,
+      "image-1": "https://static.poeppelmann.com/assets/700283/tray-2x-pikto.svg",
+      "title-1": "Trays unterverpackt auf Palette"
+    }
+  ],
+  "products": [
+    {
+      "availability": "",
+      "articleNumber": "ST 11",
+      "orderNumber": "",
+      "image": "https://static.teku.com/assets/572788/st-11-circular-grau-pr.psd",
+      "imageAlt": "Transport- und Kulturtray",
+      "imageTitle": " Transport- und Kulturtray",
+      "seriesName": "ST | Transport- und Kulturtrays",
+      "radius": "",
+      "width": "",
+      "length": "",
+      "index": 0,
+      "fields": {
+        "10900": "ST 11",
+        "8527": "39,5",
+        "8251": "8",
+        "7337": "6",
+        "variants": "details.variants",
+        "fittingproducts": "details.fittingproducts",
+        "8532": "29,4",
+        "8533": "6,0",
+        "8250": "48",
+        "8440": "2.200"
+      },
+      "variants": [
+        {
+          "articleNo": "ST 11 Circular grau ",
+          "orderNo": "11300778711",
+          "productImage": "https://static.teku.com/assets/572788/st-11-circular-grau-pr.psd",
+          "articleName": "ST 11",
+          "seriesName": "ST | Transport- und Kulturtrays",
+          "category": "Circular360",
+          "color": "Circular grau",
+          "image": "https://static.teku.com/assets/572788/st-11-circular-grau-pr.psd",
+          "alt": "Transport- und Kulturtray",
+          "title": " Transport- und Kulturtray",
+          "availability": "",
+          "show": true,
+          "certificates": [
+            "https://static.teku.com/assets/501424/logo-blauer-engel-de.png",
+            "https://static.teku.com/assets/501422/logo-cyclos-htp-de.png"
+          ]
+        }
+      ],
+      "fitting": [
+        {
+          "image": "https://static.teku.com/assets/456560/vcg-circular-ton-grau-pr.psd",
+          "name": "VCG 10,5",
+          "alt": "TEKU VCG Dekortopf Circular360, ton-grau",
+          "linkToPdp": "de/teku/produkte/vcg-rundtoepfe-und-container-5-",
+          "underline": " TEKU VCG VDA Circular"
+        },
+        {
+          "image": "https://static.teku.com/assets/456560/vcg-circular-ton-grau-pr.psd",
+          "name": "VCG 10,5 K",
+          "alt": "TEKU VCG Dekortopf Circular360, ton-grau",
+          "linkToPdp": "de/teku/produkte/vcg-rundtoepfe-und-container-5-",
+          "underline": " TEKU VCG VDA Circular"
+        },
+        {
+          "image": "https://static.teku.com/assets/455310/vtg-circular-ton-grau-pr.psd",
+          "name": "VTG 10,5",
+          "alt": "vtg-circular-ton-grau-pr.psd",
+          "linkToPdp": "de/teku/produkte/vtg-rundtoepfe-8-",
+          "underline": " "
+        },
+        {
+          "image": "https://static.teku.com/assets/456560/vcg-circular-ton-grau-pr.psd",
+          "name": "VCG 11",
+          "alt": "TEKU VCG Dekortopf Circular360, ton-grau",
+          "linkToPdp": "de/teku/produkte/vcg-rundtoepfe-und-container-5-",
+          "underline": " TEKU VCG VDA Circular"
+        },
+        {
+          "image": "https://static.teku.com/assets/455475/vch-vck-ton-grau-pr.psd",
+          "name": "VCH 11",
+          "alt": "vch-vck-ton-grau-pr.psd",
+          "linkToPdp": "de/teku/produkte/vch-vck-rundtoepfe-und-container-hoch-5-",
+          "underline": " "
+        },
+        {
+          "image": "https://static.teku.com/assets/455475/vch-vck-ton-grau-pr.psd",
+          "name": "VCH 11 VOL",
+          "alt": "vch-vck-ton-grau-pr.psd",
+          "linkToPdp": "de/teku/produkte/vch-vck-rundtoepfe-und-container-hoch-5-",
+          "underline": " "
+        },
+        {
+          "image": "https://static.teku.com/assets/455475/vch-vck-ton-grau-pr.psd",
+          "name": "VCK 11 VOL",
+          "alt": "vch-vck-ton-grau-pr.psd",
+          "linkToPdp": "de/teku/produkte/vch-vck-rundtoepfe-und-container-hoch-5-",
+          "underline": " "
+        },
+        {
+          "image": "https://static.teku.com/assets/455310/vtg-circular-ton-grau-pr.psd",
+          "name": "VTG 11",
+          "alt": "vtg-circular-ton-grau-pr.psd",
+          "linkToPdp": "de/teku/produkte/vtg-rundtoepfe-8-",
+          "underline": " "
+        },
+        {
+          "image": "https://static.teku.com/assets/456002/vcc-taupe-pr.psd",
+          "name": "VCC 12 VOL",
+          "alt": "vcc-taupe-pr.psd",
+          "linkToPdp": "de/teku/produkte/vcc-rundtoepfe-und-container-hoch-5-",
+          "underline": " Rundtopf, Pflanztopf, Container"
+        },
+        {
+          "image": "https://static.teku.com/assets/455989/mxc-ton-pr.psd",
+          "name": "MXC 10",
+          "alt": "TEKU Vcg Rundtoepfe Und Container 5 ",
+          "linkToPdp": "de/teku/produkte/mxc-rundtoepfe-6-",
+          "underline": "TEKU Vcg Rundtoepfe Und Container 5 "
+        },
+        {
+          "image": "https://static.teku.com/assets/455989/mxc-ton-pr.psd",
+          "name": "MXC 10,5",
+          "alt": "TEKU Vcg Rundtoepfe Und Container 5 ",
+          "linkToPdp": "de/teku/produkte/mxc-rundtoepfe-6-",
+          "underline": "TEKU Vcg Rundtoepfe Und Container 5 "
+        },
+        {
+          "image": "https://static.teku.com/assets/455989/mxc-ton-pr.psd",
+          "name": "MXC 11",
+          "alt": "TEKU Vcg Rundtoepfe Und Container 5 ",
+          "linkToPdp": "de/teku/produkte/mxc-rundtoepfe-6-",
+          "underline": "TEKU Vcg Rundtoepfe Und Container 5 "
+        },
+        {
+          "image": "https://static.teku.com/assets/22051/mdf-103-universell.psd",
+          "name": "MDF 11",
+          "alt": " Produktfoto bedruckte Coverpots",
+          "linkToPdp": "de/teku/produkte/mdf-coverpot",
+          "underline": "  Produktfoto bedruckte Coverpots"
+        },
+        {
+          "image": "https://static.teku.com/assets/711899/vcl-circular-ton-grau-pr.psd",
+          "name": "VCL 10,5",
+          "alt": "Produktbild Rundtopf",
+          "linkToPdp": "de/teku/produkte/vcl-rundtoepfe-und-container-5-",
+          "underline": "Produktbild Rundtopf"
+        },
+        {
+          "image": "https://static.teku.com/assets/701344/vcm-10-5-ton-grau-pr.psd",
+          "name": "VCM 11 VOL",
+          "alt": "Produktbild VCM",
+          "linkToPdp": "de/teku/produkte/vcm-rundtoepfe-und-container-hoch-5-",
+          "underline": "Produktbild VCM"
+        }
+      ]
+    },
+    {
+      "availability": "",
+      "articleNumber": "ST 11 B",
+      "orderNumber": "",
+      "image": "https://static.teku.com/assets/571251/st-11-b-circular-grau-pr.psd",
+      "imageAlt": "Transport- und Kulturtray",
+      "imageTitle": " Transport- und Kulturtray",
+      "seriesName": "ST | Transport- und Kulturtrays",
+      "radius": "",
+      "width": "",
+      "length": "",
+      "index": 1,
+      "fields": {
+        "10900": "ST 11 B",
+        "8527": "39,5",
+        "8251": "8",
+        "7337": "6",
+        "variants": "details.variants",
+        "fittingproducts": "details.fittingproducts",
+        "8532": "29,4",
+        "8533": "6,0",
+        "8250": "48",
+        "8440": "2.200"
+      },
+      "variants": [
+        {
+          "articleNo": "ST 11 B Circular grau ",
+          "orderNo": "11301018711",
+          "productImage": "https://static.teku.com/assets/571251/st-11-b-circular-grau-pr.psd",
+          "articleName": "ST 11 B",
+          "seriesName": "ST | Transport- und Kulturtrays",
+          "category": "Circular360",
+          "color": "Circular grau",
+          "image": "https://static.teku.com/assets/571251/st-11-b-circular-grau-pr.psd",
+          "alt": "Transport- und Kulturtray",
+          "title": " Transport- und Kulturtray",
+          "availability": "",
+          "show": true,
+          "certificates": [
+            "https://static.teku.com/assets/501424/logo-blauer-engel-de.png",
+            "https://static.teku.com/assets/501422/logo-cyclos-htp-de.png"
+          ]
+        }
+      ],
+      "fitting": [
+        {
+          "image": "https://static.teku.com/assets/456560/vcg-circular-ton-grau-pr.psd",
+          "name": "VCG 10,5",
+          "alt": "TEKU VCG Dekortopf Circular360, ton-grau",
+          "linkToPdp": "de/teku/produkte/vcg-rundtoepfe-und-container-5-",
+          "underline": " TEKU VCG VDA Circular"
+        },
+        {
+          "image": "https://static.teku.com/assets/456560/vcg-circular-ton-grau-pr.psd",
+          "name": "VCG 10,5 K",
+          "alt": "TEKU VCG Dekortopf Circular360, ton-grau",
+          "linkToPdp": "de/teku/produkte/vcg-rundtoepfe-und-container-5-",
+          "underline": " TEKU VCG VDA Circular"
+        },
+        {
+          "image": "https://static.teku.com/assets/455310/vtg-circular-ton-grau-pr.psd",
+          "name": "VTG 10,5",
+          "alt": "vtg-circular-ton-grau-pr.psd",
+          "linkToPdp": "de/teku/produkte/vtg-rundtoepfe-8-",
+          "underline": " "
+        },
+        {
+          "image": "https://static.teku.com/assets/456560/vcg-circular-ton-grau-pr.psd",
+          "name": "VCG 11",
+          "alt": "TEKU VCG Dekortopf Circular360, ton-grau",
+          "linkToPdp": "de/teku/produkte/vcg-rundtoepfe-und-container-5-",
+          "underline": " TEKU VCG VDA Circular"
+        },
+        {
+          "image": "https://static.teku.com/assets/455475/vch-vck-ton-grau-pr.psd",
+          "name": "VCH 11",
+          "alt": "vch-vck-ton-grau-pr.psd",
+          "linkToPdp": "de/teku/produkte/vch-vck-rundtoepfe-und-container-hoch-5-",
+          "underline": " "
+        },
+        {
+          "image": "https://static.teku.com/assets/455310/vtg-circular-ton-grau-pr.psd",
+          "name": "VTG 11",
+          "alt": "vtg-circular-ton-grau-pr.psd",
+          "linkToPdp": "de/teku/produkte/vtg-rundtoepfe-8-",
+          "underline": " "
+        },
+        {
+          "image": "https://static.teku.com/assets/455475/vch-vck-ton-grau-pr.psd",
+          "name": "VCK 11 VOL",
+          "alt": "vch-vck-ton-grau-pr.psd",
+          "linkToPdp": "de/teku/produkte/vch-vck-rundtoepfe-und-container-hoch-5-",
+          "underline": " "
+        },
+        {
+          "image": "https://static.teku.com/assets/455475/vch-vck-ton-grau-pr.psd",
+          "name": "VCH 11 VOL",
+          "alt": "vch-vck-ton-grau-pr.psd",
+          "linkToPdp": "de/teku/produkte/vch-vck-rundtoepfe-und-container-hoch-5-",
+          "underline": " "
+        },
+        {
+          "image": "https://static.teku.com/assets/456002/vcc-taupe-pr.psd",
+          "name": "VCC 12 VOL",
+          "alt": "vcc-taupe-pr.psd",
+          "linkToPdp": "de/teku/produkte/vcc-rundtoepfe-und-container-hoch-5-",
+          "underline": " Rundtopf, Pflanztopf, Container"
+        },
+        {
+          "image": "https://static.teku.com/assets/455475/vch-vck-ton-grau-pr.psd",
+          "name": "VCH 13 VOL",
+          "alt": "vch-vck-ton-grau-pr.psd",
+          "linkToPdp": "de/teku/produkte/vch-vck-rundtoepfe-und-container-hoch-5-",
+          "underline": " "
+        },
+        {
+          "image": "https://static.teku.com/assets/455989/mxc-ton-pr.psd",
+          "name": "MXC 10",
+          "alt": "TEKU Vcg Rundtoepfe Und Container 5 ",
+          "linkToPdp": "de/teku/produkte/mxc-rundtoepfe-6-",
+          "underline": "TEKU Vcg Rundtoepfe Und Container 5 "
+        },
+        {
+          "image": "https://static.teku.com/assets/455989/mxc-ton-pr.psd",
+          "name": "MXC 10,5",
+          "alt": "TEKU Vcg Rundtoepfe Und Container 5 ",
+          "linkToPdp": "de/teku/produkte/mxc-rundtoepfe-6-",
+          "underline": "TEKU Vcg Rundtoepfe Und Container 5 "
+        },
+        {
+          "image": "https://static.teku.com/assets/455989/mxc-ton-pr.psd",
+          "name": "MXC 11",
+          "alt": "TEKU Vcg Rundtoepfe Und Container 5 ",
+          "linkToPdp": "de/teku/produkte/mxc-rundtoepfe-6-",
+          "underline": "TEKU Vcg Rundtoepfe Und Container 5 "
+        },
+        {
+          "image": "https://static.teku.com/assets/711899/vcl-circular-ton-grau-pr.psd",
+          "name": "VCL 10,5",
+          "alt": "Produktbild Rundtopf",
+          "linkToPdp": "de/teku/produkte/vcl-rundtoepfe-und-container-5-",
+          "underline": "Produktbild Rundtopf"
+        },
+        {
+          "image": "https://static.teku.com/assets/701344/vcm-10-5-ton-grau-pr.psd",
+          "name": "VCM 11 VOL",
+          "alt": "Produktbild VCM",
+          "linkToPdp": "de/teku/produkte/vcm-rundtoepfe-und-container-hoch-5-",
+          "underline": "Produktbild VCM"
+        }
+      ]
+    },
+    {
+      "availability": "",
+      "articleNumber": "ST 11 C",
+      "orderNumber": "",
+      "image": "https://static.teku.com/assets/571250/st-11-c-baseline-grau-pr.psd",
+      "imageAlt": "Transport- und Kulturtray",
+      "imageTitle": " Transport- und Kulturtray",
+      "seriesName": "ST | Transport- und Kulturtrays",
+      "radius": "",
+      "width": "",
+      "length": "",
+      "index": 2,
+      "fields": {
+        "10900": "ST 11 C",
+        "8527": "39,5",
+        "8251": "8",
+        "7337": "6",
+        "variants": "details.variants",
+        "fittingproducts": "details.fittingproducts",
+        "8532": "29,4",
+        "8533": "6,0",
+        "8250": "48",
+        "8440": "2.200"
+      },
+      "variants": [
+        {
+          "articleNo": "ST 11 C Circular grau ",
+          "orderNo": "11301708711",
+          "productImage": "https://static.teku.com/assets/571250/st-11-c-baseline-grau-pr.psd",
+          "articleName": "ST 11 C",
+          "seriesName": "ST | Transport- und Kulturtrays",
+          "category": "Circular360",
+          "color": "Circular grau",
+          "image": "https://static.teku.com/assets/571250/st-11-c-baseline-grau-pr.psd",
+          "alt": "Transport- und Kulturtray",
+          "title": " Transport- und Kulturtray",
+          "availability": "",
+          "show": true,
+          "certificates": [
+            "https://static.teku.com/assets/501424/logo-blauer-engel-de.png",
+            "https://static.teku.com/assets/501422/logo-cyclos-htp-de.png"
+          ]
+        }
+      ],
+      "fitting": [
+        {
+          "image": "https://static.teku.com/assets/456560/vcg-circular-ton-grau-pr.psd",
+          "name": "VCG 10,5",
+          "alt": "TEKU VCG Dekortopf Circular360, ton-grau",
+          "linkToPdp": "de/teku/produkte/vcg-rundtoepfe-und-container-5-",
+          "underline": " TEKU VCG VDA Circular"
+        },
+        {
+          "image": "https://static.teku.com/assets/456560/vcg-circular-ton-grau-pr.psd",
+          "name": "VCG 10,5 K",
+          "alt": "TEKU VCG Dekortopf Circular360, ton-grau",
+          "linkToPdp": "de/teku/produkte/vcg-rundtoepfe-und-container-5-",
+          "underline": " TEKU VCG VDA Circular"
+        },
+        {
+          "image": "https://static.teku.com/assets/455310/vtg-circular-ton-grau-pr.psd",
+          "name": "VTG 10,5",
+          "alt": "vtg-circular-ton-grau-pr.psd",
+          "linkToPdp": "de/teku/produkte/vtg-rundtoepfe-8-",
+          "underline": " "
+        },
+        {
+          "image": "https://static.teku.com/assets/456560/vcg-circular-ton-grau-pr.psd",
+          "name": "VCG 11",
+          "alt": "TEKU VCG Dekortopf Circular360, ton-grau",
+          "linkToPdp": "de/teku/produkte/vcg-rundtoepfe-und-container-5-",
+          "underline": " TEKU VCG VDA Circular"
+        },
+        {
+          "image": "https://static.teku.com/assets/455475/vch-vck-ton-grau-pr.psd",
+          "name": "VCH 11",
+          "alt": "vch-vck-ton-grau-pr.psd",
+          "linkToPdp": "de/teku/produkte/vch-vck-rundtoepfe-und-container-hoch-5-",
+          "underline": " "
+        },
+        {
+          "image": "https://static.teku.com/assets/455475/vch-vck-ton-grau-pr.psd",
+          "name": "VCH 11 VOL",
+          "alt": "vch-vck-ton-grau-pr.psd",
+          "linkToPdp": "de/teku/produkte/vch-vck-rundtoepfe-und-container-hoch-5-",
+          "underline": " "
+        },
+        {
+          "image": "https://static.teku.com/assets/455475/vch-vck-ton-grau-pr.psd",
+          "name": "VCK 11 VOL",
+          "alt": "vch-vck-ton-grau-pr.psd",
+          "linkToPdp": "de/teku/produkte/vch-vck-rundtoepfe-und-container-hoch-5-",
+          "underline": " "
+        },
+        {
+          "image": "https://static.teku.com/assets/455310/vtg-circular-ton-grau-pr.psd",
+          "name": "VTG 11",
+          "alt": "vtg-circular-ton-grau-pr.psd",
+          "linkToPdp": "de/teku/produkte/vtg-rundtoepfe-8-",
+          "underline": " "
+        },
+        {
+          "image": "https://static.teku.com/assets/456002/vcc-taupe-pr.psd",
+          "name": "VCC 12 VOL",
+          "alt": "vcc-taupe-pr.psd",
+          "linkToPdp": "de/teku/produkte/vcc-rundtoepfe-und-container-hoch-5-",
+          "underline": " Rundtopf, Pflanztopf, Container"
+        },
+        {
+          "image": "https://static.teku.com/assets/455475/vch-vck-ton-grau-pr.psd",
+          "name": "VCH 13 VOL",
+          "alt": "vch-vck-ton-grau-pr.psd",
+          "linkToPdp": "de/teku/produkte/vch-vck-rundtoepfe-und-container-hoch-5-",
+          "underline": " "
+        },
+        {
+          "image": "https://static.teku.com/assets/455989/mxc-ton-pr.psd",
+          "name": "MXC 10",
+          "alt": "TEKU Vcg Rundtoepfe Und Container 5 ",
+          "linkToPdp": "de/teku/produkte/mxc-rundtoepfe-6-",
+          "underline": "TEKU Vcg Rundtoepfe Und Container 5 "
+        },
+        {
+          "image": "https://static.teku.com/assets/455989/mxc-ton-pr.psd",
+          "name": "MXC 10,5",
+          "alt": "TEKU Vcg Rundtoepfe Und Container 5 ",
+          "linkToPdp": "de/teku/produkte/mxc-rundtoepfe-6-",
+          "underline": "TEKU Vcg Rundtoepfe Und Container 5 "
+        },
+        {
+          "image": "https://static.teku.com/assets/455989/mxc-ton-pr.psd",
+          "name": "MXC 11",
+          "alt": "TEKU Vcg Rundtoepfe Und Container 5 ",
+          "linkToPdp": "de/teku/produkte/mxc-rundtoepfe-6-",
+          "underline": "TEKU Vcg Rundtoepfe Und Container 5 "
+        },
+        {
+          "image": "https://static.teku.com/assets/22051/mdf-103-universell.psd",
+          "name": "MDF 11",
+          "alt": " Produktfoto bedruckte Coverpots",
+          "linkToPdp": "de/teku/produkte/mdf-coverpot",
+          "underline": "  Produktfoto bedruckte Coverpots"
+        },
+        {
+          "image": "https://static.teku.com/assets/711899/vcl-circular-ton-grau-pr.psd",
+          "name": "VCL 10,5",
+          "alt": "Produktbild Rundtopf",
+          "linkToPdp": "de/teku/produkte/vcl-rundtoepfe-und-container-5-",
+          "underline": "Produktbild Rundtopf"
+        },
+        {
+          "image": "https://static.teku.com/assets/701344/vcm-10-5-ton-grau-pr.psd",
+          "name": "VCM 11 VOL",
+          "alt": "Produktbild VCM",
+          "linkToPdp": "de/teku/produkte/vcm-rundtoepfe-und-container-hoch-5-",
+          "underline": "Produktbild VCM"
+        }
+      ]
+    },
+    {
+      "availability": "",
+      "articleNumber": "ST 12",
+      "orderNumber": "",
+      "image": "https://static.teku.com/assets/571249/st-12-circular-grau-pr.psd",
+      "imageAlt": "Transport- und Kulturtray",
+      "imageTitle": " Transport- und Kulturtray",
+      "seriesName": "ST | Transport- und Kulturtrays",
+      "radius": "",
+      "width": "",
+      "length": "",
+      "index": 3,
+      "fields": {
+        "10900": "ST 12",
+        "8527": "39,0",
+        "8251": "6",
+        "7337": "6",
+        "variants": "details.variants",
+        "fittingproducts": "details.fittingproducts",
+        "8532": "28,0",
+        "8533": "5,4",
+        "8250": "36",
+        "8440": "1.980"
+      },
+      "variants": [
+        {
+          "articleNo": "ST 12 Circular grau ",
+          "orderNo": "11300788711",
+          "productImage": "https://static.teku.com/assets/571249/st-12-circular-grau-pr.psd",
+          "articleName": "ST 12",
+          "seriesName": "ST | Transport- und Kulturtrays",
+          "category": "Circular360",
+          "color": "Circular grau",
+          "image": "https://static.teku.com/assets/571249/st-12-circular-grau-pr.psd",
+          "alt": "Transport- und Kulturtray",
+          "title": " Transport- und Kulturtray",
+          "availability": "",
+          "show": true,
+          "certificates": [
+            "https://static.teku.com/assets/501424/logo-blauer-engel-de.png",
+            "https://static.teku.com/assets/501422/logo-cyclos-htp-de.png"
+          ]
+        }
+      ],
+      "fitting": [
+        {
+          "image": "https://static.teku.com/assets/456560/vcg-circular-ton-grau-pr.psd",
+          "name": "VCG 12",
+          "alt": "TEKU VCG Dekortopf Circular360, ton-grau",
+          "linkToPdp": "de/teku/produkte/vcg-rundtoepfe-und-container-5-",
+          "underline": " TEKU VCG VDA Circular"
+        },
+        {
+          "image": "https://static.teku.com/assets/456560/vcg-circular-ton-grau-pr.psd",
+          "name": "VCG 12 D",
+          "alt": "TEKU VCG Dekortopf Circular360, ton-grau",
+          "linkToPdp": "de/teku/produkte/vcg-rundtoepfe-und-container-5-",
+          "underline": " TEKU VCG VDA Circular"
+        },
+        {
+          "image": "https://static.teku.com/assets/455310/vtg-circular-ton-grau-pr.psd",
+          "name": "VTG 12",
+          "alt": "vtg-circular-ton-grau-pr.psd",
+          "linkToPdp": "de/teku/produkte/vtg-rundtoepfe-8-",
+          "underline": " "
+        },
+        {
+          "image": "https://static.teku.com/assets/455310/vtg-circular-ton-grau-pr.psd",
+          "name": "VTG 13",
+          "alt": "vtg-circular-ton-grau-pr.psd",
+          "linkToPdp": "de/teku/produkte/vtg-rundtoepfe-8-",
+          "underline": " "
+        },
+        {
+          "image": "https://static.teku.com/assets/456002/vcc-taupe-pr.psd",
+          "name": "VCC 13 VOL",
+          "alt": "vcc-taupe-pr.psd",
+          "linkToPdp": "de/teku/produkte/vcc-rundtoepfe-und-container-hoch-5-",
+          "underline": " Rundtopf, Pflanztopf, Container"
+        },
+        {
+          "image": "https://static.teku.com/assets/455475/vch-vck-ton-grau-pr.psd",
+          "name": "VCH 13 VOL",
+          "alt": "vch-vck-ton-grau-pr.psd",
+          "linkToPdp": "de/teku/produkte/vch-vck-rundtoepfe-und-container-hoch-5-",
+          "underline": " "
+        },
+        {
+          "image": "https://static.teku.com/assets/455989/mxc-ton-pr.psd",
+          "name": "MXC 12",
+          "alt": "TEKU Vcg Rundtoepfe Und Container 5 ",
+          "linkToPdp": "de/teku/produkte/mxc-rundtoepfe-6-",
+          "underline": "TEKU Vcg Rundtoepfe Und Container 5 "
+        },
+        {
+          "image": "https://static.teku.com/assets/455989/mxc-ton-pr.psd",
+          "name": "MXC 13",
+          "alt": "TEKU Vcg Rundtoepfe Und Container 5 ",
+          "linkToPdp": "de/teku/produkte/mxc-rundtoepfe-6-",
+          "underline": "TEKU Vcg Rundtoepfe Und Container 5 "
+        },
+        {
+          "image": "https://static.teku.com/assets/711899/vcl-circular-ton-grau-pr.psd",
+          "name": "VCL 12",
+          "alt": "Produktbild Rundtopf",
+          "linkToPdp": "de/teku/produkte/vcl-rundtoepfe-und-container-5-",
+          "underline": "Produktbild Rundtopf"
+        },
+        {
+          "image": "https://static.teku.com/assets/711899/vcl-circular-ton-grau-pr.psd",
+          "name": "VCL 12 C",
+          "alt": "Produktbild Rundtopf",
+          "linkToPdp": "de/teku/produkte/vcl-rundtoepfe-und-container-5-",
+          "underline": "Produktbild Rundtopf"
+        }
+      ]
+    },
+    {
+      "availability": "",
+      "articleNumber": "ST 12 B",
+      "orderNumber": "",
+      "image": "https://static.teku.com/assets/571248/st-12-b-baseline-grau-pr.psd",
+      "imageAlt": "Transport- und Kulturtray",
+      "imageTitle": " Transport- und Kulturtray",
+      "seriesName": "ST | Transport- und Kulturtrays",
+      "radius": "",
+      "width": "",
+      "length": "",
+      "index": 4,
+      "fields": {
+        "10900": "ST 12 B",
+        "8527": "39,0",
+        "8251": "6",
+        "7337": "6",
+        "variants": "details.variants",
+        "fittingproducts": "details.fittingproducts",
+        "8532": "28,0",
+        "8533": "5,4",
+        "8250": "36",
+        "8440": "1.980"
+      },
+      "variants": [
+        {
+          "articleNo": "ST 12 B Circular grau ",
+          "orderNo": "11301028711",
+          "productImage": "https://static.teku.com/assets/571248/st-12-b-baseline-grau-pr.psd",
+          "articleName": "ST 12 B",
+          "seriesName": "ST | Transport- und Kulturtrays",
+          "category": "Circular360",
+          "color": "Circular grau",
+          "image": "https://static.teku.com/assets/571248/st-12-b-baseline-grau-pr.psd",
+          "alt": "Transport- und Kulturtray",
+          "title": " Transport- und Kulturtray",
+          "availability": "",
+          "show": true,
+          "certificates": [
+            "https://static.teku.com/assets/501424/logo-blauer-engel-de.png",
+            "https://static.teku.com/assets/501422/logo-cyclos-htp-de.png"
+          ]
+        }
+      ],
+      "fitting": [
+        {
+          "image": "https://static.teku.com/assets/456560/vcg-circular-ton-grau-pr.psd",
+          "name": "VCG 12",
+          "alt": "TEKU VCG Dekortopf Circular360, ton-grau",
+          "linkToPdp": "de/teku/produkte/vcg-rundtoepfe-und-container-5-",
+          "underline": " TEKU VCG VDA Circular"
+        },
+        {
+          "image": "https://static.teku.com/assets/456560/vcg-circular-ton-grau-pr.psd",
+          "name": "VCG 12 D",
+          "alt": "TEKU VCG Dekortopf Circular360, ton-grau",
+          "linkToPdp": "de/teku/produkte/vcg-rundtoepfe-und-container-5-",
+          "underline": " TEKU VCG VDA Circular"
+        },
+        {
+          "image": "https://static.teku.com/assets/455310/vtg-circular-ton-grau-pr.psd",
+          "name": "VTG 12",
+          "alt": "vtg-circular-ton-grau-pr.psd",
+          "linkToPdp": "de/teku/produkte/vtg-rundtoepfe-8-",
+          "underline": " "
+        },
+        {
+          "image": "https://static.teku.com/assets/456002/vcc-taupe-pr.psd",
+          "name": "VCC 13 VOL",
+          "alt": "vcc-taupe-pr.psd",
+          "linkToPdp": "de/teku/produkte/vcc-rundtoepfe-und-container-hoch-5-",
+          "underline": " Rundtopf, Pflanztopf, Container"
+        },
+        {
+          "image": "https://static.teku.com/assets/455475/vch-vck-ton-grau-pr.psd",
+          "name": "VCH 13 VOL",
+          "alt": "vch-vck-ton-grau-pr.psd",
+          "linkToPdp": "de/teku/produkte/vch-vck-rundtoepfe-und-container-hoch-5-",
+          "underline": " "
+        },
+        {
+          "image": "https://static.teku.com/assets/455989/mxc-ton-pr.psd",
+          "name": "MXC 12",
+          "alt": "TEKU Vcg Rundtoepfe Und Container 5 ",
+          "linkToPdp": "de/teku/produkte/mxc-rundtoepfe-6-",
+          "underline": "TEKU Vcg Rundtoepfe Und Container 5 "
+        },
+        {
+          "image": "https://static.teku.com/assets/455989/mxc-ton-pr.psd",
+          "name": "MXC 13",
+          "alt": "TEKU Vcg Rundtoepfe Und Container 5 ",
+          "linkToPdp": "de/teku/produkte/mxc-rundtoepfe-6-",
+          "underline": "TEKU Vcg Rundtoepfe Und Container 5 "
+        },
+        {
+          "image": "https://static.teku.com/assets/711899/vcl-circular-ton-grau-pr.psd",
+          "name": "VCL 12",
+          "alt": "Produktbild Rundtopf",
+          "linkToPdp": "de/teku/produkte/vcl-rundtoepfe-und-container-5-",
+          "underline": "Produktbild Rundtopf"
+        },
+        {
+          "image": "https://static.teku.com/assets/711899/vcl-circular-ton-grau-pr.psd",
+          "name": "VCL 12 C",
+          "alt": "Produktbild Rundtopf",
+          "linkToPdp": "de/teku/produkte/vcl-rundtoepfe-und-container-5-",
+          "underline": "Produktbild Rundtopf"
+        }
+      ]
+    },
+    {
+      "availability": "",
+      "articleNumber": "ST 1656-17/3 G",
+      "orderNumber": "",
+      "image": "https://static.teku.com/assets/574715/st-1656-17-3-G-pr-circular-grau.psd",
+      "imageAlt": "Produktfoto, Produktbild",
+      "imageTitle": "Produktfoto, Produktbild",
+      "seriesName": "ST | Transport- und Kulturtrays",
+      "radius": "",
+      "width": "",
+      "length": "",
+      "index": 5,
+      "fields": {
+        "10900": "ST 1656-17/3 G",
+        "8527": "56,0",
+        "8251": "3",
+        "7337": "8",
+        "variants": "details.variants",
+        "fittingproducts": "details.fittingproducts",
+        "8532": "15,9",
+        "8533": "6,5",
+        "8250": "24",
+        "8440": "1.932"
+      },
+      "variants": [
+        {
+          "articleNo": "ST 1656-17/3 G Circular grau ",
+          "orderNo": "11311058711",
+          "productImage": "https://static.teku.com/assets/574715/st-1656-17-3-G-pr-circular-grau.psd",
+          "articleName": "ST 1656-17/3 G",
+          "seriesName": "ST | Transport- und Kulturtrays",
+          "category": "Circular360",
+          "color": "Circular grau",
+          "image": "https://static.teku.com/assets/574715/st-1656-17-3-G-pr-circular-grau.psd",
+          "alt": "Produktfoto, Produktbild",
+          "title": "Produktfoto, Produktbild",
+          "availability": "",
+          "show": true,
+          "certificates": [
+            "https://static.teku.com/assets/501424/logo-blauer-engel-de.png",
+            "https://static.teku.com/assets/501422/logo-cyclos-htp-de.png"
+          ]
+        }
+      ],
+      "fitting": [
+        {
+          "image": "https://static.teku.com/assets/456560/vcg-circular-ton-grau-pr.psd",
+          "name": "VCG 17",
+          "alt": "TEKU VCG Dekortopf Circular360, ton-grau",
+          "linkToPdp": "de/teku/produkte/vcg-rundtoepfe-und-container-5-",
+          "underline": " TEKU VCG VDA Circular"
+        },
+        {
+          "image": "https://static.teku.com/assets/455475/vch-vck-ton-grau-pr.psd",
+          "name": "VCH 17",
+          "alt": "vch-vck-ton-grau-pr.psd",
+          "linkToPdp": "de/teku/produkte/vch-vck-rundtoepfe-und-container-hoch-5-",
+          "underline": " "
+        },
+        {
+          "image": "https://static.teku.com/assets/21397/mch-ton-pr.psd",
+          "name": "MCH 17",
+          "alt": "TEKU Mcl Container Hoch 5 ",
+          "linkToPdp": "de/teku/produkte/mch-container-hoch-5-",
+          "underline": "TEKU Mcl Container Hoch 5 "
+        },
+        {
+          "image": "https://static.teku.com/assets/456519/mci-terracotta-pr.psd",
+          "name": "MCI 17",
+          "alt": "TEKU Pdb Dekorcontainer",
+          "linkToPdp": "de/teku/produkte/mci-container-5-",
+          "underline": "TEKU Pdb Dekorcontainer"
+        },
+        {
+          "image": "https://static.teku.com/assets/456519/mci-terracotta-pr.psd",
+          "name": "MCI 17 K",
+          "alt": "TEKU Pdb Dekorcontainer",
+          "linkToPdp": "de/teku/produkte/mci-container-5-",
+          "underline": "TEKU Pdb Dekorcontainer"
+        },
+        {
+          "image": "https://static.teku.com/assets/22051/mdf-103-universell.psd",
+          "name": "MDF 17",
+          "alt": " Produktfoto bedruckte Coverpots",
+          "linkToPdp": "de/teku/produkte/mdf-coverpot",
+          "underline": "  Produktfoto bedruckte Coverpots"
+        }
+      ]
+    },
+    {
+      "availability": "",
+      "articleNumber": "ST 1856-9x9/12 BD",
+      "orderNumber": "",
+      "image": "https://static.teku.com/assets/571247/st-1856-9x9-12-bd-circular-grau-pr.psd",
+      "imageAlt": "Kultur- und Verkaufstrays",
+      "imageTitle": "Kultur- und Verkaufstrays",
+      "seriesName": "ST | Transport- und Kulturtrays",
+      "radius": "",
+      "width": "",
+      "length": "",
+      "index": 6,
+      "fields": {
+        "10900": "ST 1856-9x9/12 BD*",
+        "8527": "56,0",
+        "8251": "12",
+        "7337": "7",
+        "variants": "details.variants",
+        "fittingproducts": "details.fittingproducts",
+        "8532": "18,1",
+        "8533": "5,7",
+        "8250": "84",
+        "8440": "2.160"
+      },
+      "variants": [
+        {
+          "articleNo": "ST 1856-9X9/12 BD Circular grau ",
+          "orderNo": "11309818711",
+          "productImage": "https://static.teku.com/assets/571247/st-1856-9x9-12-bd-circular-grau-pr.psd",
+          "articleName": "ST 1856-9x9/12 BD",
+          "seriesName": "ST | Transport- und Kulturtrays",
+          "category": "Circular360",
+          "color": "Circular grau",
+          "image": "https://static.teku.com/assets/571247/st-1856-9x9-12-bd-circular-grau-pr.psd",
+          "alt": "Kultur- und Verkaufstrays",
+          "title": "Kultur- und Verkaufstrays",
+          "availability": "",
+          "show": true,
+          "certificates": [
+            "https://static.teku.com/assets/501424/logo-blauer-engel-de.png",
+            "https://static.teku.com/assets/501422/logo-cyclos-htp-de.png"
+          ]
+        }
+      ],
+      "fitting": [
+        {
+          "image": "https://static.teku.com/assets/455310/vtg-circular-ton-grau-pr.psd",
+          "name": "VTG 9",
+          "alt": "vtg-circular-ton-grau-pr.psd",
+          "linkToPdp": "de/teku/produkte/vtg-rundtoepfe-8-",
+          "underline": " "
+        },
+        {
+          "image": "https://static.teku.com/assets/456560/vcg-circular-ton-grau-pr.psd",
+          "name": "VCG 9",
+          "alt": "TEKU VCG Dekortopf Circular360, ton-grau",
+          "linkToPdp": "de/teku/produkte/vcg-rundtoepfe-und-container-5-",
+          "underline": " TEKU VCG VDA Circular"
+        },
+        {
+          "image": "https://static.teku.com/assets/455475/vch-vck-ton-grau-pr.psd",
+          "name": "VCH 9",
+          "alt": "vch-vck-ton-grau-pr.psd",
+          "linkToPdp": "de/teku/produkte/vch-vck-rundtoepfe-und-container-hoch-5-",
+          "underline": " "
+        },
+        {
+          "image": "https://static.teku.com/assets/455989/mxc-ton-pr.psd",
+          "name": "MXC 9",
+          "alt": "TEKU Vcg Rundtoepfe Und Container 5 ",
+          "linkToPdp": "de/teku/produkte/mxc-rundtoepfe-6-",
+          "underline": "TEKU Vcg Rundtoepfe Und Container 5 "
+        },
+        {
+          "image": "https://static.teku.com/assets/701342/vqh-9x9x9-5-baseline-grau-pr.psd",
+          "name": "VQH 9x9x9,5",
+          "alt": "Produktbild VQH",
+          "linkToPdp": "de/teku/produkte/vqh-vierkanttoepfe",
+          "underline": "Produktbild VQH"
+        },
+        {
+          "image": "https://static.teku.com/assets/701342/vqh-9x9x9-5-baseline-grau-pr.psd",
+          "name": "VQH 9x9x8",
+          "alt": "Produktbild VQH",
+          "linkToPdp": "de/teku/produkte/vqh-vierkanttoepfe",
+          "underline": "Produktbild VQH"
+        },
+        {
+          "image": "https://static.teku.com/assets/535554/mqd-taupe-etikett-en-pr.psd",
+          "name": "MQD 9x9x9,5",
+          "alt": " mqd-taupe-etikett-en-pr.psd",
+          "linkToPdp": "de/teku/produkte/mqd-vierkanttoepfe-mit-etikettenarretierung",
+          "underline": " MQD Circular taupe"
+        },
+        {
+          "image": "https://static.teku.com/assets/535554/mqd-taupe-etikett-en-pr.psd",
+          "name": "MQD 9x9x10",
+          "alt": " mqd-taupe-etikett-en-pr.psd",
+          "linkToPdp": "de/teku/produkte/mqd-vierkanttoepfe-mit-etikettenarretierung",
+          "underline": " MQD Circular taupe"
+        },
+        {
+          "image": "https://static.teku.com/assets/22051/mdf-103-universell.psd",
+          "name": "MDF 9",
+          "alt": " Produktfoto bedruckte Coverpots",
+          "linkToPdp": "de/teku/produkte/mdf-coverpot",
+          "underline": "  Produktfoto bedruckte Coverpots"
+        },
+        {
+          "image": "https://static.teku.com/assets/575707/vco-9-jf-recycleable-transparent.psd",
+          "name": "VCO 9",
+          "alt": " VCO, Rundtopf",
+          "linkToPdp": "de/teku/produkte/vco-orchideentoepfe-und-container",
+          "underline": " VCO, Rundtopf"
+        },
+        {
+          "image": "https://static.teku.com/assets/711899/vcl-circular-ton-grau-pr.psd",
+          "name": "VCL 9",
+          "alt": "Produktbild Rundtopf",
+          "linkToPdp": "de/teku/produkte/vcl-rundtoepfe-und-container-5-",
+          "underline": "Produktbild Rundtopf"
+        },
+        {
+          "image": "https://static.teku.com/assets/701344/vcm-10-5-ton-grau-pr.psd",
+          "name": "VCM 9",
+          "alt": "Produktbild VCM",
+          "linkToPdp": "de/teku/produkte/vcm-rundtoepfe-und-container-hoch-5-",
+          "underline": "Produktbild VCM"
+        }
+      ]
+    },
+    {
+      "availability": "",
+      "articleNumber": "ST 2254-11x11/10 AZ-D",
+      "orderNumber": "",
+      "image": "https://static.teku.com/assets/571246/st-2254-11x11-10-az-d-baseline-grau-pr.psd",
+      "imageAlt": "Transport- und Kulturtray",
+      "imageTitle": " Transport- und Kulturtray",
+      "seriesName": "ST | Transport- und Kulturtrays",
+      "radius": "",
+      "width": "",
+      "length": "",
+      "index": 7,
+      "fields": {
+        "10900": "ST 2254-11x11/10 AZ-D*",
+        "8527": "54,1",
+        "8251": "10",
+        "7337": "6",
+        "variants": "details.variants",
+        "fittingproducts": "details.fittingproducts",
+        "8532": "21,6",
+        "8533": "8,0",
+        "8250": "60",
+        "8440": "1.232"
+      },
+      "variants": [
+        {
+          "articleNo": "ST 2254-11X11/10 AZ-D Circular grau S09 ",
+          "orderNo": "11309808711",
+          "productImage": "https://static.teku.com/assets/571246/st-2254-11x11-10-az-d-baseline-grau-pr.psd",
+          "articleName": "ST 2254-11x11/10 AZ-D",
+          "seriesName": "ST | Transport- und Kulturtrays",
+          "category": "Circular360",
+          "color": "Circular grau",
+          "image": "https://static.teku.com/assets/571246/st-2254-11x11-10-az-d-baseline-grau-pr.psd",
+          "alt": "Transport- und Kulturtray",
+          "title": " Transport- und Kulturtray",
+          "availability": "",
+          "show": true,
+          "certificates": [
+            "https://static.teku.com/assets/501424/logo-blauer-engel-de.png",
+            "https://static.teku.com/assets/501422/logo-cyclos-htp-de.png"
+          ]
+        }
+      ],
+      "fitting": [
+        {
+          "image": "https://static.teku.com/assets/455473/vqf-circular-taupe-pr.psd",
+          "name": "VQF 11x11x11,5",
+          "alt": "vqf-circular-taupe-pr.psd",
+          "linkToPdp": "de/teku/produkte/vqf-vierkanttoepfe",
+          "underline": " "
+        },
+        {
+          "image": "https://static.teku.com/assets/456560/vcg-circular-ton-grau-pr.psd",
+          "name": "VCG 11",
+          "alt": "TEKU VCG Dekortopf Circular360, ton-grau",
+          "linkToPdp": "de/teku/produkte/vcg-rundtoepfe-und-container-5-",
+          "underline": " TEKU VCG VDA Circular"
+        },
+        {
+          "image": "https://static.teku.com/assets/455475/vch-vck-ton-grau-pr.psd",
+          "name": "VCH 11",
+          "alt": "vch-vck-ton-grau-pr.psd",
+          "linkToPdp": "de/teku/produkte/vch-vck-rundtoepfe-und-container-hoch-5-",
+          "underline": " "
+        },
+        {
+          "image": "https://static.teku.com/assets/530136/mqa-baseline-grau-pr.psd",
+          "name": "10x10x11",
+          "alt": "Produktfoto Vierkanttopf",
+          "linkToPdp": "de/teku/produkte/mqa-vierkanttoepfe",
+          "underline": "Produktfoto Vierkanttopf"
+        },
+        {
+          "image": "https://static.teku.com/assets/456420/mqe-taupe-de-pr.psd",
+          "name": "MQE 11x11x11",
+          "alt": " MQE Taupe, Vierkanttopf",
+          "linkToPdp": "de/teku/produkte/mqe-vierkant-rundtoepfe-mit-etikettenarretierung",
+          "underline": "  MQE Taupe, Vierkanttopf"
+        },
+        {
+          "image": "https://static.teku.com/assets/455989/mxc-ton-pr.psd",
+          "name": "MXC 11",
+          "alt": "TEKU Vcg Rundtoepfe Und Container 5 ",
+          "linkToPdp": "de/teku/produkte/mxc-rundtoepfe-6-",
+          "underline": "TEKU Vcg Rundtoepfe Und Container 5 "
+        },
+        {
+          "image": "https://static.teku.com/assets/456524/mco-transparent-pr.psd",
+          "name": "MCO 12",
+          "alt": "Produktfoto Coverpots",
+          "linkToPdp": "de/teku/produkte/mco-orchideentoepfe-und-container",
+          "underline": "Produktfoto Coverpots"
+        },
+        {
+          "image": "https://static.teku.com/assets/429149/mcp-ton-pr.psd",
+          "name": "MCP 12",
+          "alt": "Produktfoto",
+          "linkToPdp": "de/teku/produkte/mcp-orchideentoepfe-und-container",
+          "underline": " Produktfoto"
+        }
+      ]
+    },
+    {
+      "availability": "",
+      "articleNumber": "ST 2254-11x11/10 STD-D",
+      "orderNumber": "",
+      "image": "https://static.teku.com/assets/571245/st-2254-11x11-10-std-d-baseline-grau-pr.psd",
+      "imageAlt": "Transport- und Kulturtray",
+      "imageTitle": " Transport- und Kulturtray",
+      "seriesName": "ST | Transport- und Kulturtrays",
+      "radius": "",
+      "width": "",
+      "length": "",
+      "index": 8,
+      "fields": {
+        "10900": "ST 2254-11x11/10 STD-D*",
+        "8527": "54,1",
+        "8251": "10",
+        "7337": "6",
+        "variants": "details.variants",
+        "fittingproducts": "details.fittingproducts",
+        "8532": "21,6",
+        "8533": "11,6",
+        "8250": "60",
+        "8440": "1.188"
+      },
+      "variants": [
+        {
+          "articleNo": "ST 2254-11X11/10 STD-D Circular grau S1.2 US ",
+          "orderNo": "11309798718",
+          "productImage": "https://static.teku.com/assets/571245/st-2254-11x11-10-std-d-baseline-grau-pr.psd",
+          "articleName": "ST 2254-11x11/10 STD-D",
+          "seriesName": "ST | Transport- und Kulturtrays",
+          "category": "Circular360",
+          "color": "Circular grau",
+          "image": "https://static.teku.com/assets/571245/st-2254-11x11-10-std-d-baseline-grau-pr.psd",
+          "alt": "Transport- und Kulturtray",
+          "title": " Transport- und Kulturtray",
+          "availability": "",
+          "show": true,
+          "certificates": [
+            "https://static.teku.com/assets/501424/logo-blauer-engel-de.png",
+            "https://static.teku.com/assets/501422/logo-cyclos-htp-de.png"
+          ]
+        }
+      ],
+      "fitting": [
+        {
+          "image": "https://static.teku.com/assets/455473/vqf-circular-taupe-pr.psd",
+          "name": "VQF 11x11x15,5",
+          "alt": "vqf-circular-taupe-pr.psd",
+          "linkToPdp": "de/teku/produkte/vqf-vierkanttoepfe",
+          "underline": " "
+        }
+      ]
+    },
+    {
+      "availability": "",
+      "articleNumber": "ST 2838-9/12",
+      "orderNumber": "",
+      "image": "https://static.teku.com/assets/571243/st-2838-9-12-circular-grau-pr.psd",
+      "imageAlt": "Transport- und Kulturtray",
+      "imageTitle": " Transport- und Kulturtray",
+      "seriesName": "ST | Transport- und Kulturtrays",
+      "radius": "",
+      "width": "",
+      "length": "",
+      "index": 9,
+      "fields": {
+        "10900": "ST 2838-9/12",
+        "8527": "38,4",
+        "8251": "12",
+        "7337": "6",
+        "variants": "details.variants",
+        "fittingproducts": "details.fittingproducts",
+        "8532": "28,5",
+        "8533": "5,2",
+        "8250": "72",
+        "8440": "2.016"
+      },
+      "variants": [
+        {
+          "articleNo": "ST 2838-9/12 Circular grau ",
+          "orderNo": "11308528714",
+          "productImage": "https://static.teku.com/assets/571243/st-2838-9-12-circular-grau-pr.psd",
+          "articleName": "ST 2838-9/12",
+          "seriesName": "ST | Transport- und Kulturtrays",
+          "category": "Circular360",
+          "color": "Circular grau",
+          "image": "https://static.teku.com/assets/571243/st-2838-9-12-circular-grau-pr.psd",
+          "alt": "Transport- und Kulturtray",
+          "title": " Transport- und Kulturtray",
+          "availability": "",
+          "show": true,
+          "certificates": [
+            "https://static.teku.com/assets/501424/logo-blauer-engel-de.png",
+            "https://static.teku.com/assets/501422/logo-cyclos-htp-de.png"
+          ]
+        }
+      ],
+      "fitting": [
+        {
+          "image": "https://static.teku.com/assets/455461/vtd-ton-pr.psd",
+          "name": "VTD 8,5",
+          "alt": "vtd-ton-pr.psd",
+          "linkToPdp": "de/teku/produkte/vtd-rundtoepfe-8-",
+          "underline": " VTD, Rundtopf"
+        },
+        {
+          "image": "https://static.teku.com/assets/456002/vcc-taupe-pr.psd",
+          "name": "VCC 9 VOL",
+          "alt": "vcc-taupe-pr.psd",
+          "linkToPdp": "de/teku/produkte/vcc-rundtoepfe-und-container-hoch-5-",
+          "underline": " Rundtopf, Pflanztopf, Container"
+        },
+        {
+          "image": "https://static.teku.com/assets/455475/vch-vck-ton-grau-pr.psd",
+          "name": "VCH 9",
+          "alt": "vch-vck-ton-grau-pr.psd",
+          "linkToPdp": "de/teku/produkte/vch-vck-rundtoepfe-und-container-hoch-5-",
+          "underline": " "
+        },
+        {
+          "image": "https://static.teku.com/assets/455475/vch-vck-ton-grau-pr.psd",
+          "name": "VCH 9 F",
+          "alt": "vch-vck-ton-grau-pr.psd",
+          "linkToPdp": "de/teku/produkte/vch-vck-rundtoepfe-und-container-hoch-5-",
+          "underline": " "
+        },
+        {
+          "image": "https://static.teku.com/assets/455310/vtg-circular-ton-grau-pr.psd",
+          "name": "VTG 9",
+          "alt": "vtg-circular-ton-grau-pr.psd",
+          "linkToPdp": "de/teku/produkte/vtg-rundtoepfe-8-",
+          "underline": " "
+        },
+        {
+          "image": "https://static.teku.com/assets/455994/to-ton-pr.psd",
+          "name": "TO 8 Z",
+          "alt": "Produktfoto Rundtopf",
+          "linkToPdp": "de/teku/produkte/to-to-d-to-z-rundtoepfe-8-",
+          "underline": "Produktfoto Rundtopf"
+        },
+        {
+          "image": "https://static.teku.com/assets/455989/mxc-ton-pr.psd",
+          "name": "MXC 9",
+          "alt": "TEKU Vcg Rundtoepfe Und Container 5 ",
+          "linkToPdp": "de/teku/produkte/mxc-rundtoepfe-6-",
+          "underline": "TEKU Vcg Rundtoepfe Und Container 5 "
+        },
+        {
+          "image": "https://static.teku.com/assets/22051/mdf-103-universell.psd",
+          "name": "MDF 9",
+          "alt": " Produktfoto bedruckte Coverpots",
+          "linkToPdp": "de/teku/produkte/mdf-coverpot",
+          "underline": "  Produktfoto bedruckte Coverpots"
+        },
+        {
+          "image": "https://static.teku.com/assets/575707/vco-9-jf-recycleable-transparent.psd",
+          "name": "VCO 9",
+          "alt": " VCO, Rundtopf",
+          "linkToPdp": "de/teku/produkte/vco-orchideentoepfe-und-container",
+          "underline": " VCO, Rundtopf"
+        },
+        {
+          "image": "https://static.teku.com/assets/672262/mtc-ton-pr.psd",
+          "name": "MTC 8,5",
+          "alt": "MTC Ton, Rundtopf, Container",
+          "linkToPdp": "de/teku/produkte/mtc-rundtoepfe-8-",
+          "underline": "MTC Ton, Rundtopf, Container"
+        },
+        {
+          "image": "https://static.teku.com/assets/711899/vcl-circular-ton-grau-pr.psd",
+          "name": "VCL 9",
+          "alt": "Produktbild Rundtopf",
+          "linkToPdp": "de/teku/produkte/vcl-rundtoepfe-und-container-5-",
+          "underline": "Produktbild Rundtopf"
+        },
+        {
+          "image": "https://static.teku.com/assets/701344/vcm-10-5-ton-grau-pr.psd",
+          "name": "VCM 9",
+          "alt": "Produktbild VCM",
+          "linkToPdp": "de/teku/produkte/vcm-rundtoepfe-und-container-hoch-5-",
+          "underline": "Produktbild VCM"
+        },
+        {
+          "image": "https://static.teku.com/assets/701344/vcm-10-5-ton-grau-pr.psd",
+          "name": "VCM 9 F",
+          "alt": "Produktbild VCM",
+          "linkToPdp": "de/teku/produkte/vcm-rundtoepfe-und-container-hoch-5-",
+          "underline": "Produktbild VCM"
+        }
+      ]
+    },
+    {
+      "availability": "",
+      "articleNumber": "ST 2838-9/12 B",
+      "orderNumber": "",
+      "image": "https://static.teku.com/assets/571242/st-2838-9-12-b-baseline-grau-pr.psd",
+      "imageAlt": "Transport- und Kulturtray",
+      "imageTitle": " Transport- und Kulturtray",
+      "seriesName": "ST | Transport- und Kulturtrays",
+      "radius": "",
+      "width": "",
+      "length": "",
+      "index": 10,
+      "fields": {
+        "10900": "ST 2838-9/12 B",
+        "8527": "38,4",
+        "8251": "12",
+        "7337": "6",
+        "variants": "details.variants",
+        "fittingproducts": "details.fittingproducts",
+        "8532": "28,5",
+        "8533": "5,2",
+        "8250": "72",
+        "8440": "2.016"
+      },
+      "variants": [
+        {
+          "articleNo": "ST 2838-9/12 B Circular grau ",
+          "orderNo": "11308548711",
+          "productImage": "https://static.teku.com/assets/571242/st-2838-9-12-b-baseline-grau-pr.psd",
+          "articleName": "ST 2838-9/12 B",
+          "seriesName": "ST | Transport- und Kulturtrays",
+          "category": "Circular360",
+          "color": "Circular grau",
+          "image": "https://static.teku.com/assets/571242/st-2838-9-12-b-baseline-grau-pr.psd",
+          "alt": "Transport- und Kulturtray",
+          "title": " Transport- und Kulturtray",
+          "availability": "",
+          "show": true,
+          "certificates": [
+            "https://static.teku.com/assets/501424/logo-blauer-engel-de.png",
+            "https://static.teku.com/assets/501422/logo-cyclos-htp-de.png"
+          ]
+        }
+      ],
+      "fitting": [
+        {
+          "image": "https://static.teku.com/assets/455461/vtd-ton-pr.psd",
+          "name": "VTD 8,5",
+          "alt": "vtd-ton-pr.psd",
+          "linkToPdp": "de/teku/produkte/vtd-rundtoepfe-8-",
+          "underline": " VTD, Rundtopf"
+        },
+        {
+          "image": "https://static.teku.com/assets/456002/vcc-taupe-pr.psd",
+          "name": "VCC 9 VOL",
+          "alt": "vcc-taupe-pr.psd",
+          "linkToPdp": "de/teku/produkte/vcc-rundtoepfe-und-container-hoch-5-",
+          "underline": " Rundtopf, Pflanztopf, Container"
+        },
+        {
+          "image": "https://static.teku.com/assets/456560/vcg-circular-ton-grau-pr.psd",
+          "name": "VCG 9",
+          "alt": "TEKU VCG Dekortopf Circular360, ton-grau",
+          "linkToPdp": "de/teku/produkte/vcg-rundtoepfe-und-container-5-",
+          "underline": " TEKU VCG VDA Circular"
+        },
+        {
+          "image": "https://static.teku.com/assets/455475/vch-vck-ton-grau-pr.psd",
+          "name": "VCH 9",
+          "alt": "vch-vck-ton-grau-pr.psd",
+          "linkToPdp": "de/teku/produkte/vch-vck-rundtoepfe-und-container-hoch-5-",
+          "underline": " "
+        },
+        {
+          "image": "https://static.teku.com/assets/455475/vch-vck-ton-grau-pr.psd",
+          "name": "VCH 9 F",
+          "alt": "vch-vck-ton-grau-pr.psd",
+          "linkToPdp": "de/teku/produkte/vch-vck-rundtoepfe-und-container-hoch-5-",
+          "underline": " "
+        },
+        {
+          "image": "https://static.teku.com/assets/455310/vtg-circular-ton-grau-pr.psd",
+          "name": "VTG 9",
+          "alt": "vtg-circular-ton-grau-pr.psd",
+          "linkToPdp": "de/teku/produkte/vtg-rundtoepfe-8-",
+          "underline": " "
+        },
+        {
+          "image": "https://static.teku.com/assets/455994/to-ton-pr.psd",
+          "name": "TO 8 Z",
+          "alt": "Produktfoto Rundtopf",
+          "linkToPdp": "de/teku/produkte/to-to-d-to-z-rundtoepfe-8-",
+          "underline": "Produktfoto Rundtopf"
+        },
+        {
+          "image": "https://static.teku.com/assets/455989/mxc-ton-pr.psd",
+          "name": "MXC 9",
+          "alt": "TEKU Vcg Rundtoepfe Und Container 5 ",
+          "linkToPdp": "de/teku/produkte/mxc-rundtoepfe-6-",
+          "underline": "TEKU Vcg Rundtoepfe Und Container 5 "
+        },
+        {
+          "image": "https://static.teku.com/assets/22051/mdf-103-universell.psd",
+          "name": "MDF 9",
+          "alt": " Produktfoto bedruckte Coverpots",
+          "linkToPdp": "de/teku/produkte/mdf-coverpot",
+          "underline": "  Produktfoto bedruckte Coverpots"
+        },
+        {
+          "image": "https://static.teku.com/assets/575707/vco-9-jf-recycleable-transparent.psd",
+          "name": "VCO 9",
+          "alt": " VCO, Rundtopf",
+          "linkToPdp": "de/teku/produkte/vco-orchideentoepfe-und-container",
+          "underline": " VCO, Rundtopf"
+        },
+        {
+          "image": "https://static.teku.com/assets/672262/mtc-ton-pr.psd",
+          "name": "MTC 8,5",
+          "alt": "MTC Ton, Rundtopf, Container",
+          "linkToPdp": "de/teku/produkte/mtc-rundtoepfe-8-",
+          "underline": "MTC Ton, Rundtopf, Container"
+        },
+        {
+          "image": "https://static.teku.com/assets/711899/vcl-circular-ton-grau-pr.psd",
+          "name": "VCL 9",
+          "alt": "Produktbild Rundtopf",
+          "linkToPdp": "de/teku/produkte/vcl-rundtoepfe-und-container-5-",
+          "underline": "Produktbild Rundtopf"
+        },
+        {
+          "image": "https://static.teku.com/assets/701344/vcm-10-5-ton-grau-pr.psd",
+          "name": "VCM 9",
+          "alt": "Produktbild VCM",
+          "linkToPdp": "de/teku/produkte/vcm-rundtoepfe-und-container-hoch-5-",
+          "underline": "Produktbild VCM"
+        },
+        {
+          "image": "https://static.teku.com/assets/701344/vcm-10-5-ton-grau-pr.psd",
+          "name": "VCM 9 F",
+          "alt": "Produktbild VCM",
+          "linkToPdp": "de/teku/produkte/vcm-rundtoepfe-und-container-hoch-5-",
+          "underline": "Produktbild VCM"
+        }
+      ]
+    },
+    {
+      "availability": "",
+      "articleNumber": "ST 2838-9/12 BA",
+      "orderNumber": "",
+      "image": "https://static.teku.com/assets/571244/st-2838-9-12-ba-baseline-grau-pr.psd",
+      "imageAlt": "Transport- und Kulturtray",
+      "imageTitle": " Transport- und Kulturtray",
+      "seriesName": "ST | Transport- und Kulturtrays",
+      "radius": "",
+      "width": "",
+      "length": "",
+      "index": 11,
+      "fields": {
+        "10900": "ST 2838-9/12 BA",
+        "8527": "38,4",
+        "8251": "12",
+        "7337": "6",
+        "variants": "details.variants",
+        "fittingproducts": "details.fittingproducts",
+        "8532": "28,5",
+        "8533": "5,2",
+        "8250": "72",
+        "8440": "2.016"
+      },
+      "variants": [
+        {
+          "articleNo": "ST 2838-9/12 BA Circular grau ",
+          "orderNo": "11308558711",
+          "productImage": "https://static.teku.com/assets/571244/st-2838-9-12-ba-baseline-grau-pr.psd",
+          "articleName": "ST 2838-9/12 BA",
+          "seriesName": "ST | Transport- und Kulturtrays",
+          "category": "Circular360",
+          "color": "Circular grau",
+          "image": "https://static.teku.com/assets/571244/st-2838-9-12-ba-baseline-grau-pr.psd",
+          "alt": "Transport- und Kulturtray",
+          "title": " Transport- und Kulturtray",
+          "availability": "",
+          "show": true,
+          "certificates": [
+            "https://static.teku.com/assets/501424/logo-blauer-engel-de.png",
+            "https://static.teku.com/assets/501422/logo-cyclos-htp-de.png"
+          ]
+        }
+      ],
+      "fitting": [
+        {
+          "image": "https://static.teku.com/assets/455461/vtd-ton-pr.psd",
+          "name": "VTD 8,5",
+          "alt": "vtd-ton-pr.psd",
+          "linkToPdp": "de/teku/produkte/vtd-rundtoepfe-8-",
+          "underline": " VTD, Rundtopf"
+        },
+        {
+          "image": "https://static.teku.com/assets/456002/vcc-taupe-pr.psd",
+          "name": "VCC 9 VOL",
+          "alt": "vcc-taupe-pr.psd",
+          "linkToPdp": "de/teku/produkte/vcc-rundtoepfe-und-container-hoch-5-",
+          "underline": " Rundtopf, Pflanztopf, Container"
+        },
+        {
+          "image": "https://static.teku.com/assets/456560/vcg-circular-ton-grau-pr.psd",
+          "name": "VCG 9",
+          "alt": "TEKU VCG Dekortopf Circular360, ton-grau",
+          "linkToPdp": "de/teku/produkte/vcg-rundtoepfe-und-container-5-",
+          "underline": " TEKU VCG VDA Circular"
+        },
+        {
+          "image": "https://static.teku.com/assets/455475/vch-vck-ton-grau-pr.psd",
+          "name": "VCH 9",
+          "alt": "vch-vck-ton-grau-pr.psd",
+          "linkToPdp": "de/teku/produkte/vch-vck-rundtoepfe-und-container-hoch-5-",
+          "underline": " "
+        },
+        {
+          "image": "https://static.teku.com/assets/455475/vch-vck-ton-grau-pr.psd",
+          "name": "VCH 9 F",
+          "alt": "vch-vck-ton-grau-pr.psd",
+          "linkToPdp": "de/teku/produkte/vch-vck-rundtoepfe-und-container-hoch-5-",
+          "underline": " "
+        },
+        {
+          "image": "https://static.teku.com/assets/455310/vtg-circular-ton-grau-pr.psd",
+          "name": "VTG 9",
+          "alt": "vtg-circular-ton-grau-pr.psd",
+          "linkToPdp": "de/teku/produkte/vtg-rundtoepfe-8-",
+          "underline": " "
+        },
+        {
+          "image": "https://static.teku.com/assets/455994/to-ton-pr.psd",
+          "name": "TO 8 Z",
+          "alt": "Produktfoto Rundtopf",
+          "linkToPdp": "de/teku/produkte/to-to-d-to-z-rundtoepfe-8-",
+          "underline": "Produktfoto Rundtopf"
+        },
+        {
+          "image": "https://static.teku.com/assets/455989/mxc-ton-pr.psd",
+          "name": "MXC 9",
+          "alt": "TEKU Vcg Rundtoepfe Und Container 5 ",
+          "linkToPdp": "de/teku/produkte/mxc-rundtoepfe-6-",
+          "underline": "TEKU Vcg Rundtoepfe Und Container 5 "
+        },
+        {
+          "image": "https://static.teku.com/assets/22051/mdf-103-universell.psd",
+          "name": "MDF 9",
+          "alt": " Produktfoto bedruckte Coverpots",
+          "linkToPdp": "de/teku/produkte/mdf-coverpot",
+          "underline": "  Produktfoto bedruckte Coverpots"
+        },
+        {
+          "image": "https://static.teku.com/assets/575707/vco-9-jf-recycleable-transparent.psd",
+          "name": "VCO 9",
+          "alt": " VCO, Rundtopf",
+          "linkToPdp": "de/teku/produkte/vco-orchideentoepfe-und-container",
+          "underline": " VCO, Rundtopf"
+        },
+        {
+          "image": "https://static.teku.com/assets/672262/mtc-ton-pr.psd",
+          "name": "MTC 8,5",
+          "alt": "MTC Ton, Rundtopf, Container",
+          "linkToPdp": "de/teku/produkte/mtc-rundtoepfe-8-",
+          "underline": "MTC Ton, Rundtopf, Container"
+        },
+        {
+          "image": "https://static.teku.com/assets/711899/vcl-circular-ton-grau-pr.psd",
+          "name": "VCL 9",
+          "alt": "Produktbild Rundtopf",
+          "linkToPdp": "de/teku/produkte/vcl-rundtoepfe-und-container-5-",
+          "underline": "Produktbild Rundtopf"
+        },
+        {
+          "image": "https://static.teku.com/assets/701344/vcm-10-5-ton-grau-pr.psd",
+          "name": "VCM 9",
+          "alt": "Produktbild VCM",
+          "linkToPdp": "de/teku/produkte/vcm-rundtoepfe-und-container-hoch-5-",
+          "underline": "Produktbild VCM"
+        },
+        {
+          "image": "https://static.teku.com/assets/701344/vcm-10-5-ton-grau-pr.psd",
+          "name": "VCM 9 F",
+          "alt": "Produktbild VCM",
+          "linkToPdp": "de/teku/produkte/vcm-rundtoepfe-und-container-hoch-5-",
+          "underline": "Produktbild VCM"
+        }
+      ]
+    },
+    {
+      "availability": "",
+      "articleNumber": "ST 2838-9/12 D",
+      "orderNumber": "",
+      "image": "https://static.teku.com/assets/571241/st-2838-9-12-d-baseline-grau-pr.psd",
+      "imageAlt": "Transport- und Kulturtray",
+      "imageTitle": " Transport- und Kulturtray",
+      "seriesName": "ST | Transport- und Kulturtrays",
+      "radius": "",
+      "width": "",
+      "length": "",
+      "index": 12,
+      "fields": {
+        "10900": "ST 2838-9/12 D",
+        "8527": "38,4",
+        "8251": "12",
+        "7337": "6",
+        "variants": "details.variants",
+        "fittingproducts": "details.fittingproducts",
+        "8532": "28,5",
+        "8533": "5,2",
+        "8250": "72",
+        "8440": "2.016"
+      },
+      "variants": [
+        {
+          "articleNo": "ST 2838-9/12 D Circular grau ",
+          "orderNo": "11308538711",
+          "productImage": "https://static.teku.com/assets/571241/st-2838-9-12-d-baseline-grau-pr.psd",
+          "articleName": "ST 2838-9/12 D",
+          "seriesName": "ST | Transport- und Kulturtrays",
+          "category": "Circular360",
+          "color": "Circular grau",
+          "image": "https://static.teku.com/assets/571241/st-2838-9-12-d-baseline-grau-pr.psd",
+          "alt": "Transport- und Kulturtray",
+          "title": " Transport- und Kulturtray",
+          "availability": "",
+          "show": true,
+          "certificates": [
+            "https://static.teku.com/assets/501424/logo-blauer-engel-de.png",
+            "https://static.teku.com/assets/501422/logo-cyclos-htp-de.png"
+          ]
+        }
+      ],
+      "fitting": [
+        {
+          "image": "https://static.teku.com/assets/455461/vtd-ton-pr.psd",
+          "name": "VTD 8,5",
+          "alt": "vtd-ton-pr.psd",
+          "linkToPdp": "de/teku/produkte/vtd-rundtoepfe-8-",
+          "underline": " VTD, Rundtopf"
+        },
+        {
+          "image": "https://static.teku.com/assets/456002/vcc-taupe-pr.psd",
+          "name": "VCC 9 VOL",
+          "alt": "vcc-taupe-pr.psd",
+          "linkToPdp": "de/teku/produkte/vcc-rundtoepfe-und-container-hoch-5-",
+          "underline": " Rundtopf, Pflanztopf, Container"
+        },
+        {
+          "image": "https://static.teku.com/assets/456560/vcg-circular-ton-grau-pr.psd",
+          "name": "VCG 9",
+          "alt": "TEKU VCG Dekortopf Circular360, ton-grau",
+          "linkToPdp": "de/teku/produkte/vcg-rundtoepfe-und-container-5-",
+          "underline": " TEKU VCG VDA Circular"
+        },
+        {
+          "image": "https://static.teku.com/assets/455475/vch-vck-ton-grau-pr.psd",
+          "name": "VCH 9",
+          "alt": "vch-vck-ton-grau-pr.psd",
+          "linkToPdp": "de/teku/produkte/vch-vck-rundtoepfe-und-container-hoch-5-",
+          "underline": " "
+        },
+        {
+          "image": "https://static.teku.com/assets/455475/vch-vck-ton-grau-pr.psd",
+          "name": "VCH 9 F",
+          "alt": "vch-vck-ton-grau-pr.psd",
+          "linkToPdp": "de/teku/produkte/vch-vck-rundtoepfe-und-container-hoch-5-",
+          "underline": " "
+        },
+        {
+          "image": "https://static.teku.com/assets/455310/vtg-circular-ton-grau-pr.psd",
+          "name": "VTG 9",
+          "alt": "vtg-circular-ton-grau-pr.psd",
+          "linkToPdp": "de/teku/produkte/vtg-rundtoepfe-8-",
+          "underline": " "
+        },
+        {
+          "image": "https://static.teku.com/assets/455994/to-ton-pr.psd",
+          "name": "TO 8 Z",
+          "alt": "Produktfoto Rundtopf",
+          "linkToPdp": "de/teku/produkte/to-to-d-to-z-rundtoepfe-8-",
+          "underline": "Produktfoto Rundtopf"
+        },
+        {
+          "image": "https://static.teku.com/assets/455989/mxc-ton-pr.psd",
+          "name": "MXC 9",
+          "alt": "TEKU Vcg Rundtoepfe Und Container 5 ",
+          "linkToPdp": "de/teku/produkte/mxc-rundtoepfe-6-",
+          "underline": "TEKU Vcg Rundtoepfe Und Container 5 "
+        },
+        {
+          "image": "https://static.teku.com/assets/22051/mdf-103-universell.psd",
+          "name": "MDF 9",
+          "alt": " Produktfoto bedruckte Coverpots",
+          "linkToPdp": "de/teku/produkte/mdf-coverpot",
+          "underline": "  Produktfoto bedruckte Coverpots"
+        },
+        {
+          "image": "https://static.teku.com/assets/575707/vco-9-jf-recycleable-transparent.psd",
+          "name": "VCO 9",
+          "alt": " VCO, Rundtopf",
+          "linkToPdp": "de/teku/produkte/vco-orchideentoepfe-und-container",
+          "underline": " VCO, Rundtopf"
+        },
+        {
+          "image": "https://static.teku.com/assets/672262/mtc-ton-pr.psd",
+          "name": "MTC 8,5",
+          "alt": "MTC Ton, Rundtopf, Container",
+          "linkToPdp": "de/teku/produkte/mtc-rundtoepfe-8-",
+          "underline": "MTC Ton, Rundtopf, Container"
+        },
+        {
+          "image": "https://static.teku.com/assets/711899/vcl-circular-ton-grau-pr.psd",
+          "name": "VCL 9",
+          "alt": "Produktbild Rundtopf",
+          "linkToPdp": "de/teku/produkte/vcl-rundtoepfe-und-container-5-",
+          "underline": "Produktbild Rundtopf"
+        },
+        {
+          "image": "https://static.teku.com/assets/701344/vcm-10-5-ton-grau-pr.psd",
+          "name": "VCM 9 F",
+          "alt": "Produktbild VCM",
+          "linkToPdp": "de/teku/produkte/vcm-rundtoepfe-und-container-hoch-5-",
+          "underline": "Produktbild VCM"
+        }
+      ]
+    },
+    {
+      "availability": "",
+      "articleNumber": "ST 2840/8-13",
+      "orderNumber": "",
+      "image": "https://static.teku.com/assets/571240/st-2840-8-13-baseline-grau-pr.psd",
+      "imageAlt": "Transport- und Kulturtray",
+      "imageTitle": " Transport- und Kulturtray",
+      "seriesName": "ST | Transport- und Kulturtrays",
+      "radius": "",
+      "width": "",
+      "length": "",
+      "index": 13,
+      "fields": {
+        "10900": "ST 2840/8-13 (12)*",
+        "8527": "39,8",
+        "8251": "12",
+        "7337": "6",
+        "variants": "details.variants",
+        "fittingproducts": "details.fittingproducts",
+        "8532": "27,9",
+        "8533": "6,0",
+        "8440": "2.256"
+      },
+      "variants": [
+        {
+          "articleNo": "ST 2840/8-13 Circular grau ",
+          "orderNo": "11307798711",
+          "productImage": "https://static.teku.com/assets/571240/st-2840-8-13-baseline-grau-pr.psd",
+          "articleName": "ST 2840/8-13",
+          "seriesName": "ST | Transport- und Kulturtrays",
+          "category": "Circular360",
+          "color": "Circular grau",
+          "image": "https://static.teku.com/assets/571240/st-2840-8-13-baseline-grau-pr.psd",
+          "alt": "Transport- und Kulturtray",
+          "title": " Transport- und Kulturtray",
+          "availability": "",
+          "show": true,
+          "certificates": [
+            "https://static.teku.com/assets/501424/logo-blauer-engel-de.png",
+            "https://static.teku.com/assets/501422/logo-cyclos-htp-de.png"
+          ]
+        }
+      ],
+      "fitting": [
+        {
+          "image": "https://static.teku.com/assets/455461/vtd-ton-pr.psd",
+          "name": "VTD 8,5",
+          "alt": "vtd-ton-pr.psd",
+          "linkToPdp": "de/teku/produkte/vtd-rundtoepfe-8-",
+          "underline": " VTD, Rundtopf"
+        },
+        {
+          "image": "https://static.teku.com/assets/456002/vcc-taupe-pr.psd",
+          "name": "VCC 9 VOL",
+          "alt": "vcc-taupe-pr.psd",
+          "linkToPdp": "de/teku/produkte/vcc-rundtoepfe-und-container-hoch-5-",
+          "underline": " Rundtopf, Pflanztopf, Container"
+        },
+        {
+          "image": "https://static.teku.com/assets/456560/vcg-circular-ton-grau-pr.psd",
+          "name": "VCG 9",
+          "alt": "TEKU VCG Dekortopf Circular360, ton-grau",
+          "linkToPdp": "de/teku/produkte/vcg-rundtoepfe-und-container-5-",
+          "underline": " TEKU VCG VDA Circular"
+        },
+        {
+          "image": "https://static.teku.com/assets/455475/vch-vck-ton-grau-pr.psd",
+          "name": "VCH 9",
+          "alt": "vch-vck-ton-grau-pr.psd",
+          "linkToPdp": "de/teku/produkte/vch-vck-rundtoepfe-und-container-hoch-5-",
+          "underline": " "
+        },
+        {
+          "image": "https://static.teku.com/assets/455475/vch-vck-ton-grau-pr.psd",
+          "name": "VCH 9 F",
+          "alt": "vch-vck-ton-grau-pr.psd",
+          "linkToPdp": "de/teku/produkte/vch-vck-rundtoepfe-und-container-hoch-5-",
+          "underline": " "
+        },
+        {
+          "image": "https://static.teku.com/assets/455310/vtg-circular-ton-grau-pr.psd",
+          "name": "VTG 9",
+          "alt": "vtg-circular-ton-grau-pr.psd",
+          "linkToPdp": "de/teku/produkte/vtg-rundtoepfe-8-",
+          "underline": " "
+        },
+        {
+          "image": "https://static.teku.com/assets/455999/vcd-ton-pr.psd",
+          "name": "VCD 9,5",
+          "alt": "vcd-ton-pr.psd",
+          "linkToPdp": "de/teku/produkte/vcd-rundtoepfe-und-container-5-",
+          "underline": " VCD Circular ton"
+        },
+        {
+          "image": "https://static.teku.com/assets/456002/vcc-taupe-pr.psd",
+          "name": "VCC 10 VOL",
+          "alt": "vcc-taupe-pr.psd",
+          "linkToPdp": "de/teku/produkte/vcc-rundtoepfe-und-container-hoch-5-",
+          "underline": " Rundtopf, Pflanztopf, Container"
+        },
+        {
+          "image": "https://static.teku.com/assets/455994/to-ton-pr.psd",
+          "name": "TO 8 Z",
+          "alt": "Produktfoto Rundtopf",
+          "linkToPdp": "de/teku/produkte/to-to-d-to-z-rundtoepfe-8-",
+          "underline": "Produktfoto Rundtopf"
+        },
+        {
+          "image": "https://static.teku.com/assets/455989/mxc-ton-pr.psd",
+          "name": "MXC 9",
+          "alt": "TEKU Vcg Rundtoepfe Und Container 5 ",
+          "linkToPdp": "de/teku/produkte/mxc-rundtoepfe-6-",
+          "underline": "TEKU Vcg Rundtoepfe Und Container 5 "
+        },
+        {
+          "image": "https://static.teku.com/assets/22051/mdf-103-universell.psd",
+          "name": "MDF 9",
+          "alt": " Produktfoto bedruckte Coverpots",
+          "linkToPdp": "de/teku/produkte/mdf-coverpot",
+          "underline": "  Produktfoto bedruckte Coverpots"
+        },
+        {
+          "image": "https://static.teku.com/assets/455994/to-ton-pr.psd",
+          "name": "TO 9,5 D",
+          "alt": "Produktfoto Rundtopf",
+          "linkToPdp": "de/teku/produkte/to-to-d-to-z-rundtoepfe-8-",
+          "underline": "Produktfoto Rundtopf"
+        },
+        {
+          "image": "https://static.teku.com/assets/456560/vcg-circular-ton-grau-pr.psd",
+          "name": "VCG 10",
+          "alt": "TEKU VCG Dekortopf Circular360, ton-grau",
+          "linkToPdp": "de/teku/produkte/vcg-rundtoepfe-und-container-5-",
+          "underline": " TEKU VCG VDA Circular"
+        },
+        {
+          "image": "https://static.teku.com/assets/455475/vch-vck-ton-grau-pr.psd",
+          "name": "VCH 10",
+          "alt": "vch-vck-ton-grau-pr.psd",
+          "linkToPdp": "de/teku/produkte/vch-vck-rundtoepfe-und-container-hoch-5-",
+          "underline": " "
+        },
+        {
+          "image": "https://static.teku.com/assets/455310/vtg-circular-ton-grau-pr.psd",
+          "name": "VTG 10",
+          "alt": "vtg-circular-ton-grau-pr.psd",
+          "linkToPdp": "de/teku/produkte/vtg-rundtoepfe-8-",
+          "underline": " "
+        },
+        {
+          "image": "https://static.teku.com/assets/456560/vcg-circular-ton-grau-pr.psd",
+          "name": "VCG 10,5",
+          "alt": "TEKU VCG Dekortopf Circular360, ton-grau",
+          "linkToPdp": "de/teku/produkte/vcg-rundtoepfe-und-container-5-",
+          "underline": " TEKU VCG VDA Circular"
+        },
+        {
+          "image": "https://static.teku.com/assets/456560/vcg-circular-ton-grau-pr.psd",
+          "name": "VCG 10,5 K",
+          "alt": "TEKU VCG Dekortopf Circular360, ton-grau",
+          "linkToPdp": "de/teku/produkte/vcg-rundtoepfe-und-container-5-",
+          "underline": " TEKU VCG VDA Circular"
+        },
+        {
+          "image": "https://static.teku.com/assets/455310/vtg-circular-ton-grau-pr.psd",
+          "name": "VTG 10,5",
+          "alt": "vtg-circular-ton-grau-pr.psd",
+          "linkToPdp": "de/teku/produkte/vtg-rundtoepfe-8-",
+          "underline": " "
+        },
+        {
+          "image": "https://static.teku.com/assets/455475/vch-vck-ton-grau-pr.psd",
+          "name": "VCH 11 VOL",
+          "alt": "vch-vck-ton-grau-pr.psd",
+          "linkToPdp": "de/teku/produkte/vch-vck-rundtoepfe-und-container-hoch-5-",
+          "underline": " "
+        },
+        {
+          "image": "https://static.teku.com/assets/455475/vch-vck-ton-grau-pr.psd",
+          "name": "VCK 11 VOL",
+          "alt": "vch-vck-ton-grau-pr.psd",
+          "linkToPdp": "de/teku/produkte/vch-vck-rundtoepfe-und-container-hoch-5-",
+          "underline": " "
+        },
+        {
+          "image": "https://static.teku.com/assets/456560/vcg-circular-ton-grau-pr.psd",
+          "name": "VCG 11",
+          "alt": "TEKU VCG Dekortopf Circular360, ton-grau",
+          "linkToPdp": "de/teku/produkte/vcg-rundtoepfe-und-container-5-",
+          "underline": " TEKU VCG VDA Circular"
+        },
+        {
+          "image": "https://static.teku.com/assets/455475/vch-vck-ton-grau-pr.psd",
+          "name": "VCH 11",
+          "alt": "vch-vck-ton-grau-pr.psd",
+          "linkToPdp": "de/teku/produkte/vch-vck-rundtoepfe-und-container-hoch-5-",
+          "underline": " "
+        },
+        {
+          "image": "https://static.teku.com/assets/455310/vtg-circular-ton-grau-pr.psd",
+          "name": "VTG 11",
+          "alt": "vtg-circular-ton-grau-pr.psd",
+          "linkToPdp": "de/teku/produkte/vtg-rundtoepfe-8-",
+          "underline": " "
+        },
+        {
+          "image": "https://static.teku.com/assets/456002/vcc-taupe-pr.psd",
+          "name": "VCC 12 VOL",
+          "alt": "vcc-taupe-pr.psd",
+          "linkToPdp": "de/teku/produkte/vcc-rundtoepfe-und-container-hoch-5-",
+          "underline": " Rundtopf, Pflanztopf, Container"
+        },
+        {
+          "image": "https://static.teku.com/assets/455989/mxc-ton-pr.psd",
+          "name": "MXC 10",
+          "alt": "TEKU Vcg Rundtoepfe Und Container 5 ",
+          "linkToPdp": "de/teku/produkte/mxc-rundtoepfe-6-",
+          "underline": "TEKU Vcg Rundtoepfe Und Container 5 "
+        },
+        {
+          "image": "https://static.teku.com/assets/455989/mxc-ton-pr.psd",
+          "name": "MXC 10,5",
+          "alt": "TEKU Vcg Rundtoepfe Und Container 5 ",
+          "linkToPdp": "de/teku/produkte/mxc-rundtoepfe-6-",
+          "underline": "TEKU Vcg Rundtoepfe Und Container 5 "
+        },
+        {
+          "image": "https://static.teku.com/assets/455989/mxc-ton-pr.psd",
+          "name": "MXC 11",
+          "alt": "TEKU Vcg Rundtoepfe Und Container 5 ",
+          "linkToPdp": "de/teku/produkte/mxc-rundtoepfe-6-",
+          "underline": "TEKU Vcg Rundtoepfe Und Container 5 "
+        },
+        {
+          "image": "https://static.teku.com/assets/22051/mdf-103-universell.psd",
+          "name": "MDF 11",
+          "alt": " Produktfoto bedruckte Coverpots",
+          "linkToPdp": "de/teku/produkte/mdf-coverpot",
+          "underline": "  Produktfoto bedruckte Coverpots"
+        },
+        {
+          "image": "https://static.teku.com/assets/456560/vcg-circular-ton-grau-pr.psd",
+          "name": "VCG 12",
+          "alt": "TEKU VCG Dekortopf Circular360, ton-grau",
+          "linkToPdp": "de/teku/produkte/vcg-rundtoepfe-und-container-5-",
+          "underline": " TEKU VCG VDA Circular"
+        },
+        {
+          "image": "https://static.teku.com/assets/456560/vcg-circular-ton-grau-pr.psd",
+          "name": "VCG 12 D",
+          "alt": "TEKU VCG Dekortopf Circular360, ton-grau",
+          "linkToPdp": "de/teku/produkte/vcg-rundtoepfe-und-container-5-",
+          "underline": " TEKU VCG VDA Circular"
+        },
+        {
+          "image": "https://static.teku.com/assets/455310/vtg-circular-ton-grau-pr.psd",
+          "name": "VTG 12",
+          "alt": "vtg-circular-ton-grau-pr.psd",
+          "linkToPdp": "de/teku/produkte/vtg-rundtoepfe-8-",
+          "underline": " "
+        },
+        {
+          "image": "https://static.teku.com/assets/456002/vcc-taupe-pr.psd",
+          "name": "VCC 13 VOL",
+          "alt": "vcc-taupe-pr.psd",
+          "linkToPdp": "de/teku/produkte/vcc-rundtoepfe-und-container-hoch-5-",
+          "underline": " Rundtopf, Pflanztopf, Container"
+        },
+        {
+          "image": "https://static.teku.com/assets/455475/vch-vck-ton-grau-pr.psd",
+          "name": "VCH 13 VOL",
+          "alt": "vch-vck-ton-grau-pr.psd",
+          "linkToPdp": "de/teku/produkte/vch-vck-rundtoepfe-und-container-hoch-5-",
+          "underline": " "
+        },
+        {
+          "image": "https://static.teku.com/assets/456560/vcg-circular-ton-grau-pr.psd",
+          "name": "VCG 13",
+          "alt": "TEKU VCG Dekortopf Circular360, ton-grau",
+          "linkToPdp": "de/teku/produkte/vcg-rundtoepfe-und-container-5-",
+          "underline": " TEKU VCG VDA Circular"
+        },
+        {
+          "image": "https://static.teku.com/assets/455475/vch-vck-ton-grau-pr.psd",
+          "name": "VCH 13",
+          "alt": "vch-vck-ton-grau-pr.psd",
+          "linkToPdp": "de/teku/produkte/vch-vck-rundtoepfe-und-container-hoch-5-",
+          "underline": " "
+        },
+        {
+          "image": "https://static.teku.com/assets/455310/vtg-circular-ton-grau-pr.psd",
+          "name": "VTG 13",
+          "alt": "vtg-circular-ton-grau-pr.psd",
+          "linkToPdp": "de/teku/produkte/vtg-rundtoepfe-8-",
+          "underline": " "
+        },
+        {
+          "image": "https://static.teku.com/assets/455989/mxc-ton-pr.psd",
+          "name": "MXC 12",
+          "alt": "TEKU Vcg Rundtoepfe Und Container 5 ",
+          "linkToPdp": "de/teku/produkte/mxc-rundtoepfe-6-",
+          "underline": "TEKU Vcg Rundtoepfe Und Container 5 "
+        },
+        {
+          "image": "https://static.teku.com/assets/456524/mco-transparent-pr.psd",
+          "name": "MCO 12",
+          "alt": "Produktfoto Coverpots",
+          "linkToPdp": "de/teku/produkte/mco-orchideentoepfe-und-container",
+          "underline": "Produktfoto Coverpots"
+        },
+        {
+          "image": "https://static.teku.com/assets/429149/mcp-ton-pr.psd",
+          "name": "MCP 12",
+          "alt": "Produktfoto",
+          "linkToPdp": "de/teku/produkte/mcp-orchideentoepfe-und-container",
+          "underline": " Produktfoto"
+        },
+        {
+          "image": "https://static.teku.com/assets/22051/mdf-103-universell.psd",
+          "name": "MDF 12",
+          "alt": " Produktfoto bedruckte Coverpots",
+          "linkToPdp": "de/teku/produkte/mdf-coverpot",
+          "underline": "  Produktfoto bedruckte Coverpots"
+        },
+        {
+          "image": "https://static.teku.com/assets/455989/mxc-ton-pr.psd",
+          "name": "MXC 13",
+          "alt": "TEKU Vcg Rundtoepfe Und Container 5 ",
+          "linkToPdp": "de/teku/produkte/mxc-rundtoepfe-6-",
+          "underline": "TEKU Vcg Rundtoepfe Und Container 5 "
+        },
+        {
+          "image": "https://static.teku.com/assets/575707/vco-9-jf-recycleable-transparent.psd",
+          "name": "VCO 9",
+          "alt": " VCO, Rundtopf",
+          "linkToPdp": "de/teku/produkte/vco-orchideentoepfe-und-container",
+          "underline": " VCO, Rundtopf"
+        },
+        {
+          "image": "https://static.teku.com/assets/672262/mtc-ton-pr.psd",
+          "name": "MTC 8,5",
+          "alt": "MTC Ton, Rundtopf, Container",
+          "linkToPdp": "de/teku/produkte/mtc-rundtoepfe-8-",
+          "underline": "MTC Ton, Rundtopf, Container"
+        }
+      ]
+    },
+    {
+      "availability": "",
+      "articleNumber": "ST 2840/8-13 D",
+      "orderNumber": "",
+      "image": "https://static.teku.com/assets/572789/st-2840-8-13-d-circular-grau-pr.psd",
+      "imageAlt": "Transport- und Kulturtray",
+      "imageTitle": " Transport- und Kulturtray",
+      "seriesName": "ST | Transport- und Kulturtrays",
+      "radius": "",
+      "width": "",
+      "length": "",
+      "index": 14,
+      "fields": {
+        "10900": "ST 2840/8-13 D (12)*",
+        "8527": "39,8",
+        "8251": "12",
+        "7337": "6",
+        "variants": "details.variants",
+        "fittingproducts": "details.fittingproducts",
+        "8532": "27,9",
+        "8533": "6,0",
+        "8440": "2.256"
+      },
+      "variants": [
+        {
+          "articleNo": "ST 2840/8-13 D Circular grau ",
+          "orderNo": "11307838711",
+          "productImage": "https://static.teku.com/assets/572789/st-2840-8-13-d-circular-grau-pr.psd",
+          "articleName": "ST 2840/8-13 D",
+          "seriesName": "ST | Transport- und Kulturtrays",
+          "category": "Circular360",
+          "color": "Circular grau",
+          "image": "https://static.teku.com/assets/572789/st-2840-8-13-d-circular-grau-pr.psd",
+          "alt": "Transport- und Kulturtray",
+          "title": " Transport- und Kulturtray",
+          "availability": "",
+          "show": true,
+          "certificates": [
+            "https://static.teku.com/assets/501424/logo-blauer-engel-de.png",
+            "https://static.teku.com/assets/501422/logo-cyclos-htp-de.png"
+          ]
+        }
+      ],
+      "fitting": [
+        {
+          "image": "https://static.teku.com/assets/455461/vtd-ton-pr.psd",
+          "name": "VTD 8,5",
+          "alt": "vtd-ton-pr.psd",
+          "linkToPdp": "de/teku/produkte/vtd-rundtoepfe-8-",
+          "underline": " VTD, Rundtopf"
+        },
+        {
+          "image": "https://static.teku.com/assets/456002/vcc-taupe-pr.psd",
+          "name": "VCC 9 VOL",
+          "alt": "vcc-taupe-pr.psd",
+          "linkToPdp": "de/teku/produkte/vcc-rundtoepfe-und-container-hoch-5-",
+          "underline": " Rundtopf, Pflanztopf, Container"
+        },
+        {
+          "image": "https://static.teku.com/assets/456560/vcg-circular-ton-grau-pr.psd",
+          "name": "VCG 9",
+          "alt": "TEKU VCG Dekortopf Circular360, ton-grau",
+          "linkToPdp": "de/teku/produkte/vcg-rundtoepfe-und-container-5-",
+          "underline": " TEKU VCG VDA Circular"
+        },
+        {
+          "image": "https://static.teku.com/assets/455475/vch-vck-ton-grau-pr.psd",
+          "name": "VCH 9",
+          "alt": "vch-vck-ton-grau-pr.psd",
+          "linkToPdp": "de/teku/produkte/vch-vck-rundtoepfe-und-container-hoch-5-",
+          "underline": " "
+        },
+        {
+          "image": "https://static.teku.com/assets/455475/vch-vck-ton-grau-pr.psd",
+          "name": "VCH 9 F",
+          "alt": "vch-vck-ton-grau-pr.psd",
+          "linkToPdp": "de/teku/produkte/vch-vck-rundtoepfe-und-container-hoch-5-",
+          "underline": " "
+        },
+        {
+          "image": "https://static.teku.com/assets/455310/vtg-circular-ton-grau-pr.psd",
+          "name": "VTG 9",
+          "alt": "vtg-circular-ton-grau-pr.psd",
+          "linkToPdp": "de/teku/produkte/vtg-rundtoepfe-8-",
+          "underline": " "
+        },
+        {
+          "image": "https://static.teku.com/assets/455999/vcd-ton-pr.psd",
+          "name": "VCD 9,5",
+          "alt": "vcd-ton-pr.psd",
+          "linkToPdp": "de/teku/produkte/vcd-rundtoepfe-und-container-5-",
+          "underline": " VCD Circular ton"
+        },
+        {
+          "image": "https://static.teku.com/assets/456002/vcc-taupe-pr.psd",
+          "name": "VCC 10 VOL",
+          "alt": "vcc-taupe-pr.psd",
+          "linkToPdp": "de/teku/produkte/vcc-rundtoepfe-und-container-hoch-5-",
+          "underline": " Rundtopf, Pflanztopf, Container"
+        },
+        {
+          "image": "https://static.teku.com/assets/455994/to-ton-pr.psd",
+          "name": "TO 8 Z",
+          "alt": "Produktfoto Rundtopf",
+          "linkToPdp": "de/teku/produkte/to-to-d-to-z-rundtoepfe-8-",
+          "underline": "Produktfoto Rundtopf"
+        },
+        {
+          "image": "https://static.teku.com/assets/455989/mxc-ton-pr.psd",
+          "name": "MXC 9",
+          "alt": "TEKU Vcg Rundtoepfe Und Container 5 ",
+          "linkToPdp": "de/teku/produkte/mxc-rundtoepfe-6-",
+          "underline": "TEKU Vcg Rundtoepfe Und Container 5 "
+        },
+        {
+          "image": "https://static.teku.com/assets/22051/mdf-103-universell.psd",
+          "name": "MDF 9",
+          "alt": " Produktfoto bedruckte Coverpots",
+          "linkToPdp": "de/teku/produkte/mdf-coverpot",
+          "underline": "  Produktfoto bedruckte Coverpots"
+        },
+        {
+          "image": "https://static.teku.com/assets/455994/to-ton-pr.psd",
+          "name": "TO 9,5 D",
+          "alt": "Produktfoto Rundtopf",
+          "linkToPdp": "de/teku/produkte/to-to-d-to-z-rundtoepfe-8-",
+          "underline": "Produktfoto Rundtopf"
+        },
+        {
+          "image": "https://static.teku.com/assets/456560/vcg-circular-ton-grau-pr.psd",
+          "name": "VCG 10",
+          "alt": "TEKU VCG Dekortopf Circular360, ton-grau",
+          "linkToPdp": "de/teku/produkte/vcg-rundtoepfe-und-container-5-",
+          "underline": " TEKU VCG VDA Circular"
+        },
+        {
+          "image": "https://static.teku.com/assets/455475/vch-vck-ton-grau-pr.psd",
+          "name": "VCH 10",
+          "alt": "vch-vck-ton-grau-pr.psd",
+          "linkToPdp": "de/teku/produkte/vch-vck-rundtoepfe-und-container-hoch-5-",
+          "underline": " "
+        },
+        {
+          "image": "https://static.teku.com/assets/455310/vtg-circular-ton-grau-pr.psd",
+          "name": "VTG 10",
+          "alt": "vtg-circular-ton-grau-pr.psd",
+          "linkToPdp": "de/teku/produkte/vtg-rundtoepfe-8-",
+          "underline": " "
+        },
+        {
+          "image": "https://static.teku.com/assets/456560/vcg-circular-ton-grau-pr.psd",
+          "name": "VCG 10,5",
+          "alt": "TEKU VCG Dekortopf Circular360, ton-grau",
+          "linkToPdp": "de/teku/produkte/vcg-rundtoepfe-und-container-5-",
+          "underline": " TEKU VCG VDA Circular"
+        },
+        {
+          "image": "https://static.teku.com/assets/456560/vcg-circular-ton-grau-pr.psd",
+          "name": "VCG 10,5 K",
+          "alt": "TEKU VCG Dekortopf Circular360, ton-grau",
+          "linkToPdp": "de/teku/produkte/vcg-rundtoepfe-und-container-5-",
+          "underline": " TEKU VCG VDA Circular"
+        },
+        {
+          "image": "https://static.teku.com/assets/455310/vtg-circular-ton-grau-pr.psd",
+          "name": "VTG 10,5",
+          "alt": "vtg-circular-ton-grau-pr.psd",
+          "linkToPdp": "de/teku/produkte/vtg-rundtoepfe-8-",
+          "underline": " "
+        },
+        {
+          "image": "https://static.teku.com/assets/455475/vch-vck-ton-grau-pr.psd",
+          "name": "VCH 11 VOL",
+          "alt": "vch-vck-ton-grau-pr.psd",
+          "linkToPdp": "de/teku/produkte/vch-vck-rundtoepfe-und-container-hoch-5-",
+          "underline": " "
+        },
+        {
+          "image": "https://static.teku.com/assets/455475/vch-vck-ton-grau-pr.psd",
+          "name": "VCK 11 VOL",
+          "alt": "vch-vck-ton-grau-pr.psd",
+          "linkToPdp": "de/teku/produkte/vch-vck-rundtoepfe-und-container-hoch-5-",
+          "underline": " "
+        },
+        {
+          "image": "https://static.teku.com/assets/456560/vcg-circular-ton-grau-pr.psd",
+          "name": "VCG 11",
+          "alt": "TEKU VCG Dekortopf Circular360, ton-grau",
+          "linkToPdp": "de/teku/produkte/vcg-rundtoepfe-und-container-5-",
+          "underline": " TEKU VCG VDA Circular"
+        },
+        {
+          "image": "https://static.teku.com/assets/455475/vch-vck-ton-grau-pr.psd",
+          "name": "VCH 11",
+          "alt": "vch-vck-ton-grau-pr.psd",
+          "linkToPdp": "de/teku/produkte/vch-vck-rundtoepfe-und-container-hoch-5-",
+          "underline": " "
+        },
+        {
+          "image": "https://static.teku.com/assets/455310/vtg-circular-ton-grau-pr.psd",
+          "name": "VTG 11",
+          "alt": "vtg-circular-ton-grau-pr.psd",
+          "linkToPdp": "de/teku/produkte/vtg-rundtoepfe-8-",
+          "underline": " "
+        },
+        {
+          "image": "https://static.teku.com/assets/456002/vcc-taupe-pr.psd",
+          "name": "VCC 12 VOL",
+          "alt": "vcc-taupe-pr.psd",
+          "linkToPdp": "de/teku/produkte/vcc-rundtoepfe-und-container-hoch-5-",
+          "underline": " Rundtopf, Pflanztopf, Container"
+        },
+        {
+          "image": "https://static.teku.com/assets/455989/mxc-ton-pr.psd",
+          "name": "MXC 10",
+          "alt": "TEKU Vcg Rundtoepfe Und Container 5 ",
+          "linkToPdp": "de/teku/produkte/mxc-rundtoepfe-6-",
+          "underline": "TEKU Vcg Rundtoepfe Und Container 5 "
+        },
+        {
+          "image": "https://static.teku.com/assets/455989/mxc-ton-pr.psd",
+          "name": "MXC 10,5",
+          "alt": "TEKU Vcg Rundtoepfe Und Container 5 ",
+          "linkToPdp": "de/teku/produkte/mxc-rundtoepfe-6-",
+          "underline": "TEKU Vcg Rundtoepfe Und Container 5 "
+        },
+        {
+          "image": "https://static.teku.com/assets/455989/mxc-ton-pr.psd",
+          "name": "MXC 11",
+          "alt": "TEKU Vcg Rundtoepfe Und Container 5 ",
+          "linkToPdp": "de/teku/produkte/mxc-rundtoepfe-6-",
+          "underline": "TEKU Vcg Rundtoepfe Und Container 5 "
+        },
+        {
+          "image": "https://static.teku.com/assets/22051/mdf-103-universell.psd",
+          "name": "MDF 11",
+          "alt": " Produktfoto bedruckte Coverpots",
+          "linkToPdp": "de/teku/produkte/mdf-coverpot",
+          "underline": "  Produktfoto bedruckte Coverpots"
+        },
+        {
+          "image": "https://static.teku.com/assets/456560/vcg-circular-ton-grau-pr.psd",
+          "name": "VCG 12",
+          "alt": "TEKU VCG Dekortopf Circular360, ton-grau",
+          "linkToPdp": "de/teku/produkte/vcg-rundtoepfe-und-container-5-",
+          "underline": " TEKU VCG VDA Circular"
+        },
+        {
+          "image": "https://static.teku.com/assets/456560/vcg-circular-ton-grau-pr.psd",
+          "name": "VCG 12 D",
+          "alt": "TEKU VCG Dekortopf Circular360, ton-grau",
+          "linkToPdp": "de/teku/produkte/vcg-rundtoepfe-und-container-5-",
+          "underline": " TEKU VCG VDA Circular"
+        },
+        {
+          "image": "https://static.teku.com/assets/455310/vtg-circular-ton-grau-pr.psd",
+          "name": "VTG 12",
+          "alt": "vtg-circular-ton-grau-pr.psd",
+          "linkToPdp": "de/teku/produkte/vtg-rundtoepfe-8-",
+          "underline": " "
+        },
+        {
+          "image": "https://static.teku.com/assets/456002/vcc-taupe-pr.psd",
+          "name": "VCC 13 VOL",
+          "alt": "vcc-taupe-pr.psd",
+          "linkToPdp": "de/teku/produkte/vcc-rundtoepfe-und-container-hoch-5-",
+          "underline": " Rundtopf, Pflanztopf, Container"
+        },
+        {
+          "image": "https://static.teku.com/assets/455475/vch-vck-ton-grau-pr.psd",
+          "name": "VCH 13 VOL",
+          "alt": "vch-vck-ton-grau-pr.psd",
+          "linkToPdp": "de/teku/produkte/vch-vck-rundtoepfe-und-container-hoch-5-",
+          "underline": " "
+        },
+        {
+          "image": "https://static.teku.com/assets/456560/vcg-circular-ton-grau-pr.psd",
+          "name": "VCG 13",
+          "alt": "TEKU VCG Dekortopf Circular360, ton-grau",
+          "linkToPdp": "de/teku/produkte/vcg-rundtoepfe-und-container-5-",
+          "underline": " TEKU VCG VDA Circular"
+        },
+        {
+          "image": "https://static.teku.com/assets/455475/vch-vck-ton-grau-pr.psd",
+          "name": "VCH 13",
+          "alt": "vch-vck-ton-grau-pr.psd",
+          "linkToPdp": "de/teku/produkte/vch-vck-rundtoepfe-und-container-hoch-5-",
+          "underline": " "
+        },
+        {
+          "image": "https://static.teku.com/assets/455310/vtg-circular-ton-grau-pr.psd",
+          "name": "VTG 13",
+          "alt": "vtg-circular-ton-grau-pr.psd",
+          "linkToPdp": "de/teku/produkte/vtg-rundtoepfe-8-",
+          "underline": " "
+        },
+        {
+          "image": "https://static.teku.com/assets/455989/mxc-ton-pr.psd",
+          "name": "MXC 12",
+          "alt": "TEKU Vcg Rundtoepfe Und Container 5 ",
+          "linkToPdp": "de/teku/produkte/mxc-rundtoepfe-6-",
+          "underline": "TEKU Vcg Rundtoepfe Und Container 5 "
+        },
+        {
+          "image": "https://static.teku.com/assets/456524/mco-transparent-pr.psd",
+          "name": "MCO 12",
+          "alt": "Produktfoto Coverpots",
+          "linkToPdp": "de/teku/produkte/mco-orchideentoepfe-und-container",
+          "underline": "Produktfoto Coverpots"
+        },
+        {
+          "image": "https://static.teku.com/assets/429149/mcp-ton-pr.psd",
+          "name": "MCP 12",
+          "alt": "Produktfoto",
+          "linkToPdp": "de/teku/produkte/mcp-orchideentoepfe-und-container",
+          "underline": " Produktfoto"
+        },
+        {
+          "image": "https://static.teku.com/assets/22051/mdf-103-universell.psd",
+          "name": "MDF 12",
+          "alt": " Produktfoto bedruckte Coverpots",
+          "linkToPdp": "de/teku/produkte/mdf-coverpot",
+          "underline": "  Produktfoto bedruckte Coverpots"
+        },
+        {
+          "image": "https://static.teku.com/assets/455989/mxc-ton-pr.psd",
+          "name": "MXC 13",
+          "alt": "TEKU Vcg Rundtoepfe Und Container 5 ",
+          "linkToPdp": "de/teku/produkte/mxc-rundtoepfe-6-",
+          "underline": "TEKU Vcg Rundtoepfe Und Container 5 "
+        },
+        {
+          "image": "https://static.teku.com/assets/575707/vco-9-jf-recycleable-transparent.psd",
+          "name": "VCO 9",
+          "alt": " VCO, Rundtopf",
+          "linkToPdp": "de/teku/produkte/vco-orchideentoepfe-und-container",
+          "underline": " VCO, Rundtopf"
+        },
+        {
+          "image": "https://static.teku.com/assets/672262/mtc-ton-pr.psd",
+          "name": "MTC 8,5",
+          "alt": "MTC Ton, Rundtopf, Container",
+          "linkToPdp": "de/teku/produkte/mtc-rundtoepfe-8-",
+          "underline": "MTC Ton, Rundtopf, Container"
+        }
+      ]
+    },
+    {
+      "availability": "",
+      "articleNumber": "ST 2943-14/6 B",
+      "orderNumber": "",
+      "image": "https://static.teku.com/assets/571238/st-2943-14-6-b-baseline-grau-pr.psd",
+      "imageAlt": "Transport- und Kulturtray",
+      "imageTitle": " Transport- und Kulturtray",
+      "seriesName": "ST | Transport- und Kulturtrays",
+      "radius": "",
+      "width": "",
+      "length": "",
+      "index": 15,
+      "fields": {
+        "10900": "ST 2943-14/6 B",
+        "8527": "42,6",
+        "8251": "6",
+        "7337": "6",
+        "variants": "details.variants",
+        "fittingproducts": "details.fittingproducts",
+        "8532": "28,6",
+        "8533": "7,0",
+        "8250": "36",
+        "8440": "2.000"
+      },
+      "variants": [
+        {
+          "articleNo": "ST 2943-14/6 B Circular grau ",
+          "orderNo": "11308818711",
+          "productImage": "https://static.teku.com/assets/571238/st-2943-14-6-b-baseline-grau-pr.psd",
+          "articleName": "ST 2943-14/6 B",
+          "seriesName": "ST | Transport- und Kulturtrays",
+          "category": "Circular360",
+          "color": "Circular grau",
+          "image": "https://static.teku.com/assets/571238/st-2943-14-6-b-baseline-grau-pr.psd",
+          "alt": "Transport- und Kulturtray",
+          "title": " Transport- und Kulturtray",
+          "availability": "",
+          "show": true,
+          "certificates": [
+            "https://static.teku.com/assets/501424/logo-blauer-engel-de.png",
+            "https://static.teku.com/assets/501422/logo-cyclos-htp-de.png"
+          ]
+        }
+      ],
+      "fitting": [
+        {
+          "image": "https://static.teku.com/assets/456560/vcg-circular-ton-grau-pr.psd",
+          "name": "VCG 14",
+          "alt": "TEKU VCG Dekortopf Circular360, ton-grau",
+          "linkToPdp": "de/teku/produkte/vcg-rundtoepfe-und-container-5-",
+          "underline": " TEKU VCG VDA Circular"
+        },
+        {
+          "image": "https://static.teku.com/assets/456560/vcg-circular-ton-grau-pr.psd",
+          "name": "VCG 14 D",
+          "alt": "TEKU VCG Dekortopf Circular360, ton-grau",
+          "linkToPdp": "de/teku/produkte/vcg-rundtoepfe-und-container-5-",
+          "underline": " TEKU VCG VDA Circular"
+        },
+        {
+          "image": "https://static.teku.com/assets/455556/vce-taupe-pr.psd",
+          "name": "VCE 14",
+          "alt": "vce-taupe-pr.psd",
+          "linkToPdp": "de/teku/produkte/vce-rosencontainer-5-",
+          "underline": " VCE Cicular taupe"
+        },
+        {
+          "image": "https://static.teku.com/assets/455475/vch-vck-ton-grau-pr.psd",
+          "name": "VCH 14",
+          "alt": "vch-vck-ton-grau-pr.psd",
+          "linkToPdp": "de/teku/produkte/vch-vck-rundtoepfe-und-container-hoch-5-",
+          "underline": " "
+        },
+        {
+          "image": "https://static.teku.com/assets/455310/vtg-circular-ton-grau-pr.psd",
+          "name": "VTG 14",
+          "alt": "vtg-circular-ton-grau-pr.psd",
+          "linkToPdp": "de/teku/produkte/vtg-rundtoepfe-8-",
+          "underline": " "
+        },
+        {
+          "image": "https://static.teku.com/assets/21397/mch-ton-pr.psd",
+          "name": "MCH 14",
+          "alt": "TEKU Mcl Container Hoch 5 ",
+          "linkToPdp": "de/teku/produkte/mch-container-hoch-5-",
+          "underline": "TEKU Mcl Container Hoch 5 "
+        },
+        {
+          "image": "https://static.teku.com/assets/455989/mxc-ton-pr.psd",
+          "name": "MXC 14",
+          "alt": "TEKU Vcg Rundtoepfe Und Container 5 ",
+          "linkToPdp": "de/teku/produkte/mxc-rundtoepfe-6-",
+          "underline": "TEKU Vcg Rundtoepfe Und Container 5 "
+        },
+        {
+          "image": "https://static.teku.com/assets/22051/mdf-103-universell.psd",
+          "name": "MDF 14",
+          "alt": " Produktfoto bedruckte Coverpots",
+          "linkToPdp": "de/teku/produkte/mdf-coverpot",
+          "underline": "  Produktfoto bedruckte Coverpots"
+        }
+      ]
+    },
+    {
+      "availability": "",
+      "articleNumber": "ST 3153-10,5/15",
+      "orderNumber": "",
+      "image": "https://static.teku.com/assets/571236/st-3153-10%2C5-15-baseline-grau-pr.psd",
+      "imageAlt": "Transport- und Kulturtray",
+      "imageTitle": " Transport- und Kulturtray",
+      "seriesName": "ST | Transport- und Kulturtrays",
+      "radius": "",
+      "width": "",
+      "length": "",
+      "index": 16,
+      "fields": {
+        "10900": "ST 3153-10,5/15",
+        "8527": "53,0",
+        "8251": "15",
+        "7337": "4",
+        "variants": "details.variants",
+        "fittingproducts": "details.fittingproducts",
+        "8532": "31,5",
+        "8533": "6,1",
+        "8250": "60",
+        "8440": "1.650"
+      },
+      "variants": [
+        {
+          "articleNo": "ST 3153-10,5/15 Circular grau ",
+          "orderNo": "11309638711",
+          "productImage": "https://static.teku.com/assets/571231/tt-3153-10-5-15-az-baseline-grau-pr.psd",
+          "articleName": "ST 3153-10,5/15",
+          "seriesName": "ST | Transport- und Kulturtrays",
+          "category": "Circular360",
+          "color": "Circular grau",
+          "image": "https://static.teku.com/assets/571231/tt-3153-10-5-15-az-baseline-grau-pr.psd",
+          "alt": "Transport- und Kulturtray",
+          "title": " Transport- und Kulturtray",
+          "availability": "",
+          "show": true,
+          "certificates": [
+            "https://static.teku.com/assets/501424/logo-blauer-engel-de.png",
+            "https://static.teku.com/assets/501422/logo-cyclos-htp-de.png"
+          ]
+        }
+      ],
+      "fitting": [
+        {
+          "image": "https://static.teku.com/assets/456560/vcg-circular-ton-grau-pr.psd",
+          "name": "VCG 10,5",
+          "alt": "TEKU VCG Dekortopf Circular360, ton-grau",
+          "linkToPdp": "de/teku/produkte/vcg-rundtoepfe-und-container-5-",
+          "underline": " TEKU VCG VDA Circular"
+        },
+        {
+          "image": "https://static.teku.com/assets/456560/vcg-circular-ton-grau-pr.psd",
+          "name": "VCG 10,5 K",
+          "alt": "TEKU VCG Dekortopf Circular360, ton-grau",
+          "linkToPdp": "de/teku/produkte/vcg-rundtoepfe-und-container-5-",
+          "underline": " TEKU VCG VDA Circular"
+        },
+        {
+          "image": "https://static.teku.com/assets/455310/vtg-circular-ton-grau-pr.psd",
+          "name": "VTG 10,5",
+          "alt": "vtg-circular-ton-grau-pr.psd",
+          "linkToPdp": "de/teku/produkte/vtg-rundtoepfe-8-",
+          "underline": " "
+        },
+        {
+          "image": "https://static.teku.com/assets/455475/vch-vck-ton-grau-pr.psd",
+          "name": "VCH 11 VOL",
+          "alt": "vch-vck-ton-grau-pr.psd",
+          "linkToPdp": "de/teku/produkte/vch-vck-rundtoepfe-und-container-hoch-5-",
+          "underline": " "
+        },
+        {
+          "image": "https://static.teku.com/assets/455475/vch-vck-ton-grau-pr.psd",
+          "name": "VCK 11 VOL",
+          "alt": "vch-vck-ton-grau-pr.psd",
+          "linkToPdp": "de/teku/produkte/vch-vck-rundtoepfe-und-container-hoch-5-",
+          "underline": " "
+        },
+        {
+          "image": "https://static.teku.com/assets/455310/vtg-circular-ton-grau-pr.psd",
+          "name": "VTG 11",
+          "alt": "vtg-circular-ton-grau-pr.psd",
+          "linkToPdp": "de/teku/produkte/vtg-rundtoepfe-8-",
+          "underline": " "
+        },
+        {
+          "image": "https://static.teku.com/assets/455989/mxc-ton-pr.psd",
+          "name": "MXC 10,5",
+          "alt": "TEKU Vcg Rundtoepfe Und Container 5 ",
+          "linkToPdp": "de/teku/produkte/mxc-rundtoepfe-6-",
+          "underline": "TEKU Vcg Rundtoepfe Und Container 5 "
+        },
+        {
+          "image": "https://static.teku.com/assets/711899/vcl-circular-ton-grau-pr.psd",
+          "name": "VCL 10,5",
+          "alt": "Produktbild Rundtopf",
+          "linkToPdp": "de/teku/produkte/vcl-rundtoepfe-und-container-5-",
+          "underline": "Produktbild Rundtopf"
+        },
+        {
+          "image": "https://static.teku.com/assets/701344/vcm-10-5-ton-grau-pr.psd",
+          "name": "VCM 11 VOL",
+          "alt": "Produktbild VCM",
+          "linkToPdp": "de/teku/produkte/vcm-rundtoepfe-und-container-hoch-5-",
+          "underline": "Produktbild VCM"
+        }
+      ]
+    },
+    {
+      "availability": "",
+      "articleNumber": "ST 3153-10,5/15 B",
+      "orderNumber": "",
+      "image": "https://static.teku.com/assets/571235/st-3153-10%2C5-15-b-baseline-grau-pr.psd",
+      "imageAlt": "Transport- und Kulturtray",
+      "imageTitle": " Transport- und Kulturtray",
+      "seriesName": "ST | Transport- und Kulturtrays",
+      "radius": "",
+      "width": "",
+      "length": "",
+      "index": 17,
+      "fields": {
+        "10900": "ST 3153-10,5/15 B",
+        "8527": "53,0",
+        "8251": "15",
+        "7337": "4",
+        "variants": "details.variants",
+        "fittingproducts": "details.fittingproducts",
+        "8532": "31,5",
+        "8533": "6,1",
+        "8250": "60",
+        "8440": "1.650"
+      },
+      "variants": [
+        {
+          "articleNo": "ST 3153-10,5/15 B Circular grau ",
+          "orderNo": "11309658711",
+          "productImage": "https://static.teku.com/assets/571235/st-3153-10%2C5-15-b-baseline-grau-pr.psd",
+          "articleName": "ST 3153-10,5/15 B",
+          "seriesName": "ST | Transport- und Kulturtrays",
+          "category": "Circular360",
+          "color": "Circular grau",
+          "image": "https://static.teku.com/assets/571235/st-3153-10%2C5-15-b-baseline-grau-pr.psd",
+          "alt": "Transport- und Kulturtray",
+          "title": " Transport- und Kulturtray",
+          "availability": "",
+          "show": true,
+          "certificates": [
+            "https://static.teku.com/assets/501424/logo-blauer-engel-de.png",
+            "https://static.teku.com/assets/501422/logo-cyclos-htp-de.png"
+          ]
+        }
+      ],
+      "fitting": [
+        {
+          "image": "https://static.teku.com/assets/456560/vcg-circular-ton-grau-pr.psd",
+          "name": "VCG 10,5",
+          "alt": "TEKU VCG Dekortopf Circular360, ton-grau",
+          "linkToPdp": "de/teku/produkte/vcg-rundtoepfe-und-container-5-",
+          "underline": " TEKU VCG VDA Circular"
+        },
+        {
+          "image": "https://static.teku.com/assets/456560/vcg-circular-ton-grau-pr.psd",
+          "name": "VCG 10,5 K",
+          "alt": "TEKU VCG Dekortopf Circular360, ton-grau",
+          "linkToPdp": "de/teku/produkte/vcg-rundtoepfe-und-container-5-",
+          "underline": " TEKU VCG VDA Circular"
+        },
+        {
+          "image": "https://static.teku.com/assets/455310/vtg-circular-ton-grau-pr.psd",
+          "name": "VTG 10,5",
+          "alt": "vtg-circular-ton-grau-pr.psd",
+          "linkToPdp": "de/teku/produkte/vtg-rundtoepfe-8-",
+          "underline": " "
+        },
+        {
+          "image": "https://static.teku.com/assets/455475/vch-vck-ton-grau-pr.psd",
+          "name": "VCH 11 VOL",
+          "alt": "vch-vck-ton-grau-pr.psd",
+          "linkToPdp": "de/teku/produkte/vch-vck-rundtoepfe-und-container-hoch-5-",
+          "underline": " "
+        },
+        {
+          "image": "https://static.teku.com/assets/455475/vch-vck-ton-grau-pr.psd",
+          "name": "VCK 11 VOL",
+          "alt": "vch-vck-ton-grau-pr.psd",
+          "linkToPdp": "de/teku/produkte/vch-vck-rundtoepfe-und-container-hoch-5-",
+          "underline": " "
+        },
+        {
+          "image": "https://static.teku.com/assets/455310/vtg-circular-ton-grau-pr.psd",
+          "name": "VTG 11",
+          "alt": "vtg-circular-ton-grau-pr.psd",
+          "linkToPdp": "de/teku/produkte/vtg-rundtoepfe-8-",
+          "underline": " "
+        },
+        {
+          "image": "https://static.teku.com/assets/455989/mxc-ton-pr.psd",
+          "name": "MXC 10,5",
+          "alt": "TEKU Vcg Rundtoepfe Und Container 5 ",
+          "linkToPdp": "de/teku/produkte/mxc-rundtoepfe-6-",
+          "underline": "TEKU Vcg Rundtoepfe Und Container 5 "
+        },
+        {
+          "image": "https://static.teku.com/assets/711899/vcl-circular-ton-grau-pr.psd",
+          "name": "VCL 10,5",
+          "alt": "Produktbild Rundtopf",
+          "linkToPdp": "de/teku/produkte/vcl-rundtoepfe-und-container-5-",
+          "underline": "Produktbild Rundtopf"
+        },
+        {
+          "image": "https://static.teku.com/assets/701344/vcm-10-5-ton-grau-pr.psd",
+          "name": "VCM 11 VOL",
+          "alt": "Produktbild VCM",
+          "linkToPdp": "de/teku/produkte/vcm-rundtoepfe-und-container-hoch-5-",
+          "underline": "Produktbild VCM"
+        }
+      ]
+    },
+    {
+      "availability": "",
+      "articleNumber": "ST 3153-10,5/15 D",
+      "orderNumber": "",
+      "image": "https://static.teku.com/assets/571234/st-3153-10%2C5-15-d-baseline-grau-pr.psd",
+      "imageAlt": "Transport- und Kulturtray",
+      "imageTitle": " Transport- und Kulturtray",
+      "seriesName": "ST | Transport- und Kulturtrays",
+      "radius": "",
+      "width": "",
+      "length": "",
+      "index": 18,
+      "fields": {
+        "10900": "ST 3153-10,5/15 D",
+        "8527": "53,0",
+        "8251": "15",
+        "7337": "4",
+        "variants": "details.variants",
+        "fittingproducts": "details.fittingproducts",
+        "8532": "31,5",
+        "8533": "6,1",
+        "8250": "60",
+        "8440": "1.650"
+      },
+      "variants": [
+        {
+          "articleNo": "ST 3153-10,5/15 D Circular grau ",
+          "orderNo": "11309648711",
+          "productImage": "https://static.teku.com/assets/571234/st-3153-10%2C5-15-d-baseline-grau-pr.psd",
+          "articleName": "ST 3153-10,5/15 D",
+          "seriesName": "ST | Transport- und Kulturtrays",
+          "category": "Circular360",
+          "color": "Circular grau",
+          "image": "https://static.teku.com/assets/571234/st-3153-10%2C5-15-d-baseline-grau-pr.psd",
+          "alt": "Transport- und Kulturtray",
+          "title": " Transport- und Kulturtray",
+          "availability": "",
+          "show": true,
+          "certificates": [
+            "https://static.teku.com/assets/501424/logo-blauer-engel-de.png",
+            "https://static.teku.com/assets/501422/logo-cyclos-htp-de.png"
+          ]
+        }
+      ],
+      "fitting": [
+        {
+          "image": "https://static.teku.com/assets/456560/vcg-circular-ton-grau-pr.psd",
+          "name": "VCG 10,5",
+          "alt": "TEKU VCG Dekortopf Circular360, ton-grau",
+          "linkToPdp": "de/teku/produkte/vcg-rundtoepfe-und-container-5-",
+          "underline": " TEKU VCG VDA Circular"
+        },
+        {
+          "image": "https://static.teku.com/assets/456560/vcg-circular-ton-grau-pr.psd",
+          "name": "VCG 10,5 K",
+          "alt": "TEKU VCG Dekortopf Circular360, ton-grau",
+          "linkToPdp": "de/teku/produkte/vcg-rundtoepfe-und-container-5-",
+          "underline": " TEKU VCG VDA Circular"
+        },
+        {
+          "image": "https://static.teku.com/assets/455310/vtg-circular-ton-grau-pr.psd",
+          "name": "VTG 10,5",
+          "alt": "vtg-circular-ton-grau-pr.psd",
+          "linkToPdp": "de/teku/produkte/vtg-rundtoepfe-8-",
+          "underline": " "
+        },
+        {
+          "image": "https://static.teku.com/assets/455475/vch-vck-ton-grau-pr.psd",
+          "name": "VCH 11 VOL",
+          "alt": "vch-vck-ton-grau-pr.psd",
+          "linkToPdp": "de/teku/produkte/vch-vck-rundtoepfe-und-container-hoch-5-",
+          "underline": " "
+        },
+        {
+          "image": "https://static.teku.com/assets/455475/vch-vck-ton-grau-pr.psd",
+          "name": "VCK 11 VOL",
+          "alt": "vch-vck-ton-grau-pr.psd",
+          "linkToPdp": "de/teku/produkte/vch-vck-rundtoepfe-und-container-hoch-5-",
+          "underline": " "
+        },
+        {
+          "image": "https://static.teku.com/assets/455310/vtg-circular-ton-grau-pr.psd",
+          "name": "VTG 11",
+          "alt": "vtg-circular-ton-grau-pr.psd",
+          "linkToPdp": "de/teku/produkte/vtg-rundtoepfe-8-",
+          "underline": " "
+        },
+        {
+          "image": "https://static.teku.com/assets/455989/mxc-ton-pr.psd",
+          "name": "MXC 10,5",
+          "alt": "TEKU Vcg Rundtoepfe Und Container 5 ",
+          "linkToPdp": "de/teku/produkte/mxc-rundtoepfe-6-",
+          "underline": "TEKU Vcg Rundtoepfe Und Container 5 "
+        },
+        {
+          "image": "https://static.teku.com/assets/711899/vcl-circular-ton-grau-pr.psd",
+          "name": "VCL 10,5",
+          "alt": "Produktbild Rundtopf",
+          "linkToPdp": "de/teku/produkte/vcl-rundtoepfe-und-container-5-",
+          "underline": "Produktbild Rundtopf"
+        },
+        {
+          "image": "https://static.teku.com/assets/701344/vcm-10-5-ton-grau-pr.psd",
+          "name": "VCM 11 VOL",
+          "alt": "Produktbild VCM",
+          "linkToPdp": "de/teku/produkte/vcm-rundtoepfe-und-container-hoch-5-",
+          "underline": "Produktbild VCM"
+        }
+      ]
+    },
+    {
+      "availability": "",
+      "articleNumber": "ST 3153-10,5/15 B7",
+      "orderNumber": "",
+      "image": "https://static.teku.com/assets/571237/st-3153-10%2C5-15-b7-baseline-grau-pr.psd",
+      "imageAlt": "Transport- und Kulturtray",
+      "imageTitle": " Transport- und Kulturtray",
+      "seriesName": "ST | Transport- und Kulturtrays",
+      "radius": "",
+      "width": "",
+      "length": "",
+      "index": 19,
+      "fields": {
+        "10900": "ST 3153-10,5/15 B7",
+        "8527": "53,0",
+        "8251": "15",
+        "7337": "4",
+        "variants": "details.variants",
+        "fittingproducts": "details.fittingproducts",
+        "8532": "31,5",
+        "8533": "6,1",
+        "8250": "60",
+        "8440": "1.650"
+      },
+      "variants": [
+        {
+          "articleNo": "ST 3153-10,5/15 B7 Circular grau ",
+          "orderNo": "11309668711",
+          "productImage": "https://static.teku.com/assets/571237/st-3153-10%2C5-15-b7-baseline-grau-pr.psd",
+          "articleName": "ST 3153-10,5/15 B7",
+          "seriesName": "ST | Transport- und Kulturtrays",
+          "category": "Circular360",
+          "color": "Circular grau",
+          "image": "https://static.teku.com/assets/571237/st-3153-10%2C5-15-b7-baseline-grau-pr.psd",
+          "alt": "Transport- und Kulturtray",
+          "title": " Transport- und Kulturtray",
+          "availability": "",
+          "show": true,
+          "certificates": [
+            "https://static.teku.com/assets/501424/logo-blauer-engel-de.png",
+            "https://static.teku.com/assets/501422/logo-cyclos-htp-de.png"
+          ]
+        }
+      ],
+      "fitting": [
+        {
+          "image": "https://static.teku.com/assets/456560/vcg-circular-ton-grau-pr.psd",
+          "name": "VCG 10,5",
+          "alt": "TEKU VCG Dekortopf Circular360, ton-grau",
+          "linkToPdp": "de/teku/produkte/vcg-rundtoepfe-und-container-5-",
+          "underline": " TEKU VCG VDA Circular"
+        },
+        {
+          "image": "https://static.teku.com/assets/456560/vcg-circular-ton-grau-pr.psd",
+          "name": "VCG 10,5 K",
+          "alt": "TEKU VCG Dekortopf Circular360, ton-grau",
+          "linkToPdp": "de/teku/produkte/vcg-rundtoepfe-und-container-5-",
+          "underline": " TEKU VCG VDA Circular"
+        },
+        {
+          "image": "https://static.teku.com/assets/455310/vtg-circular-ton-grau-pr.psd",
+          "name": "VTG 10,5",
+          "alt": "vtg-circular-ton-grau-pr.psd",
+          "linkToPdp": "de/teku/produkte/vtg-rundtoepfe-8-",
+          "underline": " "
+        },
+        {
+          "image": "https://static.teku.com/assets/455475/vch-vck-ton-grau-pr.psd",
+          "name": "VCH 11 VOL",
+          "alt": "vch-vck-ton-grau-pr.psd",
+          "linkToPdp": "de/teku/produkte/vch-vck-rundtoepfe-und-container-hoch-5-",
+          "underline": " "
+        },
+        {
+          "image": "https://static.teku.com/assets/455475/vch-vck-ton-grau-pr.psd",
+          "name": "VCK 11 VOL",
+          "alt": "vch-vck-ton-grau-pr.psd",
+          "linkToPdp": "de/teku/produkte/vch-vck-rundtoepfe-und-container-hoch-5-",
+          "underline": " "
+        },
+        {
+          "image": "https://static.teku.com/assets/455310/vtg-circular-ton-grau-pr.psd",
+          "name": "VTG 11",
+          "alt": "vtg-circular-ton-grau-pr.psd",
+          "linkToPdp": "de/teku/produkte/vtg-rundtoepfe-8-",
+          "underline": " "
+        },
+        {
+          "image": "https://static.teku.com/assets/455989/mxc-ton-pr.psd",
+          "name": "MXC 10,5",
+          "alt": "TEKU Vcg Rundtoepfe Und Container 5 ",
+          "linkToPdp": "de/teku/produkte/mxc-rundtoepfe-6-",
+          "underline": "TEKU Vcg Rundtoepfe Und Container 5 "
+        },
+        {
+          "image": "https://static.teku.com/assets/711899/vcl-circular-ton-grau-pr.psd",
+          "name": "VCL 10,5",
+          "alt": "Produktbild Rundtopf",
+          "linkToPdp": "de/teku/produkte/vcl-rundtoepfe-und-container-5-",
+          "underline": "Produktbild Rundtopf"
+        },
+        {
+          "image": "https://static.teku.com/assets/701344/vcm-10-5-ton-grau-pr.psd",
+          "name": "VCM 11 VOL",
+          "alt": "Produktbild VCM",
+          "linkToPdp": "de/teku/produkte/vcm-rundtoepfe-und-container-hoch-5-",
+          "underline": "Produktbild VCM"
+        }
+      ]
+    },
+    {
+      "availability": "",
+      "articleNumber": "ST 3156-8/13",
+      "orderNumber": "",
+      "image": "https://static.teku.com/assets/571199/st-3156-8-13-baseline-grau-pr.psd",
+      "imageAlt": "Transport- und Kulturtray",
+      "imageTitle": " Transport- und Kulturtray",
+      "seriesName": "ST | Transport- und Kulturtrays",
+      "radius": "",
+      "width": "",
+      "length": "",
+      "index": 20,
+      "fields": {
+        "10900": "ST 3156-8/13*",
+        "8527": "56,5",
+        "8251": "8",
+        "7337": "4",
+        "variants": "details.variants",
+        "fittingproducts": "details.fittingproducts",
+        "8532": "31,5",
+        "8533": "8,2",
+        "8250": "32",
+        "8440": "980"
+      },
+      "variants": [
+        {
+          "articleNo": "ST 3156-8/13 Circular grau ",
+          "orderNo": "11307858711",
+          "productImage": "https://static.teku.com/assets/571199/st-3156-8-13-baseline-grau-pr.psd",
+          "articleName": "ST 3156-8/13",
+          "seriesName": "ST | Transport- und Kulturtrays",
+          "category": "Circular360",
+          "color": "Circular grau",
+          "image": "https://static.teku.com/assets/571199/st-3156-8-13-baseline-grau-pr.psd",
+          "alt": "Transport- und Kulturtray",
+          "title": " Transport- und Kulturtray",
+          "availability": "",
+          "show": true,
+          "certificates": [
+            "https://static.teku.com/assets/501424/logo-blauer-engel-de.png",
+            "https://static.teku.com/assets/501422/logo-cyclos-htp-de.png"
+          ]
+        }
+      ],
+      "fitting": [
+        {
+          "image": "https://static.teku.com/assets/456560/vcg-circular-ton-grau-pr.psd",
+          "name": "VCG 13",
+          "alt": "TEKU VCG Dekortopf Circular360, ton-grau",
+          "linkToPdp": "de/teku/produkte/vcg-rundtoepfe-und-container-5-",
+          "underline": " TEKU VCG VDA Circular"
+        },
+        {
+          "image": "https://static.teku.com/assets/455475/vch-vck-ton-grau-pr.psd",
+          "name": "VCH 13",
+          "alt": "vch-vck-ton-grau-pr.psd",
+          "linkToPdp": "de/teku/produkte/vch-vck-rundtoepfe-und-container-hoch-5-",
+          "underline": " "
+        },
+        {
+          "image": "https://static.teku.com/assets/455310/vtg-circular-ton-grau-pr.psd",
+          "name": "VTG 13",
+          "alt": "vtg-circular-ton-grau-pr.psd",
+          "linkToPdp": "de/teku/produkte/vtg-rundtoepfe-8-",
+          "underline": " "
+        },
+        {
+          "image": "https://static.teku.com/assets/456002/vcc-taupe-pr.psd",
+          "name": "VCC 14 VOL",
+          "alt": "vcc-taupe-pr.psd",
+          "linkToPdp": "de/teku/produkte/vcc-rundtoepfe-und-container-hoch-5-",
+          "underline": " Rundtopf, Pflanztopf, Container"
+        },
+        {
+          "image": "https://static.teku.com/assets/455556/vce-taupe-pr.psd",
+          "name": "VCE 14",
+          "alt": "vce-taupe-pr.psd",
+          "linkToPdp": "de/teku/produkte/vce-rosencontainer-5-",
+          "underline": " VCE Cicular taupe"
+        },
+        {
+          "image": "https://static.teku.com/assets/455310/vtg-circular-ton-grau-pr.psd",
+          "name": "VTG 14",
+          "alt": "vtg-circular-ton-grau-pr.psd",
+          "linkToPdp": "de/teku/produkte/vtg-rundtoepfe-8-",
+          "underline": " "
+        },
+        {
+          "image": "https://static.teku.com/assets/455383/mcl-terracotta-pr.psd",
+          "name": "MCL 13 K-C",
+          "alt": "TEKU MCL Container Hoch 5 ",
+          "linkToPdp": "de/teku/produkte/mcl-container-hoch-5-",
+          "underline": "TEKU MCL Container Hoch 5 "
+        },
+        {
+          "image": "https://static.teku.com/assets/455989/mxc-ton-pr.psd",
+          "name": "MXC 13",
+          "alt": "TEKU Vcg Rundtoepfe Und Container 5 ",
+          "linkToPdp": "de/teku/produkte/mxc-rundtoepfe-6-",
+          "underline": "TEKU Vcg Rundtoepfe Und Container 5 "
+        },
+        {
+          "image": "https://static.teku.com/assets/22051/mdf-103-universell.psd",
+          "name": "MDF 13",
+          "alt": " Produktfoto bedruckte Coverpots",
+          "linkToPdp": "de/teku/produkte/mdf-coverpot",
+          "underline": "  Produktfoto bedruckte Coverpots"
+        },
+        {
+          "image": "https://static.teku.com/assets/455989/mxc-ton-pr.psd",
+          "name": "MXC 14",
+          "alt": "TEKU Vcg Rundtoepfe Und Container 5 ",
+          "linkToPdp": "de/teku/produkte/mxc-rundtoepfe-6-",
+          "underline": "TEKU Vcg Rundtoepfe Und Container 5 "
+        },
+        {
+          "image": "https://static.teku.com/assets/22051/mdf-103-universell.psd",
+          "name": "MDF 14",
+          "alt": " Produktfoto bedruckte Coverpots",
+          "linkToPdp": "de/teku/produkte/mdf-coverpot",
+          "underline": "  Produktfoto bedruckte Coverpots"
+        }
+      ]
+    },
+    {
+      "availability": "",
+      "articleNumber": "ST 3156-8/13 D",
+      "orderNumber": "",
+      "image": "https://static.teku.com/assets/571197/st-3156-8-13-d-baseline-grau-pr.psd",
+      "imageAlt": "Transport- und Kulturtray",
+      "imageTitle": " Transport- und Kulturtray",
+      "seriesName": "ST | Transport- und Kulturtrays",
+      "radius": "",
+      "width": "",
+      "length": "",
+      "index": 21,
+      "fields": {
+        "10900": "ST 3156-8/13 D*",
+        "8527": "56,5",
+        "8251": "8",
+        "7337": "4",
+        "variants": "details.variants",
+        "fittingproducts": "details.fittingproducts",
+        "8532": "31,5",
+        "8533": "8,2",
+        "8250": "32",
+        "8440": "980"
+      },
+      "variants": [
+        {
+          "articleNo": "ST 3156-8/13 D Circular grau ",
+          "orderNo": "11307868711",
+          "productImage": "https://static.teku.com/assets/571197/st-3156-8-13-d-baseline-grau-pr.psd",
+          "articleName": "ST 3156-8/13 D",
+          "seriesName": "ST | Transport- und Kulturtrays",
+          "category": "Circular360",
+          "color": "Circular grau",
+          "image": "https://static.teku.com/assets/571197/st-3156-8-13-d-baseline-grau-pr.psd",
+          "alt": "Transport- und Kulturtray",
+          "title": " Transport- und Kulturtray",
+          "availability": "",
+          "show": true,
+          "certificates": [
+            "https://static.teku.com/assets/501424/logo-blauer-engel-de.png",
+            "https://static.teku.com/assets/501422/logo-cyclos-htp-de.png"
+          ]
+        }
+      ],
+      "fitting": [
+        {
+          "image": "https://static.teku.com/assets/456560/vcg-circular-ton-grau-pr.psd",
+          "name": "VCG 13",
+          "alt": "TEKU VCG Dekortopf Circular360, ton-grau",
+          "linkToPdp": "de/teku/produkte/vcg-rundtoepfe-und-container-5-",
+          "underline": " TEKU VCG VDA Circular"
+        },
+        {
+          "image": "https://static.teku.com/assets/455475/vch-vck-ton-grau-pr.psd",
+          "name": "VCH 13",
+          "alt": "vch-vck-ton-grau-pr.psd",
+          "linkToPdp": "de/teku/produkte/vch-vck-rundtoepfe-und-container-hoch-5-",
+          "underline": " "
+        },
+        {
+          "image": "https://static.teku.com/assets/455310/vtg-circular-ton-grau-pr.psd",
+          "name": "VTG 13",
+          "alt": "vtg-circular-ton-grau-pr.psd",
+          "linkToPdp": "de/teku/produkte/vtg-rundtoepfe-8-",
+          "underline": " "
+        },
+        {
+          "image": "https://static.teku.com/assets/456002/vcc-taupe-pr.psd",
+          "name": "VCC 14 VOL",
+          "alt": "vcc-taupe-pr.psd",
+          "linkToPdp": "de/teku/produkte/vcc-rundtoepfe-und-container-hoch-5-",
+          "underline": " Rundtopf, Pflanztopf, Container"
+        },
+        {
+          "image": "https://static.teku.com/assets/455556/vce-taupe-pr.psd",
+          "name": "VCE 14",
+          "alt": "vce-taupe-pr.psd",
+          "linkToPdp": "de/teku/produkte/vce-rosencontainer-5-",
+          "underline": " VCE Cicular taupe"
+        },
+        {
+          "image": "https://static.teku.com/assets/455310/vtg-circular-ton-grau-pr.psd",
+          "name": "VTG 14",
+          "alt": "vtg-circular-ton-grau-pr.psd",
+          "linkToPdp": "de/teku/produkte/vtg-rundtoepfe-8-",
+          "underline": " "
+        },
+        {
+          "image": "https://static.teku.com/assets/455383/mcl-terracotta-pr.psd",
+          "name": "MCL 13 K-C",
+          "alt": "TEKU MCL Container Hoch 5 ",
+          "linkToPdp": "de/teku/produkte/mcl-container-hoch-5-",
+          "underline": "TEKU MCL Container Hoch 5 "
+        },
+        {
+          "image": "https://static.teku.com/assets/455989/mxc-ton-pr.psd",
+          "name": "MXC 13",
+          "alt": "TEKU Vcg Rundtoepfe Und Container 5 ",
+          "linkToPdp": "de/teku/produkte/mxc-rundtoepfe-6-",
+          "underline": "TEKU Vcg Rundtoepfe Und Container 5 "
+        },
+        {
+          "image": "https://static.teku.com/assets/22051/mdf-103-universell.psd",
+          "name": "MDF 13",
+          "alt": " Produktfoto bedruckte Coverpots",
+          "linkToPdp": "de/teku/produkte/mdf-coverpot",
+          "underline": "  Produktfoto bedruckte Coverpots"
+        },
+        {
+          "image": "https://static.teku.com/assets/455989/mxc-ton-pr.psd",
+          "name": "MXC 14",
+          "alt": "TEKU Vcg Rundtoepfe Und Container 5 ",
+          "linkToPdp": "de/teku/produkte/mxc-rundtoepfe-6-",
+          "underline": "TEKU Vcg Rundtoepfe Und Container 5 "
+        },
+        {
+          "image": "https://static.teku.com/assets/22051/mdf-103-universell.psd",
+          "name": "MDF 14",
+          "alt": " Produktfoto bedruckte Coverpots",
+          "linkToPdp": "de/teku/produkte/mdf-coverpot",
+          "underline": "  Produktfoto bedruckte Coverpots"
+        }
+      ]
+    },
+    {
+      "availability": "",
+      "articleNumber": "ST 3156-10/13",
+      "orderNumber": "",
+      "image": "https://static.teku.com/assets/571199/st-3156-8-13-baseline-grau-pr.psd",
+      "imageAlt": "Transport- und Kulturtray",
+      "imageTitle": " Transport- und Kulturtray",
+      "seriesName": "ST | Transport- und Kulturtrays",
+      "radius": "",
+      "width": "",
+      "length": "",
+      "index": 22,
+      "fields": {
+        "10900": "ST 3156-10/13*",
+        "8527": "56,5",
+        "8251": "10",
+        "7337": "4",
+        "variants": "details.variants",
+        "fittingproducts": "details.fittingproducts",
+        "8532": "31,5",
+        "8533": "7,6",
+        "8250": "40",
+        "8440": "980"
+      },
+      "variants": [
+        {
+          "articleNo": "ST 3156-10/13 Circular grau ",
+          "orderNo": "11307768711",
+          "productImage": "https://static.teku.com/assets/571233/st-3156-10-13-baseline-grau-pr.psd",
+          "articleName": "ST 3156-10/13",
+          "seriesName": "ST | Transport- und Kulturtrays",
+          "category": "Circular360",
+          "color": "Circular grau",
+          "image": "https://static.teku.com/assets/571233/st-3156-10-13-baseline-grau-pr.psd",
+          "alt": "Produktfoto vom ST 3156 10-13 in Circular grau",
+          "title": "Produktfoto vom ST 3156 10-13 in Circular grau",
+          "availability": "",
+          "show": true,
+          "certificates": [
+            "https://static.teku.com/assets/501424/logo-blauer-engel-de.png",
+            "https://static.teku.com/assets/501422/logo-cyclos-htp-de.png"
+          ]
+        }
+      ],
+      "fitting": [
+        {
+          "image": "https://static.teku.com/assets/456560/vcg-circular-ton-grau-pr.psd",
+          "name": "VCG 13",
+          "alt": "TEKU VCG Dekortopf Circular360, ton-grau",
+          "linkToPdp": "de/teku/produkte/vcg-rundtoepfe-und-container-5-",
+          "underline": " TEKU VCG VDA Circular"
+        },
+        {
+          "image": "https://static.teku.com/assets/455475/vch-vck-ton-grau-pr.psd",
+          "name": "VCH 13",
+          "alt": "vch-vck-ton-grau-pr.psd",
+          "linkToPdp": "de/teku/produkte/vch-vck-rundtoepfe-und-container-hoch-5-",
+          "underline": " "
+        },
+        {
+          "image": "https://static.teku.com/assets/455310/vtg-circular-ton-grau-pr.psd",
+          "name": "VTG 13",
+          "alt": "vtg-circular-ton-grau-pr.psd",
+          "linkToPdp": "de/teku/produkte/vtg-rundtoepfe-8-",
+          "underline": " "
+        },
+        {
+          "image": "https://static.teku.com/assets/456002/vcc-taupe-pr.psd",
+          "name": "VCC 14 VOL",
+          "alt": "vcc-taupe-pr.psd",
+          "linkToPdp": "de/teku/produkte/vcc-rundtoepfe-und-container-hoch-5-",
+          "underline": " Rundtopf, Pflanztopf, Container"
+        },
+        {
+          "image": "https://static.teku.com/assets/455383/mcl-terracotta-pr.psd",
+          "name": "MCL 13 K-C",
+          "alt": "TEKU MCL Container Hoch 5 ",
+          "linkToPdp": "de/teku/produkte/mcl-container-hoch-5-",
+          "underline": "TEKU MCL Container Hoch 5 "
+        },
+        {
+          "image": "https://static.teku.com/assets/455989/mxc-ton-pr.psd",
+          "name": "MXC 13",
+          "alt": "TEKU Vcg Rundtoepfe Und Container 5 ",
+          "linkToPdp": "de/teku/produkte/mxc-rundtoepfe-6-",
+          "underline": "TEKU Vcg Rundtoepfe Und Container 5 "
+        },
+        {
+          "image": "https://static.teku.com/assets/22051/mdf-103-universell.psd",
+          "name": "MDF 13",
+          "alt": " Produktfoto bedruckte Coverpots",
+          "linkToPdp": "de/teku/produkte/mdf-coverpot",
+          "underline": "  Produktfoto bedruckte Coverpots"
+        }
+      ]
+    },
+    {
+      "availability": "",
+      "articleNumber": "ST 3156-10/13 D",
+      "orderNumber": "",
+      "image": "https://static.teku.com/assets/571232/st-3156-10-13-d-baseline-grau-pr.psd",
+      "imageAlt": "Transport- und Kulturtray",
+      "imageTitle": " Transport- und Kulturtray",
+      "seriesName": "ST | Transport- und Kulturtrays",
+      "radius": "",
+      "width": "",
+      "length": "",
+      "index": 23,
+      "fields": {
+        "10900": "ST 3156-10/13 D*",
+        "8527": "56,5",
+        "8251": "10",
+        "7337": "4",
+        "variants": "details.variants",
+        "fittingproducts": "details.fittingproducts",
+        "8532": "31,5",
+        "8533": "7,6",
+        "8250": "40",
+        "8440": "980"
+      },
+      "variants": [
+        {
+          "articleNo": "ST 3156-10/13 D Circular grau ",
+          "orderNo": "11307848711",
+          "productImage": "https://static.teku.com/assets/571232/st-3156-10-13-d-baseline-grau-pr.psd",
+          "articleName": "ST 3156-10/13 D",
+          "seriesName": "ST | Transport- und Kulturtrays",
+          "category": "Circular360",
+          "color": "Circular grau",
+          "image": "https://static.teku.com/assets/571232/st-3156-10-13-d-baseline-grau-pr.psd",
+          "alt": "Transport- und Kulturtray",
+          "title": " Transport- und Kulturtray",
+          "availability": "",
+          "show": true,
+          "certificates": [
+            "https://static.teku.com/assets/501424/logo-blauer-engel-de.png",
+            "https://static.teku.com/assets/501422/logo-cyclos-htp-de.png"
+          ]
+        }
+      ],
+      "fitting": [
+        {
+          "image": "https://static.teku.com/assets/456560/vcg-circular-ton-grau-pr.psd",
+          "name": "VCG 13",
+          "alt": "TEKU VCG Dekortopf Circular360, ton-grau",
+          "linkToPdp": "de/teku/produkte/vcg-rundtoepfe-und-container-5-",
+          "underline": " TEKU VCG VDA Circular"
+        },
+        {
+          "image": "https://static.teku.com/assets/455475/vch-vck-ton-grau-pr.psd",
+          "name": "VCH 13",
+          "alt": "vch-vck-ton-grau-pr.psd",
+          "linkToPdp": "de/teku/produkte/vch-vck-rundtoepfe-und-container-hoch-5-",
+          "underline": " "
+        },
+        {
+          "image": "https://static.teku.com/assets/455310/vtg-circular-ton-grau-pr.psd",
+          "name": "VTG 13",
+          "alt": "vtg-circular-ton-grau-pr.psd",
+          "linkToPdp": "de/teku/produkte/vtg-rundtoepfe-8-",
+          "underline": " "
+        },
+        {
+          "image": "https://static.teku.com/assets/456002/vcc-taupe-pr.psd",
+          "name": "VCC 14 VOL",
+          "alt": "vcc-taupe-pr.psd",
+          "linkToPdp": "de/teku/produkte/vcc-rundtoepfe-und-container-hoch-5-",
+          "underline": " Rundtopf, Pflanztopf, Container"
+        },
+        {
+          "image": "https://static.teku.com/assets/455383/mcl-terracotta-pr.psd",
+          "name": "MCL 13 K-C",
+          "alt": "TEKU MCL Container Hoch 5 ",
+          "linkToPdp": "de/teku/produkte/mcl-container-hoch-5-",
+          "underline": "TEKU MCL Container Hoch 5 "
+        },
+        {
+          "image": "https://static.teku.com/assets/455989/mxc-ton-pr.psd",
+          "name": "MXC 13",
+          "alt": "TEKU Vcg Rundtoepfe Und Container 5 ",
+          "linkToPdp": "de/teku/produkte/mxc-rundtoepfe-6-",
+          "underline": "TEKU Vcg Rundtoepfe Und Container 5 "
+        },
+        {
+          "image": "https://static.teku.com/assets/22051/mdf-103-universell.psd",
+          "name": "MDF 13",
+          "alt": " Produktfoto bedruckte Coverpots",
+          "linkToPdp": "de/teku/produkte/mdf-coverpot",
+          "underline": "  Produktfoto bedruckte Coverpots"
+        }
+      ]
+    },
+    {
+      "availability": "",
+      "articleNumber": "ST 3156-12/12",
+      "orderNumber": "",
+      "image": "https://static.teku.com/assets/572794/st-3156-12-12-circular-grau-pr.psd",
+      "imageAlt": "Transport- und Kulturtray",
+      "imageTitle": " Transport- und Kulturtray",
+      "seriesName": "ST | Transport- und Kulturtrays",
+      "radius": "",
+      "width": "",
+      "length": "",
+      "index": 24,
+      "fields": {
+        "10900": "ST 3156-12/12",
+        "8527": "56,2",
+        "8251": "12",
+        "7337": "4",
+        "variants": "details.variants",
+        "fittingproducts": "details.fittingproducts",
+        "8532": "31,5",
+        "8533": "7,0",
+        "8250": "48",
+        "8440": "980"
+      },
+      "variants": [
+        {
+          "articleNo": "ST 3156-12/12 Circular grau ",
+          "orderNo": "11309408711",
+          "productImage": "https://static.teku.com/assets/572794/st-3156-12-12-circular-grau-pr.psd",
+          "articleName": "ST 3156-12/12",
+          "seriesName": "ST | Transport- und Kulturtrays",
+          "category": "Circular360",
+          "color": "Circular grau",
+          "image": "https://static.teku.com/assets/572794/st-3156-12-12-circular-grau-pr.psd",
+          "alt": "Transport- und Kulturtray",
+          "title": " Transport- und Kulturtray",
+          "availability": "",
+          "show": true,
+          "certificates": [
+            "https://static.teku.com/assets/501424/logo-blauer-engel-de.png",
+            "https://static.teku.com/assets/501422/logo-cyclos-htp-de.png"
+          ]
+        }
+      ],
+      "fitting": [
+        {
+          "image": "https://static.teku.com/assets/456560/vcg-circular-ton-grau-pr.psd",
+          "name": "VCG 12",
+          "alt": "TEKU VCG Dekortopf Circular360, ton-grau",
+          "linkToPdp": "de/teku/produkte/vcg-rundtoepfe-und-container-5-",
+          "underline": " TEKU VCG VDA Circular"
+        },
+        {
+          "image": "https://static.teku.com/assets/456560/vcg-circular-ton-grau-pr.psd",
+          "name": "VCG 12 D",
+          "alt": "TEKU VCG Dekortopf Circular360, ton-grau",
+          "linkToPdp": "de/teku/produkte/vcg-rundtoepfe-und-container-5-",
+          "underline": " TEKU VCG VDA Circular"
+        },
+        {
+          "image": "https://static.teku.com/assets/455310/vtg-circular-ton-grau-pr.psd",
+          "name": "VTG 12",
+          "alt": "vtg-circular-ton-grau-pr.psd",
+          "linkToPdp": "de/teku/produkte/vtg-rundtoepfe-8-",
+          "underline": " "
+        },
+        {
+          "image": "https://static.teku.com/assets/456002/vcc-taupe-pr.psd",
+          "name": "VCC 13 VOL",
+          "alt": "vcc-taupe-pr.psd",
+          "linkToPdp": "de/teku/produkte/vcc-rundtoepfe-und-container-hoch-5-",
+          "underline": " Rundtopf, Pflanztopf, Container"
+        },
+        {
+          "image": "https://static.teku.com/assets/455475/vch-vck-ton-grau-pr.psd",
+          "name": "VCH 13 VOL",
+          "alt": "vch-vck-ton-grau-pr.psd",
+          "linkToPdp": "de/teku/produkte/vch-vck-rundtoepfe-und-container-hoch-5-",
+          "underline": " "
+        },
+        {
+          "image": "https://static.teku.com/assets/456524/mco-transparent-pr.psd",
+          "name": "MCO 12",
+          "alt": "Produktfoto Coverpots",
+          "linkToPdp": "de/teku/produkte/mco-orchideentoepfe-und-container",
+          "underline": "Produktfoto Coverpots"
+        },
+        {
+          "image": "https://static.teku.com/assets/429149/mcp-ton-pr.psd",
+          "name": "MCP 12",
+          "alt": "Produktfoto",
+          "linkToPdp": "de/teku/produkte/mcp-orchideentoepfe-und-container",
+          "underline": " Produktfoto"
+        },
+        {
+          "image": "https://static.teku.com/assets/455989/mxc-ton-pr.psd",
+          "name": "MXC 12",
+          "alt": "TEKU Vcg Rundtoepfe Und Container 5 ",
+          "linkToPdp": "de/teku/produkte/mxc-rundtoepfe-6-",
+          "underline": "TEKU Vcg Rundtoepfe Und Container 5 "
+        },
+        {
+          "image": "https://static.teku.com/assets/22051/mdf-103-universell.psd",
+          "name": "MDF 12",
+          "alt": " Produktfoto bedruckte Coverpots",
+          "linkToPdp": "de/teku/produkte/mdf-coverpot",
+          "underline": "  Produktfoto bedruckte Coverpots"
+        },
+        {
+          "image": "https://static.teku.com/assets/711899/vcl-circular-ton-grau-pr.psd",
+          "name": "VCL 12",
+          "alt": "Produktbild Rundtopf",
+          "linkToPdp": "de/teku/produkte/vcl-rundtoepfe-und-container-5-",
+          "underline": "Produktbild Rundtopf"
+        },
+        {
+          "image": "https://static.teku.com/assets/711899/vcl-circular-ton-grau-pr.psd",
+          "name": "VCL 12 C",
+          "alt": "Produktbild Rundtopf",
+          "linkToPdp": "de/teku/produkte/vcl-rundtoepfe-und-container-5-",
+          "underline": "Produktbild Rundtopf"
+        }
+      ]
+    },
+    {
+      "availability": "",
+      "articleNumber": "ST 3156-12/12 D",
+      "orderNumber": "",
+      "image": "https://static.teku.com/assets/572795/st-3156-12-12-d-circular-grau-pr.psd",
+      "imageAlt": "Transport- und Kulturtray",
+      "imageTitle": " Transport- und Kulturtray",
+      "seriesName": "ST | Transport- und Kulturtrays",
+      "radius": "",
+      "width": "",
+      "length": "",
+      "index": 25,
+      "fields": {
+        "10900": "ST 3156-12/12 D",
+        "8527": "56,2",
+        "8251": "12",
+        "7337": "4",
+        "variants": "details.variants",
+        "fittingproducts": "details.fittingproducts",
+        "8532": "31,5",
+        "8533": "7,0",
+        "8250": "48",
+        "8440": "980"
+      },
+      "variants": [
+        {
+          "articleNo": "ST 3156-12/12 D Circular grau ",
+          "orderNo": "11309418711",
+          "productImage": "https://static.teku.com/assets/572795/st-3156-12-12-d-circular-grau-pr.psd",
+          "articleName": "ST 3156-12/12 D",
+          "seriesName": "ST | Transport- und Kulturtrays",
+          "category": "Circular360",
+          "color": "Circular grau",
+          "image": "https://static.teku.com/assets/572795/st-3156-12-12-d-circular-grau-pr.psd",
+          "alt": "Transport- und Kulturtray",
+          "title": " Transport- und Kulturtray",
+          "availability": "",
+          "show": true,
+          "certificates": [
+            "https://static.teku.com/assets/501424/logo-blauer-engel-de.png",
+            "https://static.teku.com/assets/501422/logo-cyclos-htp-de.png"
+          ]
+        }
+      ],
+      "fitting": [
+        {
+          "image": "https://static.teku.com/assets/456560/vcg-circular-ton-grau-pr.psd",
+          "name": "VCG 12",
+          "alt": "TEKU VCG Dekortopf Circular360, ton-grau",
+          "linkToPdp": "de/teku/produkte/vcg-rundtoepfe-und-container-5-",
+          "underline": " TEKU VCG VDA Circular"
+        },
+        {
+          "image": "https://static.teku.com/assets/456560/vcg-circular-ton-grau-pr.psd",
+          "name": "VCG 12 D",
+          "alt": "TEKU VCG Dekortopf Circular360, ton-grau",
+          "linkToPdp": "de/teku/produkte/vcg-rundtoepfe-und-container-5-",
+          "underline": " TEKU VCG VDA Circular"
+        },
+        {
+          "image": "https://static.teku.com/assets/455310/vtg-circular-ton-grau-pr.psd",
+          "name": "VTG 12",
+          "alt": "vtg-circular-ton-grau-pr.psd",
+          "linkToPdp": "de/teku/produkte/vtg-rundtoepfe-8-",
+          "underline": " "
+        },
+        {
+          "image": "https://static.teku.com/assets/456002/vcc-taupe-pr.psd",
+          "name": "VCC 13 VOL",
+          "alt": "vcc-taupe-pr.psd",
+          "linkToPdp": "de/teku/produkte/vcc-rundtoepfe-und-container-hoch-5-",
+          "underline": " Rundtopf, Pflanztopf, Container"
+        },
+        {
+          "image": "https://static.teku.com/assets/455475/vch-vck-ton-grau-pr.psd",
+          "name": "VCH 13 VOL",
+          "alt": "vch-vck-ton-grau-pr.psd",
+          "linkToPdp": "de/teku/produkte/vch-vck-rundtoepfe-und-container-hoch-5-",
+          "underline": " "
+        },
+        {
+          "image": "https://static.teku.com/assets/456524/mco-transparent-pr.psd",
+          "name": "MCO 12",
+          "alt": "Produktfoto Coverpots",
+          "linkToPdp": "de/teku/produkte/mco-orchideentoepfe-und-container",
+          "underline": "Produktfoto Coverpots"
+        },
+        {
+          "image": "https://static.teku.com/assets/429149/mcp-ton-pr.psd",
+          "name": "MCP 12",
+          "alt": "Produktfoto",
+          "linkToPdp": "de/teku/produkte/mcp-orchideentoepfe-und-container",
+          "underline": " Produktfoto"
+        },
+        {
+          "image": "https://static.teku.com/assets/455989/mxc-ton-pr.psd",
+          "name": "MXC 12",
+          "alt": "TEKU Vcg Rundtoepfe Und Container 5 ",
+          "linkToPdp": "de/teku/produkte/mxc-rundtoepfe-6-",
+          "underline": "TEKU Vcg Rundtoepfe Und Container 5 "
+        },
+        {
+          "image": "https://static.teku.com/assets/22051/mdf-103-universell.psd",
+          "name": "MDF 12",
+          "alt": " Produktfoto bedruckte Coverpots",
+          "linkToPdp": "de/teku/produkte/mdf-coverpot",
+          "underline": "  Produktfoto bedruckte Coverpots"
+        },
+        {
+          "image": "https://static.teku.com/assets/711899/vcl-circular-ton-grau-pr.psd",
+          "name": "VCL 12",
+          "alt": "Produktbild Rundtopf",
+          "linkToPdp": "de/teku/produkte/vcl-rundtoepfe-und-container-5-",
+          "underline": "Produktbild Rundtopf"
+        },
+        {
+          "image": "https://static.teku.com/assets/711899/vcl-circular-ton-grau-pr.psd",
+          "name": "VCL 12 C",
+          "alt": "Produktbild Rundtopf",
+          "linkToPdp": "de/teku/produkte/vcl-rundtoepfe-und-container-5-",
+          "underline": "Produktbild Rundtopf"
+        }
+      ]
+    },
+    {
+      "availability": "",
+      "articleNumber": "ST 3156-17/6",
+      "orderNumber": "",
+      "image": "https://static.teku.com/assets/572792/st-3156-17-6-circular-grau-pr.psd",
+      "imageAlt": "Transport- und Kulturtray",
+      "imageTitle": " Transport- und Kulturtray",
+      "seriesName": "ST | Transport- und Kulturtrays",
+      "radius": "",
+      "width": "",
+      "length": "",
+      "index": 26,
+      "fields": {
+        "10900": "ST 3156-17/6",
+        "8527": "56,2",
+        "8251": "6",
+        "7337": "4",
+        "variants": "details.variants",
+        "fittingproducts": "details.fittingproducts",
+        "8532": "31,5",
+        "8533": "8,0",
+        "8250": "24",
+        "8440": "980"
+      },
+      "variants": [
+        {
+          "articleNo": "ST 3156-17/6 Circular grau ",
+          "orderNo": "11309388711",
+          "productImage": "https://static.teku.com/assets/572792/st-3156-17-6-circular-grau-pr.psd",
+          "articleName": "ST 3156-17/6",
+          "seriesName": "ST | Transport- und Kulturtrays",
+          "category": "Circular360",
+          "color": "Circular grau",
+          "image": "https://static.teku.com/assets/572792/st-3156-17-6-circular-grau-pr.psd",
+          "alt": "Transport- und Kulturtray",
+          "title": " Transport- und Kulturtray",
+          "availability": "",
+          "show": true,
+          "certificates": [
+            "https://static.teku.com/assets/501424/logo-blauer-engel-de.png",
+            "https://static.teku.com/assets/501422/logo-cyclos-htp-de.png"
+          ]
+        }
+      ],
+      "fitting": [
+        {
+          "image": "https://static.teku.com/assets/456560/vcg-circular-ton-grau-pr.psd",
+          "name": "VCG 17",
+          "alt": "TEKU VCG Dekortopf Circular360, ton-grau",
+          "linkToPdp": "de/teku/produkte/vcg-rundtoepfe-und-container-5-",
+          "underline": " TEKU VCG VDA Circular"
+        },
+        {
+          "image": "https://static.teku.com/assets/455475/vch-vck-ton-grau-pr.psd",
+          "name": "VCH 17",
+          "alt": "vch-vck-ton-grau-pr.psd",
+          "linkToPdp": "de/teku/produkte/vch-vck-rundtoepfe-und-container-hoch-5-",
+          "underline": " "
+        },
+        {
+          "image": "https://static.teku.com/assets/456519/mci-terracotta-pr.psd",
+          "name": "MCI 17",
+          "alt": "TEKU Pdb Dekorcontainer",
+          "linkToPdp": "de/teku/produkte/mci-container-5-",
+          "underline": "TEKU Pdb Dekorcontainer"
+        },
+        {
+          "image": "https://static.teku.com/assets/456519/mci-terracotta-pr.psd",
+          "name": "MCI 17 K",
+          "alt": "TEKU Pdb Dekorcontainer",
+          "linkToPdp": "de/teku/produkte/mci-container-5-",
+          "underline": "TEKU Pdb Dekorcontainer"
+        },
+        {
+          "image": "https://static.teku.com/assets/21397/mch-ton-pr.psd",
+          "name": "MCH 17",
+          "alt": "TEKU Mcl Container Hoch 5 ",
+          "linkToPdp": "de/teku/produkte/mch-container-hoch-5-",
+          "underline": "TEKU Mcl Container Hoch 5 "
+        },
+        {
+          "image": "https://static.teku.com/assets/455383/mcl-terracotta-pr.psd",
+          "name": "MCL 17",
+          "alt": "TEKU MCL Container Hoch 5 ",
+          "linkToPdp": "de/teku/produkte/mcl-container-hoch-5-",
+          "underline": "TEKU MCL Container Hoch 5 "
+        },
+        {
+          "image": "https://static.teku.com/assets/22051/mdf-103-universell.psd",
+          "name": "MDF 17",
+          "alt": " Produktfoto bedruckte Coverpots",
+          "linkToPdp": "de/teku/produkte/mdf-coverpot",
+          "underline": "  Produktfoto bedruckte Coverpots"
+        }
+      ]
+    },
+    {
+      "availability": "",
+      "articleNumber": "ST 3156-17/6 D",
+      "orderNumber": "",
+      "image": "https://static.teku.com/assets/572793/st-3156-17-6-d-circular-grau-pr.psd",
+      "imageAlt": "Transport- und Kulturtray",
+      "imageTitle": " Transport- und Kulturtray",
+      "seriesName": "ST | Transport- und Kulturtrays",
+      "radius": "",
+      "width": "",
+      "length": "",
+      "index": 27,
+      "fields": {
+        "10900": "ST 3156-17/6 D",
+        "8527": "56,2",
+        "8251": "6",
+        "7337": "4",
+        "variants": "details.variants",
+        "fittingproducts": "details.fittingproducts",
+        "8532": "31,5",
+        "8533": "8,0",
+        "8250": "24",
+        "8440": "980"
+      },
+      "variants": [
+        {
+          "articleNo": "ST 3156-17/6 D Circular grau ",
+          "orderNo": "11309398711",
+          "productImage": "https://static.teku.com/assets/572793/st-3156-17-6-d-circular-grau-pr.psd",
+          "articleName": "ST 3156-17/6 D",
+          "seriesName": "ST | Transport- und Kulturtrays",
+          "category": "Circular360",
+          "color": "Circular grau",
+          "image": "https://static.teku.com/assets/572793/st-3156-17-6-d-circular-grau-pr.psd",
+          "alt": "Transport- und Kulturtray",
+          "title": " Transport- und Kulturtray",
+          "availability": "",
+          "show": true,
+          "certificates": [
+            "https://static.teku.com/assets/501424/logo-blauer-engel-de.png",
+            "https://static.teku.com/assets/501422/logo-cyclos-htp-de.png"
+          ]
+        }
+      ],
+      "fitting": [
+        {
+          "image": "https://static.teku.com/assets/456560/vcg-circular-ton-grau-pr.psd",
+          "name": "VCG 17",
+          "alt": "TEKU VCG Dekortopf Circular360, ton-grau",
+          "linkToPdp": "de/teku/produkte/vcg-rundtoepfe-und-container-5-",
+          "underline": " TEKU VCG VDA Circular"
+        },
+        {
+          "image": "https://static.teku.com/assets/455475/vch-vck-ton-grau-pr.psd",
+          "name": "VCH 17",
+          "alt": "vch-vck-ton-grau-pr.psd",
+          "linkToPdp": "de/teku/produkte/vch-vck-rundtoepfe-und-container-hoch-5-",
+          "underline": " "
+        },
+        {
+          "image": "https://static.teku.com/assets/456519/mci-terracotta-pr.psd",
+          "name": "MCI 17",
+          "alt": "TEKU Pdb Dekorcontainer",
+          "linkToPdp": "de/teku/produkte/mci-container-5-",
+          "underline": "TEKU Pdb Dekorcontainer"
+        },
+        {
+          "image": "https://static.teku.com/assets/456519/mci-terracotta-pr.psd",
+          "name": "MCI 17 K",
+          "alt": "TEKU Pdb Dekorcontainer",
+          "linkToPdp": "de/teku/produkte/mci-container-5-",
+          "underline": "TEKU Pdb Dekorcontainer"
+        },
+        {
+          "image": "https://static.teku.com/assets/21397/mch-ton-pr.psd",
+          "name": "MCH 17",
+          "alt": "TEKU Mcl Container Hoch 5 ",
+          "linkToPdp": "de/teku/produkte/mch-container-hoch-5-",
+          "underline": "TEKU Mcl Container Hoch 5 "
+        },
+        {
+          "image": "https://static.teku.com/assets/455383/mcl-terracotta-pr.psd",
+          "name": "MCL 17",
+          "alt": "TEKU MCL Container Hoch 5 ",
+          "linkToPdp": "de/teku/produkte/mcl-container-hoch-5-",
+          "underline": "TEKU MCL Container Hoch 5 "
+        },
+        {
+          "image": "https://static.teku.com/assets/22051/mdf-103-universell.psd",
+          "name": "MDF 17",
+          "alt": " Produktfoto bedruckte Coverpots",
+          "linkToPdp": "de/teku/produkte/mdf-coverpot",
+          "underline": "  Produktfoto bedruckte Coverpots"
+        }
+      ]
+    },
+    {
+      "availability": "",
+      "articleNumber": "ST 3156-24/9",
+      "orderNumber": "",
+      "image": "https://static.teku.com/assets/572790/st-3156-24-9-circular-grau-pr.psd",
+      "imageAlt": "Transport- und Kulturtray",
+      "imageTitle": "TEKU NormPack Circular",
+      "seriesName": "ST | Transport- und Kulturtrays",
+      "radius": "",
+      "width": "",
+      "length": "",
+      "index": 28,
+      "fields": {
+        "10900": "ST 3156-24/9*",
+        "8527": "56,5",
+        "8251": "24",
+        "7337": "4",
+        "variants": "details.variants",
+        "fittingproducts": "details.fittingproducts",
+        "8532": "31,5",
+        "8533": "4,9",
+        "8250": "96",
+        "8440": "980"
+      },
+      "variants": [
+        {
+          "articleNo": "ST 3156-24/9 Circular grau ",
+          "orderNo": "11307908711",
+          "productImage": "https://static.teku.com/assets/572790/st-3156-24-9-circular-grau-pr.psd",
+          "articleName": "ST 3156-24/9",
+          "seriesName": "ST | Transport- und Kulturtrays",
+          "category": "Circular360",
+          "color": "Circular grau",
+          "image": "https://static.teku.com/assets/572790/st-3156-24-9-circular-grau-pr.psd",
+          "alt": "Transport- und Kulturtray",
+          "title": "TEKU NormPack Circular",
+          "availability": "",
+          "show": true,
+          "certificates": [
+            "https://static.teku.com/assets/501424/logo-blauer-engel-de.png",
+            "https://static.teku.com/assets/501422/logo-cyclos-htp-de.png"
+          ]
+        }
+      ],
+      "fitting": [
+        {
+          "image": "https://static.teku.com/assets/455461/vtd-ton-pr.psd",
+          "name": "VTD 8,5",
+          "alt": "vtd-ton-pr.psd",
+          "linkToPdp": "de/teku/produkte/vtd-rundtoepfe-8-",
+          "underline": " VTD, Rundtopf"
+        },
+        {
+          "image": "https://static.teku.com/assets/456002/vcc-taupe-pr.psd",
+          "name": "VCC 9 VOL",
+          "alt": "vcc-taupe-pr.psd",
+          "linkToPdp": "de/teku/produkte/vcc-rundtoepfe-und-container-hoch-5-",
+          "underline": " Rundtopf, Pflanztopf, Container"
+        },
+        {
+          "image": "https://static.teku.com/assets/456560/vcg-circular-ton-grau-pr.psd",
+          "name": "VCG 9",
+          "alt": "TEKU VCG Dekortopf Circular360, ton-grau",
+          "linkToPdp": "de/teku/produkte/vcg-rundtoepfe-und-container-5-",
+          "underline": " TEKU VCG VDA Circular"
+        },
+        {
+          "image": "https://static.teku.com/assets/455475/vch-vck-ton-grau-pr.psd",
+          "name": "VCH 9",
+          "alt": "vch-vck-ton-grau-pr.psd",
+          "linkToPdp": "de/teku/produkte/vch-vck-rundtoepfe-und-container-hoch-5-",
+          "underline": " "
+        },
+        {
+          "image": "https://static.teku.com/assets/455475/vch-vck-ton-grau-pr.psd",
+          "name": "VCH 9 F",
+          "alt": "vch-vck-ton-grau-pr.psd",
+          "linkToPdp": "de/teku/produkte/vch-vck-rundtoepfe-und-container-hoch-5-",
+          "underline": " "
+        },
+        {
+          "image": "https://static.teku.com/assets/455310/vtg-circular-ton-grau-pr.psd",
+          "name": "VTG 9",
+          "alt": "vtg-circular-ton-grau-pr.psd",
+          "linkToPdp": "de/teku/produkte/vtg-rundtoepfe-8-",
+          "underline": " "
+        },
+        {
+          "image": "https://static.teku.com/assets/455989/mxc-ton-pr.psd",
+          "name": "MXC 9",
+          "alt": "TEKU Vcg Rundtoepfe Und Container 5 ",
+          "linkToPdp": "de/teku/produkte/mxc-rundtoepfe-6-",
+          "underline": "TEKU Vcg Rundtoepfe Und Container 5 "
+        },
+        {
+          "image": "https://static.teku.com/assets/22051/mdf-103-universell.psd",
+          "name": "MDF 9",
+          "alt": " Produktfoto bedruckte Coverpots",
+          "linkToPdp": "de/teku/produkte/mdf-coverpot",
+          "underline": "  Produktfoto bedruckte Coverpots"
+        },
+        {
+          "image": "https://static.teku.com/assets/575707/vco-9-jf-recycleable-transparent.psd",
+          "name": "VCO 9",
+          "alt": " VCO, Rundtopf",
+          "linkToPdp": "de/teku/produkte/vco-orchideentoepfe-und-container",
+          "underline": " VCO, Rundtopf"
+        },
+        {
+          "image": "https://static.teku.com/assets/711899/vcl-circular-ton-grau-pr.psd",
+          "name": "VCL 9",
+          "alt": "Produktbild Rundtopf",
+          "linkToPdp": "de/teku/produkte/vcl-rundtoepfe-und-container-5-",
+          "underline": "Produktbild Rundtopf"
+        },
+        {
+          "image": "https://static.teku.com/assets/701344/vcm-10-5-ton-grau-pr.psd",
+          "name": "VCM 9",
+          "alt": "Produktbild VCM",
+          "linkToPdp": "de/teku/produkte/vcm-rundtoepfe-und-container-hoch-5-",
+          "underline": "Produktbild VCM"
+        },
+        {
+          "image": "https://static.teku.com/assets/701344/vcm-10-5-ton-grau-pr.psd",
+          "name": "VCM 9 F",
+          "alt": "Produktbild VCM",
+          "linkToPdp": "de/teku/produkte/vcm-rundtoepfe-und-container-hoch-5-",
+          "underline": "Produktbild VCM"
+        }
+      ]
+    },
+    {
+      "availability": "",
+      "articleNumber": "ST 3156-24/9 D",
+      "orderNumber": "",
+      "image": "https://static.teku.com/assets/572791/st-3156-24-9-d-circular-grau-pr.psd",
+      "imageAlt": "Transport- und Kulturtray",
+      "imageTitle": " Transport- und Kulturtray",
+      "seriesName": "ST | Transport- und Kulturtrays",
+      "radius": "",
+      "width": "",
+      "length": "",
+      "index": 29,
+      "fields": {
+        "10900": "ST 3156-24/9 D*",
+        "8527": "56,5",
+        "8251": "24",
+        "7337": "4",
+        "variants": "details.variants",
+        "fittingproducts": "details.fittingproducts",
+        "8532": "31,5",
+        "8533": "4,9",
+        "8250": "96",
+        "8440": "980"
+      },
+      "variants": [
+        {
+          "articleNo": "ST 3156-24/9 D Circular grau ",
+          "orderNo": "11307918711",
+          "productImage": "https://static.teku.com/assets/572791/st-3156-24-9-d-circular-grau-pr.psd",
+          "articleName": "ST 3156-24/9 D",
+          "seriesName": "ST | Transport- und Kulturtrays",
+          "category": "Circular360",
+          "color": "Circular grau",
+          "image": "https://static.teku.com/assets/572791/st-3156-24-9-d-circular-grau-pr.psd",
+          "alt": "Transport- und Kulturtray",
+          "title": " Transport- und Kulturtray",
+          "availability": "",
+          "show": true,
+          "certificates": [
+            "https://static.teku.com/assets/501424/logo-blauer-engel-de.png",
+            "https://static.teku.com/assets/501422/logo-cyclos-htp-de.png"
+          ]
+        }
+      ],
+      "fitting": [
+        {
+          "image": "https://static.teku.com/assets/455461/vtd-ton-pr.psd",
+          "name": "VTD 8,5",
+          "alt": "vtd-ton-pr.psd",
+          "linkToPdp": "de/teku/produkte/vtd-rundtoepfe-8-",
+          "underline": " VTD, Rundtopf"
+        },
+        {
+          "image": "https://static.teku.com/assets/456002/vcc-taupe-pr.psd",
+          "name": "VCC 9 VOL",
+          "alt": "vcc-taupe-pr.psd",
+          "linkToPdp": "de/teku/produkte/vcc-rundtoepfe-und-container-hoch-5-",
+          "underline": " Rundtopf, Pflanztopf, Container"
+        },
+        {
+          "image": "https://static.teku.com/assets/456560/vcg-circular-ton-grau-pr.psd",
+          "name": "VCG 9",
+          "alt": "TEKU VCG Dekortopf Circular360, ton-grau",
+          "linkToPdp": "de/teku/produkte/vcg-rundtoepfe-und-container-5-",
+          "underline": " TEKU VCG VDA Circular"
+        },
+        {
+          "image": "https://static.teku.com/assets/455475/vch-vck-ton-grau-pr.psd",
+          "name": "VCH 9",
+          "alt": "vch-vck-ton-grau-pr.psd",
+          "linkToPdp": "de/teku/produkte/vch-vck-rundtoepfe-und-container-hoch-5-",
+          "underline": " "
+        },
+        {
+          "image": "https://static.teku.com/assets/455475/vch-vck-ton-grau-pr.psd",
+          "name": "VCH 9 F",
+          "alt": "vch-vck-ton-grau-pr.psd",
+          "linkToPdp": "de/teku/produkte/vch-vck-rundtoepfe-und-container-hoch-5-",
+          "underline": " "
+        },
+        {
+          "image": "https://static.teku.com/assets/455310/vtg-circular-ton-grau-pr.psd",
+          "name": "VTG 9",
+          "alt": "vtg-circular-ton-grau-pr.psd",
+          "linkToPdp": "de/teku/produkte/vtg-rundtoepfe-8-",
+          "underline": " "
+        },
+        {
+          "image": "https://static.teku.com/assets/455989/mxc-ton-pr.psd",
+          "name": "MXC 9",
+          "alt": "TEKU Vcg Rundtoepfe Und Container 5 ",
+          "linkToPdp": "de/teku/produkte/mxc-rundtoepfe-6-",
+          "underline": "TEKU Vcg Rundtoepfe Und Container 5 "
+        },
+        {
+          "image": "https://static.teku.com/assets/22051/mdf-103-universell.psd",
+          "name": "MDF 9",
+          "alt": " Produktfoto bedruckte Coverpots",
+          "linkToPdp": "de/teku/produkte/mdf-coverpot",
+          "underline": "  Produktfoto bedruckte Coverpots"
+        },
+        {
+          "image": "https://static.teku.com/assets/575707/vco-9-jf-recycleable-transparent.psd",
+          "name": "VCO 9",
+          "alt": " VCO, Rundtopf",
+          "linkToPdp": "de/teku/produkte/vco-orchideentoepfe-und-container",
+          "underline": " VCO, Rundtopf"
+        },
+        {
+          "image": "https://static.teku.com/assets/711899/vcl-circular-ton-grau-pr.psd",
+          "name": "VCL 9",
+          "alt": "Produktbild Rundtopf",
+          "linkToPdp": "de/teku/produkte/vcl-rundtoepfe-und-container-5-",
+          "underline": "Produktbild Rundtopf"
+        },
+        {
+          "image": "https://static.teku.com/assets/701344/vcm-10-5-ton-grau-pr.psd",
+          "name": "VCM 9",
+          "alt": "Produktbild VCM",
+          "linkToPdp": "de/teku/produkte/vcm-rundtoepfe-und-container-hoch-5-",
+          "underline": "Produktbild VCM"
+        },
+        {
+          "image": "https://static.teku.com/assets/701344/vcm-10-5-ton-grau-pr.psd",
+          "name": "VCM 9 F",
+          "alt": "Produktbild VCM",
+          "linkToPdp": "de/teku/produkte/vcm-rundtoepfe-und-container-hoch-5-",
+          "underline": "Produktbild VCM"
+        }
+      ]
+    }
+  ]
+}

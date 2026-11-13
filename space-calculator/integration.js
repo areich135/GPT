@@ -14,13 +14,14 @@
     if (opener?.isConnected) opener.focus({preventScroll: true});
   }
   function close() {dialog.close(); release();}
-  function open({diameter, itemLength, itemWidth, plants, productKind, productName, kind, trigger = document.activeElement}) {
+  function open({diameter, itemLength, itemWidth, plants, productKind, contentLabel, productName, kind, trigger = document.activeElement}) {
     opener = trigger;
     const component = document.createElement(kind === 'rectangle' ? 'teku-tray-space-calculator' : 'teku-space-calculator');
     if (kind === 'rectangle') {
       component.setAttribute('item-length',itemLength);component.setAttribute('item-width',itemWidth);
       if(plants!==null&&plants!==undefined)component.setAttribute('plants',plants);
       component.setAttribute('product-kind',productKind||'Trays');
+      if(contentLabel)component.setAttribute('content-label',contentLabel);
     } else component.setAttribute('diameter', diameter);
     component.setAttribute('product-name', productName);
     dialog.querySelector('.sc-component-host').replaceChildren(component);

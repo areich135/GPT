@@ -1,17 +1,28 @@
 # TEKU Produktdetailseiten – Clickdummy
 
-Die Kopfzeile führt zu zwei Produktbereichen:
+Die Kopfzeile führt zu drei Produktbereichen:
 
 - **Rundtöpfe / VCG:** V12 mit animiertem Stellflächenrechner im Modal; V1–V11 bleiben über den Versionsumschalter erreichbar.
-- **Trays / Anzuchtpaletten / BP:** V6 mit 20 Artikeln, eigenem Rechteckrechner und animiertem Ausrichtungswechsel; V1–V5 bleiben erreichbar. Plug-, Tray- und Zellmaße sind separat benannt.
+- **Anzuchtpaletten / BP:** V6 mit 20 Artikeln, eigenem Rechteckrechner und animiertem Ausrichtungswechsel; V1–V5 bleiben erreichbar. Plug-, Tray- und Zellmaße sind separat benannt.
+- **Trays / ST:** V1 mit 30 Transport- und Kulturtrays, eigenen Filtern, CC-Lagen-Werten und passenden Töpfen.
 
-Beide aktuellen Entwürfe enthalten die rechten Listen für Muster, Angebote und Merkliste. Anfragen werden nur simuliert. Der VCG-Stellflächenrechner berechnet die Stückzahl für Viereck- und Dreieckverband mit frei änderbarem Durchmesser.
+Alle aktuellen Entwürfe enthalten die rechten Listen für Muster, Angebote und Merkliste. Anfragen werden nur simuliert. Der VCG-Stellflächenrechner berechnet die Stückzahl für Viereck- und Dreieckverband mit frei änderbarem Durchmesser.
 
 - [Rundtöpfe V12 öffnen](https://areich135.github.io/GPT/?version=v12)
 - [Anzuchtpaletten BP V6 öffnen](https://areich135.github.io/GPT/bp/?version=v6)
+- [Trays ST V1 öffnen](https://areich135.github.io/GPT/st/?version=v1)
+- [ST-Quellen und Datenzuordnung](st/SOURCE.md)
 - [Quellen, Datenzuordnung und tatsächliche Prüfungen](docs/sources-2026-10-22.md)
 
 ## Changelog
+
+### 13.11.2026 · Artikelbezogene Anfragen und Trays ST V1
+
+- Rundtöpfe V12 und Anzuchtpaletten BP V6: Anfrageformular beginnt mit Muster-/Angebotsauswahl und kompakten Artikelzeilen ohne Fotos. Jede gespeicherte Artikel-/Farbvariante hat eigene Muster- und Angebotsmengen; nur gewählte Anfragearten aktivieren die jeweiligen Felder. Kontaktdaten folgen darunter.
+- BP verwendet jetzt ebenfalls das zweistufige Formular ganz oben vor allen SKU-Zeilen, mit laufendem Fortschritt, erhaltenem Entwurf und Abschlussübersicht je Artikel.
+- Kategorie „Trays / Anzuchtpaletten“ getrennt in „Anzuchtpaletten“ und „Trays“. ST V1 ergänzt 30 Originalartikel, 30 Farbvarianten/Bestellnummern, 372 Zuordnungen passender Töpfe und 69 lokale Originalassets einschließlich Piktogrammen, Zertifikaten und Vorteilsbildern.
+- ST bietet Filter für Farbe, Nachhaltigkeitskategorie, Außenmaße, Töpfe pro Tray und CC-Lage; ausgeschriebene Verpackungsdaten, Rechteckrechner mit Topfzahl und passende Töpfe mit seitlichen blauen Pfeilen, maximal fünf Kacheln und einem Produktschritt je Klick.
+- Originalquelle vom 13.11.2026 dokumentiert; fehlende CC-Topfzahlen bei zwei ST-Artikeln bleiben „Keine Angabe“. Archive unverändert, aktuelle VCG-/BP-Versionsnummern beibehalten.
 
 ### 12.11.2026 · V12: Anfrage an erster Position und Mengen in Schritt 1
 
