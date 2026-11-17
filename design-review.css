@@ -1,0 +1,102 @@
+/* Current VCG/BP/ST: supplied November 17 design review. */
+.greta-review{--pink:#e3319d;--green:#4eae94}
+.greta-review .catalog .row-requests button[data-request],.greta-review .catalog .row-requests button[data-request].is-selected{background:var(--pink);border-color:var(--pink);color:white}
+.greta-review .catalog .row-requests button[data-request]:hover{background:#bd2080;border-color:#bd2080;color:white}
+.greta-review .catalog .row-requests button[data-request].is-selected{box-shadow:0 0 0 2px white,0 0 0 3px var(--green)}
+.greta-review .catalog .refreshed-row .row-section-toggle{flex-direction:row;gap:4px;align-items:center;color:var(--navy)}
+.greta-review .catalog .row-section-toggle>span{display:inline-flex;color:var(--navy);flex:none}
+.greta-review .catalog .row-section-toggle>span svg{width:15px;height:15px}
+.greta-review .catalog .row-section-toggle strong{min-width:0;font-size:13px;line-height:1.05}
+.greta-review .catalog .row-section-toggle:disabled{flex-direction:column}
+.greta-review .catalog .row-section-toggle:disabled>span{white-space:normal}
+.greta-review .row-specs .metric{border:0}
+.greta-review .gallery-arrow{border:0;border-radius:0;background:transparent;color:#0e2856;width:30px;height:42px}
+.greta-review .gallery-arrow:hover{background:transparent;color:#185383}
+.greta-review .gallery-arrow svg{width:18px;height:18px}
+.greta-review .gallery-view-caption{position:absolute;bottom:6px;left:8px;right:8px;text-align:center;font-size:10px;color:var(--muted);pointer-events:none}
+.greta-review .gallery-card .thumbnails{justify-content:space-between;gap:10px;overflow-x:auto;scrollbar-width:thin}
+.greta-review .gallery-card .thumbnail{flex:1 0 25%;max-width:32%;width:auto}
+.greta-review .gallery-card .thumbnail img{max-height:60px}
+.greta-review .compact-unit{font-size:0;background-image:var(--unit-icon);background-position:center;background-size:30px;background-repeat:no-repeat}
+.greta-review .compact-filters button{height:56px;border-color:#627797}
+.greta-review .filters.collapsed{border-radius:8px}
+.greta-review .measurement-toggle{width:116px;height:32px;border-width:1px;border-radius:18px;padding:4px}
+.greta-review .measurement-toggle button{font-size:14px;line-height:21px;border-radius:14px}
+.greta-review #filter-unit .measurement-toggle{margin-left:37px}
+.greta-review .filter-topbar .reset-button{font-size:12px;text-decoration:none}
+.greta-review .check-label:has(input:checked){font-weight:700}
+.greta-review .selection-count{color:var(--pink);font-weight:700;font-size:12px}
+.greta-review .selection-symbol{display:inline-grid;place-items:center;background:#182c50;color:white;border-radius:50%;width:19px;height:19px;flex:none}
+.greta-review .selection-symbol svg{width:14px;height:14px;stroke-width:1.2}
+.greta-review [data-list-type=favorites] h2 .selection-symbol{background:transparent;color:var(--navy)}
+.greta-review [data-list-type=favorites]:has(.selection-item) h2 .selection-symbol{color:var(--green)}
+.greta-review [data-list-type=favorites]:has(.selection-item) h2 svg{fill:var(--green)}
+.greta-review .selection-item{align-items:center;gap:3px;font-size:11px}
+.greta-review .selection-item-label strong,.greta-review .selection-item-label small{display:inline;color:var(--navy);font-size:11px;line-height:1.4}
+.greta-review .selection-item-label strong{margin-right:5px}
+.greta-review .selection-icon:not(.selection-heart){width:17px;height:17px;background:#182c50;color:white;border-radius:50%}
+.greta-review .selection-icon:not(.selection-heart) svg{width:12px;height:12px;stroke-width:1.2}
+.greta-review .selection-icon.is-selected:not(.selection-heart){background:var(--green);color:white}
+.greta-review .selection-heart{background:transparent;color:var(--navy)}
+.greta-review .selection-heart.is-selected{color:var(--green);background:transparent}
+.greta-review .selection-heart.is-selected svg{fill:var(--green)}
+.greta-review .selection-rail button+button{border-top:1px solid #627797;padding-top:10px}
+.greta-review .selection-rail button>.selection-symbol{width:20px;height:20px}
+.greta-review .selection-rail button>.selection-symbol svg{width:14px;height:14px}
+.greta-review .rail-count{background:transparent;color:var(--pink);font-weight:700}
+.greta-review .more-articles{display:flex;align-items:center;justify-content:center;gap:6px;color:white;font-size:14px;margin:12px auto 22px;padding:8px 14px}
+.greta-review .more-articles svg{width:15px;height:15px}
+.greta-review .more-articles[aria-expanded=true] svg{transform:rotate(180deg)}
+.greta-review .secondary-products{margin-top:12px}
+.greta-review .batch-actions{margin-bottom:20px}
+.greta-review .catalog .refreshed-row .patent-note{display:flex;flex-wrap:wrap;gap:8px 32px;color:var(--navy);padding-left:90px;font-size:11px}
+.greta-review .label-slot-note{font-size:11px;line-height:1.35;margin:10px 0 0}
+.greta-review .label-slot-note sup{font-size:12px;margin:0;vertical-align:baseline}
+.greta-review .catalog .rounds-detail-figure .feature-highlight{box-shadow:0 0 0 2px var(--pink)}
+.greta-review .feature-highlight-button{border-radius:50%;display:inline-flex;margin:2px}
+.greta-review .feature-highlight-button:hover,.greta-review .feature-highlight-button:focus-visible{outline:3px solid #e3319d40;outline-offset:3px}
+.greta-review .floor-detail-zoom:hover .feature-highlight{animation:feature-pulse .8s ease-out 1}
+@keyframes feature-pulse{50%{box-shadow:0 0 0 6px #e3319d55}}
+@media(prefers-reduced-motion:reduce){.greta-review .floor-detail-zoom:hover .feature-highlight{animation:none}}
+.greta-review .product-detail-images{display:flex;flex-wrap:wrap;justify-content:center;gap:12px;margin-top:14px;width:100%}
+.greta-review .product-detail-images>button{flex:1 1 90px;max-width:150px;font-size:11px;line-height:1.3;text-align:center}
+.greta-review .product-detail-images>button img{width:100%;height:90px;object-fit:contain;border:1px solid #d2dce5;border-radius:8px;margin-bottom:5px}
+.greta-review .product-detail-images>button:hover img{border-color:var(--navy)}
+.greta-review .inline-request{border-radius:10px;padding:28px 20px 20px}
+.greta-review .inline-request-close{width:15px;height:15px;font-size:15px;line-height:14px;right:12px;top:12px}
+.greta-review .inline-request .request-step-label{font-size:14px}
+.greta-review .inline-request .request-progress{height:5px}
+.greta-review .inline-request .request-types legend{font-size:20px}
+.greta-review .inline-request .request-check{font-size:16px;align-items:center}
+.greta-review .inline-request .request-check:has(input:checked){color:var(--green);font-weight:700}
+.greta-review .inline-request .request-check input{appearance:none;border:0;width:19px;height:19px;border-radius:5px;background:#e7e7e7;margin:0;cursor:pointer}
+.greta-review .inline-request .request-check input:checked{background:var(--green);border:4px solid #e2e7e5}
+.greta-review .inline-request .request-check input:focus-visible{outline:2px solid var(--navy);outline-offset:2px}
+.greta-review .inline-request .request-item{background:#ecf6f3;border-radius:6px}
+.greta-review .inline-request .request-item-title{display:block}
+.greta-review .inline-request .request-item-title span{display:block;margin-top:4px}
+.greta-review .inline-request .request-step-panel h3{font-size:28px}
+.greta-review .inline-request .request-step-intro{font-size:14px}
+.greta-review .inline-request .form-field{font-size:14px}
+.greta-review .inline-request .form-field :is(input,select){border:1px solid #b9c8da;background:white;box-shadow:0 0 0 1px #b9c8da22;height:44px;font-size:14px}
+.greta-review .inline-request .request-item-quantities .form-field{font-size:13px}
+.greta-review .inline-request .request-wizard-actions button{font-size:12px}
+.greta-review .inline-request .request-wizard-actions .outline-button{border-width:1px}
+.greta-review button:focus-visible{outline:2px solid var(--navy);outline-offset:3px}
+.greta-review .product-row[hidden],.greta-review #additional-article-rows[hidden]{display:none}
+@container(max-width:600px){
+ .greta-review .catalog .row-section-toggle strong{font-size:11px}
+ .greta-review .catalog .row-section-toggle>span svg{width:12px;height:12px}
+ .greta-review .inline-request .request-step-panel h3{font-size:25px}
+}
+@container(max-width:360px){
+ .greta-review .catalog .row-section-toggle strong{font-size:10px;overflow-wrap:anywhere}
+ .greta-review .catalog .row-section-toggle{gap:2px}
+ .greta-review .catalog .refreshed-row .patent-note{padding-left:14px;gap:8px}
+}
+@media(max-width:700px){
+ .greta-review .inline-request{padding:26px 16px 18px}
+ .greta-review .selection-rail button+button{border-top:0;border-left:1px solid #627797;padding:5px 0 5px 5px}
+}
+
+.greta-review .row-product-summary:has(.label-slot-note) .bp-tray-measures::after{content:"*";position:absolute;right:-7px;top:0;font-size:12px;color:var(--navy)}

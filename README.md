@@ -16,6 +16,18 @@ Alle aktuellen Entwürfe enthalten die rechten Listen für Muster, Angebote und 
 
 ## Changelog
 
+### 17.11.2026 · Gestaltung nach Greta-Vorlage für VCG V12, BP V6 und ST V1
+
+- Beide SKU-Anfragebuttons gleichwertig magenta/weiß; Aufklapppfeile rechts neben dem Text, schlichte blaue Galerie-Pfeile, überarbeiteter cm/inch-Schalter und Lineal-Icon.
+- Anfrageformular in beiden Schritten nach Screenshot: grüne Auswahl, dezente Artikelzeilen, abgerundete Eingaben, kompakte Schließen-Schaltfläche und gleiche Farben. Bestehende Validierung, eigene Mengen, Entwurf und Fortschritt bleiben erhalten.
+- Dunkelblaue runde Listenicons, magentafarbene Artikelzähler; bereits als Muster/Angebot gespeicherte Varianten zeigen grün/weiße Aktionsicons auf der Merkliste. Hinzufügen und Entfernen synchronisiert alle Anzeigen.
+- „weitere Artikel“ mit weißem Text und Pfeil: VCG klappt die zusätzlichen Artikel auf; BP/ST zeigen jeweils acht weitere Treffer. Sticky-Grenze berücksichtigt nur sichtbare Artikel.
+- BP: vorhandene artikelbezogene Bodenfotos auch im Hero-Karussell. BP/ST unterstützen zusätzliche, ausdrücklich je Artikel zugeordnete Detailbilder (`detailImages`).
+- ST: vorhandene originale Bodenillustration sowie bei ST 2840 / ST 3156 die Etikettenschlitz-Illustration in Galerie und technischen Details; bewusst als **Serienillustration** gekennzeichnet. Artikelgenaue ST-Boden-/Etikettenschlitzfotos fehlen weiterhin. Sternchen „Mit Etikettenschlitz“ nur an diesen beiden öffentlich belegten Reihen; endgültige Artikelzuordnung durch TEKU/PIM abzustimmen.
+- Rundtöpfe: VCG 12 D mit „PATENT PENDING“ und „D: Niedrige Ausführung“ nach Nutzer-Screenshot. Magentafarbene Neuheiten-Markierung am Multilochprofilboden IV von VCG 11 als explizites Designbeispiel, mit Erklärung beim Anklicken. Kronenrand bleibt ohne Neuheiten-Markierung. Keine pauschale Neuheitenbehauptung; TEKU-Freigabe offen. Kurzer Impuls nur bei Hover, reduzierte Bewegung berücksichtigt.
+- Prüfung: JS-Syntax, `git diff --check`, DOM-Interaktionen aller drei Bereiche (Listen, Mengen, beide Formularschritte, Datenerhalt/Fortschritt, Einheiten, Galerien, Detailzoom, weitere Artikel). Lokale visuelle Browserprüfung durch die Umgebung blockiert; keine Aussage über geprüfte Pixelgleichheit oder responsive Abstände.
+
+
 ### 13.11.2026 · cm/inch bei BP und ST, kompakte Mengenzeilen
 
 - Anzuchtpaletten BP V6 und Trays ST V1 erhalten denselben 110,5 × 25,5 px großen cm/inch-Schalter wie Rundtöpfe. Kurzmaße, Maßtabellen, Maßfilter und ausgewählte Hero-Infos stellen um; BP-Zellvolumen wechselt von ml zu in³. Filter bleiben auf den Originalwerten, Rechner und Stückzahlen unverändert.

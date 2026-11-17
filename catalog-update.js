@@ -26,7 +26,7 @@
       recommendation?.style.removeProperty('--sku-column-width');
       return;
     }
-    const rows=results.querySelectorAll('.product-row');
+    const rows=[...results.querySelectorAll('.product-row')].filter(row=>row.getClientRects().length);
     const first=rows[0]?.getBoundingClientRect();
     const lastRow=rows[rows.length-1]?.getBoundingClientRect();
     const request=results.querySelector('#inline-request:not([hidden])')?.getBoundingClientRect();

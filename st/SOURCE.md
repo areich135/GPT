@@ -23,3 +23,9 @@ Bei ST 2840/8-13 und ST 2840/8-13 D ist Feld 8250 nicht vorhanden: „Keine Anga
 Der Rechner nutzt Länge/Breite als rechteckige Außenmaße und Töpfe pro Tray als Multiplikator. Er plant Stellflächen in einer Ebene, keinen vollständigen CC-Wagen. Vorteile der Originalseite sind kurz zusammengefasst; Wasserablauf bei B/D und Etikettenaufnahmen bei ST 2840 / ST 3156 nicht auf alle Artikel verallgemeinern.
 
 Navigation und Gestaltung übernehmen die bestehenden VCG-/BP-Komponenten; der Datenbestand und die passenden Töpfe sind ST-spezifisch. Anfragen bleiben ausschließlich eine Simulation ohne Versand.
+
+## Ergänzung 17.11.2026
+
+Die Originalseite nennt Etikettenaufnahmen für ST 2840 … und ST 3156 … (erneut abgerufen 17.11.2026). Der November-Adapter zeigt für diese Reihen den Sternchenhinweis „Mit Etikettenschlitz“. Endgültige SKU-Freigabe durch TEKU/PIM offen; keine Schlitzmaße ergänzt.
+
+Die schon vorhandenen Original-Vorteilsbilder `21298-teku-mehrwert-stabilitaet-boden-lgcup-st-dst.webp` und `21311-teku-mehrwert-verkaufsfoerderung-etiketten-pt.webp` werden nun zusätzlich in Galerie und technischen Daten gezeigt. Sie sind ausdrücklich als Serienillustrationen beschriftet, keine artikelgenauen Boden-/Etikettenschlitzfotos. Weitere reale Fotos lassen sich je Produkt über `detailImages` mit `src` und `label` ergänzen.

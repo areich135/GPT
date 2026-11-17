@@ -1,7 +1,7 @@
 # TEKU Website – verbindliche Übergabe für die Clickdummys
 
-**Dokumentrevision:** 13 · **Stand:** 13.11.2026
-**Ausgangsbasis dieser Änderung:** 8033eb9; aktuelle Änderungen siehe README-Changelog
+**Dokumentrevision:** 14 · **Stand:** 17.11.2026
+**Ausgangsbasis dieser Änderung:** b34a099; aktuelle Änderungen siehe README-Changelog
 **Repository:** https://github.com/areich135/GPT · **Arbeitsbranch:** main
 
 Diese Übergabe soll einen neuen Chat arbeitsfähig machen, ohne den gesamten alten Verlauf zu laden. Sie beschreibt den freigegebenen Stand, die bewussten Unterschiede zwischen den Produktbereichen und die Grenzen des Dummys. Vor jeder Aufgabe den aktuellen Remote-Stand prüfen: Eine im ChatGPT-Projekt hochgeladene Kopie kann älter sein als die Datei im Repository.
@@ -60,9 +60,9 @@ Frühere Rundtopf-Stände V1–V11 liegen unter versions/v1/ bis versions/v11/. 
 | Erster Aufklappbereich | „Technische Daten“ | „Technische Daten“ |
 | Farbausführungen | „Varianten“ | „Varianten“ |
 | Dritter Bereich | „Passende Trays“ | „Aushebeplatte“; ohne Zuordnung deaktiviert |
-| Öffnen/Schließen | SVG-Pfeil ohne sichtbares „einblenden“ | Bisherige Ein-/Ausblendtexte erhalten |
+| Öffnen/Schließen | Blauer SVG-Pfeil rechts neben dem Text | Ebenso; ohne Ein-/Ausblendtext, fehlende Aushebeplatte bleibt deaktiviert |
 | Weißer Zeiger unter aktivem Bereich | Umgesetzt; folgt dessen Buttonmitte | Nicht allein wegen VCG automatisch nachrüsten |
-| Anfrage-CTA | Muster primär magenta/weiß, Angebot Kontur | Muster primär magenta/weiß, Angebot Kontur |
+| Anfrage-CTA | Muster und Angebot gleichwertig magenta/weiß | Muster und Angebot gleichwertig magenta/weiß |
 | Kompakte rechte Listenleiste bei offenem Filter | Umgesetzt | Umgesetzt |
 | Anfrageformular | Ganz oben in der SKU-Spalte; Anfrageart, Mengen je Artikel/Farbe, dann Kontaktdaten in Schritt 1 | Gleiches Inline-Formular mit laufendem Fortschritt; Adresse in Schritt 2 |
 | Rechner | Kreisgeometrie | Rechteckgeometrie, inkl. Pflanzenzahl |
@@ -115,7 +115,7 @@ catalog-xd.css regelt unter anderem Breakpoints bei 1350, 1100 und 700 px. Bei s
 
 Bei sehr schmalen Karten erlauben bestehende Containerregeln andere Zeilenumbrüche. Priorität: alle Buttons lesbar, bedienbar und vollständig sichtbar; keine starre Desktop-Anordnung auf Kosten von Überlagerungen erzwingen.
 
-Alle drei aktuellen Bereiche: Musterbutton Magenta mit weißer Schrift. Hover derzeit Hintergrund #fff4fb und magentafarbener Text. Angebot bleibt Konturbutton. Bereits zur Liste hinzugefügte Artikel behalten ihren sichtbaren Status.
+Alle drei aktuellen Bereiche: Muster und Angebot gleichwertig Magenta mit weißer Schrift; Hover dunkleres Magenta. Bereits hinzugefügte Artikel behalten weißen Text und erhalten eine grüne Statuskontur. Schlichte marineblaue Galerie-Pfeile ohne Kreisrahmen. Rechte Listenicons dunkelblau/weiß, aktive Muster-/Angebotsicons grün/weiß; Artikelzahlen magenta. Der Maßschalter folgt der November-Vorlage, kompakte Maßeinheit mit Lineal-Icon statt Einheitentext.
 
 ## 5. Zustandsmodell: Filter, Listen und Aufklappbereiche
 
@@ -231,7 +231,7 @@ Produktbild und runde Detailansichten: Rand-/Bodenkreise sollen deutlich über d
 
 Referenz-Detailbilder sind Circular ton/grau. Die vorhandene Kennzeichnung beibehalten, selbst wenn das Hauptfoto eine andere Farbe zeigt. Fehlende artikelbezogene Detailfotos oder Patentangaben nicht nachzeichnen/erfinden.
 
-Vorhandene Fußnoten wie D/K stehen im geschlossenen Artikelbereich unter der Zeile; keine neuen Patentbehauptungen ergänzen. Verpackungszahlen bleiben verständlich als Text mit Einheiten/Bezeichnungen dargestellt.
+Vorhandene Fußnoten wie D/K stehen im geschlossenen Artikelbereich unter der Zeile. Ausschließlich VCG 12 D zeigt nach Nutzer-Vorlage vom 17.11. zusätzlich „PATENT PENDING“ und „D: Niedrige Ausführung“; nicht auf andere Artikel übertragen. VCG 11 demonstriert am Boden-Hinweis 2 eine magentafarbene Neuheiten-Markierung. Tooltip und anklickbare Erklärung benennen den Beispielstatus; fachliche Freigabe durch TEKU offen. Der Kronenrand ist Standard und wird nicht als neu markiert. Impuls nur bei Hover und ohne Bewegung bei prefers-reduced-motion. Verpackungszahlen bleiben verständlich als Text mit Einheiten/Bezeichnungen dargestellt.
 
 ### 6.4 Passende Trays
 
@@ -382,14 +382,14 @@ Vorlagen aus früheren Chats sind nicht automatisch im neuen Chat verfügbar. Da
 
 ST hat ausschließlich A/B/C-Außenmaße, Töpfe pro Tray, Trays und Töpfe pro CC-Lage sowie „Trays unterverpackt auf Palette“. Keine Zell-, Plug- oder Volumendaten aus BP übertragen. Filter umfassen Farbe, Nachhaltigkeitskategorie, A/B/C, Töpfe pro Tray und beide CC-Werte; längere Wertelisten bieten „weitere Größen laden“. Einzige Quellfarbe/-kategorie nicht künstlich erweitern.
 
-„Passende Töpfe“ verwendet ausschließlich `p.fitting` des gewählten ST-Artikels; maximal fünf nebeneinander, seitliche blaue Winkel, exakt ein Produkt pro Klick, Füllbalken ab links, Anfang/Ende deaktiviert. Ein Produkt: voller Balken, beide Pfeile aus. Original-Produktlinks öffnen sich in neuem Tab. Hero/Zoom nutzen das jeweilige Quellfoto; keine künstliche Bodenansicht. Vorteilsbilder und Texte berücksichtigen die Quellunterschiede Standard/B/D und die Etikettenaufnahmen bestimmter Modelle.
+„Passende Töpfe“ verwendet ausschließlich `p.fitting` des gewählten ST-Artikels; maximal fünf nebeneinander, seitliche blaue Winkel, exakt ein Produkt pro Klick, Füllbalken ab links, Anfang/Ende deaktiviert. Ein Produkt: voller Balken, beide Pfeile aus. Original-Produktlinks öffnen sich in neuem Tab. Hero/Zoom nutzen das jeweilige Quellfoto. Seit 17.11. ergänzt eine ausdrücklich als Serienillustration gekennzeichnete originale Bodendetail-Illustration die Galerie und die technischen Daten; sie ist kein artikelgenaues ST-Bodenfoto. Die originale Etikettenschlitz-Illustration erscheint nur bei ST 2840 / ST 3156, ebenso der Sternchenhinweis „Mit Etikettenschlitz“. Diese Reihen nennt die Originalseite (erneut geprüft 17.11.); die endgültige SKU-Zuordnung durch TEKU/PIM bleibt abzustimmen. Keine Etikettenschlitzgrößen ergänzen. Vorteilsbilder und Texte berücksichtigen die Quellunterschiede Standard/B/D und die Etikettenaufnahmen bestimmter Modelle.
 
 ## 10. Fehlende Funktionen und noch offene Arbeit
 
 - ST V1 ist umgesetzt; GP und weitere Tray-Serien sind nicht Teil des aktuellen Auftrags.
 - ST 2840/8-13 und ST 2840/8-13 D: Quellfeld „Töpfe pro CC-Lage“ fehlt, deshalb „Keine Angabe“. Keine selbst berechnete Zahl als Originalwert ausgeben. Es gibt keine zusätzlichen ST-Bodenfotos oder weiteren Farben im extrahierten Variantenbestand.
 - Zusätzliche Produkt-Rand-/Bodendetailfotos, Patenttexte oder andere Farbabbildungen: nur mit Vorlage/Originalquelle ergänzen.
-- BP verwendet nun ebenfalls „Varianten“ und den magentafarbenen Musterbutton. Die bisherigen Ein-/Ausblendtexte und übrigen Aufklappdetails bleiben bewusst erhalten.
+- VCG/BP/ST folgen der November-Gestaltung mit zwei gleichwertigen Anfragebuttons und seitlichen Aufklapppfeilen. Bei BP bleibt eine nicht zugeordnete Aushebeplatte deaktiviert. Neuheiten nur nach TEKU-Freigabe; das Beispiel an VCG 11 ist ausdrücklich als solches gekennzeichnet.
 - Ein echtes Anfrage-Backend, Anmeldung, Preise, Verfügbarkeit, CRM-Anbindung oder dauerhaft gespeicherter Warenkorb gehören nicht zum derzeitigen Dummy.
 - Eine allgemeine CC-Wagenplanung über mehrere Ebenen wird nicht berechnet.
 - Produktnavigation mit mehreren BP-Aushebeplatten ist in der Komponente vorhanden, aber im aktuellen Datenbestand nicht real belegbar.
@@ -399,6 +399,7 @@ ST hat ausschließlich A/B/C-Außenmaße, Töpfe pro Tray, Trays und Töpfe pro 
 
 | Änderung | Zuerst ansehen | Mitbetroffene Bereiche |
 |---|---|---|
+| November-Gestaltung, Icons, Neuheiten und Bildadapter | design-review.js, design-review.css; assets/filter-unit.svg | Zuletzt in allen drei aktuellen HTML-Dateien geladen; Archive unverändert |
 | Bereiche/Versionsauswahl | version-switch.js; index.html, bp/index.html, st/index.html | Aktuell + Archive |
 | cm/inch-Anzeige | measurements.js (VCG), rectangular-measurements.js (BP/ST), measurements.css | Aktuelle Seiten; Quelldaten/Filterwerte und Archive erhalten |
 | VCG-Daten/Filter/Grundfunktionen | data.js, app.js | Aktuelle Ergänzungen können Renderer ersetzen |
@@ -422,7 +423,7 @@ ST hat ausschließlich A/B/C-Außenmaße, Töpfe pro Tray, Trays und Töpfe pro 
 
 **Ladereihenfolge ist Teil der Funktion.** Das Projekt verwendet globale Funktionen, die spätere Skripte dekorieren/überschreiben. renderProducts, renderRow, renderDetail und die Collapse-Setter nicht isoliert neu definieren, ohne vorhandene Wrapper zu berücksichtigen.
 
-VCG grob: app.js → v3.js → technical.js → latest.js → v4.js → catalog-xd.js → review.js → Rechneradapter → certificates.js/v8.js. BP grob: technical.js → bp/app.js → gemeinsames v3.js → catalog-xd.js → review.js → bp/review-update.js → Rechnerkomponenten/Adapter. Alle drei aktuellen Seiten laden `request-form.css` und danach `inline-request.js/css`. VCG lädt zusätzlich `measurements.js`, BP/ST zuletzt `rectangular-measurements.js` mit derselben Schalter-CSS. ST nutzt seinen eigenen app-/interaction-Adapter und geteilte Styles/Listen/Rechner, ohne VCG-Zertifikatszuordnungen oder BP-Produktdaten zu übernehmen. Archivseiten behalten ihre bisherigen Formulare und Maßanzeigen. Bei Änderungen die tatsächlichen script-Tags prüfen; diese Kurzfolge ist kein Ersatz für index.html.
+VCG grob: app.js → v3.js → technical.js → latest.js → v4.js → catalog-xd.js → review.js → Rechneradapter → certificates.js/v8.js. BP grob: technical.js → bp/app.js → gemeinsames v3.js → catalog-xd.js → review.js → bp/review-update.js → Rechnerkomponenten/Adapter. Alle drei aktuellen Seiten laden zuletzt `design-review.js/css` für die November-Vorlage. Dieser Adapter dekoriert die vorherigen Renderer nach den Maßumrechnungen, ergänzt weitere Artikel und erweitert bei BP/ST die Galerie. Neue Detailbilder über `p.detailImages=[{src,label}]` ausdrücklich pro Artikel zuordnen. BP-Bodenfotos bleiben artikelgenau; ST-Serienillustrationen klar beschriftet. `catalog-update.js` misst nur sichtbare SKU-Zeilen. Alle drei aktuellen Seiten laden `request-form.css` und danach `inline-request.js/css`. VCG lädt zusätzlich `measurements.js`, BP/ST zuletzt `rectangular-measurements.js` mit derselben Schalter-CSS. ST nutzt seinen eigenen app-/interaction-Adapter und geteilte Styles/Listen/Rechner, ohne VCG-Zertifikatszuordnungen oder BP-Produktdaten zu übernehmen. Archivseiten behalten ihre bisherigen Formulare und Maßanzeigen. Bei Änderungen die tatsächlichen script-Tags prüfen; diese Kurzfolge ist kein Ersatz für index.html.
 
 CSS ebenfalls in tatsächlicher Reihenfolge prüfen. Ein früher Treffer in styles.css ist oft nicht die am Ende wirksame Regel. Vorhandene Media-/Containerqueries sowie Scope-Klassen beachten: rounds-v8 und bp-review sind bereichsspezifisch, catalog-xd und v3-Dateien geteilt.
 
@@ -435,6 +436,8 @@ Besonders beachten:
 - Rechner liegen im offenen Shadow DOM. Für UI-Tests zugängliche Rollen oder passende Shadow-DOM-Locators nutzen; Dokument-CSS greift dort nicht direkt.
 - Bei neuen Textänderungen Sichtbarkeit und Platz prüfen: „Länge Anzuchtpalette“ passt nicht dreimal nebeneinander in die schmale Zusammenfassung.
 - Nach Änderungen an gemeinsamem JS/CSS passende Cacheparameter in allen betroffenen aktuellen HTML-Dateien aktualisieren.
+
+**Prüfstand 17.11.2026:** Syntaxprüfung `design-review.js` / `catalog-update.js`, Diff-Whitespace und DOM-Interaktionen VCG/BP/ST bestanden (Listen/Zähler und aktive Icons, beide Anfragearten und Artikelmengen, vollständiger zweistufiger Ablauf, Vor-/Zurück und Datenerhalt, Fortschritt 0/50/100, cm/inch, Galerie nach erneutem Artikelwechsel, Detailzoom, Sternchenabgrenzung, weitere Artikel). Keine neue Rechnerlogik. Lokale visuelle Browserprüfung durch die Umgebung blockiert; responsive Geometrie und Pixelvergleich nicht als geprüft ausgeben.
 
 ## 12. Prüfkatalog: je nach Auftrag auswählen
 
