@@ -1,10 +1,14 @@
 # TEKU Produktdetailseiten – Clickdummy
 
-Die Kopfzeile führt zu drei Produktbereichen:
+Die Kopfzeile führt zu sechs Produktbereichen:
 
 - **Rundtöpfe / VCG:** V12 mit animiertem Stellflächenrechner im Modal; V1–V11 bleiben über den Versionsumschalter erreichbar.
 - **Anzuchtpaletten / BP:** V6 mit 20 Artikeln, eigenem Rechteckrechner und animiertem Ausrichtungswechsel; V1–V5 bleiben erreichbar. Plug-, Tray- und Zellmaße sind separat benannt.
 - **Trays / ST:** V1 mit 30 Transport- und Kulturtrays, eigenen Filtern, CC-Lagen-Werten und passenden Töpfen.
+
+- **Ampeln / MAO:** V1 mit 5 Artikeln, 38 Varianten und zugeordneten Hängern.
+- **Untersetzer / MUK:** V1 mit 2 Artikeln, 4 Varianten und katalogbelegten MAK-Zuordnungen.
+- **Hänger / MHB, MHI, A:** V1 mit 4 Artikeln, 34 Varianten und Erklärung des Haken-Durchmessers.
 
 Alle aktuellen Entwürfe enthalten die rechten Listen für Muster, Angebote und Merkliste. Anfragen werden nur simuliert. Der VCG-Stellflächenrechner berechnet die Stückzahl für Viereck- und Dreieckverband mit frei änderbarem Durchmesser.
 
@@ -14,7 +18,21 @@ Alle aktuellen Entwürfe enthalten die rechten Listen für Muster, Angebote und 
 - [ST-Quellen und Datenzuordnung](st/SOURCE.md)
 - [Quellen, Datenzuordnung und tatsächliche Prüfungen](docs/sources-2026-10-22.md)
 
+- [Ampeln MAO V1 öffnen](https://areich135.github.io/GPT/mao/?version=v1)
+- [Untersetzer MUK V1 öffnen](https://areich135.github.io/GPT/muk/?version=v1)
+- [Hänger V1 öffnen](https://areich135.github.io/GPT/mhb/?version=v1)
+- [Neue Serien: Quellen und Kompatibilitäten](accessories/SOURCE.md)
+
 ## Changelog
+
+### 19.11.2026 · Drei neue Kategorien V1 und einheitliche technische Bilddialoge
+
+- Ampeln MAO, Untersetzer MUK und Hänger MHB/MHI/A als V1 in der oberen Bereichsauswahl. Originalartikel, Farbvarianten mit Bestellnummern/Zertifikaten, Maß-/Farb-/Nachhaltigkeitsfilter, cm/inch, technische Daten, Verpackungszeilen und bestehende Listen-/Anfragefunktionen integriert. Haken-Durchmesser mit Original-Icon und Infohilfe; MAO/MUK mit Rundrechner.
+- Artikelbezogenes Cross-Selling aus dem TEKU-Katalog; lokale Zubehörartikel lassen sich direkt zu Mustern oder Angeboten hinzufügen. MHI 38/45 passen laut Quelle zu MAO 25/27. MUK ist nur MAK zugeordnet: MAO-Untersetzerbereich nennt diese Lücke, statt eine Passung zu erfinden. Hänger/Untersetzer über gemeinsame MAK-Zuordnungen verknüpft, stets mit benannter Ampel.
+- VCG: Topf, Rand- und Bodenkreis bilden eine einzige aus Originalfotos zusammengesetzte PNG. Ganze Bildfläche öffnet die Produktansicht; nummerierte Bildunterschriften führen direkt zu Rand/Boden. Der Dialog erklärt Kronenrand und Multilochprofilboden IV kurz. Blaue Pfeile entsprechen den übrigen Galerien.
+- BP/ST: identischer Bilddialog mit wechselbaren Ansichten; technische Bodenansicht als Kreis. ST behält mangels artikelgenauem Foto die ausdrücklich gekennzeichnete originale Serienillustration. Maßband-Icon bleibt auch nach Filter-Neuaufbau sichtbar. Verpackungstabellen folgen dem Zeilenmuster der Rundtöpfe.
+- Quellen, Konflikte und Datenlücken in `accessories/SOURCE.md`, bereinigte Produktextrakte und 65 lokale Originalassets mit Manifest. Aktuelle VCG-/BP-/ST-Versionen und historische Dateien bleiben erhalten.
+- Prüfung: Syntax, lokale Asset-/Verlinkungsprüfung und DOM-Interaktionen aller sechs Bereiche einschließlich Einheiten, Verpackung, Bilddialogen, Varianten, Listen und Anfrageentwurf. VCG-Kompositionsbild separat kontrolliert. Lokaler visueller Chromium-Start durch Laufzeitumgebung blockiert; gerenderte Responsive-Prüfung deshalb offen.
 
 ### 17.11.2026 · Gestaltung nach Greta-Vorlage für VCG V12, BP V6 und ST V1
 

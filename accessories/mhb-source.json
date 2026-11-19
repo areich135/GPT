@@ -1,0 +1,752 @@
+{
+  "retrieved": "2026-11-19",
+  "source": "https://www.poeppelmann.com/de/teku/produkte/mhb-l-haenger",
+  "headlines": [
+    {
+      "id": "7493",
+      "headlineCount-0": 1,
+      "image-0": "",
+      "title-0": ""
+    },
+    {
+      "id": "7492",
+      "headlineCount-0": 1,
+      "image-0": "",
+      "title-0": ""
+    },
+    {
+      "id": "variants",
+      "headlineCount-0": 1,
+      "image-0": "",
+      "title-0": ""
+    },
+    {
+      "id": "7493",
+      "headlineCount-1": 1,
+      "image-1": "https://static.poeppelmann.com/assets/700236/haenger-hoehe-pikto.svg",
+      "title-1": "Länge"
+    },
+    {
+      "id": "7492",
+      "headlineCount-1": 1,
+      "image-1": "https://static.poeppelmann.com/assets/700237/haenger-druchbesser-pikto.svg",
+      "title-1": "H-nger-Durchmesser"
+    },
+    {
+      "id": "variants",
+      "headlineCount-1": 1,
+      "image-1": "https://static.poeppelmann.com/assets/700239/farbvarianten-pikto.svg",
+      "title-1": "Varianten"
+    },
+    {
+      "id": "8438",
+      "headlineCount-0": 1,
+      "image-0": "https://static.poeppelmann.com/assets/700486/karton-pikto.svg",
+      "title-0": ""
+    },
+    {
+      "id": "8439",
+      "headlineCount-0": 2,
+      "image-0": "https://static.poeppelmann.com/assets/700384/euro-palette-pikto.svg",
+      "title-0": ""
+    },
+    {
+      "id": "8438",
+      "headlineCount-1": 1,
+      "image-1": "https://static.poeppelmann.com/assets/700238/haenger-3x-pikto.svg",
+      "title-1": "Hänger pro Karton"
+    },
+    {
+      "id": "8439",
+      "headlineCount-1": 1,
+      "image-1": "https://static.poeppelmann.com/assets/700487/karton-2x-pikto.svg",
+      "title-1": "Kartons pro Palette"
+    },
+    {
+      "id": "8440",
+      "headlineCount-1": 1,
+      "image-1": "https://static.poeppelmann.com/assets/700238/haenger-3x-pikto.svg",
+      "title-1": "Hänger unterverpackt auf Palette"
+    }
+  ],
+  "products": [
+    {
+      "availability": "",
+      "articleNumber": "MHB 33",
+      "orderNumber": "",
+      "image": "https://static.teku.com/assets/456542/mhb-ton-haken.psd",
+      "imageAlt": "TEKU MHB Hänger, ton",
+      "imageTitle": "TEKU MHB ton",
+      "seriesName": "MHB l Hänger",
+      "radius": "",
+      "width": "",
+      "length": "",
+      "index": 0,
+      "fields": {
+        "10900": "MHB 33",
+        "7493": "33",
+        "7492": "35",
+        "variants": "details.variants",
+        "8438": "874",
+        "8439": "20",
+        "8440": "17.480"
+      },
+      "variants": [
+        {
+          "articleNo": "MHB 33 Recyclable rot PMS 199\t",
+          "orderNo": "11218460601",
+          "productImage": "https://static.teku.com/assets/456544/mhb-rot-haken.psd",
+          "articleName": "MHB 33",
+          "seriesName": "MHB l Hänger",
+          "category": "Recyclable",
+          "color": "Recyclable rot",
+          "image": "https://static.teku.com/assets/456544/mhb-rot-haken.psd",
+          "alt": " ",
+          "title": " ",
+          "availability": "",
+          "show": true,
+          "certificates": [
+            "https://static.teku.com/assets/501422/logo-cyclos-htp-de.png"
+          ]
+        },
+        {
+          "articleNo": "MHB 33 Recyclable anthrazit PMS 447\t",
+          "orderNo": "11218460105",
+          "productImage": "https://static.teku.com/assets/456554/mhb-anthrazit-haken.psd",
+          "articleName": "MHB 33",
+          "seriesName": "MHB l Hänger",
+          "category": "Recyclable",
+          "color": "Recyclable anthrazit",
+          "image": "https://static.teku.com/assets/456554/mhb-anthrazit-haken.psd",
+          "alt": "Produktfoto,Hänger",
+          "title": "Produktfoto,Hänger",
+          "availability": "",
+          "show": true,
+          "certificates": [
+            "https://static.teku.com/assets/501422/logo-cyclos-htp-de.png"
+          ]
+        },
+        {
+          "articleNo": "MHB 33 Recyclable pink PMS 7424\t",
+          "orderNo": "11218460801",
+          "productImage": "https://static.teku.com/assets/456545/mhb-pink-haken.psd",
+          "articleName": "MHB 33",
+          "seriesName": "MHB l Hänger",
+          "category": "Recyclable",
+          "color": "Recyclable pink",
+          "image": "https://static.teku.com/assets/456545/mhb-pink-haken.psd",
+          "alt": "Produktfoto Hänger",
+          "title": " Produktfoto Hänger",
+          "availability": "",
+          "show": true,
+          "certificates": [
+            "https://static.teku.com/assets/501422/logo-cyclos-htp-de.png"
+          ]
+        },
+        {
+          "articleNo": "MHB 33 Recyclable brombeer PMS 260\t",
+          "orderNo": "11218460603",
+          "productImage": "https://static.teku.com/assets/456728/a-brombeer-pr.psd",
+          "articleName": "MHB 33",
+          "seriesName": "MHB l Hänger",
+          "category": "Recyclable",
+          "color": "Recyclable brombeer",
+          "image": "https://static.teku.com/assets/456728/a-brombeer-pr.psd",
+          "alt": "Produktfoto Hänger",
+          "title": "Produktfoto Hänger",
+          "availability": "",
+          "show": true,
+          "certificates": [
+            "https://static.teku.com/assets/501422/logo-cyclos-htp-de.png"
+          ]
+        },
+        {
+          "articleNo": "MHB 33 Recyclable ton ",
+          "orderNo": "11218460006",
+          "productImage": "https://static.teku.com/assets/456542/mhb-ton-haken.psd",
+          "articleName": "MHB 33",
+          "seriesName": "MHB l Hänger",
+          "category": "Recyclable",
+          "color": "Recyclable ton",
+          "image": "https://static.teku.com/assets/456542/mhb-ton-haken.psd",
+          "alt": "TEKU MHB Hänger, ton",
+          "title": "TEKU MHB ton",
+          "availability": "",
+          "show": true,
+          "certificates": [
+            "https://static.teku.com/assets/501422/logo-cyclos-htp-de.png"
+          ]
+        },
+        {
+          "articleNo": "MHB 33 Recyclable gelb PMS 123\t",
+          "orderNo": "11218460901",
+          "productImage": "https://static.teku.com/assets/456552/mhb-gelb-haken.psd",
+          "articleName": "MHB 33",
+          "seriesName": "MHB l Hänger",
+          "category": "Recyclable",
+          "color": "Recyclable gelb",
+          "image": "https://static.teku.com/assets/456552/mhb-gelb-haken.psd",
+          "alt": "Produktfoto Hänger",
+          "title": " Produktfoto Hänger",
+          "availability": "",
+          "show": true,
+          "certificates": [
+            "https://static.teku.com/assets/501422/logo-cyclos-htp-de.png"
+          ]
+        },
+        {
+          "articleNo": "MHB 33 Recyclable weiß\t",
+          "orderNo": "11218460401",
+          "productImage": "https://static.teku.com/assets/456541/mhb-weiss-haken.psd",
+          "articleName": "MHB 33",
+          "seriesName": "MHB l Hänger",
+          "category": "Recyclable",
+          "color": "Recyclable weiß",
+          "image": "https://static.teku.com/assets/456541/mhb-weiss-haken.psd",
+          "alt": "Produktfoto Hänger",
+          "title": "Produktfoto Hänger",
+          "availability": "",
+          "show": true,
+          "certificates": [
+            "https://static.teku.com/assets/501422/logo-cyclos-htp-de.png"
+          ]
+        },
+        {
+          "articleNo": "MHB 33 Recyclable kiefergrün PMS 3308\t",
+          "orderNo": "11218460501",
+          "productImage": "https://static.teku.com/assets/456549/mhb-kiefergruen-haken.psd",
+          "articleName": "MHB 33",
+          "seriesName": "MHB l Hänger",
+          "category": "Recyclable",
+          "color": "Recyclable kiefergrün",
+          "image": "https://static.teku.com/assets/456549/mhb-kiefergruen-haken.psd",
+          "alt": "Produktfoto Hänger",
+          "title": " Produktfoto Hänger",
+          "availability": "",
+          "show": true,
+          "certificates": [
+            "https://static.teku.com/assets/501422/logo-cyclos-htp-de.png"
+          ]
+        },
+        {
+          "articleNo": "MHB 33 Recyclable orange 2008\t",
+          "orderNo": "11218460803",
+          "productImage": "https://static.teku.com/assets/456724/a-orange-pr.psd",
+          "articleName": "MHB 33",
+          "seriesName": "MHB l Hänger",
+          "category": "Recyclable",
+          "color": "Recyclable orange",
+          "image": "https://static.teku.com/assets/456724/a-orange-pr.psd",
+          "alt": "Produktfoto Hänger",
+          "title": " Produktfoto Hänger",
+          "availability": "",
+          "show": true,
+          "certificates": [
+            "https://static.teku.com/assets/501422/logo-cyclos-htp-de.png"
+          ]
+        },
+        {
+          "articleNo": "MHB 33 Recyclable hellgrün PMS 367\t",
+          "orderNo": "11218460505",
+          "productImage": "https://static.teku.com/assets/456551/mhb-gruen-haken.psd",
+          "articleName": "MHB 33",
+          "seriesName": "MHB l Hänger",
+          "category": "Recyclable",
+          "color": "Recyclable hellgrün",
+          "image": "https://static.teku.com/assets/456551/mhb-gruen-haken.psd",
+          "alt": "Produktfoto Hänger",
+          "title": " Produktfoto Hänger",
+          "availability": "",
+          "show": true,
+          "certificates": [
+            "https://static.teku.com/assets/501422/logo-cyclos-htp-de.png"
+          ]
+        }
+      ],
+      "fitting": []
+    },
+    {
+      "availability": "Neu",
+      "articleNumber": "MHI 38",
+      "orderNumber": "",
+      "image": "https://static.teku.com/assets/711874/mhi-ton-haken.psd",
+      "imageAlt": "Produktfoto",
+      "imageTitle": "Produktfoto",
+      "seriesName": "MHB l Hänger",
+      "radius": "",
+      "width": "",
+      "length": "",
+      "index": 1,
+      "fields": {
+        "10900": "MHI 38",
+        "7493": "38",
+        "7492": "35",
+        "variants": "details.variants",
+        "8438": "598",
+        "8439": "20",
+        "8440": "11.960"
+      },
+      "variants": [
+        {
+          "articleNo": "MHI 38 Recyclable ton PAK ",
+          "orderNo": "88000017031",
+          "productImage": "https://static.teku.com/assets/711874/mhi-ton-haken.psd",
+          "articleName": "MHI 38",
+          "seriesName": "MHB l Hänger",
+          "category": "Recyclable",
+          "color": "Recyclable ton",
+          "image": "https://static.teku.com/assets/711874/mhi-ton-haken.psd",
+          "alt": "Produktfoto",
+          "title": "Produktfoto",
+          "availability": "",
+          "show": true,
+          "certificates": [
+            "https://static.teku.com/assets/501422/logo-cyclos-htp-de.png"
+          ]
+        },
+        {
+          "articleNo": "MHI 38 Recyclable gelb PMS 123 PAK ",
+          "orderNo": "88000017247",
+          "productImage": "https://static.teku.com/assets/711877/mhi-gelb-haken.psd",
+          "articleName": "MHI 38",
+          "seriesName": "MHB l Hänger",
+          "category": "Recyclable",
+          "color": "Recyclable gelb",
+          "image": "https://static.teku.com/assets/711877/mhi-gelb-haken.psd",
+          "alt": "Produktfoto",
+          "title": "Produktfoto",
+          "availability": "",
+          "show": true,
+          "certificates": [
+            "https://static.teku.com/assets/501422/logo-cyclos-htp-de.png"
+          ]
+        },
+        {
+          "articleNo": "MHI 38 Recyclable orange 2008 PAK ",
+          "orderNo": "88000017246",
+          "productImage": "https://static.teku.com/assets/711880/mhi-orange-haken.psd",
+          "articleName": "MHI 38",
+          "seriesName": "MHB l Hänger",
+          "category": "Recyclable",
+          "color": "Recyclable orange",
+          "image": "https://static.teku.com/assets/711880/mhi-orange-haken.psd",
+          "alt": "Produktfoto",
+          "title": "Produktfoto",
+          "availability": "",
+          "show": true,
+          "certificates": [
+            "https://static.teku.com/assets/501422/logo-cyclos-htp-de.png"
+          ]
+        },
+        {
+          "articleNo": "MHI 38 Recyclable hellgrün PMS 367 PAK ",
+          "orderNo": "88000017245",
+          "productImage": "https://static.teku.com/assets/711883/mhi-hellgruen-haken.psd",
+          "articleName": "MHI 38",
+          "seriesName": "MHB l Hänger",
+          "category": "Recyclable",
+          "color": "Recyclable hellgrün",
+          "image": "https://static.teku.com/assets/711883/mhi-hellgruen-haken.psd",
+          "alt": "Produktfoto",
+          "title": "Produktfoto",
+          "availability": "",
+          "show": true,
+          "certificates": [
+            "https://static.teku.com/assets/501422/logo-cyclos-htp-de.png"
+          ]
+        },
+        {
+          "articleNo": "MHI 38 Recyclable rot PMS 199 PAK ",
+          "orderNo": "88000017243",
+          "productImage": "https://static.teku.com/assets/711862/mhi-rot-haken.psd",
+          "articleName": "MHI 38",
+          "seriesName": "MHB l Hänger",
+          "category": "Recyclable",
+          "color": "Recyclable rot",
+          "image": "https://static.teku.com/assets/711862/mhi-rot-haken.psd",
+          "alt": "Produktfoto",
+          "title": "Produktfoto",
+          "availability": "",
+          "show": true,
+          "certificates": [
+            "https://static.teku.com/assets/501422/logo-cyclos-htp-de.png"
+          ]
+        },
+        {
+          "articleNo": "MHI 38 Recyclable pink PMS 7424 PAK ",
+          "orderNo": "88000017244",
+          "productImage": "https://static.teku.com/assets/711868/mhi-pink-haken.psd",
+          "articleName": "MHI 38",
+          "seriesName": "MHB l Hänger",
+          "category": "Recyclable",
+          "color": "Recyclable pink",
+          "image": "https://static.teku.com/assets/711868/mhi-pink-haken.psd",
+          "alt": "Produktfoto",
+          "title": "Produktfoto",
+          "availability": "",
+          "show": true,
+          "certificates": [
+            "https://static.teku.com/assets/501422/logo-cyclos-htp-de.png"
+          ]
+        },
+        {
+          "articleNo": "MHI 38 Recyclable brombeer PMS 260 PAK ",
+          "orderNo": "88000017242",
+          "productImage": "https://static.teku.com/assets/711859/mhi-brombeer-haken.psd",
+          "articleName": "MHI 38",
+          "seriesName": "MHB l Hänger",
+          "category": "Recyclable",
+          "color": "Recyclable brombeer",
+          "image": "https://static.teku.com/assets/711859/mhi-brombeer-haken.psd",
+          "alt": "Produktfoto",
+          "title": "Produktfoto",
+          "availability": "",
+          "show": true,
+          "certificates": [
+            "https://static.teku.com/assets/501422/logo-cyclos-htp-de.png"
+          ]
+        },
+        {
+          "articleNo": "MHI 38 Rec kiefergrün PMS 3308 PAK ",
+          "orderNo": "88000017241",
+          "productImage": "https://static.teku.com/assets/711871/mhi-kiefergruen-haken.psd",
+          "articleName": "MHI 38",
+          "seriesName": "MHB l Hänger",
+          "category": "Recyclable",
+          "color": "Recyclable kiefergrün",
+          "image": "https://static.teku.com/assets/711871/mhi-kiefergruen-haken.psd",
+          "alt": "Produktfoto",
+          "title": "Produktfoto",
+          "availability": "",
+          "show": true,
+          "certificates": [
+            "https://static.teku.com/assets/501422/logo-cyclos-htp-de.png"
+          ]
+        },
+        {
+          "articleNo": "MHI 38 Recyclable weiß PAK ",
+          "orderNo": "88000017240",
+          "productImage": "https://static.teku.com/assets/711865/mhi-weiss-haken.psd",
+          "articleName": "MHI 38",
+          "seriesName": "MHB l Hänger",
+          "category": "Recyclable",
+          "color": "Recyclable weiß",
+          "image": "https://static.teku.com/assets/711865/mhi-weiss-haken.psd",
+          "alt": "Produktfoto",
+          "title": "Produktfoto",
+          "availability": "",
+          "show": true,
+          "certificates": [
+            "https://static.teku.com/assets/501422/logo-cyclos-htp-de.png"
+          ]
+        },
+        {
+          "articleNo": "MHI 38 Recyclable anthrazit PMS 447 PAK ",
+          "orderNo": "88000017238",
+          "productImage": "https://static.teku.com/assets/711886/mhi-anthrazit-haken.psd",
+          "articleName": "MHI 38",
+          "seriesName": "MHB l Hänger",
+          "category": "Recyclable",
+          "color": "Recyclable anthrazit",
+          "image": "https://static.teku.com/assets/711886/mhi-anthrazit-haken.psd",
+          "alt": "Produktfoto",
+          "title": "Produktfoto",
+          "availability": "",
+          "show": true,
+          "certificates": [
+            "https://static.teku.com/assets/501422/logo-cyclos-htp-de.png"
+          ]
+        }
+      ],
+      "fitting": []
+    },
+    {
+      "availability": "Neu",
+      "articleNumber": "MHI 45",
+      "orderNumber": "",
+      "image": "https://static.teku.com/assets/711874/mhi-ton-haken.psd",
+      "imageAlt": "Produktfoto",
+      "imageTitle": "Produktfoto",
+      "seriesName": "MHB l Hänger",
+      "radius": "",
+      "width": "",
+      "length": "",
+      "index": 2,
+      "fields": {
+        "10900": "MHI 45",
+        "7493": "45",
+        "7492": "35",
+        "variants": "details.variants",
+        "8438": "552",
+        "8439": "20",
+        "8440": "11.040"
+      },
+      "variants": [
+        {
+          "articleNo": "MHI 45 Recyclable rot PMS 199 PAK ",
+          "orderNo": "88000018093",
+          "productImage": "https://static.teku.com/assets/711862/mhi-rot-haken.psd",
+          "articleName": "MHI 45",
+          "seriesName": "MHB l Hänger",
+          "category": "Recyclable",
+          "color": "Recyclable rot",
+          "image": "https://static.teku.com/assets/711862/mhi-rot-haken.psd",
+          "alt": "Produktfoto",
+          "title": "Produktfoto",
+          "availability": "",
+          "show": true,
+          "certificates": [
+            "https://static.teku.com/assets/501422/logo-cyclos-htp-de.png"
+          ]
+        },
+        {
+          "articleNo": "MHI 45 Recyclable hellgrün PMS 367 PAK ",
+          "orderNo": "88000018092",
+          "productImage": "https://static.teku.com/assets/711883/mhi-hellgruen-haken.psd",
+          "articleName": "MHI 45",
+          "seriesName": "MHB l Hänger",
+          "category": "Recyclable",
+          "color": "Recyclable hellgrün",
+          "image": "https://static.teku.com/assets/711883/mhi-hellgruen-haken.psd",
+          "alt": "Produktfoto",
+          "title": "Produktfoto",
+          "availability": "",
+          "show": true,
+          "certificates": [
+            "https://static.teku.com/assets/501422/logo-cyclos-htp-de.png"
+          ]
+        },
+        {
+          "articleNo": "MHI 45 Recyclable pink PMS 7424 PAK ",
+          "orderNo": "88000018091",
+          "productImage": "https://static.teku.com/assets/711868/mhi-pink-haken.psd",
+          "articleName": "MHI 45",
+          "seriesName": "MHB l Hänger",
+          "category": "Recyclable",
+          "color": "Recyclable pink",
+          "image": "https://static.teku.com/assets/711868/mhi-pink-haken.psd",
+          "alt": "Produktfoto",
+          "title": "Produktfoto",
+          "availability": "",
+          "show": true,
+          "certificates": [
+            "https://static.teku.com/assets/501422/logo-cyclos-htp-de.png"
+          ]
+        },
+        {
+          "articleNo": "MHI 45 Recyclable brombeer PMS 260 PAK ",
+          "orderNo": "88000018090",
+          "productImage": "https://static.teku.com/assets/711859/mhi-brombeer-haken.psd",
+          "articleName": "MHI 45",
+          "seriesName": "MHB l Hänger",
+          "category": "Recyclable",
+          "color": "Recyclable brombeer",
+          "image": "https://static.teku.com/assets/711859/mhi-brombeer-haken.psd",
+          "alt": "Produktfoto",
+          "title": "Produktfoto",
+          "availability": "",
+          "show": true,
+          "certificates": [
+            "https://static.teku.com/assets/501422/logo-cyclos-htp-de.png"
+          ]
+        },
+        {
+          "articleNo": "MHI 45 Rec kiefergrün PMS 3308 PAK ",
+          "orderNo": "88000018089",
+          "productImage": "https://static.teku.com/assets/711871/mhi-kiefergruen-haken.psd",
+          "articleName": "MHI 45",
+          "seriesName": "MHB l Hänger",
+          "category": "Recyclable",
+          "color": "Recyclable kiefergrün",
+          "image": "https://static.teku.com/assets/711871/mhi-kiefergruen-haken.psd",
+          "alt": "Produktfoto",
+          "title": "Produktfoto",
+          "availability": "",
+          "show": true,
+          "certificates": [
+            "https://static.teku.com/assets/501422/logo-cyclos-htp-de.png"
+          ]
+        },
+        {
+          "articleNo": "MHI 45 Recyclable weiß PAK ",
+          "orderNo": "88000018087",
+          "productImage": "https://static.teku.com/assets/711865/mhi-weiss-haken.psd",
+          "articleName": "MHI 45",
+          "seriesName": "MHB l Hänger",
+          "category": "Recyclable",
+          "color": "Recyclable weiß",
+          "image": "https://static.teku.com/assets/711865/mhi-weiss-haken.psd",
+          "alt": "Produktfoto",
+          "title": "Produktfoto",
+          "availability": "",
+          "show": true,
+          "certificates": [
+            "https://static.teku.com/assets/501422/logo-cyclos-htp-de.png"
+          ]
+        },
+        {
+          "articleNo": "MHI 45 Recyclable anthrazit PMS 447 PAK ",
+          "orderNo": "88000018086",
+          "productImage": "https://static.teku.com/assets/711886/mhi-anthrazit-haken.psd",
+          "articleName": "MHI 45",
+          "seriesName": "MHB l Hänger",
+          "category": "Recyclable",
+          "color": "Recyclable anthrazit",
+          "image": "https://static.teku.com/assets/711886/mhi-anthrazit-haken.psd",
+          "alt": "Produktfoto",
+          "title": "Produktfoto",
+          "availability": "",
+          "show": true,
+          "certificates": [
+            "https://static.teku.com/assets/501422/logo-cyclos-htp-de.png"
+          ]
+        },
+        {
+          "articleNo": "MHI 45 Recyclable ton PAK ",
+          "orderNo": "88000018084",
+          "productImage": "https://static.teku.com/assets/711874/mhi-ton-haken.psd",
+          "articleName": "MHI 45",
+          "seriesName": "MHB l Hänger",
+          "category": "Recyclable",
+          "color": "Recyclable ton",
+          "image": "https://static.teku.com/assets/711874/mhi-ton-haken.psd",
+          "alt": "Produktfoto",
+          "title": "Produktfoto",
+          "availability": "",
+          "show": true,
+          "certificates": [
+            "https://static.teku.com/assets/501422/logo-cyclos-htp-de.png"
+          ]
+        },
+        {
+          "articleNo": "MHI 45 Recyclable gelb PMS 123 PAK ",
+          "orderNo": "88000018095",
+          "productImage": "https://static.teku.com/assets/711877/mhi-gelb-haken.psd",
+          "articleName": "MHI 45",
+          "seriesName": "MHB l Hänger",
+          "category": "Recyclable",
+          "color": "Recyclable gelb",
+          "image": "https://static.teku.com/assets/711877/mhi-gelb-haken.psd",
+          "alt": "Produktfoto",
+          "title": "Produktfoto",
+          "availability": "",
+          "show": true,
+          "certificates": [
+            "https://static.teku.com/assets/501422/logo-cyclos-htp-de.png"
+          ]
+        },
+        {
+          "articleNo": "MHI 45 Recyclable orange 2008 PAK ",
+          "orderNo": "88000018094",
+          "productImage": "https://static.teku.com/assets/711880/mhi-orange-haken.psd",
+          "articleName": "MHI 45",
+          "seriesName": "MHB l Hänger",
+          "category": "Recyclable",
+          "color": "Recyclable orange",
+          "image": "https://static.teku.com/assets/711880/mhi-orange-haken.psd",
+          "alt": "Produktfoto",
+          "title": "Produktfoto",
+          "availability": "",
+          "show": true,
+          "certificates": [
+            "https://static.teku.com/assets/501422/logo-cyclos-htp-de.png"
+          ]
+        }
+      ],
+      "fitting": []
+    },
+    {
+      "availability": "",
+      "articleNumber": "A 60",
+      "orderNumber": "",
+      "image": "https://static.teku.com/assets/456542/mhb-ton-haken.psd",
+      "imageAlt": "TEKU MHB Hänger, ton",
+      "imageTitle": "TEKU MHB ton",
+      "seriesName": "MHB l Hänger",
+      "radius": "",
+      "width": "",
+      "length": "",
+      "index": 3,
+      "fields": {
+        "10900": "A 60",
+        "7493": "60",
+        "7492": "38",
+        "variants": "details.variants",
+        "8438": "380",
+        "8439": "14",
+        "8440": "5.320"
+      },
+      "variants": [
+        {
+          "articleNo": "A 60 Recyclable ton\t",
+          "orderNo": "11204690005",
+          "productImage": "https://static.teku.com/assets/456542/mhb-ton-haken.psd",
+          "articleName": "A 60",
+          "seriesName": "MHB l Hänger",
+          "category": "Recyclable",
+          "color": "Recyclable ton",
+          "image": "https://static.teku.com/assets/456542/mhb-ton-haken.psd",
+          "alt": "TEKU MHB Hänger, ton",
+          "title": "TEKU MHB ton",
+          "availability": "",
+          "show": true,
+          "certificates": [
+            "https://static.teku.com/assets/501422/logo-cyclos-htp-de.png"
+          ]
+        },
+        {
+          "articleNo": "A 60 Recyclable weiß\t",
+          "orderNo": "11204690401",
+          "productImage": "https://static.teku.com/assets/456541/mhb-weiss-haken.psd",
+          "articleName": "A 60",
+          "seriesName": "MHB l Hänger",
+          "category": "Recyclable",
+          "color": "Recyclable weiß",
+          "image": "https://static.teku.com/assets/456541/mhb-weiss-haken.psd",
+          "alt": "Produktfoto Hänger",
+          "title": "Produktfoto Hänger",
+          "availability": "",
+          "show": true,
+          "certificates": [
+            "https://static.teku.com/assets/501422/logo-cyclos-htp-de.png"
+          ]
+        },
+        {
+          "articleNo": "A 60 Recyclable kiefergrün PMS 3308\t",
+          "orderNo": "11204690501",
+          "productImage": "https://static.teku.com/assets/456549/mhb-kiefergruen-haken.psd",
+          "articleName": "A 60",
+          "seriesName": "MHB l Hänger",
+          "category": "Recyclable",
+          "color": "Recyclable kiefergrün",
+          "image": "https://static.teku.com/assets/456549/mhb-kiefergruen-haken.psd",
+          "alt": "Produktfoto Hänger",
+          "title": " Produktfoto Hänger",
+          "availability": "",
+          "show": true,
+          "certificates": [
+            "https://static.teku.com/assets/501422/logo-cyclos-htp-de.png"
+          ]
+        },
+        {
+          "articleNo": "A 60 Recyclable anthrazit PMS 447\t",
+          "orderNo": "11204690108",
+          "productImage": "https://static.teku.com/assets/456554/mhb-anthrazit-haken.psd",
+          "articleName": "A 60",
+          "seriesName": "MHB l Hänger",
+          "category": "Recyclable",
+          "color": "Recyclable anthrazit",
+          "image": "https://static.teku.com/assets/456554/mhb-anthrazit-haken.psd",
+          "alt": "Produktfoto,Hänger",
+          "title": "Produktfoto,Hänger",
+          "availability": "",
+          "show": true,
+          "certificates": [
+            "https://static.teku.com/assets/501422/logo-cyclos-htp-de.png"
+          ]
+        }
+      ],
+      "fitting": []
+    }
+  ]
+}

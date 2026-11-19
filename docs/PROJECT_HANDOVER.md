@@ -1,7 +1,7 @@
 # TEKU Website – verbindliche Übergabe für die Clickdummys
 
-**Dokumentrevision:** 14 · **Stand:** 17.11.2026
-**Ausgangsbasis dieser Änderung:** b34a099; aktuelle Änderungen siehe README-Changelog
+**Dokumentrevision:** 15 · **Stand:** 19.11.2026
+**Ausgangsbasis dieser Änderung:** 12532a3; aktuelle Änderungen siehe README-Changelog
 **Repository:** https://github.com/areich135/GPT · **Arbeitsbranch:** main
 
 Diese Übergabe soll einen neuen Chat arbeitsfähig machen, ohne den gesamten alten Verlauf zu laden. Sie beschreibt den freigegebenen Stand, die bewussten Unterschiede zwischen den Produktbereichen und die Grenzen des Dummys. Vor jeder Aufgabe den aktuellen Remote-Stand prüfen: Eine im ChatGPT-Projekt hochgeladene Kopie kann älter sein als die Datei im Repository.
@@ -38,8 +38,11 @@ Keine erfundenen Produktdaten, Patenttexte, Siegel, Bilder, Verkaufsargumente od
 | Rundtöpfe, Serie VCG | V12 | Repository-Stamm | https://areich135.github.io/GPT/?version=v12 |
 | Anzuchtpaletten, Serie BP | V6 | bp/ | https://areich135.github.io/GPT/bp/?version=v6 |
 | Transport- und Kulturtrays, Serie ST | V1 | st/ | https://areich135.github.io/GPT/st/?version=v1 |
+| Ampeln, Serie MAO | V1 | mao/ | https://areich135.github.io/GPT/mao/?version=v1 |
+| Untersetzer, Serie MUK | V1 | muk/ | https://areich135.github.io/GPT/muk/?version=v1 |
+| Hänger MHB/MHI/A | V1 | mhb/ | https://areich135.github.io/GPT/mhb/?version=v1 |
 
-Der Umschalter hat drei getrennte Kategorien: „Rundtöpfe“ (VCG), „Anzuchtpaletten“ (BP) und „Trays“ (ST). ST V1 ist ein eigener Datenbestand und eine eigene Seite. GP ist nicht umgesetzt. BP nicht als Tray-Sortiment umdeuten.
+Der Umschalter hat sechs getrennte Kategorien; MAO, MUK und Hänger ergänzen seit 19.11.2026: „Rundtöpfe“ (VCG), „Anzuchtpaletten“ (BP) und „Trays“ (ST). ST V1 ist ein eigener Datenbestand und eine eigene Seite. GP ist nicht umgesetzt. BP nicht als Tray-Sortiment umdeuten.
 
 Frühere Rundtopf-Stände V1–V11 liegen unter versions/v1/ bis versions/v11/. Frühere BP-Stände V1–V5 liegen unter bp/versions/. Die aktuellen Stände liegen gerade nicht unter versions/v12/ oder bp/versions/v6/. Die Zuordnung steuert version-switch.js.
 
@@ -227,11 +230,11 @@ Farbfilter oder Variantenwahl verwenden vorhandene Farbfotos. Boden-/Randdetails
 
 Unterbereiche: Maße, Verpackungsdaten, Stellflächenrechner.
 
-Produktbild und runde Detailansichten: Rand-/Bodenkreise sollen deutlich über das Produktbild ragen. Nummerierte Hinweise „1 Kronenrand“ und „2 Multilochprofilboden IV“ erhalten. Das Bodenfoto sitzt im Kreis so tief, dass unten kein störender weißer Saum bleibt. Beide Details sind vergrößerbar.
+Produktbild und runde Detailansichten sind seit 19.11.2026 **eine einzige PNG-Komposition** aus Originalfotos (`assets/technical-composites/`, optional reproduzierbar über `scripts/build-vcg-composites.cjs` mit sharp). Gestaltung und Kreispositionen aus dem vorhandenen Raster übernommen; kein künstlich gezeichneter Topf. Ganze Bildfläche öffnet Produktansicht. Die getrennten beschrifteten Buttons „1 Kronenrand“ / „2 Multilochprofilboden IV“ öffnen direkt Rand/Boden; kurze Erklärtexte ersetzen die bisherige Farbbeschreibung im Dialog. Originalfarben sind im Alttext/Bildhinweis weiter erkennbar. `product-details.js/css` ist der abschließende Adapter aller sechs aktuellen Seiten, Archive laden ihn nicht.
 
-Referenz-Detailbilder sind Circular ton/grau. Die vorhandene Kennzeichnung beibehalten, selbst wenn das Hauptfoto eine andere Farbe zeigt. Fehlende artikelbezogene Detailfotos oder Patentangaben nicht nachzeichnen/erfinden.
+Referenz-Detailbilder sind Circular ton/grau. Diese Kennzeichnung steht bei der technischen Komposition und in den Bildinformationen; der Dialog verwendet nun fachliche Kurzbeschreibungen. Fehlende artikelbezogene Detailfotos oder Patentangaben nicht nachzeichnen/erfinden.
 
-Vorhandene Fußnoten wie D/K stehen im geschlossenen Artikelbereich unter der Zeile. Ausschließlich VCG 12 D zeigt nach Nutzer-Vorlage vom 17.11. zusätzlich „PATENT PENDING“ und „D: Niedrige Ausführung“; nicht auf andere Artikel übertragen. VCG 11 demonstriert am Boden-Hinweis 2 eine magentafarbene Neuheiten-Markierung. Tooltip und anklickbare Erklärung benennen den Beispielstatus; fachliche Freigabe durch TEKU offen. Der Kronenrand ist Standard und wird nicht als neu markiert. Impuls nur bei Hover und ohne Bewegung bei prefers-reduced-motion. Verpackungszahlen bleiben verständlich als Text mit Einheiten/Bezeichnungen dargestellt.
+Vorhandene Fußnoten wie D/K stehen im geschlossenen Artikelbereich unter der Zeile. Ausschließlich VCG 12 D zeigt nach Nutzer-Vorlage vom 17.11. zusätzlich „PATENT PENDING“ und „D: Niedrige Ausführung“; nicht auf andere Artikel übertragen. VCG 11 demonstriert am Boden-Hinweis 2 eine magentafarbene Neuheiten-Markierung. Ein Tooltip an der markierten Nummer benennt den Beispielstatus; fachliche Freigabe durch TEKU offen. Klick auf die nummerierte Boden-Beschriftung öffnet seit 19.11. direkt die Bodenansicht. Der Kronenrand ist Standard und wird nicht als neu markiert. Die technische Komposition bleibt ein einzelnes statisches Bild; keine separat animierten Bildkreise. Verpackungszahlen bleiben verständlich als Text mit Einheiten/Bezeichnungen dargestellt.
 
 ### 6.4 Passende Trays
 
@@ -384,6 +387,12 @@ ST hat ausschließlich A/B/C-Außenmaße, Töpfe pro Tray, Trays und Töpfe pro 
 
 „Passende Töpfe“ verwendet ausschließlich `p.fitting` des gewählten ST-Artikels; maximal fünf nebeneinander, seitliche blaue Winkel, exakt ein Produkt pro Klick, Füllbalken ab links, Anfang/Ende deaktiviert. Ein Produkt: voller Balken, beide Pfeile aus. Original-Produktlinks öffnen sich in neuem Tab. Hero/Zoom nutzen das jeweilige Quellfoto. Seit 17.11. ergänzt eine ausdrücklich als Serienillustration gekennzeichnete originale Bodendetail-Illustration die Galerie und die technischen Daten; sie ist kein artikelgenaues ST-Bodenfoto. Die originale Etikettenschlitz-Illustration erscheint nur bei ST 2840 / ST 3156, ebenso der Sternchenhinweis „Mit Etikettenschlitz“. Diese Reihen nennt die Originalseite (erneut geprüft 17.11.); die endgültige SKU-Zuordnung durch TEKU/PIM bleibt abzustimmen. Keine Etikettenschlitzgrößen ergänzen. Vorteilsbilder und Texte berücksichtigen die Quellunterschiede Standard/B/D und die Etikettenaufnahmen bestimmter Modelle.
 
+### 9.2 MAO, MUK und Hänger V1
+
+Vollständige Datenkarte und geprüfte Katalogzuordnungen stehen in `accessories/SOURCE.md`. Gemeinsamer Renderer `accessories/app.js`, Styles und zusätzliche auswählbare Zubehörartikel in `accessories/catalog.js`; Bereichsdateien `mao/`, `muk/`, `mhb/` laden ihre eigenen 5/2/4 Artikel mit 38/4/34 Varianten. Nur geprüfte Kompatibilitäten zeigen; MUK passt laut Katalog zu MAK, nicht belegt zu MAO. MHI 38/45 sind für MAO 25/27 aufgeführt. Fehlende weitere Fotos/Links nicht erfinden. Aktuelle Web-Verpackungswerte haben Vorrang vor abweichenden Katalogzahlen. Hakenmaß im Quellwert mm; Anzeige cm/inch, Erklärung mit Originalpiktogramm. Hänger haben keinen Stellflächenrechner. Bestehende Anfrage bleibt simuliert und seitenbezogen.
+
+BP/ST zeigen Bodenbilder im Kreis und den gleichen umschaltbaren Bilddialog wie VCG. ST bleibt mangels PIM-Foto ausdrücklich Serienillustration. Verpackungsdaten aller aktuellen Bereiche folgen dem zeilenweisen Rundtopfmuster; Maßeinheit-Icon wird nach jedem Filteraufbau gesetzt.
+
 ## 10. Fehlende Funktionen und noch offene Arbeit
 
 - ST V1 ist umgesetzt; GP und weitere Tray-Serien sind nicht Teil des aktuellen Auftrags.
@@ -399,6 +408,8 @@ ST hat ausschließlich A/B/C-Außenmaße, Töpfe pro Tray, Trays und Töpfe pro 
 
 | Änderung | Zuerst ansehen | Mitbetroffene Bereiche |
 |---|---|---|
+| Aktuelle Bildkomposition, Dialog, Boden-Kreis und Verpackungszeilen | product-details.js, product-details.css; assets/technical-composites/ | Alle sechs aktuellen Bereiche; als letzte Dateien laden |
+| MAO/MUK/Hänger | accessories/app.js, catalog.js, styles.css, SOURCE.md; mao/data.js, muk/data.js, mhb/data.js | Gemeinsame Listen/Anfrage, product-details.js, version-switch.js |
 | November-Gestaltung, Icons, Neuheiten und Bildadapter | design-review.js, design-review.css; assets/filter-unit.svg | Zuletzt in allen drei aktuellen HTML-Dateien geladen; Archive unverändert |
 | Bereiche/Versionsauswahl | version-switch.js; index.html, bp/index.html, st/index.html | Aktuell + Archive |
 | cm/inch-Anzeige | measurements.js (VCG), rectangular-measurements.js (BP/ST), measurements.css | Aktuelle Seiten; Quelldaten/Filterwerte und Archive erhalten |

@@ -1,0 +1,25 @@
+/* Shared current product image interaction; archived pages do not load this. */
+.greta-review .unified-gallery{display:grid;grid-template-columns:32px minmax(0,1fr) 32px;gap:12px;align-items:center}
+.greta-review .unified-gallery-arrow{border:0;background:transparent;color:#123361;width:30px;height:42px;display:grid;place-items:center}
+.greta-review .unified-gallery-arrow svg{width:18px;height:18px;stroke:currentColor;stroke-width:1.5;fill:none}
+.greta-review .unified-gallery-arrow:disabled{opacity:.3;cursor:default}
+.greta-review .product-image-dialog{width:min(824px,92vw);max-height:94dvh;overflow:auto}
+.greta-review .unified-gallery .modal-image{width:100%;height:min(55dvh,540px);object-fit:contain;margin:0}
+.greta-review .detail-description{font-size:13px;line-height:1.4;text-align:center;max-width:650px;margin:12px auto 0;min-height:2.8em}
+.greta-review .technical-composite{display:block;width:100%}
+.greta-review .rounds-detail-figure .technical-composite img{width:100%;height:auto;max-height:350px;object-fit:contain}
+.greta-review .rounds-detail-figure figcaption>button{display:flex;align-items:center;gap:7px;text-align:left;font-size:13px;margin:8px 0}
+.greta-review .rounds-detail-figure figcaption>button:hover,.greta-review .technical-circle-figure figcaption button:hover{text-decoration:underline}
+.greta-review .technical-circle-figure{display:block}
+.greta-review .technical-circle-stage{position:relative;width:100%;padding:0 10px 24px}
+.greta-review .technical-circle-stage>button:first-child{width:100%;display:block}
+.greta-review .technical-circle-stage>button:first-child img{width:100%;height:220px;object-fit:contain}
+.greta-review .technical-circle-stage .floor-zoom{display:block;position:relative;margin:-72px -8px 0 auto;width:120px;height:120px;border:3px solid #123361;background:white;border-radius:50%;overflow:hidden}
+.greta-review .technical-circle-stage .floor-zoom img{width:100%;height:100%;object-fit:cover}
+.greta-review .technical-circle-figure figcaption small{display:block;margin-top:5px}
+.greta-review .compact-unit{background-image:var(--unit-icon,url('../assets/filter-unit.svg'))!important;color:transparent}
+.greta-review .st-packaging>img{display:none}
+.greta-review .technical-content .spec-table>div{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:8px;border-bottom:1px solid #dce0e5;padding:10px 8px}
+.greta-review .technical-content .spec-table dt{overflow-wrap:anywhere}
+.greta-review .technical-content .spec-table dd{white-space:normal;text-align:right}
+@media(max-width:700px){.greta-review .unified-gallery{gap:3px;grid-template-columns:24px minmax(0,1fr) 24px}.greta-review .gallery-modal-tabs{flex-wrap:wrap}.greta-review .technical-circle-stage>button:first-child img{height:180px}.greta-review .technical-circle-stage .floor-zoom{width:100px;height:100px}}

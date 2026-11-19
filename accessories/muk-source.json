@@ -1,0 +1,204 @@
+{
+  "retrieved": "2026-11-19",
+  "source": "https://www.poeppelmann.com/de/teku/produkte/muk-untersetzer",
+  "headlines": [
+    {
+      "id": "7897",
+      "headlineCount-0": 1,
+      "image-0": "",
+      "title-0": ""
+    },
+    {
+      "id": "7217",
+      "headlineCount-0": 1,
+      "image-0": "",
+      "title-0": ""
+    },
+    {
+      "id": "7223",
+      "headlineCount-0": 1,
+      "image-0": "",
+      "title-0": ""
+    },
+    {
+      "id": "variants",
+      "headlineCount-0": 1,
+      "image-0": "",
+      "title-0": ""
+    },
+    {
+      "id": "7897",
+      "headlineCount-1": 1,
+      "image-1": "https://static.poeppelmann.com/assets/700500/untersetzer-breite-pikto.svg",
+      "title-1": "Durchmesser"
+    },
+    {
+      "id": "7217",
+      "headlineCount-1": 1,
+      "image-1": "https://static.poeppelmann.com/assets/700499/untersetzer-hoehe-pikto.svg",
+      "title-1": "Höhe"
+    },
+    {
+      "id": "7223",
+      "headlineCount-1": 1,
+      "image-1": "https://static.poeppelmann.com/assets/700493/untersetzer-vol-pikto.svg",
+      "title-1": "Volumen"
+    },
+    {
+      "id": "variants",
+      "headlineCount-1": 1,
+      "image-1": "https://static.poeppelmann.com/assets/700239/farbvarianten-pikto.svg",
+      "title-1": "Varianten"
+    },
+    {
+      "id": "8438",
+      "headlineCount-0": 1,
+      "image-0": "https://static.poeppelmann.com/assets/700486/karton-pikto.svg",
+      "title-0": ""
+    },
+    {
+      "id": "8439",
+      "headlineCount-0": 1,
+      "image-0": "https://static.poeppelmann.com/assets/700384/euro-palette-pikto.svg",
+      "title-0": ""
+    },
+    {
+      "id": "8438",
+      "headlineCount-1": 1,
+      "image-1": "https://static.poeppelmann.com/assets/700503/untersetzer-3x-pikto.svg",
+      "title-1": "Untersetzer pro Karton"
+    },
+    {
+      "id": "8439",
+      "headlineCount-1": 1,
+      "image-1": "https://static.poeppelmann.com/assets/700487/karton-2x-pikto.svg",
+      "title-1": "Kartons pro Palette"
+    }
+  ],
+  "products": [
+    {
+      "availability": "",
+      "articleNumber": "MUK 25",
+      "orderNumber": "",
+      "image": "https://static.teku.com/assets/456185/muk-ton-pr.psd",
+      "imageAlt": "TEKU MUK Untersetzer, ton",
+      "imageTitle": "TEKU MUK ton",
+      "seriesName": "MUK | Untersetzer",
+      "radius": "",
+      "width": "",
+      "length": "",
+      "index": 0,
+      "fields": {
+        "10900": "MUK 251",
+        "7897": "17,3",
+        "7217": "2,4",
+        "7223": "0,40 l",
+        "variants": "details.variants",
+        "8438": "322",
+        "8439": "32",
+        "8440": "10.304"
+      },
+      "variants": [
+        {
+          "articleNo": "MUK 25 Circular ton ",
+          "orderNo": "11216658001",
+          "productImage": "https://static.teku.com/assets/456185/muk-ton-pr.psd",
+          "articleName": "MUK 25",
+          "seriesName": "MUK | Untersetzer",
+          "category": "Circular360",
+          "color": "Circular ton",
+          "image": "https://static.teku.com/assets/456185/muk-ton-pr.psd",
+          "alt": "TEKU MUK Untersetzer, ton",
+          "title": "TEKU MUK ton",
+          "availability": "",
+          "show": true,
+          "certificates": [
+            "https://static.teku.com/assets/501424/logo-blauer-engel-de.png",
+            "https://static.teku.com/assets/501422/logo-cyclos-htp-de.png"
+          ]
+        },
+        {
+          "articleNo": "MUK 25 Circular weiß ",
+          "orderNo": "11216658401",
+          "productImage": "https://static.teku.com/assets/456182/muk-weiss-pr.psd",
+          "articleName": "MUK 25",
+          "seriesName": "MUK | Untersetzer",
+          "category": "Circular360",
+          "color": "Circular weiß",
+          "image": "https://static.teku.com/assets/456182/muk-weiss-pr.psd",
+          "alt": "TEKU MUK Untersetzer",
+          "title": "TEKU MUK Untersetzer",
+          "availability": "",
+          "show": true,
+          "certificates": [
+            "https://static.teku.com/assets/501424/logo-blauer-engel-de.png",
+            "https://static.teku.com/assets/501422/logo-cyclos-htp-de.png"
+          ]
+        }
+      ],
+      "fitting": []
+    },
+    {
+      "availability": "",
+      "articleNumber": "MUK 27",
+      "orderNumber": "",
+      "image": "https://static.teku.com/assets/456185/muk-ton-pr.psd",
+      "imageAlt": "TEKU MUK Untersetzer, ton",
+      "imageTitle": "TEKU MUK ton",
+      "seriesName": "MUK | Untersetzer",
+      "radius": "",
+      "width": "",
+      "length": "",
+      "index": 1,
+      "fields": {
+        "10900": "MUK 271",
+        "7897": "19",
+        "7217": "2,6",
+        "7223": "0,50 l",
+        "variants": "details.variants",
+        "8438": "276",
+        "8439": "32",
+        "8440": "8.832"
+      },
+      "variants": [
+        {
+          "articleNo": "MUK 27 Circular ton ",
+          "orderNo": "11216668001",
+          "productImage": "https://static.teku.com/assets/456185/muk-ton-pr.psd",
+          "articleName": "MUK 27",
+          "seriesName": "MUK | Untersetzer",
+          "category": "Circular360",
+          "color": "Circular ton",
+          "image": "https://static.teku.com/assets/456185/muk-ton-pr.psd",
+          "alt": "TEKU MUK Untersetzer, ton",
+          "title": "TEKU MUK ton",
+          "availability": "",
+          "show": true,
+          "certificates": [
+            "https://static.teku.com/assets/501424/logo-blauer-engel-de.png",
+            "https://static.teku.com/assets/501422/logo-cyclos-htp-de.png"
+          ]
+        },
+        {
+          "articleNo": "MUK 27 Circular weiß ",
+          "orderNo": "11216668401",
+          "productImage": "https://static.teku.com/assets/456182/muk-weiss-pr.psd",
+          "articleName": "MUK 27",
+          "seriesName": "MUK | Untersetzer",
+          "category": "Circular360",
+          "color": "Circular weiß",
+          "image": "https://static.teku.com/assets/456182/muk-weiss-pr.psd",
+          "alt": "TEKU MUK Untersetzer",
+          "title": "TEKU MUK Untersetzer",
+          "availability": "",
+          "show": true,
+          "certificates": [
+            "https://static.teku.com/assets/501424/logo-blauer-engel-de.png",
+            "https://static.teku.com/assets/501422/logo-cyclos-htp-de.png"
+          ]
+        }
+      ],
+      "fitting": []
+    }
+  ]
+}

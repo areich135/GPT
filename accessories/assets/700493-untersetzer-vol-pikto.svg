@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="72" height="72" viewBox="0 0 72 72">
+  <g id="untersetzer-vol-pikto" transform="translate(0.245 0.044)">
+    <rect id="Rechteck_132" data-name="Rechteck 132" width="72" height="72" transform="translate(-0.245 -0.044)" fill="#fff" opacity="0"/>
+    <path id="Pfad_1399" data-name="Pfad 1399" d="M4,12.7l3.861,6.961a1.493,1.493,0,0,0,1.314.76h31.4a1.518,1.518,0,0,0,1.314-.76l3.9-6.961Zm37.106,6.263a1.157,1.157,0,0,1-1.006.6H9.647a1.157,1.157,0,0,1-1.006-.6l-3-5.38H44.1l-3.019,5.38Z" transform="translate(11.621 20.522)" fill="#084686"/>
+    <path id="Pfad_1400" data-name="Pfad 1400" d="M45.432,11.89H4.609a.556.556,0,0,0-.534.37l-.205.554H46.192l-.205-.554a.575.575,0,0,0-.534-.37Z" transform="translate(11.484 19.669)" fill="#084686"/>
+    <path id="Pfad_1401" data-name="Pfad 1401" d="M11.25,13.44h1.129l1.191,3.7,1.232-3.7h1.109l-1.684,5.01H12.954l-1.7-5.01Z" transform="translate(19.259 21.301)" fill="#084686"/>
+    <path id="Pfad_1402" data-name="Pfad 1402" d="M13.42,15.939a1.785,1.785,0,0,1,1.93-1.869,1.8,1.8,0,0,1,1.93,1.869,1.811,1.811,0,0,1-1.93,1.889A1.8,1.8,0,0,1,13.42,15.939Zm2.854,0a.932.932,0,0,0-.924-1.047c-.575,0-.9.431-.9,1.047a.925.925,0,1,0,1.828,0Z" transform="translate(21.545 21.965)" fill="#084686"/>
+    <path id="Pfad_1403" data-name="Pfad 1403" d="M15.57,13.44h1.006v5.01H15.57V13.44Z" transform="translate(23.81 21.301)" fill="#084686"/>
+    <path id="Pfad_1404" data-name="Pfad 1404" d="M16.986,15.31a.6.6,0,1,1-.616.6A.577.577,0,0,1,16.986,15.31Z" transform="translate(24.653 23.271)" fill="#084686"/>
+  </g>
+</svg>

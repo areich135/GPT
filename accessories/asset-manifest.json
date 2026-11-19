@@ -1,0 +1,331 @@
+{
+  "retrieved": "2026-11-19",
+  "assets": {
+    "https://static.poeppelmann.com/assets/700236/haenger-hoehe-pikto.svg": {
+      "path": "assets/700236-haenger-hoehe-pikto.svg",
+      "sha256": "b331a0f2110f9a68e2ce1fc60c6b6086bb5e5c5a7b5cdffad3bf4941db954d9d",
+      "bytes": 2642
+    },
+    "https://static.poeppelmann.com/assets/700237/haenger-druchbesser-pikto.svg": {
+      "path": "assets/700237-haenger-druchbesser-pikto.svg",
+      "sha256": "0e0c3c8bea1bc4a56941c1167eef3a1bd70041e089e938da3572f722921d7c06",
+      "bytes": 1688
+    },
+    "https://static.poeppelmann.com/assets/700238/haenger-3x-pikto.svg": {
+      "path": "assets/700238-haenger-3x-pikto.svg",
+      "sha256": "fe7a4c15a751fee8f8e7e172d84cad960bd65d53a46c44fddbbf405869036be9",
+      "bytes": 6527
+    },
+    "https://static.poeppelmann.com/assets/700239/farbvarianten-pikto.svg": {
+      "path": "assets/700239-farbvarianten-pikto.svg",
+      "sha256": "8ebe7d0e263c4f17159e40fb4be512101e5b4bd0678a92d5d5cc402590406b60",
+      "bytes": 1324
+    },
+    "https://static.poeppelmann.com/assets/700253/rundtopf-vol-pikto.svg": {
+      "path": "assets/700253-rundtopf-vol-pikto.svg",
+      "sha256": "decbcc2d14ba23a0de8ddba4ddeb35978219762da139de941529136ef83b4d17",
+      "bytes": 2145
+    },
+    "https://static.poeppelmann.com/assets/700254/rundtopf-hoehe-pikto.svg": {
+      "path": "assets/700254-rundtopf-hoehe-pikto.svg",
+      "sha256": "1fe879413868fb6eebc505d02bb2aea8699147c543f9f60f021be01960eb32b0",
+      "bytes": 1094
+    },
+    "https://static.poeppelmann.com/assets/700256/rundtopf-breite-pikto.svg": {
+      "path": "assets/700256-rundtopf-breite-pikto.svg",
+      "sha256": "2bf9271df46279e125b4e009c4fa4c47f8b980f84c91697ea1b2d17d7b531c04",
+      "bytes": 1100
+    },
+    "https://static.poeppelmann.com/assets/700260/rundtopf-2x-pikto.svg": {
+      "path": "assets/700260-rundtopf-2x-pikto.svg",
+      "sha256": "ede22c350c7db303cd9df6bda0f65c966caf58c1767fb0067bce974599f4054a",
+      "bytes": 2004
+    },
+    "https://static.poeppelmann.com/assets/700261/netz-pikto.svg": {
+      "path": "assets/700261-netz-pikto.svg",
+      "sha256": "1ea8658e42c5eff923a5db3d05702a19bd65b1407a99d952ad7ba9f141d9051f",
+      "bytes": 9397
+    },
+    "https://static.poeppelmann.com/assets/700262/netz-2x-pikto.svg": {
+      "path": "assets/700262-netz-2x-pikto.svg",
+      "sha256": "96e0b09f838bc12e784062d625ef9b57b035f566d760721fe3128b4e1dc9750d",
+      "bytes": 18614
+    },
+    "https://static.poeppelmann.com/assets/700384/euro-palette-pikto.svg": {
+      "path": "assets/700384-euro-palette-pikto.svg",
+      "sha256": "0945a7666c1ed7329710a4cfb3ad28754690b2036f5c11d3b2f4e9a4222843d8",
+      "bytes": 7854
+    },
+    "https://static.poeppelmann.com/assets/700486/karton-pikto.svg": {
+      "path": "assets/700486-karton-pikto.svg",
+      "sha256": "6eeace501330b75e6365839526cd5185e59912e3201514aed070b21e1a6904ce",
+      "bytes": 1295
+    },
+    "https://static.poeppelmann.com/assets/700487/karton-2x-pikto.svg": {
+      "path": "assets/700487-karton-2x-pikto.svg",
+      "sha256": "b6785aa77b69ea2211ddcb19d7af9a3f10189e840438be72e591dee9cf796f1d",
+      "bytes": 2549
+    },
+    "https://static.poeppelmann.com/assets/700493/untersetzer-vol-pikto.svg": {
+      "path": "assets/700493-untersetzer-vol-pikto.svg",
+      "sha256": "5bde7dea66acacb429f73bad2c613eaca4df4eda332fb9714051286ef6255b52",
+      "bytes": 1610
+    },
+    "https://static.poeppelmann.com/assets/700499/untersetzer-hoehe-pikto.svg": {
+      "path": "assets/700499-untersetzer-hoehe-pikto.svg",
+      "sha256": "cccbc38122f1ccf8a2230ed947c84029a4e303be4a03df42b0540fcd4ae89c0e",
+      "bytes": 1030
+    },
+    "https://static.poeppelmann.com/assets/700500/untersetzer-breite-pikto.svg": {
+      "path": "assets/700500-untersetzer-breite-pikto.svg",
+      "sha256": "1e034df8cfef3e2fb8219d7a6c12c574dde36c4bf57183c415fac5db8fe9c19d",
+      "bytes": 1027
+    },
+    "https://static.poeppelmann.com/assets/700503/untersetzer-3x-pikto.svg": {
+      "path": "assets/700503-untersetzer-3x-pikto.svg",
+      "sha256": "2980dc6645dd2070d3140703ace4e129f6fcf53155b6f133c3a45b1ac4fd877d",
+      "bytes": 1533
+    },
+    "https://static.teku.com/assets/456182/muk-weiss-pr.psd": {
+      "path": "assets/456182-muk-weiss-pr.webp",
+      "sha256": "3f91723b531fb87804f4c7c2478d62d342a8ed760b3a9b593cb5104288871b41",
+      "bytes": 24322
+    },
+    "https://static.teku.com/assets/456185/muk-ton-pr.psd": {
+      "path": "assets/456185-muk-ton-pr.webp",
+      "sha256": "8e04251d50f0c679a1002ee60e6318b83edbb98655c8c55bbef9307c2ea52a80",
+      "bytes": 20612
+    },
+    "https://static.teku.com/assets/456282/vaa-ton-grau-pr.psd": {
+      "path": "assets/456282-vaa-ton-grau-pr.webp",
+      "sha256": "504de60cc459b8fc4ee5f0a066f8e907f67cef768a7b7a785270b5e5ed7409a4",
+      "bytes": 17594
+    },
+    "https://static.teku.com/assets/456425/tca-ton-pr.psd": {
+      "path": "assets/456425-tca-ton-pr.webp",
+      "sha256": "497f45f7d86669c289b86ec2ff96249cb3b709d14b81e43b3688afe0b0cfd3d1",
+      "bytes": 17124
+    },
+    "https://static.teku.com/assets/456506/mak-ton-pr.psd": {
+      "path": "assets/456506-mak-ton-pr.webp",
+      "sha256": "1ce8f9365a1e77ba9110d1ef0fcc5b6b31c71f1da407bf070473424bf2d327a9",
+      "bytes": 22690
+    },
+    "https://static.teku.com/assets/456508/mal-weiss-pr.psd": {
+      "path": "assets/456508-mal-weiss-pr.webp",
+      "sha256": "219ed80f4ad07f0e6a90879e33451462ea3c64a023782c5e64f157641c8f571d",
+      "bytes": 11198
+    },
+    "https://static.teku.com/assets/456510/mal-rot-pr.psd": {
+      "path": "assets/456510-mal-rot-pr.webp",
+      "sha256": "4f7ec8a43dded781266913163f555eb1516463e6df63dde9ceaa6bc546e49a04",
+      "bytes": 14974
+    },
+    "https://static.teku.com/assets/456511/mal-pink-pr.psd": {
+      "path": "assets/456511-mal-pink-pr.webp",
+      "sha256": "847795b750173b6bac141ef812f9f2fdbd0f4d269d1ebceb7b1eb79a2f1afbfc",
+      "bytes": 15308
+    },
+    "https://static.teku.com/assets/456512/mal-orange-pr.psd": {
+      "path": "assets/456512-mal-orange-pr.webp",
+      "sha256": "12baf943549b660579c50602c36f4e5e5bd5a59b411e4761875376b5f9fb33f8",
+      "bytes": 14864
+    },
+    "https://static.teku.com/assets/456513/mal-kiefergruen-pr.psd": {
+      "path": "assets/456513-mal-kiefergruen-pr.webp",
+      "sha256": "3561f33e6fb0fd5a333c6e2b933df88cfd6f4fd497dc07d3100bc3aba265e738",
+      "bytes": 14620
+    },
+    "https://static.teku.com/assets/456514/mal-hellgruen-pr.psd": {
+      "path": "assets/456514-mal-hellgruen-pr.webp",
+      "sha256": "b05aba27118a36a2b3c7cc48d315582899b878a8b12d55096fb2ed1006148358",
+      "bytes": 15178
+    },
+    "https://static.teku.com/assets/456515/mal-gelb-pr.psd": {
+      "path": "assets/456515-mal-gelb-pr.webp",
+      "sha256": "199d6782c5693b9634e513cafd9ca1cb767b7e5461de368eabb52b9cdd8515fd",
+      "bytes": 14604
+    },
+    "https://static.teku.com/assets/456516/mal-brombeer-pr.psd": {
+      "path": "assets/456516-mal-brombeer-pr.webp",
+      "sha256": "d4ffec1b6ac5007a30f4fed7251f0ee66cdd70b4bcaaa10138dd506d5b97ad13",
+      "bytes": 15868
+    },
+    "https://static.teku.com/assets/456517/mal-anthrazit-pr.psd": {
+      "path": "assets/456517-mal-anthrazit-pr.webp",
+      "sha256": "a272977a5fb8caa55f777113bea5e985ca311f64e0d96403f512c9532bd9e91a",
+      "bytes": 15398
+    },
+    "https://static.teku.com/assets/456541/mhb-weiss-haken.psd": {
+      "path": "assets/456541-mhb-weiss-haken.webp",
+      "sha256": "d9cc0b994ecff8aa7e8d687213afb06aa5bfaf998c2718ca3287691e4408d46c",
+      "bytes": 71402
+    },
+    "https://static.teku.com/assets/456542/mhb-ton-haken.psd": {
+      "path": "assets/456542-mhb-ton-haken.webp",
+      "sha256": "8f044c15a27785d41c55fabb70a333bda704be1f732e6314c720d5227b116d37",
+      "bytes": 76452
+    },
+    "https://static.teku.com/assets/456544/mhb-rot-haken.psd": {
+      "path": "assets/456544-mhb-rot-haken.webp",
+      "sha256": "34349b1dcb315f10b8bd50687384f426a24a05d9473065b3f5e9585233447836",
+      "bytes": 77264
+    },
+    "https://static.teku.com/assets/456545/mhb-pink-haken.psd": {
+      "path": "assets/456545-mhb-pink-haken.webp",
+      "sha256": "7d518592d0a3d2cb8e76c9d6e56d018f6b8eddb1b17f0450133e4c8af6f6ddad",
+      "bytes": 77030
+    },
+    "https://static.teku.com/assets/456549/mhb-kiefergruen-haken.psd": {
+      "path": "assets/456549-mhb-kiefergruen-haken.webp",
+      "sha256": "9c4b8c087c85bd569992b5b28619fd7270931a95d6a25a7987bc77ade1be754a",
+      "bytes": 77856
+    },
+    "https://static.teku.com/assets/456551/mhb-gruen-haken.psd": {
+      "path": "assets/456551-mhb-gruen-haken.webp",
+      "sha256": "b00f0fd13f9806f3c2802c05ab4e7b4c3b7cdc67d7d921c320b6ebffcaeed182",
+      "bytes": 76760
+    },
+    "https://static.teku.com/assets/456552/mhb-gelb-haken.psd": {
+      "path": "assets/456552-mhb-gelb-haken.webp",
+      "sha256": "1a2df1bebab70543c5bb6bd6fd7ebbffef7e4d060ba4d71931293e29d096ba70",
+      "bytes": 75614
+    },
+    "https://static.teku.com/assets/456554/mhb-anthrazit-haken.psd": {
+      "path": "assets/456554-mhb-anthrazit-haken.webp",
+      "sha256": "067172dcbe3f47aec86a7109565dd3f6ec4e7ce7a5e2d87b14adc0d48526ebe4",
+      "bytes": 76324
+    },
+    "https://static.teku.com/assets/456724/a-orange-pr.psd": {
+      "path": "assets/456724-a-orange-pr.webp",
+      "sha256": "5bcdaaae8d8669d4087ec1ce1cdc833c6971ebdf36de1091a71137b411263500",
+      "bytes": 88600
+    },
+    "https://static.teku.com/assets/456728/a-brombeer-pr.psd": {
+      "path": "assets/456728-a-brombeer-pr.webp",
+      "sha256": "361f713e31c16e0f4c891e6a204aaec4f100e4f61e9a2fd60fd5db349dd2f68e",
+      "bytes": 87170
+    },
+    "https://static.teku.com/assets/501422/logo-cyclos-htp-de.png": {
+      "path": "assets/501422-logo-cyclos-htp-de.webp",
+      "sha256": "2ae1ae2534ac937ada843ad4daf72e01b917d5da15c6e545052e29957398ba6c",
+      "bytes": 20126
+    },
+    "https://static.teku.com/assets/501424/logo-blauer-engel-de.png": {
+      "path": "assets/501424-logo-blauer-engel-de.webp",
+      "sha256": "43fda935d31bcfe6a07fb1cd5f9317b0f0e157c8dd8c3b1c3c24b81e35e578be",
+      "bytes": 27330
+    },
+    "https://static.teku.com/assets/654771/mao-25-anthrazit-pr.psd": {
+      "path": "assets/654771-mao-25-anthrazit-pr.webp",
+      "sha256": "e56575857c0c02cb6e3ff52d0b8025f3a801ddd7574ac50a2d6210076665a523",
+      "bytes": 80190
+    },
+    "https://static.teku.com/assets/672756/mao-25-weiss-pr.psd": {
+      "path": "assets/672756-mao-25-weiss-pr.webp",
+      "sha256": "4ac2d4d4c7e725e85e1fd615ed7b1ba0970b9ab833ae7ae677266d3e6c114771",
+      "bytes": 80250
+    },
+    "https://static.teku.com/assets/672757/mao-25-ton-pr.psd": {
+      "path": "assets/672757-mao-25-ton-pr.webp",
+      "sha256": "09feca412f8afe2c19aeb75ed2c6a1d313267e8fc38f75eb6ffd03403738b0b1",
+      "bytes": 81002
+    },
+    "https://static.teku.com/assets/672758/mao-25-rot-pr.psd": {
+      "path": "assets/672758-mao-25-rot-pr.webp",
+      "sha256": "fdd221eb7dc04518d33d77d4dd0839cf39729cff7d19fc8148bcdabf4601f32e",
+      "bytes": 81024
+    },
+    "https://static.teku.com/assets/672759/mao-25-pink-pr.psd": {
+      "path": "assets/672759-mao-25-pink-pr.webp",
+      "sha256": "f06ea2837ef9b1675a3e337124bbf2c39a84d72173c06e7796b5b78b7baf2b38",
+      "bytes": 80740
+    },
+    "https://static.teku.com/assets/672760/mao-25-orange-pr.psd": {
+      "path": "assets/672760-mao-25-orange-pr.webp",
+      "sha256": "cfce092670dc4cdf0f23a4008237a5d6cab5f30bb6a3c93c1dec6eae5335004d",
+      "bytes": 81828
+    },
+    "https://static.teku.com/assets/672761/mao-25-kiefergruen-pr.psd": {
+      "path": "assets/672761-mao-25-kiefergruen-pr.webp",
+      "sha256": "3ef2370ba01bc00de97719d4d410045d7d68e22a32e9ab33446de66605771048",
+      "bytes": 80250
+    },
+    "https://static.teku.com/assets/672762/mao-25-hellgruen-pr.psd": {
+      "path": "assets/672762-mao-25-hellgruen-pr.webp",
+      "sha256": "1bf7a3dce0e0c978588d38047ab3e3725ece3631c60f1bb5cf464760449d0b4c",
+      "bytes": 81230
+    },
+    "https://static.teku.com/assets/672763/mao-25-gelb-pr.psd": {
+      "path": "assets/672763-mao-25-gelb-pr.webp",
+      "sha256": "8da30ef456249131fe22bfcb3ea5f8ad4bc821df9f3c690abdbf6dd6486e7429",
+      "bytes": 82022
+    },
+    "https://static.teku.com/assets/672764/mao-25-brommbeere-pr.psd": {
+      "path": "assets/672764-mao-25-brommbeere-pr.webp",
+      "sha256": "016b033bb9823c65bce07312d3de2b1340046c9ae6edc25ee7c796315719680e",
+      "bytes": 80458
+    },
+    "https://static.teku.com/assets/711826/mao-boden.psd": {
+      "path": "assets/711826-mao-boden.webp",
+      "sha256": "62146400431784f39fb9b62820981a66133d89fc9f89519964762976e9ab4217",
+      "bytes": 73564
+    },
+    "https://static.teku.com/assets/711859/mhi-brombeer-haken.psd": {
+      "path": "assets/711859-mhi-brombeer-haken.webp",
+      "sha256": "ed6546a6cfaf29c10019c3961582689b5277a4de17c5bb0ccc270f9c51c22ba6",
+      "bytes": 71180
+    },
+    "https://static.teku.com/assets/711862/mhi-rot-haken.psd": {
+      "path": "assets/711862-mhi-rot-haken.webp",
+      "sha256": "65023760be2fd125d76a4d15b71f0526c074eff8d604c4a3af766a4e47fba7e3",
+      "bytes": 72392
+    },
+    "https://static.teku.com/assets/711865/mhi-weiss-haken.psd": {
+      "path": "assets/711865-mhi-weiss-haken.webp",
+      "sha256": "2efe7f90ffc54e6f0a755327c211ea0eb8c0e53886b52371985c1658b2cd4078",
+      "bytes": 63946
+    },
+    "https://static.teku.com/assets/711868/mhi-pink-haken.psd": {
+      "path": "assets/711868-mhi-pink-haken.webp",
+      "sha256": "f64f3794aeb6bb232a7549f4513e1f55809226715986c6ae2034b15749660d49",
+      "bytes": 72298
+    },
+    "https://static.teku.com/assets/711871/mhi-kiefergruen-haken.psd": {
+      "path": "assets/711871-mhi-kiefergruen-haken.webp",
+      "sha256": "71d6abbd853cee5314d9028429043adcc66ace6d609db9578ef5ca704b415bc1",
+      "bytes": 71024
+    },
+    "https://static.teku.com/assets/711874/mhi-ton-haken.psd": {
+      "path": "assets/711874-mhi-ton-haken.webp",
+      "sha256": "050549725db1176a5fe5110e2d4b26c8066fd925c155139f77e9747b513bc955",
+      "bytes": 72342
+    },
+    "https://static.teku.com/assets/711877/mhi-gelb-haken.psd": {
+      "path": "assets/711877-mhi-gelb-haken.webp",
+      "sha256": "e50f59a169dcf51bcff6767eb0e4ef2c5913c6c7578fca0510099a070cfb6b7b",
+      "bytes": 73594
+    },
+    "https://static.teku.com/assets/711880/mhi-orange-haken.psd": {
+      "path": "assets/711880-mhi-orange-haken.webp",
+      "sha256": "2b93f6538969f90405c2f505ea9ab06ef979f657953a3a1fbaebaa7624cddb24",
+      "bytes": 73072
+    },
+    "https://static.teku.com/assets/711883/mhi-hellgruen-haken.psd": {
+      "path": "assets/711883-mhi-hellgruen-haken.webp",
+      "sha256": "ec95f3f450d4286609a504624807d1e0a3833773ad03c11563ddcf1c9f549662",
+      "bytes": 73208
+    },
+    "https://static.teku.com/assets/711886/mhi-anthrazit-haken.psd": {
+      "path": "assets/711886-mhi-anthrazit-haken.webp",
+      "sha256": "fee30a29a022cc245877215cb89a2fe5d6cd9e286061abee374a912323a85bef",
+      "bytes": 70276
+    },
+    "https://static.teku.com/assets/832578/mao-slide3.psd": {
+      "path": "assets/832578-mao-slide3.webp",
+      "sha256": "e8f273e246998b8917cd1ab37f71992920034fe1118148bbfaa6ae1b12fda99b",
+      "bytes": 12700
+    }
+  },
+  "catalog": "https://static.teku.com/assets/712404/teku-de.pdf"
+}

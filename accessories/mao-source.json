@@ -1,0 +1,904 @@
+{
+  "retrieved": "2026-11-19",
+  "source": "https://www.poeppelmann.com/de/teku/produkte/mao-ampeln",
+  "headlines": [
+    {
+      "id": "7897",
+      "headlineCount-0": 1,
+      "image-0": "",
+      "title-0": ""
+    },
+    {
+      "id": "7217",
+      "headlineCount-0": 1,
+      "image-0": "",
+      "title-0": ""
+    },
+    {
+      "id": "7223",
+      "headlineCount-0": 1,
+      "image-0": "",
+      "title-0": ""
+    },
+    {
+      "id": "variants",
+      "headlineCount-0": 1,
+      "image-0": "",
+      "title-0": ""
+    },
+    {
+      "id": "7897",
+      "headlineCount-1": 1,
+      "image-1": "https://static.poeppelmann.com/assets/700256/rundtopf-breite-pikto.svg",
+      "title-1": "Durchmesser"
+    },
+    {
+      "id": "7217",
+      "headlineCount-1": 1,
+      "image-1": "https://static.poeppelmann.com/assets/700254/rundtopf-hoehe-pikto.svg",
+      "title-1": "Höhe"
+    },
+    {
+      "id": "7223",
+      "headlineCount-1": 1,
+      "image-1": "https://static.poeppelmann.com/assets/700253/rundtopf-vol-pikto.svg",
+      "title-1": "Volumen"
+    },
+    {
+      "id": "variants",
+      "headlineCount-1": 1,
+      "image-1": "https://static.poeppelmann.com/assets/700239/farbvarianten-pikto.svg",
+      "title-1": "Varianten"
+    },
+    {
+      "id": "8438",
+      "headlineCount-0": 1,
+      "image-0": "https://static.poeppelmann.com/assets/700261/netz-pikto.svg",
+      "title-0": "Pot-per-net"
+    },
+    {
+      "id": "8439",
+      "headlineCount-0": 3,
+      "image-0": "https://static.poeppelmann.com/assets/700384/euro-palette-pikto.svg",
+      "title-0": ""
+    },
+    {
+      "id": "8438",
+      "headlineCount-1": 1,
+      "image-1": "https://static.poeppelmann.com/assets/700260/rundtopf-2x-pikto.svg",
+      "title-1": "Töpfe pro Netz"
+    },
+    {
+      "id": "8439",
+      "headlineCount-1": 1,
+      "image-1": "https://static.poeppelmann.com/assets/700262/netz-2x-pikto.svg",
+      "title-1": "Netze pro Palette"
+    },
+    {
+      "id": "8440",
+      "headlineCount-1": 1,
+      "image-1": "https://static.poeppelmann.com/assets/700260/rundtopf-2x-pikto.svg",
+      "title-1": "Töpfe unterverpackt auf Palette"
+    },
+    {
+      "id": "8441",
+      "headlineCount-1": 1,
+      "image-1": "https://static.poeppelmann.com/assets/700260/rundtopf-2x-pikto.svg",
+      "title-1": "Töpfe lose auf Palette"
+    }
+  ],
+  "products": [
+    {
+      "availability": "",
+      "articleNumber": "MAO 20",
+      "orderNumber": "",
+      "image": "https://static.teku.com/assets/672757/mao-25-ton-pr.psd",
+      "imageAlt": "TEKU MAO 25 Ampel, ton",
+      "imageTitle": "TEKU MAO 25 ton",
+      "seriesName": "MAO | Ampeln",
+      "radius": "",
+      "width": "",
+      "length": "",
+      "index": 0,
+      "fields": {
+        "10900": "MAO 20",
+        "7897": "20",
+        "7217": "13,4",
+        "7223": "3,00 l",
+        "variants": "details.variants",
+        "8438": "46",
+        "8439": "80",
+        "8440": "3.680",
+        "8441": "3.680"
+      },
+      "variants": [
+        {
+          "articleNo": "MAO 20 Circular rot 199 ",
+          "orderNo": "11219658611",
+          "productImage": "https://static.teku.com/assets/672758/mao-25-rot-pr.psd",
+          "articleName": "MAO 20",
+          "seriesName": "MAO | Ampeln",
+          "category": "Circular360",
+          "color": "Circular rot",
+          "image": "https://static.teku.com/assets/672758/mao-25-rot-pr.psd",
+          "alt": "MAO Produktbild",
+          "title": "MAO Produktbild",
+          "availability": "",
+          "show": true,
+          "certificates": [
+            "https://static.teku.com/assets/501424/logo-blauer-engel-de.png",
+            "https://static.teku.com/assets/501422/logo-cyclos-htp-de.png"
+          ]
+        },
+        {
+          "articleNo": "MAO 20 Circular hellgrün 367 ",
+          "orderNo": "11219658511",
+          "productImage": "https://static.teku.com/assets/672762/mao-25-hellgruen-pr.psd",
+          "articleName": "MAO 20",
+          "seriesName": "MAO | Ampeln",
+          "category": "Circular360",
+          "color": "Circular hellgrün",
+          "image": "https://static.teku.com/assets/672762/mao-25-hellgruen-pr.psd",
+          "alt": "TEKU MAO 25 Ampel, hellgrün",
+          "title": "TEKU MAO 25 hellgrün",
+          "availability": "",
+          "show": true,
+          "certificates": [
+            "https://static.teku.com/assets/501424/logo-blauer-engel-de.png",
+            "https://static.teku.com/assets/501422/logo-cyclos-htp-de.png"
+          ]
+        },
+        {
+          "articleNo": "MAO 20 Circular pink 7424 ",
+          "orderNo": "11219658612",
+          "productImage": "https://static.teku.com/assets/672759/mao-25-pink-pr.psd",
+          "articleName": "MAO 20",
+          "seriesName": "MAO | Ampeln",
+          "category": "Circular360",
+          "color": "Circular pink",
+          "image": "https://static.teku.com/assets/672759/mao-25-pink-pr.psd",
+          "alt": "TEKU MAO 25 Ampel, pink",
+          "title": "TEKU MAO 25 pink",
+          "availability": "",
+          "show": true,
+          "certificates": [
+            "https://static.teku.com/assets/501424/logo-blauer-engel-de.png",
+            "https://static.teku.com/assets/501422/logo-cyclos-htp-de.png"
+          ]
+        },
+        {
+          "articleNo": "MAO 20 Circular brombeer 260 ",
+          "orderNo": "11219658613",
+          "productImage": "https://static.teku.com/assets/672764/mao-25-brommbeere-pr.psd",
+          "articleName": "MAO 20",
+          "seriesName": "MAO | Ampeln",
+          "category": "Circular360",
+          "color": "Circular brombeer",
+          "image": "https://static.teku.com/assets/672764/mao-25-brommbeere-pr.psd",
+          "alt": "TEKU MAO 25 Ampel, brombeere",
+          "title": "TEKU MAO 25 brombeere",
+          "availability": "",
+          "show": true,
+          "certificates": [
+            "https://static.teku.com/assets/501424/logo-blauer-engel-de.png",
+            "https://static.teku.com/assets/501422/logo-cyclos-htp-de.png"
+          ]
+        },
+        {
+          "articleNo": "MAO 20 Circular ton ",
+          "orderNo": "11219658001",
+          "productImage": "https://static.teku.com/assets/672757/mao-25-ton-pr.psd",
+          "articleName": "MAO 20",
+          "seriesName": "MAO | Ampeln",
+          "category": "Circular360",
+          "color": "Circular ton",
+          "image": "https://static.teku.com/assets/672757/mao-25-ton-pr.psd",
+          "alt": "TEKU MAO 25 Ampel, ton",
+          "title": "TEKU MAO 25 ton",
+          "availability": "",
+          "show": true,
+          "certificates": [
+            "https://static.teku.com/assets/501424/logo-blauer-engel-de.png",
+            "https://static.teku.com/assets/501422/logo-cyclos-htp-de.png"
+          ]
+        },
+        {
+          "articleNo": "MAO 20 Recyclable gelb PMS 123 ",
+          "orderNo": "11219650901",
+          "productImage": "https://static.teku.com/assets/672763/mao-25-gelb-pr.psd",
+          "articleName": "MAO 20",
+          "seriesName": "MAO | Ampeln",
+          "category": "Recyclable",
+          "color": "Recyclable gelb",
+          "image": "https://static.teku.com/assets/672763/mao-25-gelb-pr.psd",
+          "alt": "TEKU MAO 25 Ampel, gelb",
+          "title": "TEKU MAO 25 gelb",
+          "availability": "",
+          "show": true,
+          "certificates": [
+            "https://static.teku.com/assets/501422/logo-cyclos-htp-de.png"
+          ]
+        },
+        {
+          "articleNo": "MAO 20 Recyclable orange 2008 ",
+          "orderNo": "11219650802",
+          "productImage": "https://static.teku.com/assets/672760/mao-25-orange-pr.psd",
+          "articleName": "MAO 20",
+          "seriesName": "MAO | Ampeln",
+          "category": "Recyclable",
+          "color": "Recyclable orange",
+          "image": "https://static.teku.com/assets/672760/mao-25-orange-pr.psd",
+          "alt": "TEKU MAO 25 Ampel, orange",
+          "title": "TEKU MAO 25 orange",
+          "availability": "",
+          "show": true,
+          "certificates": [
+            "https://static.teku.com/assets/501422/logo-cyclos-htp-de.png"
+          ]
+        },
+        {
+          "articleNo": "MAO 20 Circular weiß ",
+          "orderNo": "11219658401",
+          "productImage": "https://static.teku.com/assets/672756/mao-25-weiss-pr.psd",
+          "articleName": "MAO 20",
+          "seriesName": "MAO | Ampeln",
+          "category": "Circular360",
+          "color": "Circular weiß",
+          "image": "https://static.teku.com/assets/672756/mao-25-weiss-pr.psd",
+          "alt": "TEKU MAO 25 Ampel, weiß",
+          "title": "TEKU MAO 25 weiß",
+          "availability": "",
+          "show": true,
+          "certificates": [
+            "https://static.teku.com/assets/501424/logo-blauer-engel-de.png",
+            "https://static.teku.com/assets/501422/logo-cyclos-htp-de.png"
+          ]
+        },
+        {
+          "articleNo": "MAO 20 Circular kiefergrün ",
+          "orderNo": "11219658501",
+          "productImage": "https://static.teku.com/assets/672761/mao-25-kiefergruen-pr.psd",
+          "articleName": "MAO 20",
+          "seriesName": "MAO | Ampeln",
+          "category": "Circular360",
+          "color": "Circular kiefergrün",
+          "image": "https://static.teku.com/assets/672761/mao-25-kiefergruen-pr.psd",
+          "alt": "TEKU MAO 25 Ampel, kiefergrün",
+          "title": "TEKU MAO 25 kiefergrün",
+          "availability": "",
+          "show": true,
+          "certificates": [
+            "https://static.teku.com/assets/501424/logo-blauer-engel-de.png",
+            "https://static.teku.com/assets/501422/logo-cyclos-htp-de.png"
+          ]
+        },
+        {
+          "articleNo": "MAO 20 Circular anthrazit ",
+          "orderNo": "11219658101",
+          "productImage": "https://static.teku.com/assets/654771/mao-25-anthrazit-pr.psd",
+          "articleName": "MAO 20",
+          "seriesName": "MAO | Ampeln",
+          "category": "Circular360",
+          "color": "Circular anthrazit",
+          "image": "https://static.teku.com/assets/654771/mao-25-anthrazit-pr.psd",
+          "alt": "TEKU MAO 25 Ampel, anthrazit",
+          "title": "TEKU MAO 25 anthrazit",
+          "availability": "",
+          "show": true,
+          "certificates": [
+            "https://static.teku.com/assets/501424/logo-blauer-engel-de.png",
+            "https://static.teku.com/assets/501422/logo-cyclos-htp-de.png"
+          ]
+        }
+      ],
+      "fitting": []
+    },
+    {
+      "availability": "Neu",
+      "articleNumber": "MAO 21",
+      "orderNumber": "",
+      "image": "https://static.teku.com/assets/672757/mao-25-ton-pr.psd",
+      "imageAlt": "TEKU MAO 25 Ampel, ton",
+      "imageTitle": "TEKU MAO 25 ton",
+      "seriesName": "MAO | Ampeln",
+      "radius": "",
+      "width": "",
+      "length": "",
+      "index": 1,
+      "fields": {
+        "10900": "MAO 21",
+        "7897": "21",
+        "7217": "12,5",
+        "7223": "2,70 l",
+        "variants": "details.variants",
+        "8438": "46",
+        "8439": "80",
+        "8440": "3.680",
+        "8441": "4.000"
+      },
+      "variants": [
+        {
+          "articleNo": "MAO 21 Circular hellgrün 367 VPE ",
+          "orderNo": "88000017229",
+          "productImage": "https://static.teku.com/assets/672762/mao-25-hellgruen-pr.psd",
+          "articleName": "MAO 21",
+          "seriesName": "MAO | Ampeln",
+          "category": "Circular360",
+          "color": "Circular hellgrün",
+          "image": "https://static.teku.com/assets/672762/mao-25-hellgruen-pr.psd",
+          "alt": "TEKU MAO 25 Ampel, hellgrün",
+          "title": "TEKU MAO 25 hellgrün",
+          "availability": "",
+          "show": true,
+          "certificates": [
+            "https://static.teku.com/assets/501424/logo-blauer-engel-de.png",
+            "https://static.teku.com/assets/501422/logo-cyclos-htp-de.png"
+          ]
+        },
+        {
+          "articleNo": "MAO 21 Circular pink 7424 VPE ",
+          "orderNo": "88000017228",
+          "productImage": "https://static.teku.com/assets/672759/mao-25-pink-pr.psd",
+          "articleName": "MAO 21",
+          "seriesName": "MAO | Ampeln",
+          "category": "Circular360",
+          "color": "Circular pink",
+          "image": "https://static.teku.com/assets/672759/mao-25-pink-pr.psd",
+          "alt": "TEKU MAO 25 Ampel, pink",
+          "title": "TEKU MAO 25 pink",
+          "availability": "",
+          "show": true,
+          "certificates": [
+            "https://static.teku.com/assets/501424/logo-blauer-engel-de.png",
+            "https://static.teku.com/assets/501422/logo-cyclos-htp-de.png"
+          ]
+        },
+        {
+          "articleNo": "MAO 21 Circular rot 199 VPE ",
+          "orderNo": "88000017227",
+          "productImage": "https://static.teku.com/assets/672758/mao-25-rot-pr.psd",
+          "articleName": "MAO 21",
+          "seriesName": "MAO | Ampeln",
+          "category": "Circular360",
+          "color": "Circular rot",
+          "image": "https://static.teku.com/assets/672758/mao-25-rot-pr.psd",
+          "alt": "MAO Produktbild",
+          "title": "MAO Produktbild",
+          "availability": "",
+          "show": true,
+          "certificates": [
+            "https://static.teku.com/assets/501424/logo-blauer-engel-de.png",
+            "https://static.teku.com/assets/501422/logo-cyclos-htp-de.png"
+          ]
+        },
+        {
+          "articleNo": "MAO 21 Circular weiß VPE ",
+          "orderNo": "88000017226",
+          "productImage": "https://static.teku.com/assets/672756/mao-25-weiss-pr.psd",
+          "articleName": "MAO 21",
+          "seriesName": "MAO | Ampeln",
+          "category": "Circular360",
+          "color": "Circular weiß",
+          "image": "https://static.teku.com/assets/672756/mao-25-weiss-pr.psd",
+          "alt": "TEKU MAO 25 Ampel, weiß",
+          "title": "TEKU MAO 25 weiß",
+          "availability": "",
+          "show": true,
+          "certificates": [
+            "https://static.teku.com/assets/501424/logo-blauer-engel-de.png",
+            "https://static.teku.com/assets/501422/logo-cyclos-htp-de.png"
+          ]
+        },
+        {
+          "articleNo": "MAO 21 Circular anthrazit VPE ",
+          "orderNo": "88000017225",
+          "productImage": "https://static.teku.com/assets/654771/mao-25-anthrazit-pr.psd",
+          "articleName": "MAO 21",
+          "seriesName": "MAO | Ampeln",
+          "category": "Circular360",
+          "color": "Circular anthrazit",
+          "image": "https://static.teku.com/assets/654771/mao-25-anthrazit-pr.psd",
+          "alt": "TEKU MAO 25 Ampel, anthrazit",
+          "title": "TEKU MAO 25 anthrazit",
+          "availability": "",
+          "show": true,
+          "certificates": [
+            "https://static.teku.com/assets/501424/logo-blauer-engel-de.png",
+            "https://static.teku.com/assets/501422/logo-cyclos-htp-de.png"
+          ]
+        },
+        {
+          "articleNo": "MAO 21 Circular ton VPE ",
+          "orderNo": "88000016595",
+          "productImage": "https://static.teku.com/assets/672757/mao-25-ton-pr.psd",
+          "articleName": "MAO 21",
+          "seriesName": "MAO | Ampeln",
+          "category": "Circular360",
+          "color": "Circular ton",
+          "image": "https://static.teku.com/assets/672757/mao-25-ton-pr.psd",
+          "alt": "TEKU MAO 25 Ampel, ton",
+          "title": "TEKU MAO 25 ton",
+          "availability": "",
+          "show": true,
+          "certificates": [
+            "https://static.teku.com/assets/501424/logo-blauer-engel-de.png",
+            "https://static.teku.com/assets/501422/logo-cyclos-htp-de.png"
+          ]
+        },
+        {
+          "articleNo": "MAO 21 Recyclable gelb PMS 123  PAL ",
+          "orderNo": "88000017011",
+          "productImage": "https://static.teku.com/assets/672763/mao-25-gelb-pr.psd",
+          "articleName": "MAO 21",
+          "seriesName": "MAO | Ampeln",
+          "category": "Recyclable",
+          "color": "Recyclable gelb",
+          "image": "https://static.teku.com/assets/672763/mao-25-gelb-pr.psd",
+          "alt": "TEKU MAO 25 Ampel, gelb",
+          "title": "TEKU MAO 25 gelb",
+          "availability": "",
+          "show": true,
+          "certificates": [
+            "https://static.teku.com/assets/501422/logo-cyclos-htp-de.png"
+          ]
+        }
+      ],
+      "fitting": []
+    },
+    {
+      "availability": "Neu",
+      "articleNumber": "MAO 23 VOL",
+      "orderNumber": "",
+      "image": "https://static.teku.com/assets/672757/mao-25-ton-pr.psd",
+      "imageAlt": "TEKU MAO 25 Ampel, ton",
+      "imageTitle": "TEKU MAO 25 ton",
+      "seriesName": "MAO | Ampeln",
+      "radius": "",
+      "width": "",
+      "length": "",
+      "index": 2,
+      "fields": {
+        "10900": "MAO 23 VOL",
+        "7897": "22",
+        "7217": "14,6",
+        "7223": "3,60 l",
+        "variants": "details.variants",
+        "8438": "42",
+        "8439": "72",
+        "8440": "3.024",
+        "8441": "3.024"
+      },
+      "variants": [
+        {
+          "articleNo": "MAO 23 VOL Circular ton VPE ",
+          "orderNo": "11219668001",
+          "productImage": "https://static.teku.com/assets/672757/mao-25-ton-pr.psd",
+          "articleName": "MAO 23 VOL",
+          "seriesName": "MAO | Ampeln",
+          "category": "Circular360",
+          "color": "Circular ton",
+          "image": "https://static.teku.com/assets/672757/mao-25-ton-pr.psd",
+          "alt": "TEKU MAO 25 Ampel, ton",
+          "title": "TEKU MAO 25 ton",
+          "availability": "",
+          "show": true,
+          "certificates": [
+            "https://static.teku.com/assets/501424/logo-blauer-engel-de.png",
+            "https://static.teku.com/assets/501422/logo-cyclos-htp-de.png"
+          ]
+        }
+      ],
+      "fitting": []
+    },
+    {
+      "availability": "",
+      "articleNumber": "MAO 25",
+      "orderNumber": "",
+      "image": "https://static.teku.com/assets/672757/mao-25-ton-pr.psd",
+      "imageAlt": "TEKU MAO 25 Ampel, ton",
+      "imageTitle": "TEKU MAO 25 ton",
+      "seriesName": "MAO | Ampeln",
+      "radius": "",
+      "width": "",
+      "length": "",
+      "index": 3,
+      "fields": {
+        "10900": "MAO 25",
+        "7897": "25",
+        "7217": "15,4",
+        "7223": "5,00 l",
+        "variants": "details.variants",
+        "8438": "46",
+        "8439": "60",
+        "8440": "2.760",
+        "8441": "2.760"
+      },
+      "variants": [
+        {
+          "articleNo": "MAO 25 Circular brombeer 260 ",
+          "orderNo": "11219648614",
+          "productImage": "https://static.teku.com/assets/672764/mao-25-brommbeere-pr.psd",
+          "articleName": "MAO 25",
+          "seriesName": "MAO | Ampeln",
+          "category": "Circular360",
+          "color": "Circular brombeer",
+          "image": "https://static.teku.com/assets/672764/mao-25-brommbeere-pr.psd",
+          "alt": "TEKU MAO 25 Ampel, brombeere",
+          "title": "TEKU MAO 25 brombeere",
+          "availability": "",
+          "show": true,
+          "certificates": [
+            "https://static.teku.com/assets/501424/logo-blauer-engel-de.png",
+            "https://static.teku.com/assets/501422/logo-cyclos-htp-de.png"
+          ]
+        },
+        {
+          "articleNo": "MAO 25 Recyclable orange 2008 ",
+          "orderNo": "11219640806",
+          "productImage": "https://static.teku.com/assets/672760/mao-25-orange-pr.psd",
+          "articleName": "MAO 25",
+          "seriesName": "MAO | Ampeln",
+          "category": "Recyclable",
+          "color": "Recyclable orange",
+          "image": "https://static.teku.com/assets/672760/mao-25-orange-pr.psd",
+          "alt": "TEKU MAO 25 Ampel, orange",
+          "title": "TEKU MAO 25 orange",
+          "availability": "",
+          "show": true,
+          "certificates": [
+            "https://static.teku.com/assets/501422/logo-cyclos-htp-de.png"
+          ]
+        },
+        {
+          "articleNo": "MAO 25 Circular rot 199 ",
+          "orderNo": "11219648611",
+          "productImage": "https://static.teku.com/assets/672758/mao-25-rot-pr.psd",
+          "articleName": "MAO 25",
+          "seriesName": "MAO | Ampeln",
+          "category": "Circular360",
+          "color": "Circular rot",
+          "image": "https://static.teku.com/assets/672758/mao-25-rot-pr.psd",
+          "alt": "MAO Produktbild",
+          "title": "MAO Produktbild",
+          "availability": "",
+          "show": true,
+          "certificates": [
+            "https://static.teku.com/assets/501424/logo-blauer-engel-de.png",
+            "https://static.teku.com/assets/501422/logo-cyclos-htp-de.png"
+          ]
+        },
+        {
+          "articleNo": "MAO 25 Circular hellgrün 367 ",
+          "orderNo": "11219648511",
+          "productImage": "https://static.teku.com/assets/672762/mao-25-hellgruen-pr.psd",
+          "articleName": "MAO 25",
+          "seriesName": "MAO | Ampeln",
+          "category": "Circular360",
+          "color": "Circular hellgrün",
+          "image": "https://static.teku.com/assets/672762/mao-25-hellgruen-pr.psd",
+          "alt": "TEKU MAO 25 Ampel, hellgrün",
+          "title": "TEKU MAO 25 hellgrün",
+          "availability": "",
+          "show": true,
+          "certificates": [
+            "https://static.teku.com/assets/501424/logo-blauer-engel-de.png",
+            "https://static.teku.com/assets/501422/logo-cyclos-htp-de.png"
+          ]
+        },
+        {
+          "articleNo": "MAO 25 Circular pink 7424 ",
+          "orderNo": "11219648612",
+          "productImage": "https://static.teku.com/assets/672759/mao-25-pink-pr.psd",
+          "articleName": "MAO 25",
+          "seriesName": "MAO | Ampeln",
+          "category": "Circular360",
+          "color": "Circular pink",
+          "image": "https://static.teku.com/assets/672759/mao-25-pink-pr.psd",
+          "alt": "TEKU MAO 25 Ampel, pink",
+          "title": "TEKU MAO 25 pink",
+          "availability": "",
+          "show": true,
+          "certificates": [
+            "https://static.teku.com/assets/501424/logo-blauer-engel-de.png",
+            "https://static.teku.com/assets/501422/logo-cyclos-htp-de.png"
+          ]
+        },
+        {
+          "articleNo": "MAO 25 Circular anthrazit ",
+          "orderNo": "11219648101",
+          "productImage": "https://static.teku.com/assets/654771/mao-25-anthrazit-pr.psd",
+          "articleName": "MAO 25",
+          "seriesName": "MAO | Ampeln",
+          "category": "Circular360",
+          "color": "Circular anthrazit",
+          "image": "https://static.teku.com/assets/654771/mao-25-anthrazit-pr.psd",
+          "alt": "TEKU MAO 25 Ampel, anthrazit",
+          "title": "TEKU MAO 25 anthrazit",
+          "availability": "",
+          "show": true,
+          "certificates": [
+            "https://static.teku.com/assets/501424/logo-blauer-engel-de.png",
+            "https://static.teku.com/assets/501422/logo-cyclos-htp-de.png"
+          ]
+        },
+        {
+          "articleNo": "MAO 25 Circular ton ",
+          "orderNo": "11219648001",
+          "productImage": "https://static.teku.com/assets/672757/mao-25-ton-pr.psd",
+          "articleName": "MAO 25",
+          "seriesName": "MAO | Ampeln",
+          "category": "Circular360",
+          "color": "Circular ton",
+          "image": "https://static.teku.com/assets/672757/mao-25-ton-pr.psd",
+          "alt": "TEKU MAO 25 Ampel, ton",
+          "title": "TEKU MAO 25 ton",
+          "availability": "",
+          "show": true,
+          "certificates": [
+            "https://static.teku.com/assets/501424/logo-blauer-engel-de.png",
+            "https://static.teku.com/assets/501422/logo-cyclos-htp-de.png"
+          ]
+        },
+        {
+          "articleNo": "MAO 25 Recyclable gelb PMS 123 ",
+          "orderNo": "11219640902",
+          "productImage": "https://static.teku.com/assets/672763/mao-25-gelb-pr.psd",
+          "articleName": "MAO 25",
+          "seriesName": "MAO | Ampeln",
+          "category": "Recyclable",
+          "color": "Recyclable gelb",
+          "image": "https://static.teku.com/assets/672763/mao-25-gelb-pr.psd",
+          "alt": "TEKU MAO 25 Ampel, gelb",
+          "title": "TEKU MAO 25 gelb",
+          "availability": "",
+          "show": true,
+          "certificates": [
+            "https://static.teku.com/assets/501422/logo-cyclos-htp-de.png"
+          ]
+        },
+        {
+          "articleNo": "MAO 25 Circular weiß ",
+          "orderNo": "11219648401",
+          "productImage": "https://static.teku.com/assets/672756/mao-25-weiss-pr.psd",
+          "articleName": "MAO 25",
+          "seriesName": "MAO | Ampeln",
+          "category": "Circular360",
+          "color": "Circular weiß",
+          "image": "https://static.teku.com/assets/672756/mao-25-weiss-pr.psd",
+          "alt": "TEKU MAO 25 Ampel, weiß",
+          "title": "TEKU MAO 25 weiß",
+          "availability": "",
+          "show": true,
+          "certificates": [
+            "https://static.teku.com/assets/501424/logo-blauer-engel-de.png",
+            "https://static.teku.com/assets/501422/logo-cyclos-htp-de.png"
+          ]
+        },
+        {
+          "articleNo": "MAO 25 Circular kiefergrün ",
+          "orderNo": "11219648501",
+          "productImage": "https://static.teku.com/assets/672761/mao-25-kiefergruen-pr.psd",
+          "articleName": "MAO 25",
+          "seriesName": "MAO | Ampeln",
+          "category": "Circular360",
+          "color": "Circular kiefergrün",
+          "image": "https://static.teku.com/assets/672761/mao-25-kiefergruen-pr.psd",
+          "alt": "TEKU MAO 25 Ampel, kiefergrün",
+          "title": "TEKU MAO 25 kiefergrün",
+          "availability": "",
+          "show": true,
+          "certificates": [
+            "https://static.teku.com/assets/501424/logo-blauer-engel-de.png",
+            "https://static.teku.com/assets/501422/logo-cyclos-htp-de.png"
+          ]
+        }
+      ],
+      "fitting": []
+    },
+    {
+      "availability": "",
+      "articleNumber": "MAO 27",
+      "orderNumber": "",
+      "image": "https://static.teku.com/assets/672757/mao-25-ton-pr.psd",
+      "imageAlt": "TEKU MAO 25 Ampel, ton",
+      "imageTitle": "TEKU MAO 25 ton",
+      "seriesName": "MAO | Ampeln",
+      "radius": "",
+      "width": "",
+      "length": "",
+      "index": 4,
+      "fields": {
+        "10900": "MAO 27",
+        "7897": "27",
+        "7217": "16,4",
+        "7223": "6,00 l",
+        "variants": "details.variants",
+        "8438": "46",
+        "8439": "48",
+        "8440": "2.208",
+        "8441": "2.208"
+      },
+      "variants": [
+        {
+          "articleNo": "MAO 27 Circular ton ",
+          "orderNo": "11219628001",
+          "productImage": "https://static.teku.com/assets/672757/mao-25-ton-pr.psd",
+          "articleName": "MAO 27",
+          "seriesName": "MAO | Ampeln",
+          "category": "Circular360",
+          "color": "Circular ton",
+          "image": "https://static.teku.com/assets/672757/mao-25-ton-pr.psd",
+          "alt": "TEKU MAO 25 Ampel, ton",
+          "title": "TEKU MAO 25 ton",
+          "availability": "",
+          "show": true,
+          "certificates": [
+            "https://static.teku.com/assets/501424/logo-blauer-engel-de.png",
+            "https://static.teku.com/assets/501422/logo-cyclos-htp-de.png"
+          ]
+        },
+        {
+          "articleNo": "MAO 27 Circular rot 199 ",
+          "orderNo": "11219628611",
+          "productImage": "https://static.teku.com/assets/456510/mal-rot-pr.psd",
+          "articleName": "MAO 27",
+          "seriesName": "MAO | Ampeln",
+          "category": "Circular360",
+          "color": "Circular rot",
+          "image": "https://static.teku.com/assets/456510/mal-rot-pr.psd",
+          "alt": " Produktfoto Ampel",
+          "title": "  Produktfoto Ampel",
+          "availability": "",
+          "show": true,
+          "certificates": [
+            "https://static.teku.com/assets/501424/logo-blauer-engel-de.png",
+            "https://static.teku.com/assets/501422/logo-cyclos-htp-de.png"
+          ]
+        },
+        {
+          "articleNo": "MAO 27 Recyclable orange 2008 ",
+          "orderNo": "11219620801",
+          "productImage": "https://static.teku.com/assets/456512/mal-orange-pr.psd",
+          "articleName": "MAO 27",
+          "seriesName": "MAO | Ampeln",
+          "category": "Recyclable",
+          "color": "Recyclable orange",
+          "image": "https://static.teku.com/assets/456512/mal-orange-pr.psd",
+          "alt": " Produktfoto Ampel",
+          "title": "  Produktfoto Ampel",
+          "availability": "",
+          "show": true,
+          "certificates": [
+            "https://static.teku.com/assets/501422/logo-cyclos-htp-de.png"
+          ]
+        },
+        {
+          "articleNo": "MAO 27 Circular anthrazit ",
+          "orderNo": "11219628101",
+          "productImage": "https://static.teku.com/assets/456517/mal-anthrazit-pr.psd",
+          "articleName": "MAO 27",
+          "seriesName": "MAO | Ampeln",
+          "category": "Circular360",
+          "color": "Circular anthrazit",
+          "image": "https://static.teku.com/assets/456517/mal-anthrazit-pr.psd",
+          "alt": " Produktfoto Ampel",
+          "title": "  Produktfoto Ampel",
+          "availability": "",
+          "show": true,
+          "certificates": [
+            "https://static.teku.com/assets/501424/logo-blauer-engel-de.png",
+            "https://static.teku.com/assets/501422/logo-cyclos-htp-de.png"
+          ]
+        },
+        {
+          "articleNo": "MAO 27 Recyclable gelb PMS 123 ",
+          "orderNo": "11219620901",
+          "productImage": "https://static.teku.com/assets/456515/mal-gelb-pr.psd",
+          "articleName": "MAO 27",
+          "seriesName": "MAO | Ampeln",
+          "category": "Recyclable",
+          "color": "Recyclable gelb",
+          "image": "https://static.teku.com/assets/456515/mal-gelb-pr.psd",
+          "alt": " Produktfoto Ampel",
+          "title": "  Produktfoto Ampel",
+          "availability": "",
+          "show": true,
+          "certificates": [
+            "https://static.teku.com/assets/501422/logo-cyclos-htp-de.png"
+          ]
+        },
+        {
+          "articleNo": "MAO 27 Circular brombeer 260 ",
+          "orderNo": "11219628614",
+          "productImage": "https://static.teku.com/assets/456516/mal-brombeer-pr.psd",
+          "articleName": "MAO 27",
+          "seriesName": "MAO | Ampeln",
+          "category": "Circular360",
+          "color": "Circular brombeer",
+          "image": "https://static.teku.com/assets/456516/mal-brombeer-pr.psd",
+          "alt": " Produktfoto Ampel",
+          "title": "  Produktfoto Ampel",
+          "availability": "",
+          "show": true,
+          "certificates": [
+            "https://static.teku.com/assets/501424/logo-blauer-engel-de.png",
+            "https://static.teku.com/assets/501422/logo-cyclos-htp-de.png"
+          ]
+        },
+        {
+          "articleNo": "MAO 27 Circular pink 7424 ",
+          "orderNo": "11219628612",
+          "productImage": "https://static.teku.com/assets/456511/mal-pink-pr.psd",
+          "articleName": "MAO 27",
+          "seriesName": "MAO | Ampeln",
+          "category": "Circular360",
+          "color": "Circular pink",
+          "image": "https://static.teku.com/assets/456511/mal-pink-pr.psd",
+          "alt": " Produktfoto Ampel",
+          "title": "  Produktfoto Ampel",
+          "availability": "",
+          "show": true,
+          "certificates": [
+            "https://static.teku.com/assets/501424/logo-blauer-engel-de.png",
+            "https://static.teku.com/assets/501422/logo-cyclos-htp-de.png"
+          ]
+        },
+        {
+          "articleNo": "MAO 27 Circular hellgrün 367 ",
+          "orderNo": "11219628503",
+          "productImage": "https://static.teku.com/assets/456514/mal-hellgruen-pr.psd",
+          "articleName": "MAO 27",
+          "seriesName": "MAO | Ampeln",
+          "category": "Circular360",
+          "color": "Circular hellgrün",
+          "image": "https://static.teku.com/assets/456514/mal-hellgruen-pr.psd",
+          "alt": " Produktfoto Ampel",
+          "title": "  Produktfoto Ampel",
+          "availability": "",
+          "show": true,
+          "certificates": [
+            "https://static.teku.com/assets/501424/logo-blauer-engel-de.png",
+            "https://static.teku.com/assets/501422/logo-cyclos-htp-de.png"
+          ]
+        },
+        {
+          "articleNo": "MAO 27 Circular kiefergrün ",
+          "orderNo": "11219628501",
+          "productImage": "https://static.teku.com/assets/456513/mal-kiefergruen-pr.psd",
+          "articleName": "MAO 27",
+          "seriesName": "MAO | Ampeln",
+          "category": "Circular360",
+          "color": "Circular kiefergrün",
+          "image": "https://static.teku.com/assets/456513/mal-kiefergruen-pr.psd",
+          "alt": " Produktfoto Ampel",
+          "title": "  Produktfoto Ampel",
+          "availability": "",
+          "show": true,
+          "certificates": [
+            "https://static.teku.com/assets/501424/logo-blauer-engel-de.png",
+            "https://static.teku.com/assets/501422/logo-cyclos-htp-de.png"
+          ]
+        },
+        {
+          "articleNo": "MAO 27 Circular weiß ",
+          "orderNo": "11219628401",
+          "productImage": "https://static.teku.com/assets/456508/mal-weiss-pr.psd",
+          "articleName": "MAO 27",
+          "seriesName": "MAO | Ampeln",
+          "category": "Circular360",
+          "color": "Circular weiß",
+          "image": "https://static.teku.com/assets/456508/mal-weiss-pr.psd",
+          "alt": " Produktfoto Ampel",
+          "title": "  Produktfoto Ampel",
+          "availability": "",
+          "show": true,
+          "certificates": [
+            "https://static.teku.com/assets/501424/logo-blauer-engel-de.png",
+            "https://static.teku.com/assets/501422/logo-cyclos-htp-de.png"
+          ]
+        }
+      ],
+      "fitting": []
+    }
+  ]
+}
