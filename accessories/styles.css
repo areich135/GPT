@@ -58,7 +58,7 @@
 .accessory-page .catalog .row-specs .info-button{position:absolute;right:0;top:-4px;width:14px;height:14px;font-size:10px}
 .accessory-page .gallery-card .main-image-button{overflow:hidden}
 .accessory-page .gallery-card .main-image-button img{transform:scale(1.15)}
-.accessory-page .gallery-card .thumbnail img{transform:scale(1.12)}
+.accessory-page .gallery-card .thumbnails{overflow-y:hidden}
 .accessory-page #product-title{overflow-wrap:anywhere}
 @container(max-width:700px){
  .accessory-page.bp-v2 .catalog .product-row.refreshed-row .row-main{grid-template-columns:64px minmax(125px,1fr) repeat(3,minmax(62px,1fr));grid-template-rows:auto auto;gap:10px}
@@ -78,3 +78,5 @@
  .accessory-page .catalog .product-title-button{font-size:16px}
  .accessory-page .catalog .row-specs .metric img{width:25px;height:24px}
 }
+
+.accessory-page .catalog .product-row.refreshed-row{border-radius:8px;overflow:hidden}

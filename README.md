@@ -32,6 +32,7 @@ Alle aktuellen Entwürfe enthalten die rechten Listen für Muster, Angebote und 
 - MAO/MUK/Hänger: SKU-Zeilen an VCG ausgerichtet – größere Produktansichten, Titel über den Maßen, Piktogramme über Wert und separater Einheit. Hänger nutzen zwei statt drei Maßspalten. Haken-Hilfe bleibt erreichbar, Maßeinheiten und Anfrageentwürfe bleiben erhalten. Größere Hero-/Vorschaubilder ohne Veränderung der Originalfotos.
 - Kurze sichtbare SKU-Listen dürfen von den rechten Angebots-, Muster-, Merklisten- und Kontaktkarten nach unten überragt werden. In diesem Zustand normaler Dokumentfluss ohne inneren Scrollbalken. Längere SKU-Listen behalten ihre Begrenzung und das bisherige Sticky-Verhalten. Größen-/Filter-/Listenänderungen werden neu vermessen.
 - Aktuelle Versionsnummern und Produktdaten unverändert; betroffene Skript-/CSS-Cacheparameter aktualisiert.
+- Prüfung: DOM-Funktionsprüfungen aller sechs Bereiche bestanden. Live-Browser: Maßband nach cm/inch und Filter-Neuaufbau in allen Bereichen sichtbar; einfarbiger Fächer; MAO/MUK/Hänger bei 1363 px und bei Browserzoom mit ca. 909/454/340 CSS-Pixeln kontrolliert. Keine horizontal überlaufende Seite bei den geprüften neuen SKU-Ansichten. MUK-Seitenleiste vollständig ohne inneren Scrollbalken; Ausnahme auch bei einem gefilterten MAO-Artikel sowie Rückkehr zur normalen Begrenzung nach Detailöffnung geprüft. Die zusätzlichen Breiten wurden durch Browserzoom, nicht durch eine Geräteemulation erzeugt.
 
 ### 19.11.2026 · Drei neue Kategorien V1 und einheitliche technische Bilddialoge
 

@@ -51,3 +51,9 @@ MAO zeigt die originalen Serienbilder von Boden und Rand; keine artikelgenauen D
 JS-Syntax und `git diff --check`; DOM-Integration der sechs aktuellen Bereiche: technische Bereiche, gezielter Bilddialog-Einstieg, Bildwechsel, Verpackung, Varianten, Musterlisten und Inline-Anfrage. Neue Serien zusätzlich Einheitenwechsel mit erhaltenem Mengenentwurf, Quellen-/Assetprüfung und artikelbezogene Zubehörzuordnung. Vorhandene Rechenkerne unverändert.
 
 Die lokale visuelle Chromium-Prüfung ist durch die Laufzeitumgebung blockiert (Prozessstart: socket operation not permitted); deshalb keine Behauptung gerenderter Responsive-Prüfung oder Pixelgleichheit. Die VCG-Kompositionsdatei wurde separat als Bild visuell kontrolliert.
+
+## Gestaltungskorrektur 20.11.2026
+
+Größere SKU-Bilder und wie bei VCG vertikale Spalten aus Icon, Zahl und Einheit; Hänger mit zwei Spalten. Echte Maßband-Bilder statt relativ zu CSS aufgelöster Hintergrund-URLs. Farbfächer auf aktuellen Seiten einfarbig. Kurze sichtbare Artikellisten lassen die rechten Karten ohne inneren Scrollbalken nach unten überstehen. Produktdaten, Fotos und Kompatibilitäten unverändert.
+
+Zusätzlich zum historischen Prüfstand oben wurden die Änderungen im Live-Browser kontrolliert: Desktop 1363 px sowie schmalere Ansichten durch Browserzoom (ca. 909/454/340 CSS-Pixel, keine Geräteemulation). Maßband in allen sechs Bereichen nach inch-Umschaltung und Filter-Neuaufbau erhalten. MUK ohne inneres Scrollen bei zwei Artikeln, MAO ebenso nach Filterung auf einen Treffer. Geöffnete Details stellen bei ausreichender SKU-Höhe die bisherige Sidebar-Begrenzung wieder her. DOM-Funktionen aller sechs Bereiche erneut bestanden.

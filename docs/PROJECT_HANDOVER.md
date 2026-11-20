@@ -450,6 +450,8 @@ Besonders beachten:
 
 **Prüfstand 17.11.2026:** Syntaxprüfung `design-review.js` / `catalog-update.js`, Diff-Whitespace und DOM-Interaktionen VCG/BP/ST bestanden (Listen/Zähler und aktive Icons, beide Anfragearten und Artikelmengen, vollständiger zweistufiger Ablauf, Vor-/Zurück und Datenerhalt, Fortschritt 0/50/100, cm/inch, Galerie nach erneutem Artikelwechsel, Detailzoom, Sternchenabgrenzung, weitere Artikel). Keine neue Rechnerlogik. Lokale visuelle Browserprüfung durch die Umgebung blockiert; responsive Geometrie und Pixelvergleich nicht als geprüft ausgeben.
 
+**Prüfstand 20.11.2026:** Gemeinsame Maßband- und Monochrom-Icons live in allen sechs Bereichen nach Einheitenwechsel/Filter-Neuaufbau geprüft. MAO/MUK/Hänger: größere SKU-Ansichten und gestapelte Maßspalten bei 1363 px sowie Browserzoom-Ansichten mit ca. 909/454/340 CSS-Pixeln, ohne horizontales Seitenüberlaufen in den geprüften Zuständen. MUK-Kartenleiste bei zwei geschlossenen Artikeln vollständig im Dokumentfluss (`overflow: visible`, `scrollHeight == clientHeight`); nach Detailöffnung normale Begrenzung ohne unnötigen Scrollbalken. MAO nach Durchmesserfilter auf einen Artikel ebenfalls im kurzen Zustand. DOM-Integration aller sechs Bereiche bestanden. Lokaler Chromium-Prozess weiterhin blockiert; die visuelle Prüfung erfolgte im verbundenen Live-Browser. Keine Geräteemulation oder pixelgenaue Prüfung von 390/768/1440 px behaupten.
+
 ## 12. Prüfkatalog: je nach Auftrag auswählen
 
 Nicht für jede Textkorrektur die gesamte Anwendung erneut prüfen. Betroffene Funktion plus unmittelbar verbundene Abläufe verifizieren. Änderungen an gemeinsamen Dateien oder Rechenlogik erfordern eine gezielte Prüfung aller betroffenen aktuellen Produktbereiche.
