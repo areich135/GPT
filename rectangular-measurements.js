@@ -80,7 +80,7 @@
     document.querySelectorAll('[data-rect-title]').forEach(node=>{const label=`${node.dataset.rectTitleLabel}: ${display(node.dataset.rectTitle)}`;node.title=label;node.setAttribute('aria-label',label);});
     document.querySelectorAll('[data-rect-summary]').forEach(node=>node.setAttribute('aria-label',`${st?'Tray':'Anzuchtpalette'} · Außenmaße in ${unit==='cm'?'Zentimetern':'Inch'}`));
     section.querySelectorAll('[data-measurement-unit]').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.measurementUnit===unit)));
-    compact.textContent=unit;compact.setAttribute('aria-label',`Maßeinheit: ${unit}. Filter aufklappen`);
+    compact.dataset.unit=unit;compact.setAttribute('aria-label',`Maßeinheit: ${unit}. Filter aufklappen`);
   }
   const previousFilters=renderFilters;
   renderFilters=function(...args){const result=previousFilters.apply(this,args);bindFilters();refresh();return result;};

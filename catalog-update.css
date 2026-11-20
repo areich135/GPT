@@ -23,3 +23,9 @@
 .catalog-xd .catalog .filters{position:static;max-height:none;overflow:visible}
 .catalog-xd .recommendations{margin-left:var(--sku-column-left,var(--xd-left));width:var(--sku-column-width,var(--xd-main))}
 .catalog-xd .recommendations>h2{margin-left:0}
+
+/* When a short SKU list cannot hold the list cards, use normal document flow. */
+@media(min-width:1101px){
+ .catalog-xd .catalog.short-sku-list .selection-sidebar-host{height:auto;align-self:start}
+ .catalog-xd .catalog.short-sku-list .selection-sidebar{position:static;max-height:none;overflow:visible}
+}

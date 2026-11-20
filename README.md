@@ -25,6 +25,14 @@ Alle aktuellen Entwürfe enthalten die rechten Listen für Muster, Angebote und 
 
 ## Changelog
 
+### 20.11.2026 · Einheitliche SKU-Maße, Filter-Icons und kurze Listen
+
+- Maßband-Symbol in allen sechs aktuellen Bereichen als echtes Bild eingebunden. Fehlerhafte relative URL-Auflösung aus CSS-Variablen unter `/GPT/bp/`, `/st/`, `/mao/`, `/muk/` und `/mhb/` beseitigt; das Icon bleibt bei Einheitenwechsel und Filter-Neuaufbau erhalten.
+- Gretas einfarbiger Farbfächer ersetzt auf den aktuellen Seiten den bunten Fächer. Originalgeometrie und Kreisrahmen bleiben erhalten; historische Seiten behalten ihr bisheriges Asset.
+- MAO/MUK/Hänger: SKU-Zeilen an VCG ausgerichtet – größere Produktansichten, Titel über den Maßen, Piktogramme über Wert und separater Einheit. Hänger nutzen zwei statt drei Maßspalten. Haken-Hilfe bleibt erreichbar, Maßeinheiten und Anfrageentwürfe bleiben erhalten. Größere Hero-/Vorschaubilder ohne Veränderung der Originalfotos.
+- Kurze sichtbare SKU-Listen dürfen von den rechten Angebots-, Muster-, Merklisten- und Kontaktkarten nach unten überragt werden. In diesem Zustand normaler Dokumentfluss ohne inneren Scrollbalken. Längere SKU-Listen behalten ihre Begrenzung und das bisherige Sticky-Verhalten. Größen-/Filter-/Listenänderungen werden neu vermessen.
+- Aktuelle Versionsnummern und Produktdaten unverändert; betroffene Skript-/CSS-Cacheparameter aktualisiert.
+
 ### 19.11.2026 · Drei neue Kategorien V1 und einheitliche technische Bilddialoge
 
 - Ampeln MAO, Untersetzer MUK und Hänger MHB/MHI/A als V1 in der oberen Bereichsauswahl. Originalartikel, Farbvarianten mit Bestellnummern/Zertifikaten, Maß-/Farb-/Nachhaltigkeitsfilter, cm/inch, technische Daten, Verpackungszeilen und bestehende Listen-/Anfragefunktionen integriert. Haken-Durchmesser mit Original-Icon und Infohilfe; MAO/MUK mit Rundrechner.

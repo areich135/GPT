@@ -37,7 +37,12 @@
       // Exclude trailing list margins and the cards below the SKU list.
       const height=Math.max(0,last.bottom-results.getBoundingClientRect().top);
       catalog.style.setProperty('--sku-list-height',`${height}px`);
-    }else catalog.style.removeProperty('--sku-list-height');
+      // Short result lists may be shorter than the four empty list cards.
+      // Let those cards flow below the last SKU instead of forcing a tiny scroller.
+      const sidebarHeight=sidebar.scrollHeight;
+      const allowOverhang=innerWidth>1100&&height+2<Math.min(sidebarHeight,innerHeight-40);
+      catalog.classList.toggle('short-sku-list',allowOverhang);
+    }else {catalog.style.removeProperty('--sku-list-height');catalog.classList.remove('short-sku-list');}
     if(recommendation){
       const column=results.getBoundingClientRect();
       recommendation.style.setProperty('--sku-column-left',`${column.left+scrollX}px`);
@@ -59,7 +64,10 @@
   }
   // Both collapse setters update this class, including the capture-phase adapter.
   new MutationObserver(sync).observe(catalog,{attributes:true,attributeFilter:['class']});
-  new ResizeObserver(schedule).observe(results);
+  const resizeObserver=new ResizeObserver(schedule);
+  resizeObserver.observe(results);
+  resizeObserver.observe(sidebar);
+  resizeObserver.observe(sidebar.querySelector('.selection-stack'));
   addEventListener('resize',schedule,{passive:true});
   // Desktop follows native CSS sticky positioning; only the mobile floating
   // actions need their viewport position clamped to the first/last SKU.

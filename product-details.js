@@ -76,8 +76,5 @@
     }
     return template.innerHTML;
   };
-  // BP/ST recreate the compact unit button after every filter change.
-  const previousFilters=renderFilters;
-  renderFilters=function(...args){const result=previousFilters.apply(this,args);document.querySelectorAll('.compact-unit').forEach(b=>b.style.setProperty('--unit-icon',`url("${root}assets/filter-unit.svg")`));return result;};
   renderFilters();renderProducts();
 })();

@@ -81,7 +81,7 @@
     });
     refreshFilters();
     section.querySelectorAll('[data-measurement-unit]').forEach(button => button.setAttribute('aria-pressed', String(button.dataset.measurementUnit === unit)));
-    compact.textContent = unit;
+    compact.dataset.unit = unit;
     compact.setAttribute('aria-label', `Maßeinheit: ${unit}. Filter aufklappen`);
   }
   const previousProducts = renderProducts;

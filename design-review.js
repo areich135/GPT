@@ -5,6 +5,8 @@
   const st=document.body.classList.contains('st-page');
   const rectangular=document.body.classList.contains('bp-v2');
   const root=rectangular?'../':'';
+  const unitIconURL=new URL('assets/filter-unit.svg',document.currentScript.src).href;
+  const colorIconURL=new URL('assets/filter-color-mono.svg',document.currentScript.src).href;
   const arrow=direction=>`<svg viewBox="0 0 24 24" aria-hidden="true"><path d="${direction<0?'m15 5-7 7 7 7':'m9 5 7 7-7 7'}"/></svg>`;
   const labelSlot=p=>st&&/^ST (2840|3156)(?:[\s/\-]|$)/.test(p.name);
   // Explicit review example, not a claim that the whole range is new.
@@ -14,7 +16,14 @@
   function decorateFilters(){
     const heading=document.querySelector('#unit-heading img');
     if(heading)heading.src=root+'assets/filter-unit.svg';
-    document.querySelectorAll('.compact-unit').forEach(button=>button.style.setProperty('--unit-icon',`url("${root}assets/filter-unit.svg")`));
+    document.querySelectorAll('.compact-unit').forEach(button=>{
+      let image=button.querySelector('img');
+      if(!image){image=document.createElement('img');image.alt='';button.replaceChildren(image);}
+      image.src=unitIconURL;
+      button.style.removeProperty('--unit-icon');
+    });
+    document.querySelectorAll('#filter-color h2 img,#filter-colors h2 img,[data-filter-group="color"] img').forEach(image=>image.src=colorIconURL);
+    document.querySelectorAll('img[src$="/filter-color.svg"],img[src="assets/filter-color.svg"]').forEach(image=>image.src=colorIconURL);
   }
   const originalFilters=renderFilters;
   renderFilters=function(...args){const result=originalFilters.apply(this,args);decorateFilters();return result;};
