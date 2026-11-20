@@ -80,3 +80,5 @@
 }
 
 .accessory-page .catalog .product-row.refreshed-row{border-radius:8px;overflow:hidden}
+
+.accessory-page .catalog .product-row.refreshed-row:has(>.row-detail[hidden]){background:white}
