@@ -1,7 +1,7 @@
 # TEKU Website – verbindliche Übergabe für die Clickdummys
 
-**Dokumentrevision:** 16 · **Stand:** 20.11.2026
-**Ausgangsbasis dieser Änderung:** e32e179; aktuelle Änderungen siehe README-Changelog
+**Dokumentrevision:** 17 · **Stand:** 24.11.2026
+**Ausgangsbasis dieser Änderung:** cbecc9a; aktuelle Änderungen siehe README-Changelog
 **Repository:** https://github.com/areich135/GPT · **Arbeitsbranch:** main
 
 Diese Übergabe soll einen neuen Chat arbeitsfähig machen, ohne den gesamten alten Verlauf zu laden. Sie beschreibt den freigegebenen Stand, die bewussten Unterschiede zwischen den Produktbereichen und die Grenzen des Dummys. Vor jeder Aufgabe den aktuellen Remote-Stand prüfen: Eine im ChatGPT-Projekt hochgeladene Kopie kann älter sein als die Datei im Repository.
@@ -323,6 +323,8 @@ Desktop kompakt in Spalten. Nicht pauschal den ganzen Rechner verkleinern: ausre
 
 engine.js und component.js berechnen ganze runde Töpfe im Viereck- und Dreieckverband. Beim Dreieckverband beide Ausrichtungen der Fläche vergleichen.
 
+VCG V12 zeigt „Gewählter Artikel“ mit dem Ausgangsartikel. „Weitere Varianten“ öffnet eine Auswahl aller 14 VCG-Datensätze unabhängig von den aktiven Filtern. Der Durchmesser ist schreibgeschützt und kommt aus dem ausgewählten Datensatz. Bei Artikelwechsel bleiben Flächenmaße, Abstand, Einheiten und Anordnung erhalten. Zurücksetzen stellt den Artikel vom Öffnen und die Standardeingaben wieder her. Die bisherigen Katalogdurchmesser gelten als vorläufige Werte bis zur Freigabe der exakten Außendurchmesser. MAO und MUK verwenden den Rundrechner weiterhin mit frei änderbarem Durchmesser.
+
 **Abstandskonvention der vorhandenen Formel:** Topfteilung = Durchmesser + Abstand; am Rand wird entsprechend der Vorlage ein halber Abstand reserviert. Bei 0 Abstand dürfen Außenkreise den Rand berühren. Nicht heimlich an die Rechteckkonvention angleichen.
 
 Kontrollwerte bei 1 × 1 m und 0 Abstand:
@@ -390,6 +392,8 @@ ST hat ausschließlich A/B/C-Außenmaße, Töpfe pro Tray, Trays und Töpfe pro 
 ### 9.2 MAO, MUK und Hänger V1
 
 Vollständige Datenkarte und geprüfte Katalogzuordnungen stehen in `accessories/SOURCE.md`. Gemeinsamer Renderer `accessories/app.js`, Styles und zusätzliche auswählbare Zubehörartikel in `accessories/catalog.js`; Bereichsdateien `mao/`, `muk/`, `mhb/` laden ihre eigenen 5/2/4 Artikel mit 38/4/34 Varianten. Nur geprüfte Kompatibilitäten zeigen; MUK passt laut Katalog zu MAK, nicht belegt zu MAO. MHI 38/45 sind für MAO 25/27 aufgeführt. Fehlende weitere Fotos/Links nicht erfinden. Aktuelle Web-Verpackungswerte haben Vorrang vor abweichenden Katalogzahlen. Hakenmaß im Quellwert mm; Anzeige cm/inch, Erklärung mit Originalpiktogramm. Hänger haben keinen Stellflächenrechner. Bestehende Anfrage bleibt simuliert und seitenbezogen. Seit 20.11. folgen SKU-Bilder, Titel und vertikale Icon-/Wert-/Einheitenspalten dem Rundtopfmuster, mit zwei Spalten für Hänger. Die Bildspalte ist größer; die drei Detailbereiche und Anfragen brechen bei schmalen Karten in eigene Zeilen um. Maßeinheitenwechsel aktualisiert die gestapelten Werte im bestehenden DOM. Nur aktuelle Seiten laden diese Anpassungen.
+
+Die Variantenkacheln rahmen die vollständige Ausführung einschließlich Auswahlstatus, Bestellnummer, Merkliste und vorhandener Siegel ein. „Passende Ampeln“, „Passende Hänger“ und „Passende Untersetzer“ zeigen Gruppen bis drei Produkte als links beginnendes Raster mit kompakten Anfragebuttons. Größere Gruppen verwenden weiterhin das Karussell. Die Querverweise unter den Produktgruppen sind entfernt.
 
 BP/ST zeigen Bodenbilder im Kreis und den gleichen umschaltbaren Bilddialog wie VCG. ST bleibt mangels PIM-Foto ausdrücklich Serienillustration. Verpackungsdaten aller aktuellen Bereiche folgen dem zeilenweisen Rundtopfmuster; Maßeinheit-Icon wird nach jedem Filteraufbau gesetzt.
 

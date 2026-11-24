@@ -17,6 +17,11 @@
     @media(max-width:350px){.inputs,.meter-grid,.results{grid-template-columns:1fr}.area-header{display:block}.unit-select{margin-top:10px}.meter-item{font-size:13px}}
     /* Compact desktop composition: controls and results share the same height. */
     .wrap{padding:16px 24px 18px}.context{margin:0 0 16px;font-size:13px}.mobile-panels{display:none}
+    .article-context{display:flex;align-items:center;flex-wrap:wrap;gap:6px 16px}
+    .article-context p{margin:0}
+    .article-choice{padding:5px 10px;border:1px solid #dce0e5;border-radius:20px;background:white}
+    .article-select select{max-width:100%;padding:5px;border:1px solid #dce0e5;border-radius:5px;background:white}
+    .input-unit:has(input[readonly]){background:#f6f7f9;border-color:#dce0e5}
     form{display:grid;grid-template-columns:minmax(320px,.9fr) minmax(0,1.1fr);gap:24px;align-items:start}
     .settings,.result-side{min-width:0}.inputs{gap:14px}.field{gap:5px}.input-unit{min-height:40px}input{padding:8px 10px;font-size:16px}.input-unit small,.input-unit select{padding:8px 10px}.field>small{font-size:11px}
     h3{font-size:17px}.per-meter{margin:16px 0;padding:12px 14px}.section-intro{margin:0;font-size:12px}.meter-grid{gap:14px;margin-top:10px}.meter-item{gap:8px;font-size:12px}.meter-item strong{font-size:24px}.meter-item .pattern-icon{width:38px;height:30px}
@@ -44,11 +49,21 @@
       this.arrangement = 'triangle';
       this.gapUnit = 'cm'; this.areaUnit = 'm';
       const product = this.getAttribute('product-name') || 'Eigene Berechnung';
+      this.initialArticle = this.articles?.findIndex(article => article.name === product) ?? -1;
+      this.articleIndex = this.initialArticle;
+      const fixedDiameter = this.initialArticle >= 0;
+      if (fixedDiameter) this.initialDiameter = this.articles[this.initialArticle].diameter;
       this.attachShadow({mode: 'open'}).innerHTML = `<style>${styles}</style><div class="wrap"><div class="calculator-view">
-        <p class="context">Ausgangsartikel: <strong>${escape(product)}</strong> · <span id="diameter-context">${number(this.initialDiameter)} cm</span><span class="context-hint"> · Durchmesser frei ändern.</span></p>
+        ${fixedDiameter ? `<div class="context article-context">
+          <p>Gewählter Artikel: <strong id="selected-article">${escape(product)}</strong></p>
+          ${this.articles.length > 1 ? `<button type="button" class="article-choice" aria-expanded="false" aria-controls="article-options">Weitere Varianten</button>
+            <label class="article-select" id="article-options" hidden>Artikel auswählen
+              <select>${this.articles.map((article,index) => `<option value="${index}"${index === this.initialArticle ? ' selected' : ''}>${escape(article.name)}</option>`).join('')}</select>
+            </label>` : ''}
+        </div>` : `<p class="context">Ausgangsartikel: <strong>${escape(product)}</strong> · <span id="diameter-context">${number(this.initialDiameter)} cm</span><span class="context-hint"> · Durchmesser frei ändern.</span></p>`}
         <nav class="mobile-panels" aria-label="Rechneransicht"><button type="button" data-panel="settings" aria-pressed="true">Eingaben</button><button type="button" data-panel="results" aria-pressed="false">Ergebnisse</button></nav>
         <form novalidate><div class="settings">
-          <div class="inputs"><label class="field"><span>Topfdurchmesser</span><div class="input-unit"><input name="diameter" inputmode="decimal" type="text" value="${number(this.initialDiameter)}" autocomplete="off" aria-describedby="diameter-hint" required><small>cm</small></div><small id="diameter-hint">Außendurchmesser am Topfrand</small></label>
+          <div class="inputs"><label class="field"><span>Topfdurchmesser</span><div class="input-unit"><input name="diameter" inputmode="decimal" type="text" value="${number(this.initialDiameter)}" autocomplete="off" aria-describedby="diameter-hint" ${fixedDiameter ? 'readonly' : 'required'}><small>cm</small></div><small id="diameter-hint">${fixedDiameter ? 'Außendurchmesser des gewählten Artikels' : 'Außendurchmesser am Topfrand'}</small></label>
           <label class="field"><span>Abstand zwischen Töpfen</span><div class="input-unit"><input name="gap" inputmode="decimal" type="text" value="0" autocomplete="off" required><select name="gapUnit" aria-label="Einheit für den Topfabstand"><option value="cm">cm</option><option value="in">Zoll</option></select></div><small>Freier Abstand von Rand zu Rand</small></label></div>
           <section class="per-meter" aria-labelledby="meter-title"><h3 id="meter-title">Auf 1 m²</h3><p class="section-intro">Töpfe auf einer Fläche von 1 × 1 m</p><div class="meter-grid"><div class="meter-item">${icon(false)}<div>Viereckverband<strong><span data-meter="square">–</span> <small>Stück</small></strong></div></div><div class="meter-item">${icon(true)}<div>Dreieckverband<strong><span data-meter="triangle">–</span> <small>Stück</small></strong></div></div></div></section>
           <div class="area-header"><h3>Ihre individuelle Stellfläche</h3><label class="unit-select">Maßeinheit<select name="areaUnit"><option value="m">Meter (m)</option><option value="cm">Zentimeter (cm)</option><option value="ft">Fuß (ft)</option><option value="in">Zoll (in)</option></select></label></div>
@@ -60,9 +75,23 @@
           <span class="sr-status" role="status" style="position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)" id="announcement"></span>
         </div></form>
         <div class="footer"><p class="notice">Geometrische Berechnung für runde Töpfe. Wege und nicht nutzbare Bereiche von der Stellfläche abziehen.</p><button type="button" class="method-link" data-method="open">Wie wird gerechnet?</button></div>
-        </div><section class="method-view" hidden aria-labelledby="method-title"><h3 id="method-title">Wie wird gerechnet?</h3><p>Der Rechner vergleicht ein rechtwinkliges Raster mit einem um eine halbe Topfteilung versetzten Dreieckverband. Beim Dreieckverband werden beide Ausrichtungen der Fläche geprüft. Die Ergebnisse zählen ganze Töpfe innerhalb der Fläche.</p><p>Die Topfteilung ist Durchmesser plus Abstand. Entsprechend der Formelvorlage wird am Flächenrand jeweils ein halber Abstand reserviert. Bei 0 cm Abstand dürfen Töpfe den Flächenrand berühren. Das Ergebnis vergleicht diese regelmäßigen Anordnungen; es ist kein Nachweis der maximal möglichen Kreispackung.</p><p>Ein manuell geänderter Durchmesser gilt nur für diese Berechnung und ändert den Ausgangsartikel nicht.</p><button type="button" class="primary" data-method="back">Zurück zum Rechner</button></section>
+        </div><section class="method-view" hidden aria-labelledby="method-title"><h3 id="method-title">Wie wird gerechnet?</h3><p>Der Rechner vergleicht ein rechtwinkliges Raster mit einem um eine halbe Topfteilung versetzten Dreieckverband. Beim Dreieckverband werden beide Ausrichtungen der Fläche geprüft. Die Ergebnisse zählen ganze Töpfe innerhalb der Fläche.</p><p>Die Topfteilung ist Durchmesser plus Abstand. Entsprechend der Formelvorlage wird am Flächenrand jeweils ein halber Abstand reserviert. Bei 0 cm Abstand dürfen Töpfe den Flächenrand berühren. Das Ergebnis vergleicht diese regelmäßigen Anordnungen; es ist kein Nachweis der maximal möglichen Kreispackung.</p><p>${fixedDiameter ? 'Der Rechner verwendet den hinterlegten Außendurchmesser des gewählten Artikels.' : 'Ein manuell geänderter Durchmesser gilt nur für diese Berechnung und ändert den Ausgangsartikel nicht.'}</p><button type="button" class="primary" data-method="back">Zurück zum Rechner</button></section>
       </div>`;
       this.form = this.shadowRoot.querySelector('form');
+      const articleChoice = this.shadowRoot.querySelector('.article-choice');
+      this.articleSelect = this.shadowRoot.querySelector('.article-select select');
+      if (articleChoice) {
+        const options = this.shadowRoot.querySelector('#article-options');
+        articleChoice.addEventListener('click', () => {
+          options.hidden = !options.hidden;
+          articleChoice.setAttribute('aria-expanded', String(!options.hidden));
+          if (!options.hidden) this.articleSelect.focus();
+        });
+        this.articleSelect.addEventListener('change', () => {
+          this.selectArticle(Number(this.articleSelect.value));
+          this.update();
+        });
+      }
       this.form.addEventListener('input', () => this.update());
       this.form.addEventListener('change', event => this.changeUnit(event));
       this.form.addEventListener('submit', event => {event.preventDefault();if(this.update(true) && matchMedia('(max-width:760px)').matches)this.showPanel('results');});
@@ -95,8 +124,20 @@
       this.shadowRoot.querySelector(`[data-panel="${panel}"]`).focus();
     }
     focusDiameter() {this.field('diameter').focus();}
+    focusInput() {
+      if (this.articleIndex >= 0) this.field('gap').focus();
+      else this.focusDiameter();
+    }
+    selectArticle(index) {
+      const article = this.articles[index];
+      this.articleIndex = index;
+      this.shadowRoot.querySelector('#selected-article').textContent = article.name;
+      this.field('diameter').value = number(article.diameter);
+      if (this.articleSelect) this.articleSelect.value = String(index);
+    }
     reset() {
       for (const [name,value] of Object.entries({diameter:number(this.initialDiameter),gap:'0',gapUnit:'cm',length:'1',width:'1',areaUnit:'m'})) this.field(name).value = value;
+      if (this.initialArticle >= 0) this.selectArticle(this.initialArticle);
       this.gapUnit = 'cm';this.areaUnit = 'm';this.arrangement = 'triangle';
       this.update();
     }
@@ -115,7 +156,8 @@
     update(focusError = false, animate = false) {
       const root = this.shadowRoot;
       // Read tracked units: select's input event precedes change/conversion.
-      const input = {diameter: E.parseDecimal(this.field('diameter').value),gap: E.parseDecimal(this.field('gap').value) * E.units[this.gapUnit],length: E.parseDecimal(this.field('length').value) * E.units[this.areaUnit],width: E.parseDecimal(this.field('width').value) * E.units[this.areaUnit]};
+      const diameter = this.articleIndex >= 0 ? this.articles[this.articleIndex].diameter : E.parseDecimal(this.field('diameter').value);
+      const input = {diameter,gap: E.parseDecimal(this.field('gap').value) * E.units[this.gapUnit],length: E.parseDecimal(this.field('length').value) * E.units[this.areaUnit],width: E.parseDecimal(this.field('width').value) * E.units[this.areaUnit]};
       root.querySelectorAll('[data-area-unit]').forEach(node => node.textContent = this.areaUnit);
       for (const key of ['diameter','gap','length','width']) {this.field(key).removeAttribute('aria-invalid');this.field(key).removeAttribute('aria-describedby');}
       this.field('diameter').setAttribute('aria-describedby','diameter-hint');
@@ -133,7 +175,8 @@
         return false;
       }
       root.querySelector('#error').hidden=true;root.querySelector('#results-content').hidden=false;
-      root.querySelector('#diameter-context').textContent = Math.abs(input.diameter-this.initialDiameter)<1e-10 ? `${number(this.initialDiameter)} cm` : `${number(input.diameter)} cm · eigener Durchmesser`;
+      const diameterContext = root.querySelector('#diameter-context');
+      if (diameterContext) diameterContext.textContent = Math.abs(input.diameter-this.initialDiameter)<1e-10 ? `${number(this.initialDiameter)} cm` : `${number(input.diameter)} cm · eigener Durchmesser`;
       for (const key of ['square','triangle']) {
         root.querySelector(`[data-meter="${key}"]`).textContent=number(meter[key].count,0);
         root.querySelector(`[data-count="${key}"]`).textContent=number(result[key].count,0);

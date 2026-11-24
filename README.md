@@ -10,7 +10,7 @@ Die Kopfzeile führt zu sechs Produktbereichen:
 - **Untersetzer / MUK:** V1 mit 2 Artikeln, 4 Varianten und katalogbelegten MAK-Zuordnungen.
 - **Hänger / MHB, MHI, A:** V1 mit 4 Artikeln, 34 Varianten und Erklärung des Haken-Durchmessers.
 
-Alle aktuellen Entwürfe enthalten die rechten Listen für Muster, Angebote und Merkliste. Anfragen werden nur simuliert. Der VCG-Stellflächenrechner berechnet die Stückzahl für Viereck- und Dreieckverband mit frei änderbarem Durchmesser.
+Alle aktuellen Entwürfe enthalten die rechten Listen für Muster, Angebote und Merkliste. Anfragen werden nur simuliert. Der VCG-Stellflächenrechner berechnet die Stückzahl für Viereck- und Dreieckverband mit dem hinterlegten Durchmesser des gewählten VCG-Artikels.
 
 - [Rundtöpfe V12 öffnen](https://areich135.github.io/GPT/?version=v12)
 - [Anzuchtpaletten BP V6 öffnen](https://areich135.github.io/GPT/bp/?version=v6)
@@ -24,6 +24,12 @@ Alle aktuellen Entwürfe enthalten die rechten Listen für Muster, Angebote und 
 - [Neue Serien: Quellen und Kompatibilitäten](accessories/SOURCE.md)
 
 ## Changelog
+
+### 24.11.2026 · Kompakte Zubehörkarten und Artikelauswahl im Stellflächenrechner
+
+- Hänger, Untersetzer und Ampeln: Auswahlmarkierung, Bild, Bestellnummer, Herz und Siegel liegen innerhalb responsiver Variantenkarten.
+- Passende Produkte heißen „Passende Ampeln“, „Passende Untersetzer“ und „Passende Hänger“. Kleine Produktgruppen beginnen links und erhalten kompakte Anfragebuttons in Kartenbreite. Die untere Produktbereichs-Linkleiste entfällt.
+- VCG V12: Der Stellflächenrechner zeigt „Gewählter Artikel“ und startet mit dem angeklickten Artikel. „Weitere Varianten“ öffnet eine Auswahl aller 14 VCG-Artikel. Der Durchmesser kommt aus dem gewählten Artikel, vorerst mit den bisherigen Katalogwerten.
 
 ### 20.11.2026 · Einheitliche SKU-Maße, Filter-Icons und kurze Listen
 

@@ -14,7 +14,7 @@
     if (opener?.isConnected) opener.focus({preventScroll: true});
   }
   function close() {dialog.close(); release();}
-  function open({diameter, itemLength, itemWidth, plants, productKind, contentLabel, productName, kind, trigger = document.activeElement}) {
+  function open({diameter, articles, itemLength, itemWidth, plants, productKind, contentLabel, productName, kind, trigger = document.activeElement}) {
     opener = trigger;
     const component = document.createElement(kind === 'rectangle' ? 'teku-tray-space-calculator' : 'teku-space-calculator');
     if (kind === 'rectangle') {
@@ -22,7 +22,10 @@
       if(plants!==null&&plants!==undefined)component.setAttribute('plants',plants);
       component.setAttribute('product-kind',productKind||'Trays');
       if(contentLabel)component.setAttribute('content-label',contentLabel);
-    } else component.setAttribute('diameter', diameter);
+    } else {
+      component.setAttribute('diameter', diameter);
+      component.articles = articles;
+    }
     component.setAttribute('product-name', productName);
     dialog.querySelector('.sc-component-host').replaceChildren(component);
     if (!locked) previousOverflow = document.documentElement.style.overflow;
@@ -48,8 +51,14 @@
   });
   dialog.addEventListener('close', release);
   window.TEKUSpaceCalculator = Object.freeze({open});
-  window.showCalculator = id => {const p = productById(id); if (p) open({diameter: p.diameter, productName: p.name});};
-  TEKUTechnical.calculator = (p, bp) => bp ? `<section class="space-launcher"><h3>Wie viele Anzuchtpaletten passen auf Ihre Fläche?</h3><p>Rechnen Sie mit ${escapeHTML(p.name)} oder eigenen Abmessungen. Vergleichen Sie beide Ausrichtungen.</p><button type="button" class="pink-button" data-tray-calculator="${p.index}"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M8 6h8M8 11h1m6 0h1m-8 4h1m6 0h1m-8 4h1m6 0h1"/></svg> Stellflächenrechner öffnen</button><p class="small-note" style="margin-top:12px">Vorbelegt: ${format(p.length)} × ${format(p.width)} cm${p.plants===null||p.plants===undefined?'':' · '+format(p.plants)+' Pflanzen je Anzuchtpalette'}</p></section>` : `<section class="space-launcher"><h3>Wie viele Töpfe passen auf Ihre Fläche?</h3><p>Rechnen Sie mit ${escapeHTML(p.name)} oder einem eigenen Durchmesser. Vergleichen Sie Viereck- und Dreieckverband.</p><button type="button" class="pink-button" data-calculator="${p.index}">${svg('calculator')} Stellflächenrechner öffnen</button><p class="small-note" style="margin-top:12px">Vorbelegt: ${format(p.diameter)} cm · Durchmesser frei änderbar</p></section>`;
+  window.showCalculator = id => {
+    const product = productById(id);
+    if (!product) return;
+    const articles = typeof PRODUCT_DATA === 'undefined' ? undefined :
+      PRODUCT_DATA.map(({name, diameter}) => ({name, diameter})).sort((a, b) => a.diameter - b.diameter);
+    open({diameter: product.diameter, productName: product.name, articles});
+  };
+  TEKUTechnical.calculator = (p, bp) => bp ? `<section class="space-launcher"><h3>Wie viele Anzuchtpaletten passen auf Ihre Fläche?</h3><p>Rechnen Sie mit ${escapeHTML(p.name)} oder eigenen Abmessungen. Vergleichen Sie beide Ausrichtungen.</p><button type="button" class="pink-button" data-tray-calculator="${p.index}"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M8 6h8M8 11h1m6 0h1m-8 4h1m6 0h1m-8 4h1m6 0h1"/></svg> Stellflächenrechner öffnen</button><p class="small-note" style="margin-top:12px">Vorbelegt: ${format(p.length)} × ${format(p.width)} cm${p.plants===null||p.plants===undefined?'':' · '+format(p.plants)+' Pflanzen je Anzuchtpalette'}</p></section>` : `<section class="space-launcher"><h3>Wie viele Töpfe passen auf Ihre Fläche?</h3><p>Vergleichen Sie für ${escapeHTML(p.name)} den Viereck- und Dreieckverband. Im Rechner können Sie weitere Artikel der VCG-Serie auswählen.</p><button type="button" class="pink-button" data-calculator="${p.index}">${svg('calculator')} Stellflächenrechner öffnen</button><p class="small-note" style="margin-top:12px">Topfdurchmesser: ${format(p.diameter)} cm</p></section>`;
   document.addEventListener('click',event=>{
     const trigger=event.target.closest('[data-tray-calculator]');if(!trigger)return;
     event.preventDefault();const p=productById(trigger.dataset.trayCalculator);if(!p)return;
