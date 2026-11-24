@@ -25,6 +25,11 @@ Alle aktuellen Entwürfe enthalten die rechten Listen für Muster, Angebote und 
 
 ## Changelog
 
+### 24.11.2026 · Vertriebsreihenfolge und Artikelauswahl bei ST und BP
+
+- ST und BP übernehmen die empfohlenen Positionen aus der Vertriebsumfrage für die Filtergruppen und den Reiter „Maße“. Die Maßeinheit bleibt über den Filtergruppen erreichbar. Die cm/inch-Anzeige ordnet die Werte über ihre Datenfelder zu.
+- Der Stellflächenrechner startet mit dem angeklickten ST- oder BP-Artikel und zeigt „Gewählter Artikel“. „Weitere Varianten“ enthält alle Artikel des jeweiligen Sortiments. Länge und Breite sind fest mit dem gewählten Artikel verknüpft. Beim Wechsel wird auch die Anzahl Töpfe beziehungsweise Pflanzen je Artikel vorbelegt, während Stellfläche und Abstand erhalten bleiben.
+
 ### 24.11.2026 · Kompakte Zubehörkarten und Artikelauswahl im Stellflächenrechner
 
 - Hänger, Untersetzer und Ampeln: Auswahlmarkierung, Bild, Bestellnummer, Herz und Siegel liegen innerhalb responsiver Variantenkarten.

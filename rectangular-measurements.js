@@ -46,7 +46,6 @@
     bindDiagrams();
   }
   function bindRows(){
-    const specs=st?[['length','length',true],['width','length',true],['height','length',true]]:[['length','length',false],['width','length',false],['height','length',false],['plugD','length',true],['plugE','length',true],['volume','volume',true],null,['cellA','length',true],['cellB','length',true]];
     document.querySelectorAll('.product-row').forEach(row=>{
       const p=productById(row.id.replace('article-',''));if(!p)return;
       row.querySelectorAll('.bp-tray-measure-values>div').forEach((cell,i)=>{
@@ -57,7 +56,12 @@
       const summary=row.querySelector('.bp-tray-measures');if(summary)summary.dataset.rectSummary='true';
       changingLabel(row.querySelector('.bp-dimension-caption'));changingLabel(row.querySelector('.bp-tray-unit'));
       if(row.querySelector('[data-tech-tab="measures"][aria-selected="true"]')){
-        row.querySelectorAll('.spec-table>div').forEach((cell,i)=>{const spec=specs[i];if(!spec)return;bind(cell.querySelector('dd'),p[spec[0]],spec[1],spec[2]);changingLabel(cell.querySelector('dt'));});
+        row.querySelectorAll('.spec-table > [data-measure-field]').forEach(cell=>{
+          const field=cell.dataset.measureField;
+          const suffix=st||!['length','width','height'].includes(field);
+          bind(cell.querySelector('dd'),p[field],field==='volume'?'volume':'length',suffix);
+          changingLabel(cell.querySelector('dt'));
+        });
         row.querySelectorAll('.measure-diagrams figcaption').forEach(node=>{if(/\bcm\b/.test(node.textContent))changingLabel(node);});
       }
     });

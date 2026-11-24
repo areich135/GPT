@@ -19,11 +19,11 @@ function openModal(title,body){$('#modal-content').innerHTML=`<h2 id="modal-titl
 function closeModal(){$('#modal').close()}
 function updateFavorites(){const n=state.favorites.size;$('#favorites-count').textContent=n;$('#favorites-count').hidden=!n}
 const filterGroups=[
- {key:'color',name:'FARBE',icon:'color',fields:[['color','Farbe','']]},
- {key:'category',name:'NACHHALTIGKEITSKATEGORIE',icon:'recycling',fields:[['category','Nachhaltigkeitskategorie','']]},
  {key:'tray',name:'ABMESSUNGEN TRAY',icon:'tray-dim',fields:[['length','A · Länge','cm'],['width','B · Breite','cm'],['height','C · Höhe','cm']]},
  {key:'pots',name:'TÖPFE PRO TRAY',icon:'pots',fields:[['pots','Töpfe pro Tray','']]},
- {key:'cc',name:'CC-LAGE / TRANSPORT',icon:'cc',help:'Eine CC-Lage ist eine Ebene im CC-Container. Die Topfzahl entspricht Töpfen pro Tray × Trays pro CC-Lage.',fields:[['ccTrays','Trays pro CC-Lage',''],['ccPots','Töpfe pro CC-Lage','']]}
+ {key:'cc',name:'CC-LAGE / TRANSPORT',icon:'cc',help:'Eine CC-Lage ist eine Ebene im CC-Container. Die Topfzahl entspricht Töpfen pro Tray × Trays pro CC-Lage.',fields:[['ccTrays','Trays pro CC-Lage',''],['ccPots','Töpfe pro CC-Lage','']]},
+ {key:'color',name:'FARBE',icon:'color',fields:[['color','Farbe','']]},
+ {key:'category',name:'NACHHALTIGKEITSKATEGORIE',icon:'recycling',fields:[['category','Nachhaltigkeitskategorie','']]}
 ];
 function fieldValues(key){return [...new Set(['category','color'].includes(key)?products.flatMap(p=>p.variants.map(v=>v[key])):products.map(p=>p[key]).filter(v=>v!==null&&v!==undefined))].sort((a,b)=>typeof a==='number'?a-b:String(a).localeCompare(String(b),'de',{numeric:true}))}
 const sourceIcons=ST_ICONS;
@@ -38,8 +38,17 @@ function renderFilters(){
 }
 function filteredProducts(){return products.filter(p=>Object.entries(state.filters).every(([key,v])=>['category','color'].includes(key)?p.variants.some(x=>x[key]===v):String(p[key])===String(v)))}
 function setCollapsed(collapsed){state.filterCollapsed=collapsed;$('.catalog').classList.toggle('filters-collapsed',collapsed);$('.filters').classList.toggle('collapsed',collapsed);$('#filter-body').hidden=collapsed;$('#compact-filters').hidden=!collapsed;const b=$('#collapse-filter');b.classList.toggle('is-collapsed',collapsed);b.setAttribute('aria-expanded',!collapsed);b.setAttribute('aria-label',collapsed?'Filter aufklappen':'Filter einklappen');b.querySelector('span').textContent=collapsed?'aufklappen':'einklappen'}
-function measureTable(p){return TEKUTechnical.table([['A · Länge Tray',value(p.length,'cm')],['B · Breite Tray',value(p.width,'cm')],['C · Höhe Tray',value(p.height,'cm')],['Töpfe pro Tray',value(p.pots)],['Trays pro CC-Lage',value(p.ccTrays)],['Töpfe pro CC-Lage',value(p.ccPots)]])}
-function calculatorLauncher(p){return `<section class="space-launcher"><h3>Wie viele Trays passen auf Ihre Fläche?</h3><p>Rechnen Sie mit ${escapeHTML(p.name)} oder eigenen Abmessungen. Vergleichen Sie beide Ausrichtungen.</p><button type="button" class="pink-button" data-st-calculator="${p.index}">Stellflächenrechner öffnen</button><p class="small-note">Vorbelegt: ${value(p.length)} × ${value(p.width)} cm · ${value(p.pots)} Töpfe je Tray</p></section>`}
+function measureTable(p){
+ return TEKUTechnical.table([
+  ['A · Länge Tray',value(p.length,'cm'),'length'],
+  ['B · Breite Tray',value(p.width,'cm'),'width'],
+  ['C · Höhe Tray',value(p.height,'cm'),'height'],
+  ['Töpfe pro Tray',value(p.pots)],
+  ['Trays pro CC-Lage',value(p.ccTrays)],
+  ['Töpfe pro CC-Lage',value(p.ccPots)]
+ ]);
+}
+function calculatorLauncher(p){return `<section class="space-launcher"><h3>Wie viele Trays passen auf Ihre Fläche?</h3><p>Vergleichen Sie für ${escapeHTML(p.name)} beide Ausrichtungen. Im Rechner können Sie weitere Trays auswählen.</p><button type="button" class="pink-button" data-st-calculator="${p.index}">Stellflächenrechner öffnen</button><p class="small-note">Vorbelegt: ${value(p.length)} × ${value(p.width)} cm · ${value(p.pots)} Töpfe je Tray</p></section>`}
 function technical(p){const tab=state.tech[p.index]||'measures';const body=tab==='packaging'?`<div class="st-packaging"><img src="${sourceIcons.pallet}" alt="Euro-Palette">${TEKUTechnical.table(Object.entries(p.packaging).map(([label,n])=>[label,value(n)]))}</div>`:tab==='calculator'?calculatorLauncher(p):`<div class="bp-measure-groups"><div class="measure-diagrams"><figure><img src="${sourceIcons['tray-dim']}" alt="Tray-Außenmaße A, B und C"><figcaption>Außenmaße · cm</figcaption></figure><figure><img src="${sourceIcons.cc}" alt="CC-Container"><figcaption>Referenz: CC-Container</figcaption></figure></div>${measureTable(p)}</div>`;return `<div class="technical-panel"><figure class="technical-figure"><button data-zoom="${p.index}" aria-label="${escapeHTML(p.name)} vergrößern"><img src="${productImage(p)}" alt="${escapeHTML(p.name)} · ${escapeHTML(selectedVariant(p).color)}" loading="lazy"></button><figcaption>Produktansicht · ${escapeHTML(selectedVariant(p).color)}</figcaption></figure><div class="technical-content">${TEKUTechnical.tabs(p.index,tab)}<div role="tabpanel" id="tech-panel-${p.index}" aria-labelledby="tech-${p.index}-${tab}">${body}</div></div></div>`}
 function renderDetail(p,type){
  if(type==='technical')return technical(p);
@@ -56,7 +65,6 @@ function activateTab(tab){state.tab=tab;['variants','benefits','downloads'].forE
 document.addEventListener('click',event=>{const b=event.target.closest('button,a');if(!b)return;
  if(b.hasAttribute('data-bp-value')){const key=b.dataset.bpFilter,v=fieldValues(key).find(v=>String(v)===b.dataset.bpValue);if(String(state.filters[key])===String(v))delete state.filters[key];else state.filters[key]=v;renderProducts();$(`[data-bp-filter="${key}"][data-bp-value="${CSS.escape(String(v))}"]`)?.focus({preventScroll:true});return}
  if(b.dataset.moreFilter){const key=b.dataset.moreFilter;state.moreFilters[key]=!state.moreFilters[key];renderFilters();$(`[data-more-filter="${key}"]`).focus({preventScroll:true});return}
- if(b.dataset.stCalculator!==undefined){const p=productById(b.dataset.stCalculator);TEKUSpaceCalculator.open({kind:'rectangle',itemLength:p.length,itemWidth:p.width,plants:p.pots,productKind:'Trays',contentLabel:'Töpfe',productName:p.name,trigger:b});return}
  if(b.dataset.techTab){state.tech[b.dataset.id]=b.dataset.techTab;renderProducts();return}
  if(b.dataset.expand){const id=b.dataset.id;state.expanded[id]=state.expanded[id]===b.dataset.expand?null:b.dataset.expand;renderProducts();return}
  if(b.hasAttribute('data-reset')){state.filters={};renderProducts();return}

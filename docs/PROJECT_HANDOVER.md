@@ -1,7 +1,7 @@
 # TEKU Website – verbindliche Übergabe für die Clickdummys
 
-**Dokumentrevision:** 17 · **Stand:** 24.11.2026
-**Ausgangsbasis dieser Änderung:** d54df44; aktuelle Änderungen siehe README-Changelog
+**Dokumentrevision:** 18 · **Stand:** 24.11.2026
+**Ausgangsbasis dieser Änderung:** f145964; aktuelle Änderungen siehe README-Changelog
 **Repository:** https://github.com/areich135/GPT · **Arbeitsbranch:** main
 
 Diese Übergabe soll einen neuen Chat arbeitsfähig machen, ohne den gesamten alten Verlauf zu laden. Sie beschreibt den freigegebenen Stand, die bewussten Unterschiede zwischen den Produktbereichen und die Grenzen des Dummys. Vor jeder Aufgabe den aktuellen Remote-Stand prüfen: Eine im ChatGPT-Projekt hochgeladene Kopie kann älter sein als die Datei im Repository.
@@ -276,14 +276,16 @@ Runde/quadratische Zellmaße lesbar als „Durchmesser“/„quadratisch“ kenn
 
 ### 7.1 Filterreihenfolge
 
-1. Plug-Größe: Plug-Breite, Plug-Höhe.
-2. Zellvolumen.
-3. Pflanzen pro Tray.
-4. Abmessungen Anzuchtpalette.
+1. Abmessungen Anzuchtpalette.
+2. Pflanzen pro Tray.
+3. Zellvolumen.
+4. Plug-Größe: Plug-Breite, Plug-Höhe.
 5. Anzuchtzelle: Zellmaß A/B.
-6. Pflanzen pro m².
-7. Nachhaltigkeitskategorie.
-8. CC-Lage / Transport.
+6. CC-Lage / Transport.
+7. Pflanzen pro m².
+8. Nachhaltigkeitskategorie.
+
+Maßtabelle gemäß empfohlener Position der Vertriebsumfrage: Länge/Breite/Höhe der Anzuchtpalette, Volumen je Zelle, Plug-Breite, Pflanzen pro Tray, Plug-Höhe, Zellmaß A, Zellmaß B, Pflanzen pro m², Trays pro CC-Lage, Pflanzen pro CC-Lage.
 
 ### 7.2 CC-Wagen und CC-Lage erklären
 
@@ -335,6 +337,8 @@ Die Darstellung ist ein Vergleich regelmäßiger Anordnungen, kein Nachweis maxi
 
 ### 8.3 Anzuchtpaletten und rechteckige ST-Trays
 
+Wie bei VCG startet der Rechner unter „Gewählter Artikel“ mit dem Ausgangsartikel. „Weitere Varianten“ zeigt alle 20 BP- bzw. 30 ST-Artikel des jeweiligen Sortiments unabhängig von aktiven Filtern. Länge und Breite sind schreibgeschützt. Beim Artikelwechsel wird auch die Topf- bzw. Pflanzenzahl je Artikel aus dem Datensatz vorbelegt. Stellfläche, Einheit und Abstand bleiben erhalten. Zurücksetzen stellt den Ausgangsartikel und die Standardwerte wieder her.
+
 rectangular-engine.js und rectangular-component.js verwenden die rechteckige Außen-Grundfläche. Je einheitlicher Ausrichtung:
 
     Anzahl längs = floor((Flächenlänge + Abstand) / (Produktlänge + Abstand))
@@ -385,7 +389,7 @@ Vorlagen aus früheren Chats sind nicht automatisch im neuen Chat verfügbar. Da
 
 `st/source-data.json` enthält den bereinigten öffentlichen Produktextrakt vom 13.11.2026, ohne Seitenkonfiguration oder Zugangsschlüssel. 30 ST-Artikel, je eine Variante Circular grau / Circular360 mit originaler Bestellnummer und artikelbezogenen Zertifikaten; 372 passende Topfzuordnungen. Alle 69 genutzten Originalassets liegen lokal, mit Herkunft und SHA-256 in `st/asset-manifest.json`. `st/SOURCE.md` dokumentiert die Feldnummern, Datenlücken und Bildverwendung.
 
-ST hat ausschließlich A/B/C-Außenmaße, Töpfe pro Tray, Trays und Töpfe pro CC-Lage sowie „Trays unterverpackt auf Palette“. Keine Zell-, Plug- oder Volumendaten aus BP übertragen. Filter umfassen Farbe, Nachhaltigkeitskategorie, A/B/C, Töpfe pro Tray und beide CC-Werte; längere Wertelisten bieten „weitere Größen laden“. Einzige Quellfarbe/-kategorie nicht künstlich erweitern.
+Filterreihenfolge gemäß Vertriebsumfrage: Abmessungen Tray, Töpfe pro Tray, CC-Lage / Transport, Farbe, Nachhaltigkeitskategorie. Die Maßtabelle zeigt Länge, Breite, Höhe, Töpfe pro Tray, Trays pro CC-Lage und Töpfe pro CC-Lage in dieser Reihenfolge. Die Verpackungstabelle führt „Trays unterverpackt auf Palette“. Längere Filterlisten bieten „weitere Größen laden“. Einzige Quellfarbe/-kategorie nicht künstlich erweitern.
 
 „Passende Töpfe“ verwendet ausschließlich `p.fitting` des gewählten ST-Artikels; maximal fünf nebeneinander, seitliche blaue Winkel, exakt ein Produkt pro Klick, Füllbalken ab links, Anfang/Ende deaktiviert. Ein Produkt: voller Balken, beide Pfeile aus. Original-Produktlinks öffnen sich in neuem Tab. Hero/Zoom nutzen das jeweilige Quellfoto. Seit 17.11. ergänzt eine ausdrücklich als Serienillustration gekennzeichnete originale Bodendetail-Illustration die Galerie und die technischen Daten; sie ist kein artikelgenaues ST-Bodenfoto. Die originale Etikettenschlitz-Illustration erscheint nur bei ST 2840 / ST 3156, ebenso der Sternchenhinweis „Mit Etikettenschlitz“. Diese Reihen nennt die Originalseite (erneut geprüft 17.11.); die endgültige SKU-Zuordnung durch TEKU/PIM bleibt abzustimmen. Keine Etikettenschlitzgrößen ergänzen. Vorteilsbilder und Texte berücksichtigen die Quellunterschiede Standard/B/D und die Etikettenaufnahmen bestimmter Modelle.
 

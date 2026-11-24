@@ -41,6 +41,35 @@
     @media(max-width:420px){.wrap{padding:14px 16px}.inputs:not(.area-fields) .field>span{min-height:36px}.field{font-size:13px}.area-header h3{max-width:160px}.unit-select{flex-direction:column;align-items:flex-start}.result{padding:11px}.result .label{font-size:12px}.result .value{font-size:27px}.diagram{grid-template-columns:1fr;gap:8px}.diagram-stage{height:150px}.diagram figcaption small{margin-top:4px}.footer{flex-direction:column;gap:8px}}
   `;
   window.TEKUSpaceCalculatorStyles = styles;
+  const articlePicker = {
+    render(articles, index) {
+      return `<div class="context article-context">
+        <p>Gewählter Artikel: <strong id="selected-article">${escape(articles[index].name)}</strong></p>
+        ${articles.length > 1 ? `<button type="button" class="article-choice" aria-expanded="false" aria-controls="article-options">Weitere Varianten</button>
+          <label class="article-select" id="article-options" hidden>Artikel auswählen
+            <select>${articles.map((article, i) => `<option value="${i}"${i === index ? ' selected' : ''}>${escape(article.name)}</option>`).join('')}</select>
+          </label>` : ''}
+      </div>`;
+    },
+    bind(root, onChange) {
+      const button = root.querySelector('.article-choice');
+      if (!button) return;
+      const options = root.querySelector('#article-options');
+      const select = options.querySelector('select');
+      button.addEventListener('click', () => {
+        options.hidden = !options.hidden;
+        button.setAttribute('aria-expanded', String(!options.hidden));
+        if (!options.hidden) select.focus();
+      });
+      select.addEventListener('change', () => onChange(Number(select.value)));
+    },
+    select(root, articles, index) {
+      root.querySelector('#selected-article').textContent = articles[index].name;
+      const select = root.querySelector('.article-select select');
+      if (select) select.value = String(index);
+    }
+  };
+  window.TEKUSpaceCalculatorArticlePicker = articlePicker;
   class TekuSpaceCalculator extends HTMLElement {
     connectedCallback() {
       if (this.shadowRoot) return;
@@ -54,13 +83,7 @@
       const fixedDiameter = this.initialArticle >= 0;
       if (fixedDiameter) this.initialDiameter = this.articles[this.initialArticle].diameter;
       this.attachShadow({mode: 'open'}).innerHTML = `<style>${styles}</style><div class="wrap"><div class="calculator-view">
-        ${fixedDiameter ? `<div class="context article-context">
-          <p>Gewählter Artikel: <strong id="selected-article">${escape(product)}</strong></p>
-          ${this.articles.length > 1 ? `<button type="button" class="article-choice" aria-expanded="false" aria-controls="article-options">Weitere Varianten</button>
-            <label class="article-select" id="article-options" hidden>Artikel auswählen
-              <select>${this.articles.map((article,index) => `<option value="${index}"${index === this.initialArticle ? ' selected' : ''}>${escape(article.name)}</option>`).join('')}</select>
-            </label>` : ''}
-        </div>` : `<p class="context">Ausgangsartikel: <strong>${escape(product)}</strong> · <span id="diameter-context">${number(this.initialDiameter)} cm</span><span class="context-hint"> · Durchmesser frei ändern.</span></p>`}
+        ${fixedDiameter ? articlePicker.render(this.articles, this.initialArticle) : `<p class="context">Ausgangsartikel: <strong>${escape(product)}</strong> · <span id="diameter-context">${number(this.initialDiameter)} cm</span><span class="context-hint"> · Durchmesser frei ändern.</span></p>`}
         <nav class="mobile-panels" aria-label="Rechneransicht"><button type="button" data-panel="settings" aria-pressed="true">Eingaben</button><button type="button" data-panel="results" aria-pressed="false">Ergebnisse</button></nav>
         <form novalidate><div class="settings">
           <div class="inputs"><label class="field"><span>Topfdurchmesser</span><div class="input-unit"><input name="diameter" inputmode="decimal" type="text" value="${number(this.initialDiameter)}" autocomplete="off" aria-describedby="diameter-hint" ${fixedDiameter ? 'readonly' : 'required'}><small>cm</small></div><small id="diameter-hint">${fixedDiameter ? 'Außendurchmesser des gewählten Artikels' : 'Außendurchmesser am Topfrand'}</small></label>
@@ -78,20 +101,10 @@
         </div><section class="method-view" hidden aria-labelledby="method-title"><h3 id="method-title">Wie wird gerechnet?</h3><p>Der Rechner vergleicht ein rechtwinkliges Raster mit einem um eine halbe Topfteilung versetzten Dreieckverband. Beim Dreieckverband werden beide Ausrichtungen der Fläche geprüft. Die Ergebnisse zählen ganze Töpfe innerhalb der Fläche.</p><p>Die Topfteilung ist Durchmesser plus Abstand. Entsprechend der Formelvorlage wird am Flächenrand jeweils ein halber Abstand reserviert. Bei 0 cm Abstand dürfen Töpfe den Flächenrand berühren. Das Ergebnis vergleicht diese regelmäßigen Anordnungen; es ist kein Nachweis der maximal möglichen Kreispackung.</p><p>${fixedDiameter ? 'Der Rechner verwendet den hinterlegten Außendurchmesser des gewählten Artikels.' : 'Ein manuell geänderter Durchmesser gilt nur für diese Berechnung und ändert den Ausgangsartikel nicht.'}</p><button type="button" class="primary" data-method="back">Zurück zum Rechner</button></section>
       </div>`;
       this.form = this.shadowRoot.querySelector('form');
-      const articleChoice = this.shadowRoot.querySelector('.article-choice');
-      this.articleSelect = this.shadowRoot.querySelector('.article-select select');
-      if (articleChoice) {
-        const options = this.shadowRoot.querySelector('#article-options');
-        articleChoice.addEventListener('click', () => {
-          options.hidden = !options.hidden;
-          articleChoice.setAttribute('aria-expanded', String(!options.hidden));
-          if (!options.hidden) this.articleSelect.focus();
-        });
-        this.articleSelect.addEventListener('change', () => {
-          this.selectArticle(Number(this.articleSelect.value));
-          this.update();
-        });
-      }
+      articlePicker.bind(this.shadowRoot, index => {
+        this.selectArticle(index);
+        this.update();
+      });
       this.form.addEventListener('input', () => this.update());
       this.form.addEventListener('change', event => this.changeUnit(event));
       this.form.addEventListener('submit', event => {event.preventDefault();if(this.update(true) && matchMedia('(max-width:760px)').matches)this.showPanel('results');});
@@ -131,9 +144,8 @@
     selectArticle(index) {
       const article = this.articles[index];
       this.articleIndex = index;
-      this.shadowRoot.querySelector('#selected-article').textContent = article.name;
+      articlePicker.select(this.shadowRoot, this.articles, index);
       this.field('diameter').value = number(article.diameter);
-      if (this.articleSelect) this.articleSelect.value = String(index);
     }
     reset() {
       for (const [name,value] of Object.entries({diameter:number(this.initialDiameter),gap:'0',gapUnit:'cm',length:'1',width:'1',areaUnit:'m'})) this.field(name).value = value;

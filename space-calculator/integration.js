@@ -22,10 +22,8 @@
       if(plants!==null&&plants!==undefined)component.setAttribute('plants',plants);
       component.setAttribute('product-kind',productKind||'Trays');
       if(contentLabel)component.setAttribute('content-label',contentLabel);
-    } else {
-      component.setAttribute('diameter', diameter);
-      component.articles = articles;
-    }
+    } else component.setAttribute('diameter', diameter);
+    component.articles = articles;
     component.setAttribute('product-name', productName);
     dialog.querySelector('.sc-component-host').replaceChildren(component);
     if (!locked) previousOverflow = document.documentElement.style.overflow;
@@ -58,11 +56,17 @@
       PRODUCT_DATA.map(({name, diameter}) => ({name, diameter})).sort((a, b) => a.diameter - b.diameter);
     open({diameter: product.diameter, productName: product.name, articles});
   };
-  TEKUTechnical.calculator = (p, bp) => bp ? `<section class="space-launcher"><h3>Wie viele Anzuchtpaletten passen auf Ihre Fläche?</h3><p>Rechnen Sie mit ${escapeHTML(p.name)} oder eigenen Abmessungen. Vergleichen Sie beide Ausrichtungen.</p><button type="button" class="pink-button" data-tray-calculator="${p.index}"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M8 6h8M8 11h1m6 0h1m-8 4h1m6 0h1m-8 4h1m6 0h1"/></svg> Stellflächenrechner öffnen</button><p class="small-note" style="margin-top:12px">Vorbelegt: ${format(p.length)} × ${format(p.width)} cm${p.plants===null||p.plants===undefined?'':' · '+format(p.plants)+' Pflanzen je Anzuchtpalette'}</p></section>` : `<section class="space-launcher"><h3>Wie viele Töpfe passen auf Ihre Fläche?</h3><p>Vergleichen Sie für ${escapeHTML(p.name)} den Viereck- und Dreieckverband. Im Rechner können Sie weitere Artikel der VCG-Serie auswählen.</p><button type="button" class="pink-button" data-calculator="${p.index}">${svg('calculator')} Stellflächenrechner öffnen</button><p class="small-note" style="margin-top:12px">Topfdurchmesser: ${format(p.diameter)} cm</p></section>`;
+  TEKUTechnical.calculator = (p, bp) => bp ? `<section class="space-launcher"><h3>Wie viele Anzuchtpaletten passen auf Ihre Fläche?</h3><p>Vergleichen Sie für ${escapeHTML(p.name)} beide Ausrichtungen. Im Rechner können Sie weitere Anzuchtpaletten auswählen.</p><button type="button" class="pink-button" data-tray-calculator="${p.index}"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="2" width="14" height="20" rx="2"/><path d="M8 6h8M8 11h1m6 0h1m-8 4h1m6 0h1m-8 4h1m6 0h1"/></svg> Stellflächenrechner öffnen</button><p class="small-note" style="margin-top:12px">Vorbelegt: ${format(p.length)} × ${format(p.width)} cm${p.plants===null||p.plants===undefined?'':' · '+format(p.plants)+' Pflanzen je Anzuchtpalette'}</p></section>` : `<section class="space-launcher"><h3>Wie viele Töpfe passen auf Ihre Fläche?</h3><p>Vergleichen Sie für ${escapeHTML(p.name)} den Viereck- und Dreieckverband. Im Rechner können Sie weitere Artikel der VCG-Serie auswählen.</p><button type="button" class="pink-button" data-calculator="${p.index}">${svg('calculator')} Stellflächenrechner öffnen</button><p class="small-note" style="margin-top:12px">Topfdurchmesser: ${format(p.diameter)} cm</p></section>`;
   document.addEventListener('click',event=>{
-    const trigger=event.target.closest('[data-tray-calculator]');if(!trigger)return;
-    event.preventDefault();const p=productById(trigger.dataset.trayCalculator);if(!p)return;
-    open({kind:'rectangle',itemLength:p.length,itemWidth:p.width,plants:p.plants,productKind:document.body.classList.contains('bp-v2')?'Anzuchtpaletten':'Trays',productName:p.name,trigger});
+    const trigger = event.target.closest('[data-tray-calculator],[data-st-calculator]');
+    if (!trigger) return;
+    event.preventDefault();
+    const tray = trigger.hasAttribute('data-st-calculator');
+    const product = productById(tray ? trigger.dataset.stCalculator : trigger.dataset.trayCalculator);
+    if (!product) return;
+    const toArticle = p => ({name:p.name, itemLength:p.length, itemWidth:p.width, plants:(tray ? p.pots : p.plants) ?? null});
+    open({kind:'rectangle', ...toArticle(product), articles:products.map(toArticle),
+      productKind:tray ? 'Trays' : 'Anzuchtpaletten', contentLabel:tray ? 'Töpfe' : 'Pflanzen', productName:product.name, trigger});
   });
   renderProducts();
   // Optional review link reveals the CTA; the dialog always requires a user click.

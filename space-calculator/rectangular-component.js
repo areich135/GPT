@@ -1,25 +1,31 @@
 'use strict';
 (() => {
   const E=window.TEKUSpaceEngine,R=window.TEKURectangularSpaceEngine;
+  const articlePicker=window.TEKUSpaceCalculatorArticlePicker;
   const n=(v,d=2)=>v.toLocaleString('de-DE',{maximumFractionDigits:d});
   const esc=v=>String(v).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  const inputValue=value=>String(value??'').replace('.',',');
   class TraySpaceCalculator extends HTMLElement {
     connectedCallback(){
       if(this.shadowRoot)return;
-      this.initial={itemLength:Number(this.getAttribute('item-length')),itemWidth:Number(this.getAttribute('item-width')),plants:this.hasAttribute('plants')?Number(this.getAttribute('plants')):null};
+      const product=this.getAttribute('product-name')||'Eigene Berechnung';
+      this.initialArticle=this.articles?.findIndex(article=>article.name===product)??-1;
+      this.articleIndex=this.initialArticle;
+      const fixedDimensions=this.initialArticle>=0;
+      this.initial=fixedDimensions?this.articles[this.initialArticle]:{itemLength:Number(this.getAttribute('item-length')),itemWidth:Number(this.getAttribute('item-width')),plants:this.hasAttribute('plants')?Number(this.getAttribute('plants')):null};
       this.areaUnit='m';this.gapUnit='cm';this.arrangement='normal';this.manualArrangement=false;
       this.label=this.getAttribute('product-kind')||'Anzuchtpaletten';
       this.singular=this.label==='Trays'?'Tray':'Anzuchtpalette';
       this.contentLabel=this.getAttribute('content-label')||'Pflanzen';
       this.itemPlural=this.label==='Trays'?'Trays':'Paletten';
       this.itemSingular=this.label==='Trays'?'Tray':'Palette';
-      const field=(name,label,value,unit,hint='')=>`<label class="field"><span>${label}</span><div class="input-unit"><input name="${name}" inputmode="decimal" type="text" value="${value}" autocomplete="off" required><small>${unit}</small></div>${hint?`<small>${hint}</small>`:''}</label>`;
+      const field=(name,label,value,unit,readOnly=false,hidden=false)=>`<label class="field"${hidden?' hidden':''}><span>${label}</span><div class="input-unit"><input name="${name}" inputmode="decimal" type="text" value="${value}" autocomplete="off" ${readOnly?'readonly':'required'}><small>${unit}</small></div></label>`;
       this.attachShadow({mode:'open'}).innerHTML=`<style>${window.TEKUSpaceCalculatorStyles}
         .tray-inputs{margin-bottom:12px}.tray-meter{font-size:13px;line-height:1.5}.tray-meter strong{font-size:21px}.result .value{font-size:27px}.result .plant-total{font-size:13px;grid-column:1/-1}.result .label{min-height:30px}.method-view p{margin:10px 0}.per-meter .section-intro{display:block;margin:0}.per-meter{margin:12px 0}.tray-result .value{grid-column:1/-1}.tray-result .label{min-height:0}
         @media(min-width:761px){.diagram-stage{height:180px}.context{margin-bottom:12px}.inputs{gap:10px}.field>span{font-size:12px}.field>small{font-size:10px}.per-meter{padding:9px 12px}.area-header{margin-bottom:8px}.footer{margin-top:12px;padding-top:9px}}
-      </style><div class="wrap"><div class="calculator-view"><p class="context">Ausgangsartikel: <strong>${esc(this.getAttribute('product-name')||'Eigene Berechnung')}</strong> · Maße frei änderbar</p>
+      </style><div class="wrap"><div class="calculator-view">${fixedDimensions?articlePicker.render(this.articles,this.initialArticle):`<p class="context">Ausgangsartikel: <strong>${esc(product)}</strong> · Maße frei änderbar</p>`}
       <nav class="mobile-panels" aria-label="Rechneransicht"><button type="button" data-panel="settings" aria-pressed="true">Eingaben</button><button type="button" data-panel="results" aria-pressed="false">Ergebnisse</button></nav>
-      <form novalidate><div class="settings"><div class="inputs tray-inputs">${field('itemLength','Länge '+this.singular,String(this.initial.itemLength).replace('.',','),'cm')}${field('itemWidth','Breite '+this.singular,String(this.initial.itemWidth).replace('.',','),'cm')}${field('gap','Abstand zwischen '+this.itemPlural,'0','cm')}${this.initial.plants===null?'':field('plants',this.contentLabel+' je '+this.singular,String(this.initial.plants),'Stück')}</div>
+      <form novalidate><div class="settings"><div class="inputs tray-inputs">${field('itemLength','Länge '+this.singular,inputValue(this.initial.itemLength),'cm',fixedDimensions)}${field('itemWidth','Breite '+this.singular,inputValue(this.initial.itemWidth),'cm',fixedDimensions)}${field('gap','Abstand zwischen '+this.itemPlural,'0','cm')}${fixedDimensions||this.initial.plants!==null?field('plants',this.contentLabel+' je '+this.singular,inputValue(this.initial.plants),'Stück',false,this.initial.plants===null):''}</div>
       <section class="per-meter"><h3>Auf 1 m²</h3><p class="section-intro">Beste der beiden einheitlichen Ausrichtungen</p><div class="tray-meter" id="per-meter"></div></section>
       <div class="area-header"><h3>Ihre individuelle Stellfläche</h3><label class="unit-select">Maßeinheit<select name="areaUnit"><option value="m">Meter (m)</option><option value="cm">Zentimeter (cm)</option><option value="ft">Fuß (ft)</option><option value="in">Zoll (in)</option></select></label></div>
       <div class="inputs area-fields">${field('length','Länge','1','<span data-area-unit>m</span>')}${field('width','Breite','1','<span data-area-unit>m</span>')}</div><div class="actions"><button class="reset" type="reset">Werte zurücksetzen</button><button class="primary" type="submit">Berechnen</button></div></div>
@@ -27,18 +33,48 @@
       <div class="footer"><p class="notice">Rechteckige Grundfläche, einheitliche Ausrichtung. Wege und nicht nutzbare Bereiche vorher abziehen.</p><button class="method-link" type="button" data-method="open">Wie wird gerechnet?</button></div></div>
       <section class="method-view" hidden><h3>Wie wird gerechnet?</h3><p>Die rechteckige Grundfläche wird in beiden Ausrichtungen geprüft. Anzahl je Reihe × Anzahl der Reihen ergibt die Stückzahl; das größere Ergebnis ist vorausgewählt.</p><p>Der Abstand liegt nur zwischen benachbarten ${esc(this.itemPlural)}. ${this.label==='Trays'?'Jedes Tray':'Jede Palette'} muss vollständig auf die Fläche passen. Gemischte Ausrichtungen, gestapelte ${esc(this.itemPlural)} und Wege werden nicht berechnet.</p><p>${this.contentLabel==='Pflanzen'?'Die Pflanzenzahl':'Die Topfzahl'} ist die Stückzahl der ${esc(this.itemPlural)} multipliziert mit ${esc(this.contentLabel)} je ${esc(this.itemSingular)}. Änderungen gelten nur für diese Berechnung und ändern den Artikel nicht.</p><button class="primary" type="button" data-method="back">Zurück zum Rechner</button></section></div>`;
       this.form=this.shadowRoot.querySelector('form');
+      if(fixedDimensions)articlePicker.bind(this.shadowRoot,index=>{
+        this.selectArticle(index);
+        this.update();
+      });
       this.form.addEventListener('input',event=>{if(event.target.name!=='areaUnit'){this.manualArrangement=false;this.update();}});
       this.form.addEventListener('change',event=>{if(event.target.name!=='areaUnit')return;const next=event.target.value;for(const key of ['length','width']){const value=E.parseDecimal(this.field(key).value);if(Number.isFinite(value))this.field(key).value=String(Number(E.convert(value,this.areaUnit,next).toPrecision(15))).replace('.',',');}this.areaUnit=next;this.update();});
       this.form.addEventListener('submit',event=>{event.preventDefault();if(this.update(true)&&matchMedia('(max-width:760px)').matches)this.showPanel('results');});
-      this.form.addEventListener('reset',event=>{event.preventDefault();for(const [key,value] of Object.entries({...this.initial,gap:0,length:1,width:1,areaUnit:'m'})){if(value!==null&&this.field(key))this.field(key).value=typeof value==='number'?String(value).replace('.',','):value;}this.areaUnit='m';this.manualArrangement=false;this.update();});
+      this.form.addEventListener('reset',event=>{event.preventDefault();this.reset();});
       this.shadowRoot.addEventListener('click',event=>{const button=event.target.closest('button');if(!button)return;if(button.dataset.panel){this.showPanel(button.dataset.panel);return;}if(button.dataset.arrangement){this.manualArrangement=true;const changed=this.arrangement!==button.dataset.arrangement;this.arrangement=button.dataset.arrangement;this.update(false,changed);return;}if(button.dataset.method){const open=button.dataset.method==='open';this.shadowRoot.querySelector('.calculator-view').hidden=open;this.shadowRoot.querySelector('.method-view').hidden=!open;this.shadowRoot.querySelector(`[data-method="${open?'back':'open'}"]`).focus();}});
       this.update();
     }
     field(name){return this.form.elements.namedItem(name);}
-    focusInput(){this.field('itemLength').focus();}
+    focusInput(){this.field(this.articleIndex>=0?'gap':'itemLength').focus();}
+    selectArticle(index){
+      this.articleIndex=index;
+      articlePicker.select(this.shadowRoot,this.articles,index);
+      const {itemLength,itemWidth,plants}=this.articles[index];
+      this.field('itemLength').value=inputValue(itemLength);
+      this.field('itemWidth').value=inputValue(itemWidth);
+      const count=this.field('plants');
+      count.value=inputValue(plants);
+      count.closest('label').hidden=plants===null;
+    }
+    reset(){
+      const {itemLength,itemWidth,plants}=this.initial;
+      for(const [key,value] of Object.entries({itemLength,itemWidth,plants,gap:0,length:1,width:1,areaUnit:'m'})){
+        if(value!==null)this.field(key).value=inputValue(value);
+      }
+      if(this.initialArticle>=0)this.selectArticle(this.initialArticle);
+      this.areaUnit='m';
+      this.manualArrangement=false;
+      this.update();
+    }
     showPanel(panel){if(panel==='results'&&!this.update(true))return;this.setAttribute('panel',panel);this.shadowRoot.querySelectorAll('[data-panel]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.panel===panel)));this.shadowRoot.querySelector(`[data-panel="${panel}"]`).focus();}
     update(focusError=false,animate=false){
-      const root=this.shadowRoot,values={};for(const key of ['itemLength','itemWidth','gap','length','width'])values[key]=E.parseDecimal(this.field(key).value);values.length*=E.units[this.areaUnit];values.width*=E.units[this.areaUnit];values.plants=this.initial.plants===null?null:E.parseDecimal(this.field('plants').value);
+      const root=this.shadowRoot,values={};
+      for(const key of ['gap','length','width'])values[key]=E.parseDecimal(this.field(key).value);
+      values.length*=E.units[this.areaUnit];values.width*=E.units[this.areaUnit];
+      const article=this.articles?.[this.articleIndex];
+      values.itemLength=article?article.itemLength:E.parseDecimal(this.field('itemLength').value);
+      values.itemWidth=article?article.itemWidth:E.parseDecimal(this.field('itemWidth').value);
+      values.plants=(article||this.initial).plants===null?null:E.parseDecimal(this.field('plants').value);
       root.querySelectorAll('[data-area-unit]').forEach(e=>e.textContent=this.areaUnit);
       root.querySelectorAll('input').forEach(i=>i.removeAttribute('aria-invalid'));
       let result,meter;try{result=R.calculate(values);meter=R.calculate({...values,length:100,width:100});}catch(error){root.querySelector('#error').hidden=false;root.querySelector('#error').textContent=error.message;root.querySelector('#results-content').hidden=true;root.querySelector('#per-meter').textContent='–';root.querySelector('#announcement').textContent='';if(focusError)this.focusInput();return false;}
