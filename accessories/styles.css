@@ -41,8 +41,9 @@
 .accessory-page .row-note{margin:8px 18px;font-size:11px}
 
 .accessory-page .accessory-product-grid{
- display:grid;grid-template-columns:repeat(auto-fill,minmax(min(100%,136px),136px));gap:12px
+ display:flex;flex-wrap:wrap;justify-content:center;gap:12px
 }
+.accessory-page .accessory-product-grid>.accessory-product-tile{flex:0 1 136px}
 .accessory-page .accessory-product-tile{min-width:0;text-align:center;font-size:12px;overflow-wrap:anywhere}
 .accessory-page .accessory-product-tile img{
  display:block;width:min(100%,136px);height:84px;object-fit:contain;margin:0 auto 8px

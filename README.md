@@ -28,7 +28,7 @@ Alle aktuellen Entwürfe enthalten die rechten Listen für Muster, Angebote und 
 ### 24.11.2026 · Kompakte Zubehörkarten und Artikelauswahl im Stellflächenrechner
 
 - Hänger, Untersetzer und Ampeln: Auswahlmarkierung, Bild, Bestellnummer, Herz und Siegel liegen innerhalb responsiver Variantenkarten.
-- Passende Produkte heißen „Passende Ampeln“, „Passende Untersetzer“ und „Passende Hänger“. Kleine Produktgruppen beginnen links und erhalten kompakte Anfragebuttons in Kartenbreite. Die untere Produktbereichs-Linkleiste entfällt.
+- Passende Produkte heißen „Passende Ampeln“, „Passende Untersetzer“ und „Passende Hänger“. Einzelkarten und Gruppen bis drei Produkte stehen mittig und erhalten kompakte Anfragebuttons in Kartenbreite. Die untere Produktbereichs-Linkleiste entfällt.
 - VCG V12: Der Stellflächenrechner zeigt „Gewählter Artikel“ und startet mit dem angeklickten Artikel. „Weitere Varianten“ öffnet eine Auswahl aller 14 VCG-Artikel. Der Durchmesser kommt aus dem gewählten Artikel, vorerst mit den bisherigen Katalogwerten.
 
 ### 20.11.2026 · Einheitliche SKU-Maße, Filter-Icons und kurze Listen
