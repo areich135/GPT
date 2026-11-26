@@ -57,3 +57,18 @@ Die lokale visuelle Chromium-Prüfung ist durch die Laufzeitumgebung blockiert (
 Größere SKU-Bilder und wie bei VCG vertikale Spalten aus Icon, Zahl und Einheit; Hänger mit zwei Spalten. Echte Maßband-Bilder statt relativ zu CSS aufgelöster Hintergrund-URLs. Farbfächer auf aktuellen Seiten einfarbig. Kurze sichtbare Artikellisten lassen die rechten Karten ohne inneren Scrollbalken nach unten überstehen. Produktdaten, Fotos und Kompatibilitäten unverändert.
 
 Zusätzlich zum historischen Prüfstand oben wurden die Änderungen im Live-Browser kontrolliert: Desktop 1363 px sowie schmalere Ansichten durch Browserzoom (ca. 909/454/340 CSS-Pixel, keine Geräteemulation). Maßband in allen sechs Bereichen nach inch-Umschaltung und Filter-Neuaufbau erhalten. MUK ohne inneres Scrollen bei zwei Artikeln, MAO ebenso nach Filterung auf einen Treffer. Geöffnete Details stellen bei ausreichender SKU-Höhe die bisherige Sidebar-Begrenzung wieder her. DOM-Funktionen aller sechs Bereiche erneut bestanden.
+
+## Stockhalter und Stützgitter V1
+
+Abruf am 26.11.2026. Artikelbezeichnungen, Bestellnummern, Verpackung, Farben, Zertifikate, Vorteile und Bilder stammen aus den deutschen [Stockhalter-](https://www.poeppelmann.com/de/teku/produkte/sh-stockhalter) und [Stützgitter-Produktseiten](https://www.poeppelmann.com/de/teku/produkte/stg-stuetzgitter). Die Artikelinformationen wurden aus öffentlichen Datenblöcken gelesen. Die konkreten Topfzuordnungen von STG entsprechen dem aktuellen Stand der deutschen Seite. Ältere Screenshots, andere Sprachfassungen und der Katalog enthalten teilweise andere Zuordnungen.
+
+| Serie | Artikel | Varianten | Maße | Verpackungsfelder |
+|---|---:|---|---|---|
+| SH | 2 | Baseline grau, je eine Ausführung | — | 8438 Stück pro Karton, 8439 Kartons pro Palette, 8440 Stück unterverpackt auf Palette |
+| STG | 9 | Recyclable moosgrün, je eine Ausführung | 7897 Durchmesser und 7217 Höhe, jeweils cm | 8438, 8439, 8440 und 8441 Stück lose auf Palette |
+
+Der Bildbestand enthält die Original-Artikelabbildungen einschließlich gemeinsam verwendeter Serienbilder. Die 33 neuen Bild- und Icon-Dateien sind im Asset-Manifest mit individuellem Abrufdatum erfasst. Fotos für die Rundtopfkacheln sind Serienansichten der verlinkten Produkte. Die Varianten zeigen das im jeweiligen Quellblock geführte cyclos-HTP-Logo.
+
+Die SH-Produktseite veröffentlicht keine artikelbezogene Topfliste. Der [TEKU-Katalog 2026, gedruckte Seite 47](https://static.teku.com/assets/712404/teku-de.pdf) führt fünf Kombinationen für SH 17 und sieben für SH 19. Die sechs Kacheln für SH 17 umfassen die fünf belegten Kombinationen und MCI 17 als sichtbar gekennzeichnete Demo-Zuordnung. Bei SH 19 zeigt der Dummy sechs der sieben Katalogkombinationen. MCH 19 bleibt dort für die PIM-Übernahme verfügbar. Für STG wurden alle 44 veröffentlichten Zuordnungen übernommen. Die Dateien `sh/data.js` und `stg/data.js` halten die Zuordnungen je Artikel für den späteren Austausch gegen PIM-Daten.
+
+Lokal in Chromium bei 360, 390, 768 und 1440 px geprüft: alle 11 Artikel, Detailwechsel, Bilddialog und Bildrahmen, Verpackungszeilen, Topfkarussell mit Tasten- und Pfeilnavigation, Filter und Listen. STG-Maße und Verpackung, alle 44 Topfzuordnungen und beide SH-Varianten wurden mit dem deutschen Quellstand abgeglichen. Der neue Bereichsumschalter wurde auch auf den bisherigen sechs aktuellen Seiten und in zwei Archivversionen geprüft.

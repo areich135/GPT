@@ -1,6 +1,6 @@
 # TEKU Produktdetailseiten – Clickdummy
 
-Die Kopfzeile führt zu sechs Produktbereichen:
+Die Kopfzeile führt zu acht Produktbereichen.
 
 - **Rundtöpfe / VCG:** V12 mit animiertem Stellflächenrechner im Modal; V1–V11 bleiben über den Versionsumschalter erreichbar.
 - **Anzuchtpaletten / BP:** V6 mit 20 Artikeln, eigenem Rechteckrechner und animiertem Ausrichtungswechsel; V1–V5 bleiben erreichbar. Plug-, Tray- und Zellmaße sind separat benannt.
@@ -9,6 +9,8 @@ Die Kopfzeile führt zu sechs Produktbereichen:
 - **Ampeln / MAO:** V1 mit 5 Artikeln, 38 Varianten und zugeordneten Hängern.
 - **Untersetzer / MUK:** V1 mit 2 Artikeln, 4 Varianten und katalogbelegten MAK-Zuordnungen.
 - **Hänger / MHB, MHI, A:** V1 mit 4 Artikeln, 34 Varianten und Erklärung des Haken-Durchmessers.
+- **Stockhalter / SH:** V1 mit SH 17 und SH 19, Verpackungsdaten und je sechs Rundtopfkacheln.
+- **Stützgitter / STG:** V1 mit 9 Artikeln, Durchmesser und Höhe, Verpackungsdaten und passenden Rundtöpfen.
 
 Alle aktuellen Entwürfe enthalten die rechten Listen für Muster, Angebote und Merkliste. Anfragen werden nur simuliert. Der VCG-Stellflächenrechner berechnet die Stückzahl für Viereck- und Dreieckverband mit dem hinterlegten Durchmesser des gewählten VCG-Artikels.
 
@@ -21,9 +23,16 @@ Alle aktuellen Entwürfe enthalten die rechten Listen für Muster, Angebote und 
 - [Ampeln MAO V1 öffnen](https://areich135.github.io/GPT/mao/?version=v1)
 - [Untersetzer MUK V1 öffnen](https://areich135.github.io/GPT/muk/?version=v1)
 - [Hänger V1 öffnen](https://areich135.github.io/GPT/mhb/?version=v1)
+- [Stockhalter SH V1 öffnen](https://areich135.github.io/GPT/sh/?version=v1)
+- [Stützgitter STG V1 öffnen](https://areich135.github.io/GPT/stg/?version=v1)
 - [Neue Serien: Quellen und Kompatibilitäten](accessories/SOURCE.md)
 
 ## Changelog
+
+### 26.11.2026 · Stockhalter und Stützgitter V1
+
+- SH und STG ergänzen die Bereichsauswahl. Beide verwenden das Zubehörlayout, Variantenkarten, ein Rundtopf-Karussell und zeilenweise Verpackungsdaten. Varianten und Rundtöpfe sind durch die einfarbigen TEKU-Piktogramme gekennzeichnet.
+- SH 17 und SH 19 zeigen je sechs Topfkacheln. Bei SH 17 sind fünf im Katalog belegt. MCI 17 ergänzt als gekennzeichnete Demo-Zuordnung die Liste. STG übernimmt neun Artikel samt Originalbildern, 44 Topfzuordnungen, Durchmesser und Höhe in cm/inch und Recyclable moosgrün von der deutschen Produktseite.
 
 ### 24.11.2026 · Vertriebsreihenfolge und Artikelauswahl bei ST und BP
 

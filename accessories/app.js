@@ -30,27 +30,33 @@ function measureContent(n,unit,stacked=false){const text=measure(n,unit);if(!sta
 function measureHTML(n,unit,stacked=false){return `<span ${stacked?'class="measurement-value"':''} data-accessory-measure="${n}" data-source-unit="${unit}">${measureContent(n,unit,stacked)}</span>`;}
 function refreshUnits(){document.querySelectorAll('[data-accessory-measure]').forEach(n=>n.innerHTML=measureContent(Number(n.dataset.accessoryMeasure),n.dataset.sourceUnit,n.classList.contains('measurement-value')));document.querySelectorAll('[data-accessory-unit]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.accessoryUnit===measureUnit)));}
 function fieldValues(key){return [...new Set(['category','color'].includes(key)?products.flatMap(p=>p.variants.map(v=>v[key])):products.map(p=>p[key]).filter(v=>v!==null&&v!==undefined))].sort((a,b)=>typeof a==='number'?a-b:String(a).localeCompare(String(b),'de',{numeric:true}))}
-const sourceIcons={};
 function filterIcon(g){return g.icon==='recycling'?'../assets/filter-recycling.svg':g.icon==='color'?'../assets/filter-color.svg':g.icon}
 function renderFilters(){
- $('#filter-body').innerHTML=`<section class="filter-section" id="filter-unit"><h2 id="unit-heading"><img class="filter-symbol" src="../assets/filter-unit.svg" alt="">MAẞEINHEIT</h2><div class="measurement-toggle" role="group" aria-labelledby="unit-heading">${['cm','inch'].map(u=>`<button data-accessory-unit="${u}" aria-pressed="${u===measureUnit}">${u}</button>`).join('')}</div></section>`+filterGroups.map(g=>`<section class="filter-section" id="filter-${g.key}"><h2><img class="filter-symbol bp-filter-icon" src="${filterIcon(g)}" alt="">${g.name}</h2>${g.help?`<p class="filter-help">${g.help}</p>`:''}${g.fields.map(([key,label,unit])=>{
+ const hasMeasures=config.fields.length>0;
+ const unitFilter=`<section class="filter-section" id="filter-unit"><h2 id="unit-heading"><img class="filter-symbol" src="../assets/filter-unit.svg" alt="">MAẞEINHEIT</h2><div class="measurement-toggle" role="group" aria-labelledby="unit-heading">${['cm','inch'].map(u=>`<button data-accessory-unit="${u}" aria-pressed="${u===measureUnit}">${u}</button>`).join('')}</div></section>`;
+ $('#filter-body').innerHTML=(hasMeasures?unitFilter:'')+filterGroups.map(g=>`<section class="filter-section" id="filter-${g.key}"><h2><img class="filter-symbol bp-filter-icon" src="${filterIcon(g)}" alt="">${g.name}</h2>${g.help?`<p class="filter-help">${g.help}</p>`:''}${g.fields.map(([key,label,unit])=>{
   const values=fieldValues(key),limit=8,expanded=!!state.moreFilters[key];
   const visible=expanded?values:values.filter((v,i)=>i<limit||String(state.filters[key])===String(v));
-  return `<fieldset class="bp-filter-field"><legend>${label}${unit?' ('+unit+')':''}</legend><div class="bp-filter-values ${key==='category'?'bp-filter-categories':''}">${visible.map(v=>{const active=String(state.filters[key])===String(v);return `<button class="bp-filter-value ${active?'active':''}" data-bp-filter="${key}" data-bp-value="${escapeHTML(v)}" aria-pressed="${active}">${unit?measureHTML(v,unit):value(v)}</button>`}).join('')}</div>${values.length>limit?`<button class="bp-filter-more" data-more-filter="${key}" aria-expanded="${expanded}">${expanded?'weniger Größen anzeigen':'weitere Größen laden'}</button>`:''}</fieldset>`
+  return `<fieldset class="bp-filter-field"><legend>${label}${unit&&!config.standalonePackaging?' ('+unit+')':''}</legend><div class="bp-filter-values ${key==='category'?'bp-filter-categories':''}">${visible.map(v=>{const active=String(state.filters[key])===String(v);return `<button class="bp-filter-value ${active?'active':''}" data-bp-filter="${key}" data-bp-value="${escapeHTML(v)}" aria-pressed="${active}">${unit?measureHTML(v,unit):value(v)}</button>`}).join('')}</div>${values.length>limit?`<button class="bp-filter-more" data-more-filter="${key}" aria-expanded="${expanded}">${expanded?'weniger Größen anzeigen':'weitere Größen laden'}</button>`:''}</fieldset>`
  }).join('')}</section>`).join('');
- $('#compact-filters').innerHTML='<button class="compact-unit" data-filter-group="unit" aria-label="Maßeinheit: Filter aufklappen" title="Maßeinheit" ><img src="../assets/filter-unit.svg" alt=""></button>'+filterGroups.map(g=>{const active=g.fields.some(([key])=>state.filters[key]!==undefined);return `<button class="${active?'filter-active':''}" data-filter-group="${g.key}" title="${g.name}${active?' – Filter aktiv':''}" aria-label="${g.name}: Filter aufklappen${active?' – Filter aktiv':''}"><img src="${filterIcon(g)}" alt=""></button>`}).join('');
+ const compactUnit='<button class="compact-unit" data-filter-group="unit" aria-label="Maßeinheit: Filter aufklappen" title="Maßeinheit" ><img src="../assets/filter-unit.svg" alt=""></button>';
+ $('#compact-filters').innerHTML=(hasMeasures?compactUnit:'')+filterGroups.map(g=>{const active=g.fields.some(([key])=>state.filters[key]!==undefined);return `<button class="${active?'filter-active':''}" data-filter-group="${g.key}" title="${g.name}${active?' – Filter aktiv':''}" aria-label="${g.name}: Filter aufklappen${active?' – Filter aktiv':''}"><img src="${filterIcon(g)}" alt=""></button>`}).join('');
 }
 function filteredProducts(){return products.filter(p=>p.variants.some(v=>(!state.filters.color||v.color===state.filters.color)&&(!state.filters.category||v.category===state.filters.category))&&Object.entries(state.filters).every(([key,v])=>['category','color'].includes(key)||String(p[key])===String(v)));}
 function setCollapsed(collapsed){state.filterCollapsed=collapsed;$('.catalog').classList.toggle('filters-collapsed',collapsed);$('.filters').classList.toggle('collapsed',collapsed);$('#filter-body').hidden=collapsed;$('#compact-filters').hidden=!collapsed;const b=$('#collapse-filter');b.classList.toggle('is-collapsed',collapsed);b.setAttribute('aria-expanded',!collapsed);b.setAttribute('aria-label',collapsed?'Filter aufklappen':'Filter einklappen');b.querySelector('span').textContent=collapsed?'aufklappen':'einklappen'}
 function measureTable(p){return TEKUTechnical.table(config.fields.map(f=>[f.label+(f.key==='hookDiameter'?' <button class="info-button" data-hook-help aria-label="Hänger-Durchmesser erklären">i</button>':''),measureHTML(p[f.key],f.unit)]));}
-function technical(p){const tab=state.tech[p.index]||'measures';const tabs=TEKUTechnical.tabs(p.index,tab);const body=tab==='packaging'?TEKUTechnical.table(Object.entries(p.packaging).map(([label,n])=>[label,value(n)])):tab==='calculator'?`<section class="space-launcher"><h3>Wie viele ${config.label} passen auf Ihre Fläche?</h3><p>Berechnen Sie die Stellfläche mit dem Durchmesser von ${escapeHTML(p.name)}.</p><button class="pink-button" data-accessory-calculator="${p.index}">Stellflächenrechner öffnen</button></section>`:measureTable(p);return `<div class="technical-panel"><figure class="technical-figure"><button data-zoom="${p.index}"><img src="${productImage(p)}" alt="${escapeHTML(p.name)}"></button></figure><div class="technical-content">${config.label==='Hänger'?tabs.replace(/<button role="tab"[^>]*data-tech-tab="calculator".*?<\/button>/,''):tabs}<div role="tabpanel" id="tech-panel-${p.index}" aria-labelledby="tech-${p.index}-${tab}">${body}</div></div></div>`;}
+function packagingTable(p){
+ return TEKUTechnical.table(Object.entries(p.packaging).map(([label,n])=>[label,value(n)]));
+}
+function technical(p){const tab=state.tech[p.index]||'measures';const tabs=TEKUTechnical.tabs(p.index,tab);const body=tab==='packaging'?packagingTable(p):tab==='calculator'?`<section class="space-launcher"><h3>Wie viele ${config.label} passen auf Ihre Fläche?</h3><p>Berechnen Sie die Stellfläche mit dem Durchmesser von ${escapeHTML(p.name)}.</p><button class="pink-button" data-accessory-calculator="${p.index}">Stellflächenrechner öffnen</button></section>`:measureTable(p);return `<div class="technical-panel"><figure class="technical-figure"><button data-zoom="${p.index}"><img src="${productImage(p)}" alt="${escapeHTML(p.name)}"></button></figure><div class="technical-content">${config.label==='Hänger'?tabs.replace(/<button role="tab"[^>]*data-tech-tab="calculator".*?<\/button>/,''):tabs}<div role="tabpanel" id="tech-panel-${p.index}" aria-labelledby="tech-${p.index}-${tab}">${body}</div></div></div>`;}
 function fittingCard(item, inCarousel){
- const {name,image,href,via}=item;
+ const {name,image,href,via,demo}=item;
  const id=ACCESSORY_CATALOG.find(p=>p.name===name)?.index;
  const product=(image?`<img src="${escapeHTML(image)}" alt="${escapeHTML(name)} · Serienansicht" loading="lazy">`:'<span class="product-no-photo">Keine Abbildung hinterlegt</span>')+`<strong>${escapeHTML(name)}</strong>`;
  return `<article class="accessory-product-tile${inCarousel?' tray-tile':''}">
    ${href?`<a class="accessory-product-link" href="${escapeHTML(href)}" ${href.startsWith('http')?'target="_blank" rel="noopener"':''}>${product}</a>`:product}
    ${via?`<small>Für ${escapeHTML(via)}</small>`:''}
+   ${demo?'<small>Demo-Zuordnung</small>':''}
    ${id!==undefined?`<div class="accessory-product-actions"><button data-request="sample" data-id="${id}">Muster anfordern</button><button data-request="offer" data-id="${id}">Angebot anfordern</button></div>`:''}
  </article>`;
 }
@@ -82,7 +88,8 @@ function accessories(p){
 }
 function renderDetail(p,type){
  if(type==='technical')return technical(p);
- if(type!=='variants')return accessories(p);
+ if(type==='packaging')return `<h3>Verpackungsdaten · ${escapeHTML(p.name)}</h3>${packagingTable(p)}`;
+ if(type==='fitting')return config.fittingTitle?fittingCards(p.fitting,config.fittingTitle):accessories(p);
  const selected=selectedVariant(p);
  return `<h3>Varianten · ${escapeHTML(p.name)}</h3><div class="accessory-variant-grid">${p.variants.map((v,i)=>`<article class="accessory-variant">
    <button class="variant-tile" data-variant="${i}" data-id="${p.index}" aria-pressed="${selected===v}"><img src="${v.image}" alt="${escapeHTML(v.color)}" loading="lazy"><strong>${escapeHTML(v.category)}</strong><small>${escapeHTML(v.color)}</small><small>Bestell-Nr. ${escapeHTML(v.orderNo)}</small></button>
@@ -90,9 +97,55 @@ function renderDetail(p,type){
    ${v.certificates.length?`<div class="accessory-certificates">${v.certificates.map(c=>`<img src="${c.image}" alt="${escapeHTML(c.label)}" loading="lazy">`).join('')}</div>`:''}
  </article>`).join('')}</div>`;
 }
-function renderRow(p){const expanded=state.expanded[p.index];const toggle=(type,label)=>`<button class="row-section-toggle" data-expand="${type}" data-id="${p.index}" aria-expanded="${expanded===type}" aria-controls="row-detail-${p.index}"><strong>${label}</strong><span>${svg('arrow')}</span></button>`;return `<article class="product-row refreshed-row bp-row" id="article-${p.index}"><div class="row-main"><button class="product-photo" data-product="${p.index}" aria-label="${escapeHTML(p.name)} in der Produktansicht anzeigen"><img src="${productImage(p)}" alt="${escapeHTML(p.name)}" loading="lazy"></button><div class="row-product-summary"><button class="product-title-button" data-product="${p.index}">${escapeHTML(p.name)}</button><div class="row-specs" style="--sku-measure-count:${config.fields.length}">${config.fields.map(f=>`<div class="metric" aria-label="${escapeHTML(f.label)}"><img src="${f.icon}" alt="${escapeHTML(f.label)}">${measureHTML(p[f.key],f.unit,true)}${f.key==='hookDiameter'?'<button class="info-button" data-hook-help aria-label="Hänger-Durchmesser erklären">i</button>':''}</div>`).join('')}</div></div>${toggle('technical','Technische Daten')}${toggle('variants','Varianten')}${toggle('fitting',config.label==='Ampeln'?'Passendes Zubehör':'Passende Produkte')}<div class="row-requests"><button data-request="sample" data-id="${p.index}">Muster anfordern</button><button data-request="offer" data-id="${p.index}">Angebot anfordern</button></div><button class="row-favorite" data-favorite="${p.index}" aria-label="${escapeHTML(p.name)} merken">${svg('heart')}</button></div>${p.note?`<p class="row-note">${escapeHTML(p.note)}</p>`:''}<div class="row-detail" id="row-detail-${p.index}" ${expanded?'':'hidden'}>${expanded?`<button class="close-row-detail" data-expand="${expanded}" data-id="${p.index}" aria-label="Detailbereich schließen">×</button>`+renderDetail(p,expanded):''}</div></article>`;}
+function rowSections(p, expanded){
+ const fittingTitle=config.fittingTitle||(config.label==='Ampeln'?'Passendes Zubehör':'Passende Produkte');
+ const sections=config.standalonePackaging?[
+  ['variants','Varianten','accessories/assets/700239-farbvarianten-pikto.svg'],
+  ['fitting',fittingTitle,'assets/tray-konfigurator-pikto.svg'],
+  ['packaging','Verpackungsdaten'],
+ ]:[['technical','Technische Daten'],['variants','Varianten'],['fitting',fittingTitle]];
+ return sections.map(([type,label,icon])=>`<button class="row-section-toggle" data-expand="${type}" data-id="${p.index}" aria-expanded="${expanded===type}" aria-controls="row-detail-${p.index}">
+  ${icon?`<img class="accessory-section-icon" src="../${icon}" alt="">`:''}<strong>${type==='packaging'?'Verpackungs<wbr>daten':escapeHTML(label)}</strong><span>${svg('arrow')}</span>
+ </button>`).join('');
+}
+function renderRow(p){
+ const expanded=state.expanded[p.index];
+ const measures=config.fields.map(f=>`<div class="metric" aria-label="${escapeHTML(f.label)}">
+  <img src="${f.icon}" alt="${escapeHTML(f.label)}">${measureHTML(p[f.key],f.unit,true)}
+  ${f.key==='hookDiameter'?'<button class="info-button" data-hook-help aria-label="Hänger-Durchmesser erklären">i</button>':''}
+ </div>`).join('');
+ return `<article class="product-row refreshed-row bp-row" id="article-${p.index}">
+  <div class="row-main">
+   <button class="product-photo" data-product="${p.index}" aria-label="${escapeHTML(p.name)} in der Produktansicht anzeigen"><img src="${productImage(p)}" alt="${escapeHTML(p.name)}" loading="lazy"></button>
+   <div class="row-product-summary">
+    <button class="product-title-button" data-product="${p.index}">${escapeHTML(p.name)}</button>
+    ${measures?`<div class="row-specs" style="--sku-measure-count:${config.fields.length}">${measures}</div>`:''}
+   </div>
+   ${rowSections(p,expanded)}
+   <div class="row-requests"><button data-request="sample" data-id="${p.index}">Muster anfordern</button><button data-request="offer" data-id="${p.index}">Angebot anfordern</button></div>
+   <button class="row-favorite" data-favorite="${p.index}" aria-label="${escapeHTML(p.name)} merken">${svg('heart')}</button>
+  </div>
+  ${p.note?`<p class="row-note">${escapeHTML(p.note)}</p>`:''}
+  <div class="row-detail" id="row-detail-${p.index}" ${expanded?'':'hidden'}>
+   ${expanded?`<button class="close-row-detail" data-expand="${expanded}" data-id="${p.index}" aria-label="Detailbereich schließen">×</button>`+renderDetail(p,expanded):''}
+  </div>
+ </article>`;
+}
 function renderProducts(){const matching=filteredProducts();$('#result-status').textContent=`${matching.length} von ${products.length} Artikeln`;$('#results').innerHTML=matching.length?matching.map(renderRow).join(''):'<div class="empty-state"><h2>Keine passenden Artikel</h2><p>Bitte passen Sie die Filter an oder setzen Sie sie zurück.</p><button class="pink-button" data-reset>Filter zurücksetzen</button></div>';renderFilters();updateFavorites()}
-function updateGallery(){const p=productById(state.current);$('#main-image').src=productImage(p);$('#main-image').alt=p.name;$('#front-thumbnail').src=productImage(p);$('#hero-info').innerHTML=`<h2>${escapeHTML(p.name)}</h2><div class="accessory-hero-specs">${config.fields.map(f=>`<p><img src="${f.icon}" alt=""><span>${escapeHTML(f.label)}<strong>${measureHTML(p[f.key],f.unit)}</strong></span></p>`).join('')}</div><p>${escapeHTML(selectedVariant(p).category+' · '+selectedVariant(p).color)}</p>${config.benefits.length?'<button class="bp-all-benefits" data-tab="benefits">Alle Vorteile entdecken</button>':''}`;}
+function updateGallery(){
+ const p=productById(state.current);
+ const variant=selectedVariant(p);
+ $('#main-image').src=variant.image;
+ $('#main-image').alt=p.name;
+ $('#front-thumbnail').src=variant.image;
+ const measures=config.fields.map(f=>`<p><img src="${f.icon}" alt=""><span>${escapeHTML(f.label)}<strong>${measureHTML(p[f.key],f.unit)}</strong></span></p>`).join('');
+ const lead=config.standalonePackaging?config.benefits[0]:null;
+ $('#hero-info').innerHTML=`<h2>${escapeHTML(p.name)}</h2>
+  ${measures?`<div class="accessory-hero-specs">${measures}</div>`:''}
+  <p>${escapeHTML(lead?variant.color:variant.category+' · '+variant.color)}</p>
+  ${lead?`<p>${escapeHTML(lead.text)}</p>`:''}
+  ${config.benefits.length?'<button class="bp-all-benefits" data-tab="benefits">Alle Vorteile entdecken</button>':''}`;
+}
 function showGalleryModal(){const p=productById(state.current);openModal(p.name,`<img class="modal-image" src="${productImage(p)}" alt="${escapeHTML(p.name+' · '+selectedVariant(p).color)}">`)}
 function showRequest(){toast('Bitte wählen Sie Artikel über Ihre Listen aus.')}
 function activateTab(tab){state.tab=tab;['variants','benefits','downloads'].forEach(key=>$(`#${key}-panel`).hidden=key!==tab);$$('.tabs [data-tab]').forEach(b=>{b.setAttribute('aria-selected',b.dataset.tab===tab);b.tabIndex=b.dataset.tab===tab?0:-1})}

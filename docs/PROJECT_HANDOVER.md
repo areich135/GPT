@@ -1,7 +1,7 @@
 # TEKU Website – verbindliche Übergabe für die Clickdummys
 
-**Dokumentrevision:** 18 · **Stand:** 24.11.2026
-**Ausgangsbasis dieser Änderung:** f145964; aktuelle Änderungen siehe README-Changelog
+**Dokumentrevision:** 19 · **Stand:** 26.11.2026
+**Ausgangsbasis dieser Änderung:** e162572; aktuelle Änderungen siehe README-Changelog
 **Repository:** https://github.com/areich135/GPT · **Arbeitsbranch:** main
 
 Diese Übergabe soll einen neuen Chat arbeitsfähig machen, ohne den gesamten alten Verlauf zu laden. Sie beschreibt den freigegebenen Stand, die bewussten Unterschiede zwischen den Produktbereichen und die Grenzen des Dummys. Vor jeder Aufgabe den aktuellen Remote-Stand prüfen: Eine im ChatGPT-Projekt hochgeladene Kopie kann älter sein als die Datei im Repository.
@@ -41,8 +41,10 @@ Keine erfundenen Produktdaten, Patenttexte, Siegel, Bilder, Verkaufsargumente od
 | Ampeln, Serie MAO | V1 | mao/ | https://areich135.github.io/GPT/mao/?version=v1 |
 | Untersetzer, Serie MUK | V1 | muk/ | https://areich135.github.io/GPT/muk/?version=v1 |
 | Hänger MHB/MHI/A | V1 | mhb/ | https://areich135.github.io/GPT/mhb/?version=v1 |
+| Stockhalter, Serie SH | V1 | sh/ | https://areich135.github.io/GPT/sh/?version=v1 |
+| Stützgitter, Serie STG | V1 | stg/ | https://areich135.github.io/GPT/stg/?version=v1 |
 
-Der Umschalter hat sechs getrennte Kategorien; MAO, MUK und Hänger ergänzen seit 19.11.2026: „Rundtöpfe“ (VCG), „Anzuchtpaletten“ (BP) und „Trays“ (ST). ST V1 ist ein eigener Datenbestand und eine eigene Seite. GP ist nicht umgesetzt. BP nicht als Tray-Sortiment umdeuten.
+Der Umschalter hat acht getrennte Kategorien. SH und STG ergänzen seit 26.11.2026 die bisherigen sechs Bereiche. ST V1 ist ein eigener Datenbestand und eine eigene Seite. GP ist nicht umgesetzt. BP nicht als Tray-Sortiment umdeuten.
 
 Frühere Rundtopf-Stände V1–V11 liegen unter versions/v1/ bis versions/v11/. Frühere BP-Stände V1–V5 liegen unter bp/versions/. Die aktuellen Stände liegen gerade nicht unter versions/v12/ oder bp/versions/v6/. Die Zuordnung steuert version-switch.js.
 
@@ -401,6 +403,12 @@ Die Variantenkacheln rahmen die vollständige Ausführung einschließlich Auswah
 
 BP/ST zeigen Bodenbilder im Kreis und den gleichen umschaltbaren Bilddialog wie VCG. ST bleibt mangels PIM-Foto ausdrücklich Serienillustration. Verpackungsdaten aller aktuellen Bereiche folgen dem zeilenweisen Rundtopfmuster; Maßeinheit-Icon wird nach jedem Filteraufbau gesetzt.
 
+### 9.3 SH und STG V1
+
+`sh/data.js` und `stg/data.js` nutzen den gemeinsamen Zubehör-Renderer. Drei direkte SKU-Bereiche in Quellenreihenfolge: Varianten (einfarbiger Farbfächer), Passende Rundtöpfe (Originalpiktogramm) und Verpackungsdaten (beschriftete Zeilen). SH hat keine Quellmaße und zeigt daher keinen Einheitenschalter. STG zeigt Durchmesser und Höhe in der SKU-Zeile, im Hero und als Filter mit cm/inch. Beide behalten Bilddialog, Merkliste und simulierte Muster-/Angebotsanfrage.
+
+Die neun STG-Artikel und 44 Zuordnungen bilden den Stand der deutschen Produktseite vom 26.11.2026 ab. SH 17 und SH 19 zeigen je sechs Töpfe. Für SH 17 ist MCI 17 als Demo-Zuordnung gekennzeichnet. Die übrigen SH-Kacheln sind anhand des TEKU-Katalogs 2026 ausgewählt. Quellen, Originalfelder und Einschränkungen stehen in `accessories/SOURCE.md`.
+
 ## 10. Fehlende Funktionen und noch offene Arbeit
 
 - ST V1 ist umgesetzt; GP und weitere Tray-Serien sind nicht Teil des aktuellen Auftrags.
@@ -416,8 +424,8 @@ BP/ST zeigen Bodenbilder im Kreis und den gleichen umschaltbaren Bilddialog wie 
 
 | Änderung | Zuerst ansehen | Mitbetroffene Bereiche |
 |---|---|---|
-| Aktuelle Bildkomposition, Dialog, Boden-Kreis und Verpackungszeilen | product-details.js, product-details.css; assets/technical-composites/ | Alle sechs aktuellen Bereiche; als letzte Dateien laden |
-| MAO/MUK/Hänger | accessories/app.js, catalog.js, styles.css, SOURCE.md; mao/data.js, muk/data.js, mhb/data.js | Gemeinsame Listen/Anfrage, product-details.js, version-switch.js |
+| Aktuelle Bildkomposition, Dialog, Boden-Kreis und Verpackungszeilen | product-details.js, product-details.css; assets/technical-composites/ | Alle aktuellen Bereiche; als letzte Dateien laden |
+| MAO/MUK/Hänger/SH/STG | accessories/app.js, catalog.js, styles.css, SOURCE.md; data.js im jeweiligen Bereich | Gemeinsame Listen/Anfrage, product-details.js, version-switch.js |
 | November-Gestaltung, Icons, Neuheiten und Bildadapter | design-review.js, design-review.css; assets/filter-unit.svg | Zuletzt in allen drei aktuellen HTML-Dateien geladen; Archive unverändert |
 | Bereiche/Versionsauswahl | version-switch.js; index.html, bp/index.html, st/index.html | Aktuell + Archive |
 | cm/inch-Anzeige | measurements.js (VCG), rectangular-measurements.js (BP/ST), measurements.css | Aktuelle Seiten; Quelldaten/Filterwerte und Archive erhalten |

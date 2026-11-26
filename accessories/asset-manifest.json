@@ -325,6 +325,204 @@
       "path": "assets/832578-mao-slide3.webp",
       "sha256": "e8f273e246998b8917cd1ab37f71992920034fe1118148bbfaa6ae1b12fda99b",
       "bytes": 12700
+    },
+    "https://static.teku.com/assets/21264/teku-mehrwert-sicherer-transport_sh.jpg": {
+      "path": "assets/21264-teku-mehrwert-sicherer-transport_sh.webp",
+      "sha256": "ba65689b7d51fe8da2eee4542b492ef2894882a69733d5b26d94fa95f2a61fce",
+      "bytes": 11508,
+      "retrieved": "2026-11-26"
+    },
+    "https://static.teku.com/assets/21265/teku-mehrwert-sichere-montage-stg.jpg": {
+      "path": "assets/21265-teku-mehrwert-sichere-montage-stg.webp",
+      "sha256": "b5301ecf4c1048ee126c0d8751be69e8d6fddc5fbb6008125b22b84f17b279fc",
+      "bytes": 18282,
+      "retrieved": "2026-11-26"
+    },
+    "https://static.teku.com/assets/21276/teku-mehrwert-reduzierung-von-transportkosten-print.jpg": {
+      "path": "assets/21276-teku-mehrwert-reduzierung-von-transportkosten-print.webp",
+      "sha256": "491392827f80c33271db0a255987ee75b5de87fc7cc3e06ce818ae219369920e",
+      "bytes": 37832,
+      "retrieved": "2026-11-26"
+    },
+    "https://static.teku.com/assets/21279/teku-mehrwert-reduzierter-arbeitsaufwand-sh.jpg": {
+      "path": "assets/21279-teku-mehrwert-reduzierter-arbeitsaufwand-sh.webp",
+      "sha256": "e666605a3c48fa70728ace179f044fd69badfdee6e02663b69f3ca3654a09667",
+      "bytes": 20594,
+      "retrieved": "2026-11-26"
+    },
+    "https://static.teku.com/assets/21292/teku-mehrwert-hoher-transportschutz-stg.jpg": {
+      "path": "assets/21292-teku-mehrwert-hoher-transportschutz-stg.webp",
+      "sha256": "c851493229af9c2a689360f6969638ad89b3f63f95c7ec9b3708b5372505bd83",
+      "bytes": 15078,
+      "retrieved": "2026-11-26"
+    },
+    "https://static.teku.com/assets/21295/teku-mehrwert-gewichtsreduzierung.jpg": {
+      "path": "assets/21295-teku-mehrwert-gewichtsreduzierung.webp",
+      "sha256": "43a93e1c12c39ef224797d301e306aca924bada75171866f9e0aa8ad7d9449d6",
+      "bytes": 13438,
+      "retrieved": "2026-11-26"
+    },
+    "https://static.teku.com/assets/21301/teku-mehrwert-stoerungsfreie-entstapelung-stg.jpg": {
+      "path": "assets/21301-teku-mehrwert-stoerungsfreie-entstapelung-stg.webp",
+      "sha256": "54ce4acb1f26bd36b4665dd753865f00813358bf7f798b680278f214b25adcfc",
+      "bytes": 10090,
+      "retrieved": "2026-11-26"
+    },
+    "https://static.teku.com/assets/21315/teku-mehrwert-verkaufsfoerderung-sh.jpg": {
+      "path": "assets/21315-teku-mehrwert-verkaufsfoerderung-sh.webp",
+      "sha256": "70248a4b46a0468d31e11490ac73ec03bc78c03f0ba525980725859cfd7c5390",
+      "bytes": 10650,
+      "retrieved": "2026-11-26"
+    },
+    "https://static.teku.com/assets/21316/teku-mehrwert-verkaufsfoerderung-stg.jpg": {
+      "path": "assets/21316-teku-mehrwert-verkaufsfoerderung-stg.webp",
+      "sha256": "df430c12865fc66cf5c7456265bd06e7e4e600d4a01dc9fae3fea42ba2331769",
+      "bytes": 17252,
+      "retrieved": "2026-11-26"
+    },
+    "https://static.teku.com/assets/21329/teku-mehrwert-besseres-handling-sh.jpg": {
+      "path": "assets/21329-teku-mehrwert-besseres-handling-sh.webp",
+      "sha256": "8f9136dc8184545851bcc96205cc47f26b9b3b2319c8ee5588c9bcbaa6a7b973",
+      "bytes": 17196,
+      "retrieved": "2026-11-26"
+    },
+    "https://static.teku.com/assets/21336/teku-mehrwert-beste-stapeleigenschaften-sh.jpg": {
+      "path": "assets/21336-teku-mehrwert-beste-stapeleigenschaften-sh.webp",
+      "sha256": "39ce079f7b792e40463f244b480ed893246e4a264a4f0b4947982b04f0b29c75",
+      "bytes": 17092,
+      "retrieved": "2026-11-26"
+    },
+    "https://static.teku.com/assets/21337/teku-mehrwert-beste-stapeleigenschaften-stg.jpg": {
+      "path": "assets/21337-teku-mehrwert-beste-stapeleigenschaften-stg.webp",
+      "sha256": "2b80eb6db0097a881222a564379bd2fe26956121998e9992bc0de456ace060e4",
+      "bytes": 14670,
+      "retrieved": "2026-11-26"
+    },
+    "https://static.teku.com/assets/21397/mch-ton-pr.psd": {
+      "path": "assets/21397-mch-ton-pr.webp",
+      "sha256": "5b42a142009c1dfa3f742142644f2efc51732752c08849d93d92f49bdc819436",
+      "bytes": 16702,
+      "retrieved": "2026-11-26"
+    },
+    "https://static.teku.com/assets/455310/vtg-circular-ton-grau-pr.psd": {
+      "path": "assets/455310-vtg-circular-ton-grau-pr.webp",
+      "sha256": "a3522fa1cff3484e0c12249691269fb73fe5da368461680c8de27376ab5c6051",
+      "bytes": 24938,
+      "retrieved": "2026-11-26"
+    },
+    "https://static.teku.com/assets/455383/mcl-terracotta-pr.psd": {
+      "path": "assets/455383-mcl-terracotta-pr.webp",
+      "sha256": "1a9b0e7bd66ab0be0802925b2e2e66a15f39dd4030e50c79469acccd369dfbc7",
+      "bytes": 15754,
+      "retrieved": "2026-11-26"
+    },
+    "https://static.teku.com/assets/455475/vch-vck-ton-grau-pr.psd": {
+      "path": "assets/455475-vch-vck-ton-grau-pr.webp",
+      "sha256": "8559d487be73d17e7cf4e74a9254ff95f23f54072a3bb605a9f80b0adf654afb",
+      "bytes": 22144,
+      "retrieved": "2026-11-26"
+    },
+    "https://static.teku.com/assets/455556/vce-taupe-pr.psd": {
+      "path": "assets/455556-vce-taupe-pr.webp",
+      "sha256": "6ce7fd38409badd55d8ff96b7884f4f3555a0af8b565c010af2adb9e9688df65",
+      "bytes": 70692,
+      "retrieved": "2026-11-26"
+    },
+    "https://static.teku.com/assets/455989/mxc-ton-pr.psd": {
+      "path": "assets/455989-mxc-ton-pr.webp",
+      "sha256": "d4e9a56600454e5c9176f74b12dccbeacf5f623885caa002484f310ef99272e8",
+      "bytes": 74810,
+      "retrieved": "2026-11-26"
+    },
+    "https://static.teku.com/assets/456002/vcc-taupe-pr.psd": {
+      "path": "assets/456002-vcc-taupe-pr.webp",
+      "sha256": "582d66b932ac25bb3100a35f9f1729124af51539e5b08b6cdfb56f878b208882",
+      "bytes": 15326,
+      "retrieved": "2026-11-26"
+    },
+    "https://static.teku.com/assets/456519/mci-terracotta-pr.psd": {
+      "path": "assets/456519-mci-terracotta-pr.webp",
+      "sha256": "92394c534682dbf95d999f40dc3ccacdae291306a5375bb9fb3adf608d2a69a1",
+      "bytes": 74734,
+      "retrieved": "2026-11-26"
+    },
+    "https://static.teku.com/assets/456529/stg-to-aw.psd": {
+      "path": "assets/456529-stg-to-aw.webp",
+      "sha256": "432b27840c018359d31864c1af5d6d7889e06a95d2c48e8e2493e797d12f316d",
+      "bytes": 23250,
+      "retrieved": "2026-11-26"
+    },
+    "https://static.teku.com/assets/456530/stg-19-aw.psd": {
+      "path": "assets/456530-stg-19-aw.webp",
+      "sha256": "ac3a116de7896cd30ce0cc6810be7f48c67637d23e16b33be6dbf092c828a9c0",
+      "bytes": 32702,
+      "retrieved": "2026-11-26"
+    },
+    "https://static.teku.com/assets/456531/stg-14-b-r-aw-vcg-schwarz.psd": {
+      "path": "assets/456531-stg-14-b-r-aw-vcg-schwarz.webp",
+      "sha256": "32d66b705248bcb77966749ac12a016b7aaf9074c31d8bfaf7f74cfd31906c3d",
+      "bytes": 36828,
+      "retrieved": "2026-11-26"
+    },
+    "https://static.teku.com/assets/456533/stg-13-b-r-aw-vcg-ton.psd": {
+      "path": "assets/456533-stg-13-b-r-aw-vcg-ton.webp",
+      "sha256": "f12356d1122ce2da54099e38c723d510f584062de0f55b1904587e92124bdf64",
+      "bytes": 38260,
+      "retrieved": "2026-11-26"
+    },
+    "https://static.teku.com/assets/456536/stg-13-aw.psd": {
+      "path": "assets/456536-stg-13-aw.webp",
+      "sha256": "10ed46f84b512c872f728b5118b0c90553fee4a97b77a10835ed98a5b7992b2c",
+      "bytes": 23638,
+      "retrieved": "2026-11-26"
+    },
+    "https://static.teku.com/assets/456560/vcg-circular-ton-grau-pr.psd": {
+      "path": "assets/456560-vcg-circular-ton-grau-pr.webp",
+      "sha256": "4c0ff2183018fec884fc2e2c1d7e13a59789a42387f070033485283011db85ed",
+      "bytes": 17960,
+      "retrieved": "2026-11-26"
+    },
+    "https://static.teku.com/assets/526195/stg-12-r-vcg12-aw.psd": {
+      "path": "assets/526195-stg-12-r-vcg12-aw.webp",
+      "sha256": "aa71e81ffec4acec544a8ecd311ac55f55504573dbace4198f8d20fa98ab6f51",
+      "bytes": 28108,
+      "retrieved": "2026-11-26"
+    },
+    "https://static.teku.com/assets/543988/sh-baseline-aw.psd": {
+      "path": "assets/543988-sh-baseline-aw.webp",
+      "sha256": "46cd6daea30e1f1a6fb6fe139291ac4fdd26b56a810fb7294d17b8e71d7d91f5",
+      "bytes": 17916,
+      "retrieved": "2026-11-26"
+    },
+    "https://static.poeppelmann.com/assets/700376/stuetzgitter-hoehe-pikto.svg": {
+      "path": "assets/700376-stuetzgitter-hoehe-pikto.svg",
+      "sha256": "155734d4771c38a6f73c6c8853a7b9cffd2b6663b63f23a9d0bdb03a33b23e9b",
+      "bytes": 4127,
+      "retrieved": "2026-11-26"
+    },
+    "https://static.poeppelmann.com/assets/700379/stuetzgitter-breite-pikto.svg": {
+      "path": "assets/700379-stuetzgitter-breite-pikto.svg",
+      "sha256": "00fbf6c7ea6a9e9a304244025c6948bc1b8b51383b5821c919871fc50e6f36f3",
+      "bytes": 3993,
+      "retrieved": "2026-11-26"
+    },
+    "https://static.teku.com/assets/701344/vcm-10-5-ton-grau-pr.psd": {
+      "path": "assets/701344-vcm-10-5-ton-grau-pr.webp",
+      "sha256": "dd1aa85556f5dfcf225fb3cffa4c0ac0ea9f2c0112f0d6e227dbfd3d0949989e",
+      "bytes": 18400,
+      "retrieved": "2026-11-26"
+    },
+    "https://static.teku.com/assets/711899/vcl-circular-ton-grau-pr.psd": {
+      "path": "assets/711899-vcl-circular-ton-grau-pr.webp",
+      "sha256": "d746b87db404b5c7346936ffb120f37f828bc4bfcfb767d6bee9858eb9f2a376",
+      "bytes": 16912,
+      "retrieved": "2026-11-26"
+    },
+    "https://static.teku.com/assets/833592/vtl-ton-grau-pr.psd": {
+      "path": "assets/833592-vtl-ton-grau-pr.webp",
+      "sha256": "1d58b9ec12b36867596afb50d254e3bf3425dc176ce311b3d335bc73ed2b4426",
+      "bytes": 21616,
+      "retrieved": "2026-11-26"
     }
   },
   "catalog": "https://static.teku.com/assets/712404/teku-de.pdf"

@@ -96,6 +96,7 @@
     return media;
   }
   function paginate(){
+    if(window.ACCESSORY_CONFIG?.showAllArticles)return;
     const key=JSON.stringify(rectangular?state.filters:{color:state.color,volume:state.volume,diameter:state.diameter,angle:state.angle,categories:[...state.categories],process:[...state.process]});
     if(key!==filterKey){filterKey=key;visibleCount=8;moreOpen=false;}
     const rows=[...document.querySelectorAll('#results>.product-row')];
